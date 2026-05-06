@@ -18,10 +18,10 @@ const services = [
     n: "02",
     title: "AI Strategy Session",
     italic: "Get clear on where AI belongs and what to build first.",
-    body: "Before you build anything, get a clear plan. We look at your business, your team and how the work gets done, then show you where AI fits, what to stop doing manually and which workflows matter most.",
+    body: "A 90-minute working session to look at your business, your team and how the work gets done. We show you where AI fits, what to stop doing manually and which workflows matter most.",
     bullets: [
       "You are experimenting with AI, but it feels scattered",
-      "You are not sure where to start",
+      "You are unsure where to start",
       "You want clarity before investing in a full build",
       "You need a clear next step",
     ],
