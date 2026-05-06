@@ -1,5 +1,5 @@
 import { Linkedin } from "lucide-react";
-import heroImg from "@/assets/footer-hills.jpg";
+import heroImg from "@/assets/footer-misty.jpg";
 
 // TikTok isn't in lucide-react, so we use a minimal inline SVG that matches
 // the stroke-style of the lucide icons we use elsewhere.
@@ -37,9 +37,14 @@ const Footer = () => {
 
         <div className="border-t border-hairline pt-10 label-mono">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <p className="text-foreground/55 text-center md:text-left">
-              © 2026 REVE AI · SITE BUILT WITH AI BY REVE
-            </p>
+            <div className="text-center md:text-left">
+              <p className="text-foreground/55">
+                © 2026 REVE AI · SITE BUILT WITH AI BY REVE
+              </p>
+              <p className="text-foreground/55 text-sm mt-1">
+                Located in Beautiful British Columbia
+              </p>
+            </div>
             <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
               <a href="#cta" className="hover:text-primary transition-colors">Contact</a>
               <a href="#" className="hover:text-primary transition-colors">Privacy</a>
