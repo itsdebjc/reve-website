@@ -20,7 +20,8 @@ const Hero = () => {
         </div>
 
         <h1 className="display-serif text-5xl md:text-7xl lg:text-[5.5rem] text-foreground">
-          Marketing is hard.{" "}
+          We make marketing hard.
+          <br />
           <span className="display-italic">We make it easier.</span>
         </h1>
 

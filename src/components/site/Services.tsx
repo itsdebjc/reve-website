@@ -38,7 +38,7 @@ const Services = () => {
         <div className="text-center mb-20">
           <p className="label-eyebrow mb-6">— Services</p>
           <h2 className="display-serif text-4xl md:text-6xl">
-            See how we help teams turn <span className="display-italic">scattered marketing</span> into stronger output.
+            Two ways to <span className="display-italic">work together.</span>
           </h2>
         </div>
 
