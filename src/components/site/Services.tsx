@@ -3,29 +3,29 @@ import { DoodleAccent } from "./Doodles";
 const services = [
   {
     n: "01",
-    title: "The AI Build",
-    italic: "Your business knowledge turned into AI workflows your team can use.",
-    body: "We capture your voice, offers, clients and marketing process, then build the workflows your team needs to create stronger content, campaigns and client-facing work without you fixing every draft.",
+    title: "The AI Marketing Build",
+    italic: "We build your AI marketing system, then train your team to run it.",
+    body: "A custom build for businesses that want to use AI more consistently in their marketing. We capture how your business thinks, sounds and sells, then build the workflows your team uses every day.",
     bullets: [
-      "You are using AI, but the output still feels inconsistent",
-      "Your team has tools, but no shared system",
-      "You are spending too much time editing, rewriting or explaining",
-      "You want your team trained inside real marketing work",
+      "You are experimenting with AI but getting inconsistent results",
+      "You want a system your team can use without you in the middle",
+      "You are ready to turn AI experimentation into something that actually runs",
     ],
-    cta: "Learn More",
+    cta: "Learn More →",
   },
   {
     n: "02",
-    title: "AI Strategy Session",
-    italic: "Get clear on where AI belongs and what to build first.",
-    body: "A 90-minute working session to look at your business, your team and how the work gets done. We show you where AI fits, what to stop doing manually and which workflows matter most.",
+    title: "AI-Built Website",
+    italic: "A modern website built faster with clear copy, SEO baked in and simple updates you can manage yourself.",
+    body: "A clear, modern website built with AI-supported tools, strong messaging and search-friendly structure. We help you explain what you do, launch faster and update your site without waiting on a developer for every small change.",
     bullets: [
-      "You are experimenting with AI, but it feels scattered",
-      "You are unsure where to start",
-      "You want clarity before investing in a full build",
-      "You need a clear next step",
+      "Your website feels outdated or hard to update",
+      "You want a better site without a long, painful build",
+      "You need clear copy and SEO from the start",
+      "You want your website ready for Google and AI search",
+      "You want to make simple updates yourself",
     ],
-    cta: "Start Here",
+    cta: "View Website Offer →",
   },
 ];
 
@@ -38,7 +38,7 @@ const Services = () => {
         <div className="text-center mb-20">
           <p className="label-eyebrow mb-6">— Services</p>
           <h2 className="display-serif text-4xl md:text-6xl">
-            Two ways to <span className="display-italic">work together.</span>
+            See how we help teams turn <span className="display-italic">scattered marketing</span> into stronger output.
           </h2>
         </div>
 
