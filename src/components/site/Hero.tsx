@@ -20,12 +20,12 @@ const Hero = () => {
         </div>
 
         <h1 className="display-serif text-5xl md:text-7xl lg:text-[5.5rem] text-foreground">
-          You're already using AI.{" "}
-          <span className="display-italic">We make it worth it.</span>
+          Marketing is hard.{" "}
+          <span className="display-italic">We make it easier.</span>
         </h1>
 
         <p className="mt-8 text-foreground/75 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
-          AI should make your business easier to run. We help you set it up that way.
+          We bring your ideas, content, tools and workflows into one clear setup so AI can help you create faster, stay consistent and spend less time fixing everything.
         </p>
 
         <a
