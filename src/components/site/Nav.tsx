@@ -6,15 +6,19 @@ const links = [
 ];
 
 import { useEffect, useState } from "react";
+import { Menu, X } from "lucide-react";
 
 const Nav = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  const closeMobileMenu = () => setMobileMenuOpen(false);
 
   return (
     <header
@@ -47,7 +51,41 @@ const Nav = () => {
         >
           Book a Call →
         </a>
+
+        <button
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          className="md:hidden text-foreground hover:text-primary transition-colors"
+          aria-label="Toggle mobile menu"
+        >
+          {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
       </nav>
+
+      {mobileMenuOpen && (
+        <div className="md:hidden bg-background/95 backdrop-blur-sm border-b border-hairline">
+          <div className="mx-auto max-w-[1400px] px-6 py-6 flex flex-col gap-6">
+            {links.map((l) => (
+              <a
+                key={l.href}
+                href={l.href}
+                onClick={closeMobileMenu}
+                className="label-mono text-foreground/70 hover:text-primary transition-colors"
+              >
+                {l.label}
+              </a>
+            ))}
+            <a
+              href="https://calendly.com/deb-xjsk/callwithdeb"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={closeMobileMenu}
+              className="label-mono text-foreground hover:text-primary transition-colors"
+            >
+              Book a Call →
+            </a>
+          </div>
+        </div>
+      )}
     </header>
   );
 };
