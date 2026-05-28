@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import Nav from "@/components/site/Nav";
 import FinalCTA from "@/components/site/FinalCTA";
 import Footer from "@/components/site/Footer";
+import TrustedLogos from "@/components/site/TrustedLogos";
 import heroImg from "@/assets/hero-cherry-blossom.jpg";
 
 type CaseStudy = {
@@ -94,46 +95,52 @@ const CaseStudiesPage = () => {
       <section className="py-24 md:py-32 border-b border-hairline">
         <div className="mx-auto max-w-5xl px-6">
           {cases.map((c, i) => (
-            <article
-              key={c.n}
-              className={`grid md:grid-cols-12 gap-8 md:gap-16 py-16 md:py-20 ${
-                i !== 0 ? "border-t border-hairline" : ""
-              }`}
-            >
-              {/* Left: meta + stat */}
-              <div className="md:col-span-5">
-                <p className="label-mono text-foreground/55 mb-4">{c.n}</p>
-                <h2 className="display-serif text-3xl md:text-4xl mb-2">
-                  {c.client}
-                </h2>
-                <p className="label-mono text-foreground/55 mb-12">
-                  {c.industry}
-                </p>
+            <div key={c.n}>
+              <article
+                className={`grid md:grid-cols-12 gap-8 md:gap-16 py-16 md:py-20 ${
+                  i !== 0 ? "border-t border-hairline" : ""
+                }`}
+              >
+                {/* Left: meta + stat */}
+                <div className="md:col-span-5">
+                  <p className="label-mono text-foreground/55 mb-4">{c.n}</p>
+                  <h2 className="display-serif text-3xl md:text-4xl mb-2">
+                    {c.client}
+                  </h2>
+                  <p className="label-mono text-foreground/55 mb-12">
+                    {c.industry}
+                  </p>
 
-                <p className="display-serif text-5xl md:text-6xl text-foreground leading-none mb-3">
-                  {c.stat}
-                </p>
-                <p className="label-mono text-foreground/55">{c.statLabel}</p>
-              </div>
+                  <p className="display-serif text-5xl md:text-6xl text-foreground leading-none mb-3">
+                    {c.stat}
+                  </p>
+                  <p className="label-mono text-foreground/55">{c.statLabel}</p>
+                </div>
 
-              {/* Right: challenge + outcome */}
-              <div className="md:col-span-7 md:pt-2 space-y-10">
-                <div>
-                  <p className="label-mono text-foreground/55 mb-3">
-                    Challenge
-                  </p>
-                  <p className="text-foreground/85 leading-relaxed">
-                    {c.challenge}
-                  </p>
+                {/* Right: challenge + outcome */}
+                <div className="md:col-span-7 md:pt-2 space-y-10">
+                  <div>
+                    <p className="label-mono text-foreground/55 mb-3">
+                      Challenge
+                    </p>
+                    <p className="text-foreground/85 leading-relaxed">
+                      {c.challenge}
+                    </p>
+                  </div>
+                  <div>
+                    <p className="label-mono text-foreground/55 mb-3">Outcome</p>
+                    <p className="text-foreground/85 leading-relaxed">
+                      {c.outcome}
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <p className="label-mono text-foreground/55 mb-3">Outcome</p>
-                  <p className="text-foreground/85 leading-relaxed">
-                    {c.outcome}
-                  </p>
+              </article>
+              {i === 2 && (
+                <div className="border-t border-hairline py-16 md:py-20">
+                  <TrustedLogos />
                 </div>
-              </div>
-            </article>
+              )}
+            </div>
           ))}
         </div>
       </section>

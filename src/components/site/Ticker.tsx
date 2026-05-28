@@ -12,7 +12,7 @@ const Ticker = () => {
       <div className="flex marquee whitespace-nowrap">
         {row.map((t, i) => (
           <div key={i} className="flex items-center shrink-0 px-8">
-            <span className="font-serif italic text-foreground/75 text-lg md:text-xl">{t}</span>
+            <span className="font-serif italic text-foreground text-lg md:text-xl">{t}</span>
             <span className="ml-8 text-primary">·</span>
           </div>
         ))}
