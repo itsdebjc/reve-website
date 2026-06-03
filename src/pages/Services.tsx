@@ -20,12 +20,12 @@ const overview = [
   },
   {
     n: "02",
-    title: "AI Strategy Session",
-    chip: "90-minute working session",
-    italic: "A 90-minute working session to show you where AI fits, what to stop doing manually and what to build first.",
-    body: "",
-    sub: "Best for: Founders who want clarity before committing to a full build.",
-    href: "#session",
+    title: "AI-Built Website",
+    chip: "Copy · Design · Build",
+    italic: "A modern website built faster with clear copy, SEO baked in and simple updates you can manage yourself.",
+    body: "A clear, modern website built with AI tools, strong messaging and a structure that works for search. We help you explain what you do, launch faster and update your site without waiting on a developer for every small change.",
+    sub: "Best for: Founder-led businesses that need a better website without a long, painful build.",
+    href: "#website",
   },
 ];
 
@@ -79,6 +79,41 @@ const sessionLeaveWith = [
   "Your three highest-value workflow opportunities",
   "A recommended first build",
   "A clear next step",
+];
+
+const whatWeBuildWebsite = [
+  {
+    n: "01",
+    title: "Clear Copy",
+    lead: "We write the messaging first.",
+    body: "Every page starts with a clear point of view: what you do, who it is for and what makes you different. SEO is built into the structure from the start so the site works for search from day one.",
+  },
+  {
+    n: "02",
+    title: "Clean Design",
+    lead: "A modern, professional look built around your brand.",
+    body: "Designed to work across devices and load fast. The design reflects how you want to be seen, without visual noise that gets in the way.",
+  },
+  {
+    n: "03",
+    title: "Working Website",
+    lead: "We build the site using AI tools so the project moves faster.",
+    body: "You get a modern, functional website with strong copy and a structure your team can maintain. No long agency process.",
+  },
+  {
+    n: "04",
+    title: "Simple Handoff",
+    lead: "We show you how to make updates yourself.",
+    body: "Change copy, swap an image or add a section. No waiting on a developer for every small change. The site is yours to run.",
+  },
+];
+
+const websiteProcess = [
+  { n: "01", title: "Discover", body: "We learn about your business, audience and what the site needs to do." },
+  { n: "02", title: "Write", body: "We draft the copy first. Messaging, structure and SEO." },
+  { n: "03", title: "Design", body: "We design the pages around the copy." },
+  { n: "04", title: "Build", body: "We build and test the site." },
+  { n: "05", title: "Launch", body: "We hand it off and show you how to keep it current." },
 ];
 
 const Bullet = ({ children }: { children: React.ReactNode }) => (
@@ -182,7 +217,7 @@ const Services = () => {
               The <span className="display-italic">AI Build</span>
             </h2>
             <p className="font-serif italic text-primary text-xl md:text-2xl leading-snug mb-8">
-              We build your AI marketing system, then train your team to run it.
+              A custom AI marketing system built around how your business thinks.
             </p>
             <div className="hairline w-12 mb-8 mx-auto" />
             <p className="text-foreground/80 leading-relaxed text-base md:text-lg">
@@ -274,31 +309,124 @@ const Services = () => {
         </div>
       </section>
 
-      {/* AI STRATEGY SESSION */}
-      <section id="session" className="py-32 md:py-44 border-b border-hairline">
-        <div className="mx-auto max-w-4xl px-6">
-          <div className="text-center max-w-3xl mx-auto mb-16">
+      {/* AI-BUILT WEBSITE — DEEP DIVE */}
+      <section id="website" className="py-32 md:py-44 border-b border-hairline">
+        <div className="mx-auto max-w-5xl px-6">
+          <div className="text-center max-w-3xl mx-auto mb-20">
             <p className="label-eyebrow mb-6">— Service 02</p>
             <h2 className="display-serif text-4xl md:text-6xl mb-6">
-              AI <span className="display-italic">Strategy Session</span>
+              AI-Built <span className="display-italic">Website</span>
             </h2>
             <p className="font-serif italic text-primary text-xl md:text-2xl leading-snug mb-8">
-              A 90-minute working session to show you where AI fits and what to build first.
+              A modern website built faster with clear copy, SEO baked in and simple updates you can manage yourself.
             </p>
             <div className="hairline w-12 mb-8 mx-auto" />
-            <p className="text-foreground/80 leading-relaxed text-base md:text-lg mb-4">
-              This is for founders who want clarity before they commit to a larger project.
-            </p>
-            <p className="text-foreground/70 leading-relaxed text-base md:text-lg">
-              We look at your business, your team and your current marketing process. Then we identify where AI can help, where it will waste time and which workflows are worth building first.
+            <p className="text-foreground/80 leading-relaxed text-base md:text-lg">
+              A clear, modern website built with AI tools, strong messaging and a structure that works for search. We help you explain what you do, launch faster and update your site without waiting on a developer for every small change.
             </p>
           </div>
 
-          <div className="border border-hairline bg-surface rounded-2xl p-8 md:p-12 max-w-2xl mx-auto">
+          {/* What we build */}
+          <p className="label-eyebrow text-center mb-4">— What We Build</p>
+          <h3 className="display-serif text-3xl md:text-4xl text-center mb-12">
+            The four <span className="display-italic">pieces</span> of the project.
+          </h3>
+          <div className="grid md:grid-cols-2 gap-px bg-hairline border border-hairline mb-24">
+            {whatWeBuildWebsite.map((it) => (
+              <div key={it.n} className="bg-background p-8 md:p-10 flex flex-col">
+                <p className="label-mono text-primary mb-4">{it.n}</p>
+                <h4 className="display-serif text-2xl md:text-3xl mb-4">{it.title}</h4>
+                <div className="hairline w-10 mb-4" />
+                <p className="font-serif italic text-foreground/85 text-lg mb-3 leading-snug">{it.lead}</p>
+                <p className="text-foreground/70 leading-relaxed text-sm md:text-base">{it.body}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Who it is for */}
+          <div className="bg-primary/5 border border-primary/30 rounded-2xl p-10 md:p-14 mb-24 max-w-3xl mx-auto text-center">
+            <p className="label-eyebrow mb-6">— Who It Is For</p>
+            <p className="font-serif italic text-primary text-2xl md:text-3xl leading-snug mb-6">
+              For founder-led businesses that need a better website without a long, painful build.
+            </p>
+            <p className="text-foreground/75 leading-relaxed text-base md:text-lg">
+              It works best when your current site feels outdated, is hard to update or does not clearly explain what you do.
+            </p>
+          </div>
+
+          {/* Process */}
+          <p className="label-eyebrow text-center mb-4">— How It Works</p>
+          <h3 className="display-serif text-3xl md:text-4xl text-center mb-16">
+            How the <span className="display-italic">project</span> moves.
+          </h3>
+          <div className="relative mb-20">
+            <div aria-hidden className="hidden md:block absolute top-5 left-[10%] right-[10%] h-px bg-hairline" />
+            <div aria-hidden className="hidden md:block absolute top-5 left-[10%] h-px bg-primary/60" style={{ width: "80%" }} />
+            <ol className="grid md:grid-cols-5 gap-12 md:gap-6 relative">
+              {websiteProcess.map((p, i) => (
+                <li key={p.n} className="relative flex flex-col md:items-center md:text-center">
+                  <span className="hidden md:flex h-10 w-10 rounded-full bg-background border-2 border-primary items-center justify-center mb-6 relative z-10">
+                    <span className="h-2 w-2 rounded-full bg-primary" />
+                  </span>
+                  <span className="label-mono text-primary mb-2 md:mb-3">Step {p.n}</span>
+                  <h4 className="display-serif text-2xl md:text-3xl mb-3 md:mb-4">
+                    {p.title}
+                    {i < websiteProcess.length - 1 && (
+                      <span className="display-italic text-primary/60"> →</span>
+                    )}
+                  </h4>
+                  <p className="text-foreground/70 leading-relaxed text-sm md:text-[15px] md:px-2">{p.body}</p>
+                </li>
+              ))}
+            </ol>
+          </div>
+
+          <div className="text-center">
+            <a
+              href={calendly}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-10 py-4 label-mono hover:bg-pink-soft transition-colors"
+            >
+              Book a Call →
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* AI STRATEGY SESSION — supplementary */}
+      <section id="session" className="py-24 md:py-32 border-b border-hairline bg-surface">
+        <div className="mx-auto max-w-4xl px-6">
+          <div className="border border-hairline rounded-2xl p-8 md:p-12">
+            <div className="flex flex-wrap items-center gap-3 mb-6">
+              <span className="label-mono text-primary">Also Available</span>
+              <span className="label-mono text-foreground/60 border border-hairline rounded-full px-3 py-1">90-minute working session</span>
+            </div>
+            <h2 className="display-serif text-3xl md:text-4xl mb-4">
+              AI <span className="display-italic">Strategy Session</span>
+            </h2>
+            <p className="font-serif italic text-primary text-xl leading-snug mb-6">
+              A 90-minute working session to show you where AI fits and what to build first.
+            </p>
+            <div className="hairline w-12 mb-6" />
+            <p className="text-foreground/80 leading-relaxed mb-4">
+              This is for founders who want clarity before they commit to a larger project.
+            </p>
+            <p className="text-foreground/70 leading-relaxed mb-8">
+              We look at your business, your team and your current marketing process. Then we identify where AI can help, where it will waste time and which workflows are worth building first.
+            </p>
             <p className="label-eyebrow mb-6">— You Leave With</p>
-            <ul className="space-y-3">
+            <ul className="space-y-3 mb-10">
               {sessionLeaveWith.map((b) => <Bullet key={b}>{b}</Bullet>)}
             </ul>
+            <a
+              href={calendly}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-10 py-4 label-mono hover:bg-pink-soft transition-colors"
+            >
+              Start Here →
+            </a>
           </div>
         </div>
       </section>

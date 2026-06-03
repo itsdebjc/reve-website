@@ -3,15 +3,15 @@ import { DoodleAccent } from "./Doodles";
 const services = [
   {
     n: "01",
-    title: "The AI Marketing Build",
-    italic: "We build your AI marketing system, then train your team to run it.",
+    title: "The AI Build",
+    italic: "A custom AI marketing system built around how your business thinks.",
     body: "A custom build for businesses that want to use AI more consistently in their marketing. We capture how your business thinks, sounds and sells, then build the workflows your team uses every day.",
     bullets: [
       "You are experimenting with AI but getting inconsistent results",
       "You want a system your team can use without you in the middle",
       "You are ready to turn AI experimentation into something that actually runs",
     ],
-    cta: "Learn More →",
+    cta: "Learn More",
   },
   {
     n: "02",
@@ -25,7 +25,7 @@ const services = [
       "You want your website ready for Google and AI search",
       "You want to make simple updates yourself",
     ],
-    cta: "View Website Offer →",
+    cta: "View Website Offer",
   },
 ];
 
