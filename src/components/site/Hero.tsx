@@ -17,7 +17,7 @@ const Hero = () => {
 
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-12">
           <div className="max-w-2xl">
-            <h1 className="display-serif text-5xl md:text-7xl lg:text-[6.5rem] text-foreground leading-tight">
+            <h1 className="display-serif text-4xl sm:text-5xl md:text-7xl lg:text-[6.5rem] text-foreground leading-tight">
               Marketing is hard.
               <br />
               <span className="display-italic">We make it easier.</span>
