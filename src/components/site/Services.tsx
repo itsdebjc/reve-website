@@ -33,7 +33,6 @@ const Services = () => {
   return (
     <section id="services" className="relative isolate py-32 md:py-44 border-b border-hairline overflow-hidden">
       <DoodleAccent className="top-24 left-[6%]" size={56} />
-      <DoodleAccent className="bottom-32 right-[6%]" size={56} />
       <div className="mx-auto max-w-6xl px-6">
         <div className="text-center mb-20">
           <p className="label-eyebrow mb-6">— Services</p>

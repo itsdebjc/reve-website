@@ -4,7 +4,6 @@ const Problem = () => {
   return (
     <section className="relative isolate py-32 md:py-44 border-b border-hairline overflow-hidden">
       <DoodleAccent className="top-24 left-[8%]" size={56} />
-      <DoodleAccent className="bottom-28 right-[10%]" size={56} />
       <div className="mx-auto max-w-4xl px-6 text-center">
         <div className="flex items-center justify-center gap-4 mb-12">
           <span className="hairline w-10" />
