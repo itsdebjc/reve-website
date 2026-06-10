@@ -1,17 +1,16 @@
-const links = [
-  { label: "Services", href: "/services" },
-  { label: "Learning", href: "/learning" },
-  { label: "Case Studies", href: "/case-studies" },
-  { label: "About", href: "/#about" },
-  { label: "AI Body Workshop", href: "/lose-weight-ai" },
-];
-
 import { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
+
+const learningItems = [
+  { label: "Articles", href: "/learning" },
+  { label: "Case Studies", href: "/case-studies" },
+];
 
 const Nav = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [learningOpen, setLearningOpen] = useState(false);
+  const [mobileLearningOpen, setMobileLearningOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -19,7 +18,10 @@ const Nav = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const closeMobileMenu = () => setMobileMenuOpen(false);
+  const closeMobileMenu = () => {
+    setMobileMenuOpen(false);
+    setMobileLearningOpen(false);
+  };
 
   return (
     <header
@@ -33,15 +35,38 @@ const Nav = () => {
         </a>
 
         <div className="hidden md:flex items-center gap-10">
-          {links.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
-              className="label-mono text-foreground/70 hover:text-primary transition-colors"
-            >
-              {l.label}
-            </a>
-          ))}
+          <a href="/services" className="label-mono text-foreground/70 hover:text-primary transition-colors">
+            Services
+          </a>
+
+          <div
+            className="relative"
+            onMouseEnter={() => setLearningOpen(true)}
+            onMouseLeave={() => setLearningOpen(false)}
+          >
+            <button className="label-mono text-foreground/70 hover:text-primary transition-colors flex items-center gap-1">
+              Learning <ChevronDown size={12} className={`transition-transform duration-200 ${learningOpen ? "rotate-180" : ""}`} />
+            </button>
+            {learningOpen && (
+              <div className="absolute top-full left-0 pt-3">
+                <div className="bg-background border border-hairline rounded-sm py-2 min-w-[160px]">
+                  {learningItems.map((item) => (
+                    <a
+                      key={item.href}
+                      href={item.href}
+                      className="block px-5 py-2.5 label-mono text-foreground/70 hover:text-primary transition-colors"
+                    >
+                      {item.label}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+
+          <a href="/lose-weight-ai" className="label-mono text-foreground/70 hover:text-primary transition-colors">
+            AI Workshop
+          </a>
         </div>
 
         <a
@@ -65,16 +90,45 @@ const Nav = () => {
       {mobileMenuOpen && (
         <div className="md:hidden bg-background/95 backdrop-blur-sm border-b border-hairline">
           <div className="mx-auto max-w-[1400px] px-6 py-6 flex flex-col gap-6">
-            {links.map((l) => (
-              <a
-                key={l.href}
-                href={l.href}
-                onClick={closeMobileMenu}
-                className="label-mono text-foreground/70 hover:text-primary transition-colors"
+            <a
+              href="/services"
+              onClick={closeMobileMenu}
+              className="label-mono text-foreground/70 hover:text-primary transition-colors"
+            >
+              Services
+            </a>
+
+            <div className="flex flex-col gap-3">
+              <button
+                onClick={() => setMobileLearningOpen(!mobileLearningOpen)}
+                className="label-mono text-foreground/70 hover:text-primary transition-colors flex items-center gap-1 text-left"
               >
-                {l.label}
-              </a>
-            ))}
+                Learning <ChevronDown size={12} className={`transition-transform duration-200 ${mobileLearningOpen ? "rotate-180" : ""}`} />
+              </button>
+              {mobileLearningOpen && (
+                <div className="pl-4 flex flex-col gap-4 border-l border-hairline">
+                  {learningItems.map((item) => (
+                    <a
+                      key={item.href}
+                      href={item.href}
+                      onClick={closeMobileMenu}
+                      className="label-mono text-foreground/50 hover:text-primary transition-colors"
+                    >
+                      {item.label}
+                    </a>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            <a
+              href="/lose-weight-ai"
+              onClick={closeMobileMenu}
+              className="label-mono text-foreground/70 hover:text-primary transition-colors"
+            >
+              AI Workshop
+            </a>
+
             <a
               href="https://calendly.com/deb-xjsk/callwithdeb"
               target="_blank"

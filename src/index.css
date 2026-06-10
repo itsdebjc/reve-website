@@ -51,8 +51,20 @@
 
     --gradient-hero: linear-gradient(180deg, hsl(0 0% 0% / 0.6) 0%, hsl(0 0% 0% / 0.75) 60%, hsl(0 0% 4%) 100%);
     --gradient-cta: linear-gradient(180deg, hsl(0 0% 4% / 0) 0%, hsl(0 0% 4% / 0.6) 100%);
+    --gradient-fade: linear-gradient(180deg, hsl(0 0% 4% / 0) 0%, hsl(0 0% 4% / 0.5) 50%, hsl(0 0% 4%) 100%);
+    --gradient-vignette: radial-gradient(ellipse at center, hsl(0 0% 4% / 0) 0%, hsl(0 0% 4% / 0.7) 100%);
 
     --shadow-soft: 0 30px 80px -40px hsl(350 60% 50% / 0.25);
+    --shadow-glow: 0 0 30px -10px hsl(348 56% 82% / 0.25);
+
+    /* Workshop page tokens */
+    --fog: 0 0% 22%;
+    --mist: 30 14% 69%;
+    --deep: 0 0% 3%;
+    --blush: 348 56% 82%;
+    --ember: 348 41% 73%;
+    --ink: 0 0% 4%;
+    --paper: 40 27% 95%;
 
     /* Sidebar (unused but keep tokens defined) */
     --sidebar-background: 0 0% 4%;
@@ -127,6 +139,78 @@
   .pink-tick {
     @apply mx-auto h-px w-16 bg-primary;
   }
+
+  /* Workshop page section themes */
+  .theme-paper {
+    --background: 40 27% 95%;
+    --foreground: 0 0% 4%;
+    --card: 40 20% 92%;
+    --card-foreground: 0 0% 4%;
+    --primary: 348 41% 73%;
+    --primary-foreground: 0 0% 4%;
+    --muted: 40 18% 88%;
+    --muted-foreground: 27 10% 35%;
+    --border: 30 14% 78%;
+    --mist: 27 10% 45%;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+  }
+
+  .theme-blush {
+    --background: 348 64% 92%;
+    --foreground: 0 0% 8%;
+    --card: 348 50% 88%;
+    --card-foreground: 0 0% 8%;
+    --primary: 348 45% 32%;
+    --primary-foreground: 40 27% 95%;
+    --muted: 348 40% 86%;
+    --muted-foreground: 348 20% 28%;
+    --border: 348 30% 78%;
+    --mist: 348 20% 32%;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+  }
+
+  .theme-plum {
+    --background: 280 18% 28%;
+    --foreground: 40 27% 95%;
+    --card: 280 18% 32%;
+    --card-foreground: 40 27% 95%;
+    --primary: 348 64% 87%;
+    --primary-foreground: 0 0% 8%;
+    --muted: 280 14% 34%;
+    --muted-foreground: 40 18% 82%;
+    --border: 280 14% 44%;
+    --mist: 40 18% 82%;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+  }
+
+  /* Workshop page component utilities */
+  .surface-deep { background-color: hsl(var(--deep)); }
+  .surface-ink  { background-color: hsl(var(--secondary)); }
+  .surface-blush { background-color: hsl(var(--card)); }
+
+  .divider-line { @apply h-px w-12 bg-border; }
+
+  .corner-mark::before {
+    content: '';
+    @apply absolute top-0 left-0 w-12 h-px bg-primary;
+  }
+  .corner-mark::after {
+    content: '';
+    @apply absolute top-0 left-0 w-px h-12 bg-primary;
+  }
+
+  .hover-link { @apply relative inline-block; }
+  .hover-link::after {
+    content: '';
+    @apply absolute left-0 -bottom-1 h-px w-full origin-left scale-x-0 bg-current transition-transform duration-300;
+  }
+  .hover-link:hover::after { @apply scale-x-100; }
+
+  .gradient-text { @apply text-foreground/90; }
+  .status-pill   { @apply inline-flex items-center gap-3; }
 }
 
 @layer utilities {
