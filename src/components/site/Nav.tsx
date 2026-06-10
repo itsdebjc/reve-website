@@ -26,7 +26,7 @@ const Nav = () => {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
-        scrolled ? "bg-background/80 backdrop-blur-md border-b border-hairline" : "bg-transparent"
+        scrolled ? "bg-background/90 backdrop-blur-md border-b border-hairline" : "bg-background/50 backdrop-blur-sm"
       }`}
     >
       <nav className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-5 md:px-12">
@@ -64,7 +64,7 @@ const Nav = () => {
             )}
           </div>
 
-          <a href="/lose-weight-ai" className="label-mono text-foreground/70 hover:text-primary transition-colors">
+          <a href="/ai-body-workshop" className="label-mono text-foreground/70 hover:text-primary transition-colors">
             AI Workshop
           </a>
         </div>
@@ -122,7 +122,7 @@ const Nav = () => {
             </div>
 
             <a
-              href="/lose-weight-ai"
+              href="/ai-body-workshop"
               onClick={closeMobileMenu}
               className="label-mono text-foreground/70 hover:text-primary transition-colors"
             >

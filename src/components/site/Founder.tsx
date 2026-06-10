@@ -10,7 +10,7 @@ const Founder = () => {
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-4 mb-6">
             <span className="hairline w-10" />
-            <span className="label-eyebrow">Founded By</span>
+            <span className="label-eyebrow">Founder · Reve AI</span>
             <span className="hairline w-10" />
           </div>
           <h2 className="display-serif text-5xl md:text-6xl">Debbie Collins.</h2>
