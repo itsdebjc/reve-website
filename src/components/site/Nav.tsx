@@ -3,6 +3,7 @@ const links = [
   { label: "Learning", href: "/learning" },
   { label: "Case Studies", href: "/case-studies" },
   { label: "About", href: "/#about" },
+  { label: "AI Body Workshop", href: "/lose-weight-ai" },
 ];
 
 import { useEffect, useState } from "react";
