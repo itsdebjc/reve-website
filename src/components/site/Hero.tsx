@@ -8,11 +8,11 @@ const Hero = () => {
         alt="Soft pink wildflower meadow at sunset"
         width={1920}
         height={1080}
-        className="absolute inset-0 -z-20 h-full w-full object-cover opacity-80"
+        className="absolute inset-0 -z-20 h-full w-full object-cover object-[30%_50%] opacity-80"
       />
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/50 via-background/40 to-background" />
 
-      <div className="mx-auto w-full max-w-6xl px-6 pt-24 pb-16 fade-up">
+      <div className="mx-auto w-full max-w-5xl px-6 md:px-10 pt-24 pb-16 fade-up">
         <p className="label-eyebrow mb-10">— AI Consultancy · 2026</p>
 
         <h1 className="display-serif text-4xl sm:text-5xl md:text-7xl lg:text-[6.5rem] text-foreground leading-tight">
