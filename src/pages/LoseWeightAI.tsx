@@ -709,7 +709,7 @@ const LoseWeightAI = () => {
             <div className="lg:col-span-5">
               <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl border border-primary/30 shadow-xl bg-primary/10">
                 <img
-                  src={debbieBlossoms.url}
+                  src={debbieBlossoms}
                   alt="Debbie Collins walking under cherry blossoms"
                   className="w-full h-full object-cover object-top"
                   loading="lazy"
@@ -786,7 +786,7 @@ const LoseWeightAI = () => {
       {/* Landscape image band */}
       <section className="relative h-[60vh] md:h-[80vh] w-full overflow-hidden bg-[hsl(0_0%_4%)]">
         <img
-          src={debbieHusbandBw.url}
+          src={debbieHusbandBw}
           alt="Debbie Collins with her husband on the beach"
           className="absolute inset-0 w-full h-full object-cover object-center"
           loading="lazy"
@@ -836,7 +836,7 @@ const LoseWeightAI = () => {
             <div className="md:col-span-2 flex justify-center md:justify-start">
               <div className="relative w-full max-w-sm md:max-w-md lg:max-w-lg aspect-[3/4] overflow-hidden rounded-t-full border border-primary/30 shadow-xl">
                 <img
-                  src={debbieParisPark.url}
+                  src={debbieParisPark}
                   alt="Debbie Collins, founder of Reve AI"
                   className="w-full h-full object-cover"
                   loading="lazy"
@@ -896,7 +896,7 @@ const LoseWeightAI = () => {
         <div className="grid lg:grid-cols-2 items-stretch">
           <div className="relative min-h-[60vh] lg:min-h-screen w-full overflow-hidden bg-primary/10">
             <img
-              src={cherryBlossomLandscape.url}
+              src={cherryBlossomLandscape}
               alt="Cherry blossom tree in full bloom"
               className="absolute inset-0 w-full h-full object-contain"
               loading="lazy"
@@ -904,7 +904,7 @@ const LoseWeightAI = () => {
           </div>
 
           <div className="px-6 md:px-12 lg:px-16 py-20 lg:py-28 flex items-center">
-            <div className="max-w-xl">
+            <div className="max-w-xl mx-auto lg:mx-0">
               <Eyebrow>What you'll leave with</Eyebrow>
               <h2 className="mt-6 font-serif text-4xl md:text-5xl leading-[1.05]">
                 The setup -{" "}
@@ -1010,7 +1010,7 @@ const LoseWeightAI = () => {
       {/* FINAL CTA, Landscape background */}
       <section className="relative text-white py-36 md:py-48 px-6 overflow-hidden">
         <img
-          src={debbieMallFlorals.url}
+          src={debbieMallFlorals}
           alt=""
           className="absolute inset-0 w-full h-full object-cover object-center"
           loading="lazy"
