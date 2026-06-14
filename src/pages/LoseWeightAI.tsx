@@ -498,7 +498,7 @@ const LoseWeightAI = () => {
               <ul className="mt-8 space-y-2 font-serif text-xl md:text-2xl text-foreground/90">
                 <li>Your body gives you signals.</li>
                 <li>Your food gives you clues.</li>
-                <li>Your feedback loop helps you see the pattern.</li>
+                <li>Your feedback loop helps you see the patterns.</li>
               </ul>
 
               <p className="mt-8 font-serif italic text-xl md:text-2xl text-foreground">
@@ -522,8 +522,8 @@ const LoseWeightAI = () => {
         <div className="container-narrow max-w-5xl relative">
           <Eyebrow>Every day</Eyebrow>
           <h2 className="mt-6 font-serif text-3xl md:text-5xl lg:text-6xl leading-[1.1] [text-wrap:balance]">
-            <span className="block">Most support checks in once a month.</span>
-            <span className="block italic text-primary">Your BFF helps you every day.</span>
+            <span className="block">When you hire support, they usually check in once a month.</span>
+            <span className="block italic text-primary">Your BFF is there every day.</span>
           </h2>
 
           <div className="mt-10 space-y-5 text-lg md:text-xl text-foreground/85 leading-relaxed">
