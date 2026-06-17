@@ -93,7 +93,7 @@ const faqs = [
 
 const CtaButton = ({
   onClick,
-  label = "Save my spot",
+  label = "Join the waitlist",
   size = "lg",
 }: {
   onClick: () => void;
@@ -110,9 +110,6 @@ const CtaButton = ({
     }`}
   >
     <span>{label}</span>
-    <span className="font-serif italic normal-case tracking-normal text-lg md:text-xl opacity-90">
-      · $69
-    </span>
     <span className="transition-transform group-hover:translate-x-1">→</span>
   </button>
 );
@@ -149,7 +146,7 @@ const StickyBar = ({ onClick }: { onClick: () => void }) => {
             onClick={onClick}
             className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#EBB7C2] text-[#0A0A0A] font-bold uppercase tracking-[0.2em] rounded-full text-[11px] md:text-xs hover:scale-[1.03] transition-transform shadow-lg"
           >
-            Save my spot · $69 →
+            Join the waitlist →
           </button>
         </div>
       </div>
@@ -285,14 +282,15 @@ const LoseWeightAI = () => {
     meta.setAttribute("content", desc);
   }, []);
 
-  const handleCheckout = () => {
-    window.open("https://buy.stripe.com/3cI5kC3V2cxJ3XC4XsaR201", "_blank", "noopener,noreferrer");
+  const handleWaitlist = () => {
+    const el = document.getElementById("bff-waitlist");
+    if (el) el.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <main className="min-h-screen bg-background overflow-hidden">
       <Nav />
-      <StickyBar onClick={handleCheckout} />
+      <StickyBar onClick={handleWaitlist} />
 
       {/* HERO, Blush */}
       <section className="theme-blush bg-background text-foreground relative pt-32 pb-20 md:pt-36 md:pb-28 px-6 overflow-hidden">
@@ -328,7 +326,7 @@ const LoseWeightAI = () => {
               </ul>
 
               <div className="mt-10">
-                <CtaButton onClick={handleCheckout} size="xl" />
+                <CtaButton onClick={handleWaitlist} size="xl" />
               </div>
               <p className="mt-3 font-mono text-[11px] md:text-xs uppercase tracking-[0.3em] text-foreground/70">
                 First invites open soon.
@@ -506,7 +504,7 @@ const LoseWeightAI = () => {
               </p>
 
               <div className="mt-10">
-                <CtaButton onClick={handleCheckout} label="Meet your BFF" size="xl" />
+                <CtaButton onClick={handleWaitlist} size="xl" />
               </div>
             </div>
             <div className="lg:col-span-5 flex justify-center py-8 lg:py-0">
@@ -671,7 +669,7 @@ const LoseWeightAI = () => {
           </p>
 
           <div className="mt-10">
-            <CtaButton onClick={handleCheckout} size="xl" />
+            <CtaButton onClick={handleWaitlist} size="xl" />
           </div>
         </div>
       </section>
@@ -839,7 +837,7 @@ const LoseWeightAI = () => {
               <em className="italic text-[#EBB7C2]">Now you have a better way to understand it.</em>
             </p>
             <div className="mt-8">
-              <CtaButton onClick={handleCheckout} size="xl" />
+              <CtaButton onClick={handleWaitlist} size="xl" />
             </div>
           </div>
         </div>
@@ -909,7 +907,7 @@ const LoseWeightAI = () => {
       </section>
 
       {/* WORKSHOP DETAILS, Paper */}
-      <section className="theme-paper bg-background text-foreground py-28 px-6">
+      <section id="bff-waitlist" className="theme-paper bg-background text-foreground py-28 px-6">
         <div className="container-narrow">
           <div className="text-center mb-12">
             <Eyebrow>Workshop details</Eyebrow>
@@ -923,11 +921,10 @@ const LoseWeightAI = () => {
             </p>
           </div>
 
-          <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+          <div className="mt-10 grid grid-cols-3 gap-4 md:gap-6">
             {[
               { l: "Date", v: "Soon", sub: "Coming" },
               { l: "Format", v: "Live", sub: "online" },
-              { l: "Price", v: "$69", sub: "One-time" },
               { l: "Spots", v: "Few", sub: "Limited" },
             ].map((d) => (
               <div
@@ -947,8 +944,8 @@ const LoseWeightAI = () => {
             ))}
           </div>
 
-          <div className="mt-12 text-center">
-            <CtaButton onClick={handleCheckout} size="xl" />
+          <div className="mt-12">
+            <div className="klaviyo-form-TdRwYR" />
           </div>
         </div>
       </section>
@@ -967,7 +964,7 @@ const LoseWeightAI = () => {
         <div className="container-narrow text-center relative z-10">
           <div className="inline-flex items-center gap-4 px-6 py-3 bg-[#EBB7C2] text-[#0A0A0A] rounded-full shadow-xl mb-8">
             <span className="font-mono uppercase tracking-[0.3em] font-bold text-xs md:text-sm">
-              AI Body Workshop · Coming Soon
+              Body Food Feedback Workshop · Coming Soon
             </span>
           </div>
           <h2 className="mt-2 font-serif text-4xl md:text-7xl leading-[1.05] text-white drop-shadow-lg">
@@ -983,7 +980,7 @@ const LoseWeightAI = () => {
           </p>
 
           <div className="mt-12">
-            <CtaButton onClick={handleCheckout} size="xl" />
+            <CtaButton onClick={handleWaitlist} size="xl" />
           </div>
           <p className="mt-5 font-mono text-[10px] md:text-xs uppercase tracking-[0.3em] text-white/70">
             First invites open soon.
