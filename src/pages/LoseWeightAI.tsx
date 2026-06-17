@@ -269,6 +269,94 @@ const BFFPhone = ({ className = "" }: { className?: string }) => (
   </div>
 );
 
+const WaitlistForm = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus("loading");
+    try {
+      const res = await fetch(
+        "https://a.klaviyo.com/client/subscriptions/?company_id=TPQB4A",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json", "revision": "2023-12-15" },
+          body: JSON.stringify({
+            data: {
+              type: "subscription",
+              attributes: {
+                profile: {
+                  data: {
+                    type: "profile",
+                    attributes: { email, first_name: name },
+                  },
+                },
+              },
+              relationships: {
+                list: { data: { type: "list", id: "QQMm5G" } },
+              },
+            },
+          }),
+        }
+      );
+      if (res.ok || res.status === 202) {
+        setStatus("success");
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
+  };
+
+  if (status === "success") {
+    return (
+      <div className="text-center py-10">
+        <p className="font-serif italic text-3xl md:text-4xl text-primary">You're on the list.</p>
+        <p className="mt-3 text-lg text-muted-foreground">I'll be in touch when the first invites go out.</p>
+      </div>
+    );
+  }
+
+  return (
+    <form onSubmit={handleSubmit} className="mt-10 max-w-2xl mx-auto">
+      <div className="flex flex-col sm:flex-row gap-3">
+        <input
+          type="text"
+          placeholder="First name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          required
+          className="flex-1 px-6 py-4 rounded-full bg-foreground/5 border-2 border-foreground/15 text-foreground placeholder:text-foreground/40 focus:outline-none focus:border-primary transition-colors text-base"
+        />
+        <input
+          type="email"
+          placeholder="Email address"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+          className="flex-1 px-6 py-4 rounded-full bg-foreground/5 border-2 border-foreground/15 text-foreground placeholder:text-foreground/40 focus:outline-none focus:border-primary transition-colors text-base"
+        />
+      </div>
+      <div className="mt-5 flex justify-center">
+        <button
+          type="submit"
+          disabled={status === "loading"}
+          className="group inline-flex items-center justify-center gap-3 bg-primary text-primary-foreground font-bold uppercase tracking-[0.18em] rounded-full px-10 py-5 text-sm hover:scale-[1.02] hover:opacity-95 transition-all shadow-2xl disabled:opacity-60"
+        >
+          <span>{status === "loading" ? "Joining..." : "Join the waitlist"}</span>
+          {status !== "loading" && <span className="transition-transform group-hover:translate-x-1">→</span>}
+        </button>
+      </div>
+      {status === "error" && (
+        <p className="mt-4 text-center text-sm text-red-400">Something went wrong — please try again.</p>
+      )}
+    </form>
+  );
+};
+
 const LoseWeightAI = () => {
   useEffect(() => {
     document.title = "AI Body Workshop — Reve AI";
@@ -880,32 +968,6 @@ const LoseWeightAI = () => {
         </div>
       </section>
 
-      {/* FAQ, Plum */}
-      <section className="theme-plum bg-background text-foreground py-28 px-6">
-        <div className="container-wide">
-          <div className="text-center mb-16">
-            <Eyebrow>FAQ</Eyebrow>
-            <h2 className="mt-6 font-serif text-4xl md:text-5xl">
-              Questions you might <em className="italic">have.</em>
-            </h2>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {faqs.map((f) => (
-              <details
-                key={f.q}
-                className="group border border-border rounded-2xl p-6 hover:border-primary transition-colors bg-card h-fit"
-              >
-                <summary className="font-serif text-lg md:text-xl cursor-pointer flex justify-between items-start list-none gap-4">
-                  <span>{f.q}</span>
-                  <span className="text-primary text-2xl group-open:rotate-45 transition-transform shrink-0 leading-none">+</span>
-                </summary>
-                <p className="mt-4 text-muted-foreground leading-relaxed text-sm md:text-base">{f.a}</p>
-              </details>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* WORKSHOP DETAILS, Paper */}
       <section id="bff-waitlist" className="theme-paper bg-background text-foreground py-28 px-6">
         <div className="container-narrow">
@@ -944,8 +1006,32 @@ const LoseWeightAI = () => {
             ))}
           </div>
 
-          <div className="mt-12">
-            <div className="klaviyo-form-TdRwYR" />
+          <WaitlistForm />
+        </div>
+      </section>
+
+      {/* FAQ, Plum */}
+      <section className="theme-plum bg-background text-foreground py-28 px-6">
+        <div className="container-wide">
+          <div className="text-center mb-16">
+            <Eyebrow>FAQ</Eyebrow>
+            <h2 className="mt-6 font-serif text-4xl md:text-5xl">
+              Questions you might <em className="italic">have.</em>
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {faqs.map((f) => (
+              <details
+                key={f.q}
+                className="group border border-border rounded-2xl p-6 hover:border-primary transition-colors bg-card h-fit"
+              >
+                <summary className="font-serif text-lg md:text-xl cursor-pointer flex justify-between items-start list-none gap-4">
+                  <span>{f.q}</span>
+                  <span className="text-primary text-2xl group-open:rotate-45 transition-transform shrink-0 leading-none">+</span>
+                </summary>
+                <p className="mt-4 text-muted-foreground leading-relaxed text-sm md:text-base">{f.a}</p>
+              </details>
+            ))}
           </div>
         </div>
       </section>
