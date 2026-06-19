@@ -2,7 +2,8 @@ import Nav from "@/components/site/Nav";
 import Hero from "@/components/site/Hero";
 import Ticker from "@/components/site/Ticker";
 import Problem from "@/components/site/Problem";
-import Services from "@/components/site/Services";
+import ThreeCards from "@/components/site/ThreeCards";
+import PopularBuilds from "@/components/site/PopularBuilds";
 import InPractice from "@/components/site/InPractice";
 import HowWeWork from "@/components/site/HowWeWork";
 import CaseStudies from "@/components/site/CaseStudies";
@@ -35,7 +36,8 @@ const Index = () => {
       <Hero />
       <Ticker />
       <Problem />
-      <Services />
+      <ThreeCards />
+      <PopularBuilds />
       <InPractice />
       <HowWeWork />
       <CaseStudies />
