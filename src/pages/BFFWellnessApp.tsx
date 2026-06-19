@@ -262,8 +262,10 @@ const BFFPhone = ({ className = "" }: { className?: string }) => (
         </div>
       </div>
     </div>
-    <div className="absolute -top-8 right-0 sm:-right-4 rotate-[4deg] bg-[#EBB7C2] text-[#0A0A0A] px-4 py-1.5 rounded-full font-mono text-[10px] uppercase tracking-[0.25em] shadow-xl whitespace-nowrap">
-      Wellness habit tracker
+    <div className="absolute -top-8 right-0 sm:-right-4 rotate-[4deg] bg-[#EBB7C2] text-[#0A0A0A] px-3 py-2 rounded-2xl font-mono text-[9px] uppercase tracking-[0.15em] shadow-xl text-center leading-tight">
+      <div>Wellness</div>
+      <div>habit</div>
+      <div>tracker</div>
     </div>
     <div className="absolute -top-4 left-0 sm:-left-4 rotate-[-8deg] bg-[#0A0A0A] text-[#F7F4EE] px-4 py-1.5 rounded-full font-mono text-[10px] uppercase tracking-[0.25em] shadow-xl">
       Body
