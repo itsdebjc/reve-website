@@ -1,36 +1,33 @@
 import Nav from "@/components/site/Nav";
 import Footer from "@/components/site/Footer";
 import HowWeWork from "@/components/site/HowWeWork";
+import { DoodleAccent } from "@/components/site/Doodles";
 import { CALENDLY_URL } from "@/lib/links";
 import heroBlossom from "@/assets/hero-cherry-blossom.jpg";
 import {
-  Sparkles,
-  Globe,
   CalendarCheck,
   Brain,
   PenTool,
   FileText,
   LayoutDashboard,
+  Sparkles,
 } from "lucide-react";
 
 const coreSystems = [
   {
-    icon: Sparkles,
+    n: "01",
     title: "The AI Marketing System",
-    tagline: "Your business knowledge turned into repeatable marketing workflows.",
+    italic: "Your business knowledge turned into repeatable marketing workflows.",
     body: "We capture your voice, offers, proof points, audience, content ideas and marketing rules, then build a system your team can use for content, campaigns, case studies, proposals and newsletters.",
-    bestFor:
-      "Businesses that want better marketing output without starting from scratch every time.",
+    bestFor: "Businesses that want better marketing output without starting from scratch every time.",
     cta: "Build my marketing system",
   },
   {
-    icon: Globe,
+    n: "02",
     title: "The AI Website System",
-    tagline:
-      "A clear, modern website with strong copy, SEO foundations and simple updates.",
+    italic: "A clear, modern website with strong copy, SEO foundations and simple updates.",
     body: "We build websites that explain what you do, who you help and why someone should choose you. The process is faster because we use AI-supported tools, but every decision is guided by strategy, taste and human review.",
-    bestFor:
-      "Service businesses that need a better website without a long traditional build.",
+    bestFor: "Service businesses that need a better website without a long traditional build.",
     cta: "Build my website system",
   },
 ];
@@ -40,22 +37,19 @@ const popularBuilds = [
     icon: CalendarCheck,
     title: "Founders AI Personal Assistant",
     body: "A personal AI assistant that helps organize your calendar, book meetings, set reminders, track notes and keep follow-ups from slipping through the cracks.",
-    bestFor:
-      "Founders, consultants and business owners who want less back-and-forth and fewer dropped balls.",
+    bestFor: "Founders, consultants and business owners who want less back-and-forth and fewer dropped balls.",
   },
   {
     icon: Brain,
     title: "The Marketing Brain",
     body: "Your voice, offers, audience, proof points, content ideas and marketing rules organized so AI can actually use them.",
-    bestFor:
-      "Anyone who wants stronger AI output, clearer messaging and less time repeating the same context.",
+    bestFor: "Anyone who wants stronger AI output, clearer messaging and less time repeating the same context.",
   },
   {
     icon: PenTool,
     title: "The Content Engine",
     body: "Plan, write and repurpose content without starting from scratch every time.",
-    bestFor:
-      "LinkedIn posts, newsletters, blogs, case studies, captions and campaign ideas.",
+    bestFor: "LinkedIn posts, newsletters, blogs, case studies, captions and campaign ideas.",
   },
   {
     icon: FileText,
@@ -67,15 +61,13 @@ const popularBuilds = [
     icon: LayoutDashboard,
     title: "The Business Health Dashboard",
     body: "See the signals. Know what needs attention. Decide what to do next. We design the dashboard around the data you already have — simple, semi-automated or connected depending on your tools and APIs.",
-    bestFor:
-      "Founders who want a clearer view of leads, sales, marketing, operations and priorities.",
+    bestFor: "Founders who want a clearer view of leads, sales, marketing, operations and priorities.",
   },
   {
     icon: Sparkles,
     title: "Your Custom Use Case",
     body: "Not sure which build fits? Tell us what's eating your time — admin, follow-ups, reporting, onboarding — and we'll design a small AI workflow around that exact problem.",
-    bestFor:
-      "Founders and teams with a specific bottleneck that doesn't fit a template.",
+    bestFor: "Founders and teams with a specific bottleneck that doesn't fit a template.",
   },
 ];
 
@@ -126,73 +118,53 @@ const Services = () => {
       </section>
 
       {/* Core Systems */}
-      <section id="core-systems" className="py-24 md:py-32 px-6 border-t border-border">
-        <div className="container-wide">
-          <div className="max-w-3xl mx-auto text-center mb-16 md:mb-20">
-            <span className="label-mono text-blush">— Services</span>
-            <h2 className="mt-6 font-serif text-4xl md:text-5xl text-foreground tracking-tight">
+      <section id="core-systems" className="relative isolate py-32 md:py-44 border-b border-hairline overflow-hidden">
+        <DoodleAccent className="top-24 left-[6%]" size={56} />
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="text-center mb-20">
+            <p className="label-eyebrow mb-6">— Services</p>
+            <h2 className="display-serif text-4xl md:text-6xl">
               Ways that we can{" "}
-              <em className="italic font-normal text-blush">build together.</em>
+              <span className="display-italic">build together.</span>
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 lg:gap-10">
-            {coreSystems.map((s, i) => {
-              const Icon = s.icon;
-              const num = String(i + 1).padStart(2, "0");
-              return (
-                <article
-                  key={s.title}
-                  className="group relative flex flex-col p-10 md:p-14 bg-gradient-to-br from-card/60 via-card/30 to-background border border-border rounded-sm overflow-hidden hover:border-blush/60 hover:shadow-[0_30px_80px_-30px_hsl(348_56%_82%/0.3)] transition-all duration-500"
+          <div className="grid md:grid-cols-2 gap-8">
+            {coreSystems.map((s) => (
+              <div
+                key={s.n}
+                className="relative border border-primary rounded-xl p-8 md:p-10 flex flex-col"
+              >
+                <p className="label-eyebrow mb-4 text-primary/80">{s.n}</p>
+                <h3 className="display-serif text-2xl md:text-3xl mb-3">{s.title}</h3>
+                <p className="font-serif italic text-primary text-base md:text-lg mb-4">
+                  {s.italic}
+                </p>
+                <div className="hairline w-10 mb-4" />
+                <p className="text-foreground/80 text-sm md:text-base mb-6 leading-relaxed flex-grow">
+                  {s.body}
+                </p>
+
+                <div>
+                  <p className="label-mono text-foreground/70 text-xs mb-4">Best for:</p>
+                  <ul className="space-y-2 mb-6">
+                    <li className="text-sm text-foreground/85 flex gap-3">
+                      <span className="text-primary mt-1 h-1 w-1 rounded-full flex-shrink-0" />
+                      <span>{s.bestFor}</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <a
+                  href={CALENDLY_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="label-mono text-foreground hover:text-primary w-fit"
                 >
-                  <span
-                    aria-hidden
-                    className="absolute -top-6 -right-4 font-serif italic text-[180px] md:text-[220px] leading-none text-blush/[0.06] group-hover:text-blush/[0.12] transition-colors duration-700 select-none pointer-events-none"
-                  >
-                    {num}
-                  </span>
-                  <span className="absolute top-0 left-0 h-[2px] w-16 bg-blush group-hover:w-32 transition-all duration-700" />
-
-                  <div className="relative flex items-center gap-4 mb-10">
-                    <div className="w-14 h-14 rounded-full bg-blush/15 border border-blush/40 flex items-center justify-center group-hover:bg-blush group-hover:border-blush transition-all duration-500">
-                      <Icon className="w-6 h-6 text-blush group-hover:text-ink transition-colors duration-500" strokeWidth={1.5} />
-                    </div>
-                  </div>
-
-                  <h3 className="relative font-serif text-3xl md:text-5xl text-foreground leading-[1.05] tracking-tight mb-6">
-                    {s.title}
-                  </h3>
-
-                  <p className="relative font-serif italic text-xl md:text-2xl text-blush leading-snug mb-8 pl-5 border-l-2 border-blush/60">
-                    {s.tagline}
-                  </p>
-
-                  <p className="relative text-foreground/85 leading-relaxed font-light text-base md:text-lg mb-10">
-                    {s.body}
-                  </p>
-
-                  <div className="relative mt-auto">
-                    <div className="inline-flex items-start gap-3 px-5 py-4 bg-background/60 border border-blush/20 rounded-sm mb-8 max-w-full">
-                      <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-blush whitespace-nowrap pt-1">
-                        Best for
-                      </span>
-                      <span className="text-sm text-foreground/90 leading-relaxed">
-                        {s.bestFor}
-                      </span>
-                    </div>
-                    <a
-                      href={CALENDLY_URL}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="group/cta inline-flex items-center gap-3 px-6 py-3 bg-blush text-ink font-mono text-xs uppercase tracking-[0.25em] rounded-sm hover:bg-pink-deep transition-colors"
-                    >
-                      {s.cta}
-                      <span aria-hidden className="transition-transform duration-300 group-hover/cta:translate-x-1">→</span>
-                    </a>
-                  </div>
-                </article>
-              );
-            })}
+                  {s.cta} →
+                </a>
+              </div>
+            ))}
           </div>
         </div>
       </section>
