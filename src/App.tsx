@@ -8,7 +8,7 @@ import Services from "./pages/Services.tsx";
 import CaseStudiesPage from "./pages/CaseStudiesPage.tsx";
 import Learning from "./pages/Learning.tsx";
 import Article from "./pages/Article.tsx";
-import LoseWeightAI from "./pages/LoseWeightAI.tsx";
+import BFFWellnessApp from "./pages/BFFWellnessApp.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -25,7 +25,7 @@ const App = () => (
           <Route path="/case-studies" element={<CaseStudiesPage />} />
           <Route path="/learning" element={<Learning />} />
           <Route path="/learning/:slug" element={<Article />} />
-          <Route path="/workshop" element={<LoseWeightAI />} />
+          <Route path="/workshop" element={<BFFWellnessApp />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

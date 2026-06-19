@@ -8,7 +8,7 @@ import debbieCollins from "@/assets/debbie-collins.jpeg";
 
 const marquee = [
   "Body. Food. Feedback.",
-  "Live AI workshop",
+  "Live AI wellness workshop",
   "Not another diet",
   "Not more willpower",
   "Built for midlife",
@@ -33,7 +33,7 @@ const motivational = [
 ];
 
 const learnItems = [
-  "Why midlife bodies need better feedback",
+  "Why midlife can make better feedback more useful",
   "How food timing and tiny habits can add up",
   "How to use body composition data without obsessing",
   "How to set up your BFF coach",
@@ -44,7 +44,7 @@ const learnItems = [
 const forYou = [
   "Your body changed and the old tricks are not working",
   "You are doing healthy things but not seeing clear progress",
-  "You feel like your weight, body fat or energy no longer makes sense",
+  "You feel like your weight, body composition or energy no longer makes sense",
   "You want to use AI in a practical way",
   "You are tired of guessing what to eat or change",
   "You want a simple system, not another strict plan",
@@ -71,20 +71,20 @@ const faqs = [
     a: "No. This is beginner-friendly. I will show you how to get started and exactly what to do.",
   },
   {
-    q: "Do I need a smart scale?",
-    a: "A body composition or smart scale makes the feedback more useful. You can still join and learn the system without one.",
-  },
-  {
     q: "Is this a diet?",
     a: "No. BFF is a feedback system. It helps you understand your patterns. No meal plan, no calorie counting.",
   },
   {
     q: "Will you tell me exactly what to eat?",
-    a: "No. I will show you how to use AI to support your own decisions based on your food notes, body data and real life.",
+    a: "No. I will show you how to use AI to support your own decisions based on your food notes, body data and real life. This is not a meal plan or medical nutrition therapy.",
   },
   {
     q: "Is this medical advice?",
-    a: "No. This workshop is educational and based on my personal system. It is not medical advice, diagnosis or treatment.",
+    a: "No. This workshop is educational and based on my personal wellness system. It is not medical advice, diagnosis, treatment or personalized medical nutrition therapy. Please speak with a qualified healthcare professional before making changes related to a medical condition, medication, hormones, pregnancy, diabetes, eating disorder history or other health concerns.",
+  },
+  {
+    q: "Will this help me lose weight?",
+    a: "The workshop teaches a feedback system that may support healthier weight-management habits. It does not promise or guarantee weight loss. The goal is to help you understand your own patterns so you can make better daily choices.",
   },
   {
     q: "Will I get the BFF coach?",
@@ -262,6 +262,9 @@ const BFFPhone = ({ className = "" }: { className?: string }) => (
         </div>
       </div>
     </div>
+    <div className="absolute -top-8 right-0 sm:-right-4 rotate-[4deg] bg-[#EBB7C2] text-[#0A0A0A] px-4 py-1.5 rounded-full font-mono text-[10px] uppercase tracking-[0.25em] shadow-xl whitespace-nowrap">
+      Wellness habit tracker
+    </div>
     <div className="absolute -top-4 left-0 sm:-left-4 rotate-[-8deg] bg-[#0A0A0A] text-[#F7F4EE] px-4 py-1.5 rounded-full font-mono text-[10px] uppercase tracking-[0.25em] shadow-xl">
       Body
     </div>
@@ -358,11 +361,15 @@ const WaitlistForm = () => {
       {status === "error" && (
         <p className="mt-4 text-center text-sm text-red-400">Something went wrong — please try again.</p>
       )}
+      <p className="mt-5 text-center text-xs text-muted-foreground leading-relaxed max-w-lg mx-auto">
+        By joining the waitlist, you agree to receive emails about the BFF Workshop and related updates from Reve AI. You can unsubscribe at any time. We respect your privacy and will handle your information according to our{" "}
+        <a href="/privacy" className="underline underline-offset-2 hover:text-foreground transition-colors">Privacy Policy</a>.
+      </p>
     </form>
   );
 };
 
-const LoseWeightAI = () => {
+const BFFWellnessApp = () => {
   useEffect(() => {
     document.title = "AI Body Workshop — Reve AI";
     const desc = "A practical AI body workshop for midlife women. Learn to use AI to see your patterns, stop guessing and understand what your body responds to now.";
@@ -404,16 +411,16 @@ const LoseWeightAI = () => {
                 <em className="italic text-primary">changed.</em>
               </h1>
               <p className="mt-4 font-serif text-2xl md:text-3xl lg:text-4xl text-foreground/85 italic leading-snug [text-wrap:balance]">
-                Now learn what it responds to.
+                Now learn what your patterns are showing you.
               </p>
 
               <p className="mt-8 text-lg md:text-xl text-foreground/80 max-w-xl leading-relaxed [text-wrap:balance]">
-                A live AI body workshop for midlife women who are done guessing.
+                <span className="font-bold underline underline-offset-4 decoration-primary decoration-2">A live AI wellness workshop</span> for midlife women who are done guessing.
               </p>
 
               <div className="mt-6 space-y-4 text-lg md:text-xl text-foreground/80 max-w-xl leading-relaxed">
                 <p>I'll teach you the Body Food Feedback system I used to understand my patterns, make better daily choices and stop starting over.</p>
-                <p>After the workshop, you'll get access to your BFF coach so you can start using the system in your own life.</p>
+                <p>After the workshop, you'll get access to your BFF coach so you can keep using the system in your own life.</p>
               </div>
 
               <ul className="mt-8 space-y-2 font-serif text-xl md:text-2xl text-foreground/90">
@@ -434,7 +441,7 @@ const LoseWeightAI = () => {
               <div className="relative w-full max-w-sm sm:max-w-md">
                 <div className="absolute -top-6 right-2 md:right-6 z-20">
                   <div className="bg-[#0A0A0A] text-[#F7F4EE] px-6 py-3 rounded-full font-serif text-lg md:text-xl shadow-xl flex items-center gap-2">
-                    Hi, I'm Deb. I created this because I needed it. <span className="text-[#EBB7C2] text-xl">✦</span>
+                    Hi, I'm Deb. Creator of BFF. <span className="text-[#EBB7C2] text-xl">✦</span>
                   </div>
                 </div>
                 <div className="relative w-full aspect-[3/4] overflow-hidden rounded-t-full border border-primary/40 shadow-2xl">
@@ -493,13 +500,13 @@ const LoseWeightAI = () => {
               { e: "🏋️‍♀️", t: "Gym 4x a week" },
               { e: "🚶‍♀️", t: "Daily walking" },
               { e: "💧", t: "Drinking water" },
-              { e: "🌸", t: "Hormones" },
+              { e: "🌸", t: "HRT (through my naturopath)" },
               { e: "🥩", t: "More protein" },
               { e: "🧘‍♀️", t: "Meditating" },
               { e: "🥗", t: "Eating well" },
             ].map((item) => (
-              <li key={item.t} className="flex items-center gap-2 border border-[hsl(348_56%_82%)]/25 rounded-full px-3 py-2 text-center text-[hsl(40_27%_95%)]/90 justify-center">
-                <span className="text-xl leading-none">{item.e}</span>
+              <li key={item.t} className="flex items-center gap-2 border border-[hsl(348_56%_82%)]/25 rounded-full px-3 py-2.5 text-center text-[hsl(40_27%_95%)]/90 justify-center">
+                <span className="text-3xl leading-none">{item.e}</span>
                 <span className="text-sm md:text-base">{item.t}</span>
               </li>
             ))}
@@ -525,7 +532,7 @@ const LoseWeightAI = () => {
           <Eyebrow>The shift</Eyebrow>
           <h2 className="mt-6 font-serif text-4xl md:text-6xl leading-[1.05]">
             Your body has changed.{" "}
-            <em className="italic text-primary">So the old tricks do not work the same way anymore.</em>
+            <em className="italic text-primary">So the old tricks may not work the same way anymore.</em>
           </h2>
 
           <div className="mt-12 grid md:grid-cols-2 gap-5 md:gap-6">
@@ -546,30 +553,30 @@ const LoseWeightAI = () => {
             <div className="relative rounded-3xl border-2 border-primary bg-primary/10 p-6 md:p-8 shadow-xl">
               <div className="font-mono text-[10px] uppercase tracking-[0.3em] text-primary">Now</div>
               <div className="mt-3 font-serif text-2xl md:text-3xl leading-snug text-primary">
-                Pattern in → response out
+                Pattern in → feedback out
               </div>
               <div className="mt-6 flex items-center gap-3">
                 <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-primary/70 border border-primary/20 px-3 py-1.5 rounded-full">Pattern</span>
                 <span className="text-primary/30">→</span>
-                <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-primary/70 border border-primary/20 px-3 py-1.5 rounded-full">Response</span>
+                <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-primary/70 border border-primary/20 px-3 py-1.5 rounded-full">Feedback</span>
               </div>
               <p className="mt-5 text-sm md:text-base text-foreground/80 italic">
-                Your body responds to patterns, not punishment.
+                The answer may not be more force. It may be better feedback.
               </p>
             </div>
           </div>
 
           <div className="mt-12 space-y-5 text-lg md:text-xl text-foreground/85 leading-relaxed">
-            <p>Midlife can change how your body responds.</p>
+            <p>Midlife can change how your body feels, functions and responds to everyday habits.</p>
             <p>
-              Food, timing, stress, sleep, hormones, movement and tiny daily habits can all start
+              Food, timing, stress, sleep, hormones, movement and tiny daily choices can all start
               showing up differently.
             </p>
             <p className="font-serif italic text-2xl md:text-3xl text-foreground">
               The goal is not to punish yourself.
             </p>
             <p className="font-serif italic text-2xl md:text-3xl text-primary">
-              The goal is to learn what your body responds to now.
+              The goal is to learn from your own patterns now.
             </p>
           </div>
         </div>
@@ -592,18 +599,18 @@ const LoseWeightAI = () => {
               </p>
               <div className="mt-6 space-y-4 text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl">
                 <p>BFF is the simple system I'll teach you in the workshop.</p>
-                <p>It helps you connect what you are doing with what your body is showing you.</p>
+                <p>It helps you connect your daily habits, food notes and body data so you can start seeing useful patterns.</p>
               </div>
 
               <ul className="mt-8 space-y-2 font-serif text-xl md:text-2xl text-foreground/90">
-                <li>Your body gives you signals.</li>
-                <li>Your food gives you clues.</li>
+                <li>Your body data gives you signals.</li>
+                <li>Your food notes give you clues.</li>
                 <li>Your feedback loop helps you see the pattern.</li>
               </ul>
 
               <div className="mt-8 space-y-3 font-serif italic text-xl md:text-2xl text-foreground">
                 <p>First, you learn the system.</p>
-                <p className="text-primary">Then you get access to the BFF coach so you can use it after the workshop.</p>
+                <p className="text-primary">Then you get access to the BFF coach so you can keep using the system after the workshop.</p>
               </div>
 
               <div className="mt-10">
@@ -713,27 +720,29 @@ const LoseWeightAI = () => {
               </h2>
 
               <p className="mt-6 text-lg md:text-xl text-muted-foreground leading-relaxed">
-                In three months, I:
+                In three months, my body composition data changed in a way I had been trying to create for years.
               </p>
 
               <ul className="mt-6 space-y-3 font-serif text-xl md:text-2xl text-foreground/90">
                 <li className="flex gap-3"><span className="text-primary">—</span> lost 7.8 lbs total</li>
                 <li className="flex gap-3"><span className="text-primary">—</span> reduced 7 lbs of body fat</li>
-                <li className="flex gap-3"><span className="text-primary">—</span> lowered body fat from 32.3% to 25.7%</li>
-                <li className="flex gap-3"><span className="text-primary">—</span> supported muscle while losing fat</li>
+                <li className="flex gap-3"><span className="text-primary">—</span> body fat percentage moved from 32.3% to 25.7%</li>
+                <li className="flex gap-3"><span className="text-primary">—</span> kept an eye on muscle data while losing fat</li>
               </ul>
 
               <div className="mt-8 space-y-4 text-lg md:text-xl text-muted-foreground leading-relaxed">
                 <p>But the biggest change was not the number.</p>
                 <p className="text-foreground font-serif italic text-2xl md:text-3xl">
-                  The biggest change was that I finally understood what was working.
+                  It was finally seeing the pattern.
                 </p>
               </div>
 
               <p className="mt-8 text-sm md:text-base text-muted-foreground italic leading-relaxed border-l-2 border-primary/40 pl-4">
-                Your results will be different because your body, food, habits and data are different.
-                That is the point. This workshop is not about copying my exact plan. It is about
-                learning your own pattern.
+                This was my personal experience using my own body data, food notes and feedback system.
+                <br /><br />
+                Your results will be different because your body, health, habits, consistency and data are different.
+                <br /><br />
+                This workshop is not about copying my exact plan. It is about learning how to read your own patterns.
               </p>
             </div>
           </div>
@@ -749,7 +758,7 @@ const LoseWeightAI = () => {
             <em className="italic text-primary">how it works.</em>
           </h2>
           <div className="mt-6 space-y-4 text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-            <p>You'll learn how I used AI, simple food notes and body composition data to understand what my body was responding to.</p>
+            <p>You'll learn how I used AI, simple food notes and body composition data to understand the patterns that seemed to affect my results.</p>
             <p>This is a teaching session first. The BFF coach comes after, so you can use the system yourself.</p>
           </div>
 
@@ -794,7 +803,7 @@ const LoseWeightAI = () => {
                 <p>This is not about tracking every bite forever.</p>
                 <p>It is about learning what matters, what does not and what to adjust.</p>
                 <p className="font-serif italic text-2xl md:text-3xl text-foreground">
-                  Once you can see the pattern, you can make better choices without starting over every
+                  Once you can see the pattern, it becomes easier to make better choices without starting over every
                   Monday.
                 </p>
               </div>
@@ -863,8 +872,7 @@ const LoseWeightAI = () => {
                 ))}
               </ul>
               <p className="mt-8 text-sm md:text-base text-muted-foreground italic leading-relaxed border-l-2 border-primary/40 pl-4">
-                This is not medical advice. It is a practical AI feedback system to help you
-                understand your own patterns.
+                This is not medical advice. It is a practical AI wellness feedback system to help you organize your notes, understand your patterns and make more informed daily choices.
               </p>
             </div>
           </div>
@@ -889,7 +897,7 @@ const LoseWeightAI = () => {
             <li>Things we meant to remember.</li>
           </ul>
           <p className="mt-8 text-lg md:text-xl text-[hsl(40_27%_95%)]/85 leading-relaxed">
-            AI helps bring it together so you can see the pattern and choose one smart next step.
+            AI helps organize those notes and trends so you can see the pattern, ask better questions and choose one reasonable next step.
           </p>
           <p className="mt-6 font-serif italic text-2xl md:text-3xl text-[hsl(348_56%_82%)]">
             That is the point of your BFF coach.
@@ -936,7 +944,7 @@ const LoseWeightAI = () => {
           <div className="container-narrow w-full pb-12 md:pb-16 px-6">
             <p className="font-serif italic text-2xl md:text-6xl text-white max-w-3xl drop-shadow-lg leading-[1.05]">
               Your body has changed.{" "}
-              <em className="italic text-[#EBB7C2]">Now you have a better way to understand it.</em>
+              <em className="italic text-[#EBB7C2]">Now you have a better way to learn from it.</em>
             </p>
             <div className="mt-8">
               <CtaButton onClick={handleWaitlist} size="xl" />
@@ -966,7 +974,7 @@ const LoseWeightAI = () => {
                 </p>
                 <p>And still, midlife changed the rules.</p>
                 <p>
-                  So I built BFF: a simple way to use AI, body data and food notes to finally see
+                  So I built BFF: a simple way to use AI, body data and food notes to start seeing
                   the pattern.
                 </p>
               </div>
@@ -992,7 +1000,7 @@ const LoseWeightAI = () => {
               Join the <em className="italic text-primary">live workshop.</em>
             </h2>
             <div className="mt-6 max-w-2xl mx-auto space-y-4 text-lg md:text-xl text-muted-foreground leading-relaxed">
-              <p>I'll walk you through the Body Food Feedback system I created to stop guessing and start understanding what my body responds to now.</p>
+              <p>I'll walk you through the Body Food Feedback system I created to stop guessing and start learning from my own body data, food notes and daily habits.</p>
               <p>You'll learn how the system works, what data to bring and how to start using your BFF coach after the workshop.</p>
             </div>
           </div>
@@ -1075,7 +1083,7 @@ const LoseWeightAI = () => {
             Meet your BFF.
           </p>
           <p className="mt-6 text-white/85 max-w-2xl mx-auto text-lg md:text-xl drop-shadow leading-relaxed">
-            Join the live AI body workshop. Learn the system first, then get access to your BFF coach so you can stop guessing and start learning what your body responds to now.
+            Join the live AI wellness workshop. Learn the system first, then get access to your BFF coach so you can stop guessing and start learning from your own patterns.
           </p>
 
           <div className="mt-12">
@@ -1087,9 +1095,16 @@ const LoseWeightAI = () => {
         </div>
       </section>
 
+      {/* Footer disclaimer */}
+      <div className="bg-background border-t border-foreground/10 py-6 px-6">
+        <p className="container-narrow text-center text-xs text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+          BFF is a wellness education workshop and AI-supported feedback system. It is not medical advice, diagnosis, treatment or personalized medical nutrition therapy. Results vary. Body composition data is estimated and should be used for trend awareness only.
+        </p>
+      </div>
+
       <Footer />
     </main>
   );
 };
 
-export default LoseWeightAI;
+export default BFFWellnessApp;
