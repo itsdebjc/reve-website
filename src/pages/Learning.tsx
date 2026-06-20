@@ -10,7 +10,7 @@ const Learning = () => {
   useEffect(() => {
     document.title = "Learning — Reve AI";
     const desc =
-      "The AI Signal: practical insights on how expert-led teams are using AI to make marketing stronger, faster, and more consistent.";
+      "The Build: what we're learning, building and sharing about AI in the real world.";
     let meta = document.querySelector('meta[name="description"]');
     if (!meta) {
       meta = document.createElement("meta");
@@ -36,11 +36,10 @@ const Learning = () => {
         <div className="mx-auto max-w-5xl px-6 text-center">
           <p className="label-eyebrow mb-6">— Learning</p>
           <h1 className="display-serif text-5xl md:text-7xl mb-8 leading-[1.05]">
-            The <span className="display-italic">AI Signal.</span>
+            The <span className="display-italic">Build.</span>
           </h1>
           <p className="text-foreground/75 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-            News, frameworks, and practical insights from the front lines of AI
-            marketing — for teams that want to use it well.
+            What we're learning, building and sharing about AI in the real world.
           </p>
           <p className="label-mono text-foreground/55 mt-8">By The Reve Team</p>
         </div>
@@ -50,10 +49,7 @@ const Learning = () => {
       <section className="py-14 border-b border-hairline bg-surface text-center">
         <div className="mx-auto max-w-3xl px-6">
           <p className="font-serif italic text-2xl md:text-3xl text-foreground/85 leading-snug">
-            Your go-to guide for AI, brand, and marketing systems.
-          </p>
-          <p className="label-mono text-foreground/55 mt-3">
-            Practical thinking for teams that want to grow smarter.
+            Practical thinking for service businesses that want to use AI well.
           </p>
         </div>
       </section>
@@ -101,7 +97,7 @@ const Learning = () => {
         <div className="mx-auto max-w-6xl px-6">
           <div className="flex items-end justify-between mb-12 flex-wrap gap-4">
             <h2 className="display-serif text-3xl md:text-4xl">
-              More from <span className="display-italic">the signal.</span>
+              More from <span className="display-italic">the build.</span>
             </h2>
             <p className="label-mono text-foreground/55">All Articles →</p>
           </div>
@@ -149,7 +145,7 @@ const Learning = () => {
         <div className="mx-auto max-w-3xl px-6 text-center">
           <p className="label-eyebrow mb-6">— Subscribe</p>
           <h2 className="display-serif text-3xl md:text-5xl mb-6">
-            Get The Signal{" "}
+            Get The Build{" "}
             <span className="display-italic">in your inbox.</span>
           </h2>
           <p className="text-foreground/75 leading-relaxed max-w-xl mx-auto mb-10">
