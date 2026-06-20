@@ -16,9 +16,9 @@ const Hero = () => {
         <p className="label-eyebrow mb-10">— AI Consultancy · 2026</p>
 
         <h1 className="display-serif text-4xl sm:text-5xl md:text-7xl lg:text-[6.5rem] text-foreground leading-tight">
-          Marketing is hard.
+          We build AI systems.
           <br />
-          <span className="display-italic">We make it easier.</span>
+          <span className="display-italic">Your team will love.</span>
         </h1>
 
         <p className="mt-8 text-foreground/75 text-base md:text-lg leading-relaxed max-w-xl">
