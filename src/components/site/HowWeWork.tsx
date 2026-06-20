@@ -6,33 +6,33 @@ const steps = [
     number: "1",
     label: "Step 1",
     Icon: Search,
-    title: "We map what you have",
+    title: "Discover",
     description:
-      "We look at your website, tools, content, workflows and the work that keeps slowing you down.",
+      "We look at your current marketing, your AI usage and where the gaps are.",
   },
   {
     number: "2",
     label: "Step 2",
     Icon: Lightbulb,
-    title: "We find the useful AI opportunities",
+    title: "Define",
     description:
-      "We identify what is repetitive, scattered, manual or living in someone's head.",
+      "We build the foundation. Brand intelligence, messaging, voice, proof points and content inputs.",
   },
   {
     number: "3",
     label: "Step 3",
     Icon: Wrench,
-    title: "We build the system",
+    title: "Build",
     description:
-      "We create the AI website, marketing system, assistant or workflow your business actually needs.",
+      "We create the workflows your team needs and set them up so they are usable from day one.",
   },
   {
     number: "4",
     label: "Step 4",
     Icon: GraduationCap,
-    title: "We train you to use it",
+    title: "Improve",
     description:
-      "You get the prompts, templates and process so the system keeps working after launch.",
+      "We refine the system over time so it keeps working as your business evolves.",
   },
 ];
 
