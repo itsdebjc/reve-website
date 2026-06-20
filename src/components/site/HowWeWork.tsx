@@ -6,17 +6,17 @@ const steps = [
     number: "1",
     label: "Step 1",
     Icon: Search,
-    title: "Discover",
+    title: "Capture",
     description:
-      "We look at your current marketing, your AI usage and where the gaps are.",
+      "We learn how your business thinks. Voice, offers, proof points, audience and what is working and what is not.",
   },
   {
     number: "2",
     label: "Step 2",
     Icon: Lightbulb,
-    title: "Define",
+    title: "Design",
     description:
-      "We build the foundation. Brand intelligence, messaging, voice, proof points and content inputs.",
+      "We map the workflows and decide what to build first based on where you will get the most traction.",
   },
   {
     number: "3",
@@ -24,15 +24,15 @@ const steps = [
     Icon: Wrench,
     title: "Build",
     description:
-      "We create the workflows your team needs and set them up so they are usable from day one.",
+      "We create the system, whether that is a website, a marketing brain, a content engine or a custom workflow.",
   },
   {
     number: "4",
     label: "Step 4",
     Icon: GraduationCap,
-    title: "Improve",
+    title: "Launch",
     description:
-      "We refine the system over time so it keeps working as your business evolves.",
+      "We hand it off properly. You leave with the templates, workflows and training so the system actually gets used from day one.",
   },
 ];
 
