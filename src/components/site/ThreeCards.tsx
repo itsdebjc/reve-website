@@ -36,8 +36,8 @@ const ThreeCards = () => {
         <div className="max-w-3xl mx-auto text-center mb-16 md:mb-20">
           <span className="label-mono text-blush">— Services</span>
           <h2 className="mt-6 font-serif text-4xl md:text-5xl text-foreground tracking-tight">
-            Ways that we can{" "}
-            <em className="italic font-normal text-blush">build together.</em>
+            Pick your{" "}
+            <em className="italic font-normal text-blush">starting point.</em>
           </h2>
         </div>
 

@@ -13,8 +13,8 @@ const FinalCTA = () => {
           — Start Here
         </p>
         <h2 className="display-serif text-3xl md:text-5xl mb-5 text-[hsl(0_0%_0%)]">
-          Ready to build the right AI setup{" "}
-          <span className="display-italic !text-[hsl(0_0%_0%)]">for your business?</span>
+          Let's figure out{" "}
+          <span className="display-italic !text-[hsl(0_0%_0%)]">where to start.</span>
         </h2>
         <p className="text-base md:text-lg max-w-xl mx-auto leading-relaxed text-[hsl(0_0%_0%)]">
           Let's talk about where you are, what your team needs and which service makes the most sense.

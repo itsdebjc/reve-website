@@ -30,7 +30,7 @@ const FAQ = () => {
         <div>
           <p className="label-eyebrow mb-6">— FAQ</p>
           <h2 className="display-serif text-4xl md:text-5xl leading-tight">
-            Frequently asked <span className="display-italic">questions.</span>
+            The questions we <span className="display-italic">hear most.</span>
           </h2>
           <a
             href="#cta"

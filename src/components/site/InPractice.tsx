@@ -13,7 +13,7 @@ const InPractice = () => {
         <div className="md:border-r md:border-hairline md:pr-12">
           <p className="label-eyebrow mb-6">— In Practice</p>
           <h2 className="display-serif text-3xl md:text-5xl">
-            This is where teams <span className="display-italic">see the shift.</span>
+            What changes when <span className="display-italic">the system works.</span>
           </h2>
         </div>
 

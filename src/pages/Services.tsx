@@ -124,8 +124,8 @@ const Services = () => {
           <div className="text-center mb-20">
             <p className="label-eyebrow mb-6">— Services</p>
             <h2 className="display-serif text-4xl md:text-6xl">
-              Ways that we can{" "}
-              <span className="display-italic">build together.</span>
+              Pick your{" "}
+              <span className="display-italic">starting point.</span>
             </h2>
           </div>
 
