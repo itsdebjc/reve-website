@@ -32,8 +32,7 @@ const CaseStudies = () => {
         <div className="text-center mb-16">
           <p className="label-eyebrow mb-6">— Case Studies</p>
           <h2 className="display-serif text-4xl md:text-5xl leading-tight max-w-3xl mx-auto">
-            See how we help teams turn scattered marketing into{" "}
-            <span className="display-italic">stronger output.</span>
+            What we <span className="display-italic">built together.</span>
           </h2>
         </div>
 
