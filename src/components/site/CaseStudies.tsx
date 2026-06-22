@@ -17,9 +17,9 @@ const cases = [
     image: heroFlowers,
   },
   {
-    tag: "Client Content",
-    title: "Build consistent client-facing content",
-    body: "Set up writing rules and content inputs that match how the team actually thinks.",
+    tag: "AI Website System",
+    title: "From Webflow to fully custom in under a week",
+    body: "A founder-led consultancy moved off a rigid platform and launched a custom site with clear messaging and SEO foundations. They now update copy, add features and manage integrations like Klaviyo via API — no developer needed.",
     image: footerHills,
   },
 ];
