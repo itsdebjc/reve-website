@@ -13,16 +13,16 @@ const Hero = () => {
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/50 via-background/40 to-background" />
 
       <div className="mx-auto w-full max-w-5xl px-6 md:px-10 pt-24 pb-16 fade-up">
-        <p className="label-eyebrow mb-10">— AI Consultancy · 2026</p>
+        <p className="label-eyebrow mb-10">— AI Systems Studio</p>
 
         <h1 className="display-serif text-4xl sm:text-5xl md:text-7xl lg:text-[6.5rem] text-foreground leading-tight">
-          We build AI systems.
+          Turn scattered work into AI systems
           <br />
-          <span className="display-italic">Your team will love.</span>
+          <span className="display-italic">your team will actually use.</span>
         </h1>
 
         <p className="mt-8 text-foreground/75 text-base md:text-lg leading-relaxed max-w-xl">
-          We bring your ideas, content, tools and workflows into one clear setup so AI can help you create faster, stay consistent and spend less time fixing everything.
+          We build practical AI systems for marketing, websites, dashboards and workflows, so your team can create faster, stay consistent and spend less time fixing almost-right output.
         </p>
 
         <div className="mt-12 flex flex-row gap-6 items-center flex-wrap">

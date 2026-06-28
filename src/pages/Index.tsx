@@ -3,9 +3,8 @@ import Hero from "@/components/site/Hero";
 import Ticker from "@/components/site/Ticker";
 import Problem from "@/components/site/Problem";
 import ThreeCards from "@/components/site/ThreeCards";
-import PopularBuilds from "@/components/site/PopularBuilds";
 import InPractice from "@/components/site/InPractice";
-import HowWeWork from "@/components/site/HowWeWork";
+import Method from "@/components/site/Method";
 import CaseStudies from "@/components/site/CaseStudies";
 import Testimonial from "@/components/site/Testimonial";
 import Founder from "@/components/site/Founder";
@@ -37,9 +36,8 @@ const Index = () => {
       <Ticker />
       <Problem />
       <ThreeCards />
-      <PopularBuilds />
       <InPractice />
-      <HowWeWork />
+      <Method />
       <CaseStudies />
       <Testimonial />
       <Founder />

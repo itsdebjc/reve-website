@@ -2,7 +2,7 @@ const Testimonial = () => {
   return (
     <section className="py-32 md:py-44 border-b border-hairline bg-[#F7F4EE]">
       <div className="mx-auto max-w-4xl px-6 text-center">
-        <p className="label-eyebrow mb-8">— Testimonial</p>
+        <p className="label-eyebrow mb-8">— Client Words</p>
         <h2 className="display-serif text-4xl md:text-6xl mb-14 text-[#1C1917]">
           Clients come to us for <span className="display-italic">clarity.</span>
         </h2>

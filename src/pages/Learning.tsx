@@ -39,9 +39,11 @@ const Learning = () => {
             The <span className="display-italic">Build.</span>
           </h1>
           <p className="text-foreground/75 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-            What we're learning, building and sharing about AI in the real world.
+            What we are learning, building and testing with AI in the real world.
           </p>
-          <p className="label-mono text-foreground/55 mt-8">By The Reve Team</p>
+          <p className="label-mono text-foreground/55 mt-4">
+            Practical thinking for service businesses, founders and small teams that want to use AI well.
+          </p>
         </div>
       </section>
 
@@ -49,7 +51,7 @@ const Learning = () => {
       <section className="py-14 border-b border-hairline bg-surface text-center">
         <div className="mx-auto max-w-3xl px-6">
           <p className="font-serif italic text-2xl md:text-3xl text-foreground/85 leading-snug">
-            Practical thinking for service businesses that want to use AI well.
+            Practical thinking for service businesses, founders and small teams that want to use AI well.
           </p>
         </div>
       </section>
@@ -149,8 +151,7 @@ const Learning = () => {
             <span className="display-italic">in your inbox.</span>
           </h2>
           <p className="text-foreground/75 leading-relaxed max-w-xl mx-auto mb-10">
-            One short email a month. Frameworks, case studies, and the things
-            we're seeing inside teams using AI well.
+            One short email a month with frameworks, case studies and notes from inside real AI builds. No hype. No tool-chasing. Just useful thinking on how to make AI work inside a real business.
           </p>
           <form
             className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto"

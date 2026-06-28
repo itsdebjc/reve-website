@@ -1,9 +1,11 @@
 const items = [
   "Turning a one-hour client call into a full case study the same day",
-  "Cutting proposal writing time from hours down to under one hour",
+  "Cutting proposal writing time from hours to under one hour",
   "Turning weekly meetings into consistent thought leadership",
   "Getting a week of content done in a single working session",
-  "Producing marketing without rewriting everything multiple times",
+  "Seeing what is working without digging through five tools",
+  "Updating your website without waiting on a developer",
+  "Producing marketing without rewriting everything three times",
 ];
 
 const InPractice = () => {
@@ -11,9 +13,9 @@ const InPractice = () => {
     <section className="py-32 md:py-44 border-b border-hairline">
       <div className="mx-auto max-w-6xl px-6 grid md:grid-cols-[1fr_2fr] gap-12 md:gap-20">
         <div className="md:border-r md:border-hairline md:pr-12">
-          <p className="label-eyebrow mb-6">— In Practice</p>
+          <p className="label-eyebrow mb-6">— What Changes</p>
           <h2 className="display-serif text-3xl md:text-5xl">
-            What changes when <span className="display-italic">the system works.</span>
+            What happens when <span className="display-italic">the system works.</span>
           </h2>
         </div>
 

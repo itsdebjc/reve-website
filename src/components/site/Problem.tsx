@@ -7,20 +7,32 @@ const Problem = () => {
       <div className="mx-auto max-w-4xl px-6 text-center">
         <div className="flex items-center justify-center gap-4 mb-12">
           <span className="hairline w-10" />
-          <span className="label-eyebrow">The Problem</span>
+          <span className="label-eyebrow">— The Problem</span>
           <span className="hairline w-10" />
         </div>
 
         <h2 className="display-serif text-4xl md:text-6xl text-foreground">
-          Most founders are already using AI.{" "}
-          <span className="display-italic">Very few have the right setup behind it.</span>
+          Almost right is{" "}
+          <span className="display-italic">still too much work.</span>
         </h2>
 
-        <p className="mt-10 text-foreground/85 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
-          The tool is not the problem. The setup is. Without the right foundation, brand
-          voice, clear direction, and repeatable workflows, AI output looks almost right.
-          Almost right still means fixing everything before it goes out.
-        </p>
+        <div className="mt-10 text-foreground/85 text-base md:text-lg max-w-2xl mx-auto leading-relaxed space-y-4 text-left md:text-center">
+          <p>Most teams are already using AI.</p>
+          <p className="text-foreground/65">
+            But the output still needs rewriting.
+            <br />
+            The voice is close but not quite right.
+            <br />
+            The strategy is missing.
+            <br />
+            The customer insight is not baked in.
+            <br />
+            The workflow does not match how the business actually works.
+          </p>
+          <p>That is not leverage.</p>
+          <p>That is another thing to fix.</p>
+          <p>The tool is not the problem. The system underneath it is.</p>
+        </div>
       </div>
     </section>
   );

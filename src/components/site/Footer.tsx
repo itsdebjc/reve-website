@@ -39,10 +39,10 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="text-center md:text-left">
               <p className="text-foreground/55">
-                © 2026 REVE AI · SITE BUILT WITH AI BY REVE
+                © 2026 Reve AI · Site built with AI by Reve
               </p>
               <p className="text-foreground/55 text-sm mt-1">
-                Located in Beautiful British Columbia
+                Located in beautiful British Columbia
               </p>
             </div>
             <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3">

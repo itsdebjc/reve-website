@@ -8,16 +8,24 @@ import { DoodleAccent } from "./Doodles";
 
 const faqs = [
   {
-    q: "What is an AI marketing system?",
-    a: "The setup behind the work: brand voice, content direction, tools, workflows, and training that help your team use AI well and consistently.",
+    q: "What is an AI system?",
+    a: "The setup behind the work. It captures your voice, offers, audience, proof, tools and workflows so your team can use AI with more consistency.",
   },
   {
     q: "How is this different from AI consulting?",
-    a: "We do not just advise. We build the system or run an AI Strategy Session — both are hands-on and built around your business, not generic frameworks.",
+    a: "We do not just advise. We help organize the business knowledge, design the workflow and build the system your team can actually use.",
   },
   {
     q: "What kinds of businesses do you work with?",
-    a: "Founder-led service businesses: agencies, consultancies, creative and digital firms. If your team creates value through thinking, writing and client delivery, this is built for you.",
+    a: "Founder-led service businesses, agencies, consultants, creative firms, e-commerce brands and growing teams that need clearer systems for marketing, content, websites, reporting or operations.",
+  },
+  {
+    q: "Do we need to know exactly what we want before we call?",
+    a: "No. Most clients come to us with a mix of problems. We help you decide what needs to be fixed first, what can wait and which system will create the most useful movement.",
+  },
+  {
+    q: "Is this all automated?",
+    a: "No. AI helps speed up the work, but the strategy, structure and judgment are human. The goal is not to remove people. The goal is to give them better systems.",
   },
 ];
 

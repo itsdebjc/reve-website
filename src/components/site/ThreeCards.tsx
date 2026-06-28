@@ -1,28 +1,39 @@
 import { Link } from "react-router-dom";
-import { Sparkles, Globe } from "lucide-react";
+import { Sparkles, LayoutDashboard, Globe, ArrowUpRight } from "lucide-react";
+import ecommerceDashboardExample from "@/assets/ecommerce-dashboard-example.png.asset.json";
+import marketingAsset from "@/assets/system-marketing.jpg.asset.json";
+import websiteImage from "@/assets/system-website.jpg";
 
 const systems = [
   {
+    num: "01",
     icon: Sparkles,
-    title: "The AI Build",
+    title: "Marketing Clarity Systems",
     tagline:
-      "A custom AI marketing system built around how your business thinks.",
-    body: "A custom build for businesses that want to use AI more consistently in their marketing. We capture how your business thinks, sounds and sells, then build the workflows your team uses every day.",
-    bestFor:
-      "Founders experimenting with AI who want a system their team can actually use without them in the middle.",
-    cta: "Learn more",
-    href: "/services",
+      "Turn scattered ideas, offers and content into a system your team can actually use.",
+    href: "/services#cat-01",
+    image: marketingAsset.url,
+    alt: "Marketing Brain knowledge base preview showing brand voice, offers and connected AI tools",
   },
   {
-    icon: Globe,
-    title: "AI-Built Website",
+    num: "02",
+    icon: LayoutDashboard,
+    title: "Business Visibility Dashboards",
     tagline:
-      "A modern website built faster with clear copy, SEO baked in and simple updates you can manage yourself.",
-    body: "A clear, modern website built with AI-supported tools, strong messaging and search-friendly structure. We help you explain what you do, launch faster and update your site without waiting on a developer for every small change.",
-    bestFor:
-      "Service businesses that need a better site without a long, painful build — ready for Google and AI search.",
-    cta: "View website offer",
-    href: "/services",
+      "See what is working, what is slipping and what needs attention next.",
+    href: "/services#cat-02",
+    image: ecommerceDashboardExample.url,
+    alt: "E-commerce health dashboard with conversion rate, LTV:CAC, revenue sources and recent orders",
+  },
+  {
+    num: "03",
+    icon: Globe,
+    title: "AI-Built Websites",
+    tagline:
+      "A clearer website built faster, with stronger copy and a structure you can manage.",
+    href: "/services#cat-03",
+    image: websiteImage,
+    alt: "Modern service business website mockup in a browser frame",
   },
 ];
 
@@ -33,75 +44,71 @@ const ThreeCards = () => {
       className="bg-background text-foreground py-24 md:py-32 px-6 border-y border-border"
     >
       <div className="container-wide">
-        <div className="max-w-3xl mx-auto text-center mb-16 md:mb-20">
-          <span className="label-mono text-blush">— Services</span>
-          <h2 className="mt-6 font-serif text-4xl md:text-5xl text-foreground tracking-tight">
-            Pick your{" "}
-            <em className="italic font-normal text-blush">starting point.</em>
+        <div className="max-w-3xl mx-auto text-center mb-14 md:mb-16">
+          <span className="label-mono text-blush">— Offers</span>
+          <h2 className="mt-6 font-serif text-4xl md:text-5xl text-foreground tracking-tight leading-[1.05]">
+            Scattered marketing. Scattered data.{" "}
+            <em className="italic font-normal text-blush">Unclear websites.</em>
           </h2>
+          <p className="mt-6 text-lg text-muted-foreground leading-relaxed font-light">
+            Choose the system your business needs next.
+          </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 lg:gap-10">
-          {systems.map((s, i) => {
+        <div className="grid md:grid-cols-3 gap-6 md:gap-7">
+          {systems.map((s) => {
             const Icon = s.icon;
-            const num = String(i + 1).padStart(2, "0");
             return (
-              <article
+              <Link
                 key={s.title}
-                className="group relative flex flex-col p-10 md:p-14 bg-gradient-to-br from-card/60 via-card/30 to-background border border-border rounded-sm overflow-hidden hover:border-blush/60 hover:shadow-[0_30px_80px_-30px_hsl(348_56%_82%/0.3)] transition-all duration-500"
+                to={s.href}
+                className="group relative flex flex-col bg-gradient-to-br from-card/60 via-card/30 to-background border border-border rounded-sm overflow-hidden hover:border-blush/60 hover:-translate-y-0.5 hover:shadow-[0_20px_60px_-20px_hsl(348_56%_82%/0.2)] transition-all duration-500"
               >
                 <span
                   aria-hidden
-                  className="absolute -top-6 -right-4 font-serif italic text-[180px] md:text-[220px] leading-none text-blush/[0.06] group-hover:text-blush/[0.12] transition-colors duration-700 select-none pointer-events-none"
+                  className="absolute -top-4 -right-2 font-serif italic text-[120px] leading-none text-blush/[0.06] group-hover:text-blush/[0.12] transition-colors duration-700 select-none pointer-events-none z-10"
                 >
-                  {num}
+                  {s.num}
                 </span>
-                <span className="absolute top-0 left-0 h-[2px] w-16 bg-blush group-hover:w-32 transition-all duration-700" />
+                <span className="absolute top-0 left-0 h-[2px] w-12 bg-blush group-hover:w-20 transition-all duration-700 z-10" />
 
-                <div className="relative flex items-center gap-4 mb-10">
-                  <div className="w-14 h-14 rounded-full bg-blush/15 border border-blush/40 flex items-center justify-center group-hover:bg-blush group-hover:border-blush transition-all duration-500">
-                    <Icon
-                      className="w-6 h-6 text-blush group-hover:text-ink transition-colors duration-500"
-                      strokeWidth={1.5}
+                <div className="aspect-[16/10] overflow-hidden border-b border-border/60">
+                  <img
+                    src={s.image}
+                    alt={s.alt}
+                    width={800}
+                    height={500}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+
+                <div className="relative flex flex-col flex-1 p-7 md:p-8">
+                  <div className="flex items-center gap-3 mb-5">
+                    <div className="w-10 h-10 rounded-full bg-blush/15 border border-blush/40 flex items-center justify-center">
+                      <Icon className="w-4 h-4 text-blush" strokeWidth={1.5} />
+                    </div>
+                    <span className="label-mono text-blush">— {s.title}</span>
+                  </div>
+
+                  <h3 className="font-serif text-2xl md:text-[1.65rem] text-foreground leading-[1.1] tracking-tight mb-4">
+                    {s.title}
+                  </h3>
+
+                  <p className="text-foreground/75 leading-relaxed font-light text-base mb-8 flex-1">
+                    {s.tagline}
+                  </p>
+
+                  <span className="mt-auto inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.25em] text-blush group-hover:text-foreground transition-colors">
+                    Learn more
+                    <ArrowUpRight
+                      className="w-3 h-3 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                      strokeWidth={1.75}
                     />
-                  </div>
+                  </span>
                 </div>
-
-                <h3 className="relative font-serif text-3xl md:text-5xl text-foreground leading-[1.05] tracking-tight mb-6">
-                  {s.title}
-                </h3>
-
-                <p className="relative font-serif italic text-xl md:text-2xl text-blush leading-snug mb-8 pl-5 border-l-2 border-blush/60">
-                  {s.tagline}
-                </p>
-
-                <p className="relative text-foreground/85 leading-relaxed font-light text-base md:text-lg mb-10">
-                  {s.body}
-                </p>
-
-                <div className="relative mt-auto">
-                  <div className="inline-flex items-start gap-3 px-5 py-4 bg-background/60 border border-blush/20 rounded-sm mb-8 max-w-full">
-                    <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-blush whitespace-nowrap pt-1">
-                      Best for
-                    </span>
-                    <span className="text-sm text-foreground/90 leading-relaxed">
-                      {s.bestFor}
-                    </span>
-                  </div>
-                  <Link
-                    to={s.href}
-                    className="group/cta inline-flex items-center gap-3 px-6 py-3 bg-blush text-ink font-mono text-xs uppercase tracking-[0.25em] rounded-sm hover:bg-pink-deep transition-colors"
-                  >
-                    {s.cta}
-                    <span
-                      aria-hidden
-                      className="transition-transform duration-300 group-hover/cta:translate-x-1"
-                    >
-                      →
-                    </span>
-                  </Link>
-                </div>
-              </article>
+              </Link>
             );
           })}
         </div>
