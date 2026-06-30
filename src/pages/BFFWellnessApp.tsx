@@ -134,6 +134,9 @@ const BFFWellnessApp = () => {
         @media (max-width: 768px) {
           .bff-grid-2col { grid-template-columns: 1fr !important; }
           .bff-hide-mobile { display: none !important; }
+          .bff-header-label { display: none !important; }
+          .bff-header-tagline { display: none !important; }
+          .bff-header-button { padding: 8px 14px !important; font-size: 12px !important; }
         }
       `}</style>
 
@@ -143,10 +146,10 @@ const BFFWellnessApp = () => {
           <div style={{ display: "flex", alignItems: "center", gap: "11px" }}>
             <HeartGradient size={26} />
             <BFFWordmark size={23} />
-            <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.13em", textTransform: "uppercase", color: BFF_COLORS["muted-gray"] }}>Body Food Feedback</span>
+            <span className="bff-header-label" style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.13em", textTransform: "uppercase", color: BFF_COLORS["muted-gray"] }}>Body Food Feedback</span>
           </div>
-          <div style={{ fontFamily: "'Caveat', cursive", fontSize: "21px", fontWeight: 600, color: BFF_COLORS["body-text"] }}>Learn the system. Meet your BFF.</div>
-          <button onClick={handleWaitlist} style={{ fontSize: "14px", fontWeight: 700, color: "#fff", background: `linear-gradient(135deg, ${BFF_COLORS.coral}, ${BFF_COLORS.pink})`, padding: "11px 20px", borderRadius: "999px", border: "none", cursor: "pointer", boxShadow: "0 8px 18px rgba(240,80,140,0.26)" }}>Join the waitlist →</button>
+          <div className="bff-header-tagline" style={{ fontFamily: "'Caveat', cursive", fontSize: "21px", fontWeight: 600, color: BFF_COLORS["body-text"] }}>Learn the system. Meet your BFF.</div>
+          <button className="bff-header-button" onClick={handleWaitlist} style={{ fontSize: "14px", fontWeight: 700, color: "#fff", background: `linear-gradient(135deg, ${BFF_COLORS.coral}, ${BFF_COLORS.pink})`, padding: "11px 20px", borderRadius: "999px", border: "none", cursor: "pointer", boxShadow: "0 8px 18px rgba(240,80,140,0.26)" }}>Join the waitlist →</button>
         </div>
       </header>
 
