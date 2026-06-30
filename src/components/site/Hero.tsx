@@ -22,7 +22,7 @@ const Hero = () => {
         </h1>
 
         <p className="mt-8 text-foreground/75 text-base md:text-lg leading-relaxed max-w-xl">
-          We rebuild your marketing foundation for the AI era, turning your website, content and workflows into one system AI can actually use.
+          We turn scattered marketing into systems AI can actually use, whether that's your website, your content or your data.
         </p>
 
         <div className="mt-12 flex flex-row gap-6 items-center flex-wrap">
