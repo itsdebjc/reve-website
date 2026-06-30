@@ -16,9 +16,9 @@ const Hero = () => {
         <p className="label-eyebrow mb-10">— AI Systems Studio</p>
 
         <h1 className="display-serif text-4xl sm:text-5xl md:text-7xl lg:text-[6.5rem] text-foreground leading-tight">
-          Turn scattered work into AI systems
+          AI won't fix scattered work.
           <br />
-          <span className="display-italic">your team will actually use.</span>
+          <span className="display-italic">A better system will.</span>
         </h1>
 
         <p className="mt-8 text-foreground/75 text-base md:text-lg leading-relaxed max-w-xl">
