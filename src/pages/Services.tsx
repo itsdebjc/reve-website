@@ -159,19 +159,21 @@ const categories: Category[] = [
     eyebrow: "AI-Built Websites",
     title: "AI-Built Websites",
     problem:
-      "When your website no longer matches what you do, every lead has to work too hard to understand you.",
+      "Most websites are just pages. They don't work for your business, your team or the AI tools and search platforms trying to understand you.",
     outcome: [
-      "Your website should make the business easier to understand. Not harder.",
-      "We help clarify your message, structure your pages, write the copy and build the site with AI-supported tools, so you can launch faster and update it without waiting on a developer for every small change.",
+      "Your website should be more than something people land on. It should be something AI, search platforms and your own team can actually use.",
+      "We build sites that are AI-ready from the ground up: structured, written and built so they double as a content source and sales support tool.",
     ],
     included: [
       "Website strategy, structure and messaging before design",
       "AI-supported copy with human editing on every page",
+      "Structured so AI and search platforms can read and pull from it accurately",
+      "Built to double as a content source for proposals, social and sales material",
       "SEO foundations: meta, headings, alt text and performance",
       "Simple CMS so you can update without a developer",
       "Launch-ready analytics, forms and tracking",
     ],
-    bestFor: "Service businesses that need a better website without a long traditional build.",
+    bestFor: "Service businesses that want a website that works harder — for people, for AI and for the systems they build next.",
     cta: "Build My Website",
     featuredImage: websiteImage,
     featuredAlt:
