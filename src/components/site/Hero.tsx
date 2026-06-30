@@ -16,13 +16,11 @@ const Hero = () => {
         <p className="label-eyebrow mb-10">— AI Systems Studio</p>
 
         <h1 className="display-serif text-4xl sm:text-5xl md:text-7xl lg:text-[6.5rem] text-foreground leading-tight">
-          AI won't fix scattered work.
-          <br />
-          <span className="display-italic">A better system will.</span>
+          AI can't work from scattered marketing.
         </h1>
 
         <p className="mt-8 text-foreground/75 text-base md:text-lg leading-relaxed max-w-xl">
-          We build practical AI systems for marketing, websites, dashboards and workflows, so your team can create faster, stay consistent and spend less time fixing almost-right output.
+          We rebuild your marketing foundation for the AI era, turning your website, content and workflows into one system AI can actually use.
         </p>
 
         <div className="mt-12 flex flex-row gap-6 items-center flex-wrap">
