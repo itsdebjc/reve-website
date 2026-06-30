@@ -64,7 +64,6 @@ const Nav = () => {
             )}
           </div>
 
-          </a>
         </div>
 
         <a
@@ -120,12 +119,9 @@ const Nav = () => {
             </div>
 
             <a
+              href="/ai-body-workshop"
               onClick={closeMobileMenu}
               className="label-mono text-foreground/70 hover:text-primary transition-colors"
-            >
-            </a>
-
-            <a
               href="https://calendly.com/deb-xjsk/callwithdeb"
               target="_blank"
               rel="noopener noreferrer"
