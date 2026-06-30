@@ -64,8 +64,6 @@ const Nav = () => {
             )}
           </div>
 
-          <a href="/ai-body-workshop" className="label-mono text-foreground/70 hover:text-primary transition-colors">
-            AI Workshop
           </a>
         </div>
 
@@ -122,11 +120,9 @@ const Nav = () => {
             </div>
 
             <a
-              href="/ai-body-workshop"
               onClick={closeMobileMenu}
               className="label-mono text-foreground/70 hover:text-primary transition-colors"
             >
-              AI Workshop
             </a>
 
             <a
