@@ -279,8 +279,31 @@ const BFFWellnessApp = () => {
             </div>
             <button onClick={handleWaitlist} style={{ textDecoration: "none", display: "inline-block", fontSize: "16px", fontWeight: 700, color: "#fff", background: `linear-gradient(135deg, ${BFF_COLORS.coral}, ${BFF_COLORS.pink})`, padding: "15px 28px", borderRadius: "999px", boxShadow: "0 14px 30px rgba(240,80,140,0.28)", border: "none", cursor: "pointer" }}>Join the waitlist →</button>
           </div>
-          <div style={{ justifySelf: "center", width: "100%", minHeight: "400px", background: "#f0f0f0", borderRadius: "24px", display: "flex", alignItems: "center", justifyContent: "center", color: BFF_COLORS["muted-gray"], fontSize: "14px" }}>
-            [iPhone mockup - BFF coach app screenshot]
+          <div style={{ justifySelf: "center", width: "100%", maxWidth: "280px", background: "#000", borderRadius: "44px", padding: "12px", boxShadow: "0 20px 60px rgba(0,0,0,0.3)" }}>
+            <div style={{ background: BFF_COLORS.cream, borderRadius: "40px", overflow: "hidden", height: "540px", display: "flex", flexDirection: "column" }}>
+              <div style={{ background: BFF_COLORS.ink, color: BFF_COLORS.cream, padding: "12px 16px", fontSize: "13px", fontWeight: 600, textAlign: "center" }}>9:41</div>
+              <div style={{ flex: 1, overflowY: "auto", padding: "12px", display: "flex", flexDirection: "column", gap: "10px" }}>
+                <div style={{ height: "80px", background: "repeating-linear-gradient(45deg, #ede5dd, #ede5dd 10px, #e6dad1 10px, #e6dad1 20px)", borderRadius: "12px", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "11px", color: BFF_COLORS["muted-gray"] }}>meal photo</div>
+                <div style={{ display: "flex", gap: "8px", alignItems: "flex-start" }}>
+                  <HeartGradient size={20} />
+                  <div style={{ background: "#fff", borderRadius: "12px", padding: "10px 12px", maxWidth: "200px", fontSize: "13px", lineHeight: 1.4, color: BFF_COLORS.ink, boxShadow: "0 2px 8px rgba(0,0,0,0.05)" }}>
+                    <div style={{ fontWeight: 700, color: BFF_COLORS.green }}>Nice balance! 👏</div>
+                    <div style={{ color: BFF_COLORS["body-text"], marginTop: "4px" }}>Solid protein here. Want to note how you feel around 3pm?</div>
+                  </div>
+                </div>
+                <div style={{ display: "flex", justifyContent: "flex-end" }}>
+                  <div style={{ background: `linear-gradient(135deg, ${BFF_COLORS.coral}, ${BFF_COLORS.pink})`, color: "#fff", borderRadius: "12px", padding: "10px 12px", maxWidth: "220px", fontSize: "13px", lineHeight: 1.4 }}>Felt a dip after lunch yesterday too.</div>
+                </div>
+                <div style={{ display: "flex", gap: "8px", alignItems: "flex-start" }}>
+                  <HeartGradient size={20} />
+                  <div style={{ background: "#fff", borderRadius: "12px", padding: "10px 12px", maxWidth: "200px", fontSize: "13px", lineHeight: 1.4, color: BFF_COLORS.ink, boxShadow: "0 2px 8px rgba(0,0,0,0.05)" }}>Worth noticing 💡 Let's look at your last three afternoons together.</div>
+                </div>
+              </div>
+              <div style={{ borderTop: `1px solid rgba(0,0,0,0.05)`, padding: "10px", display: "flex", gap: "8px" }}>
+                <input type="text" placeholder="Ask your BFF…" style={{ flex: 1, background: "#f5f1ed", border: "none", borderRadius: "20px", padding: "10px 14px", fontSize: "13px", color: BFF_COLORS.ink, fontFamily: "'Plus Jakarta Sans', sans-serif" }} readOnly />
+                <div style={{ width: "32px", height: "32px", borderRadius: "50%", background: `linear-gradient(135deg, ${BFF_COLORS.coral}, ${BFF_COLORS.pink})`, display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", fontSize: "16px", cursor: "pointer" }}>↑</div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
