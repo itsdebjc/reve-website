@@ -35,6 +35,10 @@ const Nav = () => {
         </a>
 
         <div className="hidden md:flex items-center gap-10">
+          <a href="/#about" className="label-mono text-foreground/70 hover:text-primary transition-colors">
+            About
+          </a>
+
           <a href="/services" className="label-mono text-foreground/70 hover:text-primary transition-colors">
             Services
           </a>
@@ -88,6 +92,14 @@ const Nav = () => {
         <div className="md:hidden bg-background/95 backdrop-blur-sm border-b border-hairline">
           <div className="mx-auto max-w-[1400px] px-6 py-6 flex flex-col gap-6">
             <a
+              href="/#about"
+              onClick={closeMobileMenu}
+              className="label-mono text-foreground/70 hover:text-primary transition-colors"
+            >
+              About
+            </a>
+
+            <a
               href="/services"
               onClick={closeMobileMenu}
               className="label-mono text-foreground/70 hover:text-primary transition-colors"
@@ -119,9 +131,6 @@ const Nav = () => {
             </div>
 
             <a
-              href="/ai-body-workshop"
-              onClick={closeMobileMenu}
-              className="label-mono text-foreground/70 hover:text-primary transition-colors"
               href="https://calendly.com/deb-xjsk/callwithdeb"
               target="_blank"
               rel="noopener noreferrer"
