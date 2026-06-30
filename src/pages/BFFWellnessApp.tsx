@@ -131,6 +131,10 @@ const BFFWellnessApp = () => {
         @keyframes bffMarquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
         details summary::-webkit-details-marker { display: none; }
         details[open] .bff-faq-plus { transform: rotate(45deg); transition: transform 0.2s; }
+        @media (max-width: 768px) {
+          .bff-grid-2col { grid-template-columns: 1fr !important; }
+          .bff-hide-mobile { display: none !important; }
+        }
       `}</style>
 
       {/* STICKY HEADER */}
@@ -148,7 +152,7 @@ const BFFWellnessApp = () => {
 
       {/* HERO SECTION */}
       <section style={{ background: `linear-gradient(180deg, ${BFF_COLORS.cream} 0%, ${BFF_COLORS["cream-alt"]} 100%)`, padding: "64px 26px 76px" }}>
-        <div style={{ maxWidth: "1180px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1.04fr", gap: "56px", alignItems: "center" }}>
+        <div className="bff-grid-2col" style={{ maxWidth: "1180px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1.04fr", gap: "56px", alignItems: "center" }}>
           <div>
             <div style={{ display: "flex", gap: "10px", flexWrap: "wrap", marginBottom: "26px" }}>
               <span style={{ display: "inline-flex", alignItems: "center", gap: "7px", background: "#fff", border: `1px solid rgba(42, 33, 28, 0.08)`, color: BFF_COLORS.coral, fontSize: "12px", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", padding: "7px 14px", borderRadius: "999px" }}><HeartGradient size={14} />BFF Body Food Feedback</span>
@@ -221,7 +225,7 @@ const BFFWellnessApp = () => {
         <div style={{ maxWidth: "1000px", margin: "0 auto" }}>
           <span style={{ display: "inline-flex", alignItems: "center", background: "#fff", border: `1px solid rgba(42,33,28,0.08)`, color: BFF_COLORS.coral, fontSize: "12px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", padding: "7px 14px", borderRadius: "999px" }}>The shift</span>
           <h2 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(30px, 4vw, 46px)", lineHeight: 1.06, letterSpacing: "-0.02em", margin: "22px 0 0", maxWidth: "760px" }}>Your body changed. <span style={{ color: BFF_COLORS.pink }}>The old rules may not explain what is happening now.</span></h2>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "22px", margin: "42px 0 32px" }}>
+          <div className="bff-grid-2col" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "22px", margin: "42px 0 32px" }}>
             <div style={{ background: BFF_COLORS.mat, borderRadius: "20px", padding: "30px 28px" }}>
               <div style={{ fontSize: "12px", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: BFF_COLORS["muted-gray"], marginBottom: "18px" }}>Before</div>
               <div style={{ display: "flex", alignItems: "center", gap: "12px", flexWrap: "wrap", marginBottom: "16px" }}>
@@ -251,7 +255,7 @@ const BFFWellnessApp = () => {
 
       {/* THE METHOD: BFF */}
       <section style={{ background: BFF_COLORS["cream-alt"], padding: "84px 26px" }}>
-        <div style={{ maxWidth: "1100px", margin: "0 auto", display: "grid", gridTemplateColumns: "1.1fr 0.9fr", gap: "60px", alignItems: "center" }}>
+        <div className="bff-grid-2col" style={{ maxWidth: "1100px", margin: "0 auto", display: "grid", gridTemplateColumns: "1.1fr 0.9fr", gap: "60px", alignItems: "center" }}>
           <div>
             <span style={{ display: "inline-flex", alignItems: "center", background: "#FFF1EB", color: BFF_COLORS.coral, fontSize: "12px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", padding: "7px 14px", borderRadius: "999px" }}>The method</span>
             <h2 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(30px, 4vw, 46px)", lineHeight: 1.06, letterSpacing: "-0.02em", margin: "22px 0 0" }}>This is not a diet. <span style={{ color: BFF_COLORS.pink }}>It is a feedback loop.</span></h2>
@@ -317,7 +321,7 @@ const BFFWellnessApp = () => {
 
       {/* PERSONAL PROOF */}
       <section style={{ background: BFF_COLORS.cream, padding: "84px 26px" }}>
-        <div style={{ maxWidth: "1080px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "54px", alignItems: "center" }}>
+        <div className="bff-grid-2col" style={{ maxWidth: "1080px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "54px", alignItems: "center" }}>
           <img src={debbieBeach} alt="Debbie at beach" style={{ display: "block", width: "100%", height: "460px", objectFit: "cover", borderRadius: "24px", boxShadow: "0 24px 50px rgba(42,33,28,0.16)" }} />
           <div>
             <span style={{ display: "inline-flex", alignItems: "center", background: "#fff", border: `1px solid rgba(42, 33, 28, 0.08)`, color: BFF_COLORS.coral, fontSize: "12px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", padding: "7px 14px", borderRadius: "999px" }}>What changed for me</span>
@@ -386,7 +390,7 @@ const BFFWellnessApp = () => {
 
       {/* WHO IT'S FOR / NOT FOR */}
       <section style={{ background: BFF_COLORS.cream, padding: "84px 26px" }}>
-        <div style={{ maxWidth: "1000px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "24px", alignItems: "start" }}>
+        <div className="bff-grid-2col" style={{ maxWidth: "1000px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "24px", alignItems: "start" }}>
           <div style={{ background: "#fff", borderRadius: "22px", padding: "34px 32px", boxShadow: "0 10px 30px rgba(42,33,28,0.06)" }}>
             <span style={{ display: "inline-flex", alignItems: "center", background: "#FFF1EB", color: BFF_COLORS.coral, fontSize: "12px", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", padding: "6px 13px", borderRadius: "999px" }}>This is for you if…</span>
             <h3 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "24px", lineHeight: 1.15, margin: "18px 0 20px" }}>You are a woman in midlife and:</h3>
@@ -490,7 +494,7 @@ const BFFWellnessApp = () => {
 
       {/* WHY I BUILT THIS */}
       <section style={{ background: BFF_COLORS["cream-alt"], padding: "84px 26px" }}>
-        <div style={{ maxWidth: "1080px", margin: "0 auto", display: "grid", gridTemplateColumns: "0.92fr 1.08fr", gap: "54px", alignItems: "center" }}>
+        <div className="bff-grid-2col" style={{ maxWidth: "1080px", margin: "0 auto", display: "grid", gridTemplateColumns: "0.92fr 1.08fr", gap: "54px", alignItems: "center" }}>
           <div>
             <span style={{ display: "inline-flex", alignItems: "center", background: "#FFF1EB", color: BFF_COLORS.coral, fontSize: "12px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", padding: "7px 14px", borderRadius: "999px" }}>Why I built this</span>
             <h2 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(30px, 4.2vw, 48px)", lineHeight: 1.05, letterSpacing: "-0.02em", margin: "22px 0 0" }}>I built BFF because I needed it.</h2>
@@ -505,7 +509,7 @@ const BFFWellnessApp = () => {
 
       {/* WORKSHOP DETAILS + WAITLIST FORM */}
       <section id="bff-waitlist" style={{ background: BFF_COLORS.cream, padding: "84px 26px", scrollMarginTop: "70px" }}>
-        <div style={{ maxWidth: "1040px", margin: "0 auto", display: "grid", gridTemplateColumns: "1.05fr 0.95fr", gap: "54px", alignItems: "center" }}>
+        <div className="bff-grid-2col" style={{ maxWidth: "1040px", margin: "0 auto", display: "grid", gridTemplateColumns: "1.05fr 0.95fr", gap: "54px", alignItems: "center" }}>
           <div>
             <span style={{ display: "inline-flex", alignItems: "center", background: "#fff", border: `1px solid rgba(42, 33, 28, 0.08)`, color: BFF_COLORS.coral, fontSize: "12px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", padding: "7px 14px", borderRadius: "999px" }}>Workshop details</span>
             <h2 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(30px, 4.2vw, 48px)", lineHeight: 1.05, letterSpacing: "-0.02em", margin: "22px 0 0" }}>Join the first <span style={{ color: BFF_COLORS.pink }}>BFF workshop.</span></h2>
