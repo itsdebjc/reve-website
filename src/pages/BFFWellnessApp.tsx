@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
+import debbieCollins from "@/assets/debbie-collins.jpeg";
+import debbieBeach from "@/assets/debbie-beach.jpeg";
+import heroCherryBlossom from "@/assets/hero-cherry-blossom.jpg";
+import debbieMallSolo from "@/assets/debbie-mall-solo.jpeg";
 
-// BFF color palette
 const BFF_COLORS = {
   cream: "#FFF7F1",
   "cream-alt": "#FFFCFA",
@@ -143,10 +146,14 @@ const BFFWellnessApp = () => {
         </div>
       </header>
 
-      {/* HERO - Simplified for brevity, full version would have all details */}
+      {/* HERO SECTION */}
       <section style={{ background: `linear-gradient(180deg, ${BFF_COLORS.cream} 0%, ${BFF_COLORS["cream-alt"]} 100%)`, padding: "64px 26px 76px" }}>
         <div style={{ maxWidth: "1180px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1.04fr", gap: "56px", alignItems: "center" }}>
           <div>
+            <div style={{ display: "flex", gap: "10px", flexWrap: "wrap", marginBottom: "26px" }}>
+              <span style={{ display: "inline-flex", alignItems: "center", gap: "7px", background: "#fff", border: `1px solid rgba(42, 33, 28, 0.08)`, color: BFF_COLORS.coral, fontSize: "12px", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", padding: "7px 14px", borderRadius: "999px" }}><HeartGradient size={14} />BFF Body Food Feedback</span>
+              <span style={{ display: "inline-flex", alignItems: "center", background: BFF_COLORS.ink, color: BFF_COLORS.cream, fontSize: "12px", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", padding: "7px 14px", borderRadius: "999px" }}>Coming Soon</span>
+            </div>
             <h1 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(44px, 6vw, 76px)", lineHeight: 0.98, letterSpacing: "-0.035em", margin: 0, color: BFF_COLORS.ink }}>Your body changed.</h1>
             <div style={{ fontFamily: "'Caveat', cursive", fontWeight: 700, fontSize: "clamp(38px, 5vw, 58px)", lineHeight: 1, color: BFF_COLORS.pink, marginTop: "6px" }}>BFF helps you stop guessing.</div>
             <p style={{ fontSize: "clamp(16px, 1.5vw, 19px)", lineHeight: 1.6, color: BFF_COLORS["body-text"], maxWidth: "520px", margin: "24px 0 0" }}>A live AI body workshop for midlife women who want to understand their food, habits and body data — without starting another diet.</p>
@@ -159,9 +166,13 @@ const BFFWellnessApp = () => {
               ))}
             </div>
             <button onClick={handleWaitlist} style={{ fontSize: "16px", fontWeight: 700, color: "#fff", background: `linear-gradient(135deg, ${BFF_COLORS.coral}, ${BFF_COLORS.pink})`, padding: "16px 30px", borderRadius: "999px", border: "none", cursor: "pointer", boxShadow: "0 14px 30px rgba(240,80,140,0.30)" }}>Join the waitlist →</button>
+            <span style={{ fontSize: "14px", color: BFF_COLORS["muted-gray"], display: "inline-block", marginTop: "8px", marginLeft: "12px" }}>First invites open soon.</span>
           </div>
-          <div style={{ display: "flex", justifyContent: "center" }}>
-            <img src="/src/assets/debbie-collins.jpeg" alt="Debbie Collins" style={{ width: "100%", maxWidth: "400px", height: "480px", objectFit: "cover", borderRadius: "26px", boxShadow: "0 28px 60px rgba(42,33,28,0.18)" }} />
+          <div style={{ display: "flex", justifyContent: "center", position: "relative" }}>
+            <img src={debbieCollins} alt="Debbie Collins" style={{ width: "100%", maxWidth: "400px", height: "480px", objectFit: "cover", borderRadius: "26px", boxShadow: "0 28px 60px rgba(42,33,28,0.18)" }} />
+            <div style={{ position: "absolute", left: "-18px", bottom: "-22px", background: "#fff", borderRadius: "16px", padding: "13px 17px", boxShadow: "0 16px 34px rgba(42,33,28,0.16)", maxWidth: "228px" }}>
+              <div style={{ fontFamily: "'Caveat', cursive", fontWeight: 600, fontSize: "21px", lineHeight: 1.15, color: BFF_COLORS.ink }}>Hi, I'm Deb. I built BFF because I needed a better feedback loop.</div>
+            </div>
           </div>
         </div>
       </section>
@@ -178,56 +189,50 @@ const BFFWellnessApp = () => {
         </div>
       </section>
 
-      {/* THE STORY SECTION - Dark background */}
-      <section style={{ background: BFF_COLORS.ink, color: BFF_COLORS.cream, padding: "84px 26px" }}>
-        <div style={{ maxWidth: "920px", margin: "0 auto" }}>
-          <span style={{ display: "inline-flex", alignItems: "center", background: "rgba(255,247,241,0.08)", color: BFF_COLORS.amber, fontSize: "12px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", padding: "7px 14px", borderRadius: "999px" }}>The story</span>
-          <h2 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(32px, 4.4vw, 50px)", lineHeight: 1.04, letterSpacing: "-0.02em", margin: "22px 0 0", color: BFF_COLORS.cream }}>
-            I was doing the right things. <span style={{ color: BFF_COLORS["coral-light"] }}>Still nothing made sense.</span>
-          </h2>
-          <p style={{ fontSize: "18px", lineHeight: 1.6, color: "rgba(255,247,241,0.72)", margin: "24px 0 0", maxWidth: "560px" }}>I was doing all the things women are told to do in midlife.</p>
-          
-          <div style={{ display: "flex", flexWrap: "wrap", gap: "14px", margin: "30px 0" }}>
-            {["🏋️‍♀️ Gym 4× a week", "🚶‍♀️ Daily walking", "💧 Drinking water", "🌿 HRT support through my healthcare provider", "🍳 More protein", "🧘‍♀️ Meditating", "🥗 Eating well"].map((item) => (
-              <span key={item} style={{ display: "inline-flex", alignItems: "center", gap: "8px", background: "rgba(255,247,241,0.07)", border: `1px solid rgba(255,247,241,0.12)`, color: BFF_COLORS.cream, fontSize: "14px", fontWeight: 600, padding: "10px 18px", borderRadius: "999px", whiteSpace: "nowrap" }}>
-                {item}
-              </span>
-            ))}
-          </div>
-
-          <p style={{ fontSize: "18px", lineHeight: 1.6, color: "rgba(255,247,241,0.72)", margin: "0", maxWidth: "560px" }}>When that did not work, I even tried a fancier gym. Still, I felt like I was guessing.</p>
-
-          <div style={{ marginTop: "40px", paddingTop: "30px", borderTop: `1px solid rgba(255,247,241,0.12)` }}>
-            <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 700, fontSize: "clamp(22px, 2.6vw, 30px)", lineHeight: 1.2, color: "rgba(255,247,241,0.55)" }}>It wasn't effort I was missing.</div>
-            <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(28px, 3.4vw, 40px)", lineHeight: 1.15, color: BFF_COLORS.amber, marginTop: "6px" }}>It was feedback.</div>
+      {/* PERSONAL PROOF */}
+      <section style={{ background: BFF_COLORS.cream, padding: "84px 26px" }}>
+        <div style={{ maxWidth: "1080px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "54px", alignItems: "center" }}>
+          <img src={debbieBeach} alt="Debbie at beach" style={{ display: "block", width: "100%", height: "460px", objectFit: "cover", borderRadius: "24px", boxShadow: "0 24px 50px rgba(42,33,28,0.16)" }} />
+          <div>
+            <span style={{ display: "inline-flex", alignItems: "center", background: "#fff", border: `1px solid rgba(42, 33, 28, 0.08)`, color: BFF_COLORS.coral, fontSize: "12px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", padding: "7px 14px", borderRadius: "999px" }}>What changed for me</span>
+            <h2 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(30px, 4vw, 46px)", lineHeight: 1.05, letterSpacing: "-0.02em", margin: "20px 0 0" }}>At 54, I finally <span style={{ color: BFF_COLORS.pink }}>stopped guessing.</span></h2>
+            <p style={{ fontSize: "16px", lineHeight: 1.6, color: BFF_COLORS["body-text"], margin: "20px 0 16px" }}>In three months, after I started using AI with my food notes, habits and body composition data, I:</p>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px", marginBottom: "22px" }}>
+              {[{ label: "7.8 lbs", desc: "lost total" }, { label: "7 lbs", desc: "body fat reduced" }, { label: "32.3% → 25.7%", desc: "body fat" }, { label: "muscle", desc: "supported while losing fat" }].map((stat) => (
+                <div key={stat.label} style={{ background: "#fff", borderRadius: "16px", padding: "18px 20px", boxShadow: "0 6px 16px rgba(42,33,28,0.05)" }}>
+                  <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "26px", color: BFF_COLORS.coral }}>{stat.label}</div>
+                  <div style={{ fontSize: "13px", color: BFF_COLORS["body-text"], marginTop: "2px" }}>{stat.desc}</div>
+                </div>
+              ))}
+            </div>
+            <p style={{ fontSize: "17px", lineHeight: 1.6, color: BFF_COLORS.ink, fontWeight: 600, margin: "22px 0 0" }}>But the biggest change was not the number.</p>
+            <p style={{ fontSize: "17px", lineHeight: 1.6, color: BFF_COLORS["body-text"], margin: "8px 0 0" }}>I finally had a feedback loop. I could see what was working, what was not and what I wanted to adjust next.</p>
           </div>
         </div>
       </section>
 
-      {/* THE SHIFT SECTION */}
-      <section style={{ background: BFF_COLORS.cream, padding: "84px 26px" }}>
-        <div style={{ maxWidth: "1000px", margin: "0 auto" }}>
-          <h2 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(30px, 4vw, 46px)", lineHeight: 1.06, letterSpacing: "-0.02em", margin: "0", maxWidth: "760px", color: BFF_COLORS.ink }}>
-            Your body changed. <span style={{ color: BFF_COLORS.pink }}>The old rules may not explain what is happening now.</span>
-          </h2>
+      {/* LANDSCAPE IMAGE BAND */}
+      <section style={{ position: "relative", minHeight: "620px", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
+        <img src={heroCherryBlossom} alt="Cherry blossom landscape" style={{ position: "absolute", inset: "0", width: "100%", height: "100%", objectFit: "cover" }} />
+        <div style={{ position: "absolute", inset: "0", background: "linear-gradient(180deg, rgba(42,33,28,0.28), rgba(42,33,28,0.6))" }} />
+        <div style={{ position: "relative", zIndex: 1, textAlign: "center", padding: "80px 26px", maxWidth: "780px" }}>
+          <h2 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(34px, 5vw, 56px)", lineHeight: 1.08, letterSpacing: "-0.02em", color: BFF_COLORS.cream, margin: "0", textShadow: "0 2px 20px rgba(42,33,28,0.4)" }}>Your body has changed. Now you have a better way to <span style={{ color: "#FFC8A0" }}>listen to the feedback.</span></h2>
+          <button onClick={handleWaitlist} style={{ display: "inline-block", marginTop: "26px", fontSize: "16px", fontWeight: 700, color: BFF_COLORS.ink, background: BFF_COLORS.cream, padding: "15px 28px", borderRadius: "999px", border: "none", cursor: "pointer", boxShadow: "0 14px 30px rgba(0,0,0,0.25)" }}>Join the waitlist →</button>
+        </div>
+      </section>
 
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "22px", margin: "42px 0 32px" }}>
-            <div style={{ background: BFF_COLORS.mat, borderRadius: "20px", padding: "30px 28px" }}>
-              <div style={{ fontSize: "12px", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: BFF_COLORS["muted-gray"], marginBottom: "18px" }}>Before</div>
-              <div style={{ fontSize: "16px", fontWeight: 600, color: BFF_COLORS["body-text"], margin: "0" }}>Effort in → Results out. You worked harder, the scale moved.</div>
-            </div>
-            <div style={{ background: "#fff", border: `1.5px solid rgba(240,80,140,0.22)`, borderRadius: "20px", padding: "30px 28px", boxShadow: "0 16px 40px rgba(240,80,140,0.10)" }}>
-              <div style={{ fontSize: "12px", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: BFF_COLORS.coral, marginBottom: "18px" }}>Now</div>
-              <div style={{ fontSize: "16px", fontWeight: 600, color: BFF_COLORS["body-text"], margin: "0" }}>Pattern in → Response out. Your body may be responding to patterns you have not seen yet.</div>
+      {/* WHY I BUILT THIS */}
+      <section style={{ background: BFF_COLORS["cream-alt"], padding: "84px 26px" }}>
+        <div style={{ maxWidth: "1080px", margin: "0 auto", display: "grid", gridTemplateColumns: "0.92fr 1.08fr", gap: "54px", alignItems: "center" }}>
+          <div>
+            <span style={{ display: "inline-flex", alignItems: "center", background: "#FFF1EB", color: BFF_COLORS.coral, fontSize: "12px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", padding: "7px 14px", borderRadius: "999px" }}>Why I built this</span>
+            <h2 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(30px, 4.2vw, 48px)", lineHeight: 1.05, letterSpacing: "-0.02em", margin: "22px 0 0" }}>I built BFF because I needed it.</h2>
+            <p style={{ fontSize: "18px", lineHeight: 1.65, color: BFF_COLORS["body-text"], maxWidth: "680px", margin: "24px 0 0" }}>I have worked in wellness, supplements, gyms and natural health for years. I have been health-conscious most of my adult life. And still, midlife changed the rules. So I built BFF: a simple way to use AI, body data and food notes to create a clearer feedback loop.</p>
+            <div style={{ marginTop: "28px", paddingLeft: "18px", borderLeft: `2px solid rgba(240,80,140,0.3)` }}>
+              <div style={{ fontFamily: "'Caveat', cursive", fontWeight: 600, fontSize: "28px", lineHeight: 1.25, color: BFF_COLORS.ink }}>Not as a doctor. Not as a guru. As a woman in midlife who finally stopped guessing.</div>
             </div>
           </div>
-
-          <p style={{ fontSize: "18px", lineHeight: 1.6, color: BFF_COLORS["body-text"], maxWidth: "720px", margin: "0" }}>Midlife can change how your body responds. Food, timing, stress, sleep, movement and tiny daily habits can all start showing up differently.</p>
-
-          <div style={{ marginTop: "30px" }}>
-            <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 700, fontSize: "clamp(20px, 2.4vw, 26px)", color: BFF_COLORS["placeholder-gray"] }}>The goal is not to blame yourself.</div>
-            <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(22px, 2.8vw, 32px)", color: BFF_COLORS.ink, marginTop: "4px" }}>The goal is to notice what may be connected.</div>
-          </div>
+          <img src={debbieMallSolo} alt="Debbie" style={{ display: "block", width: "100%", height: "520px", objectFit: "cover", borderRadius: "24px", boxShadow: "0 24px 50px rgba(42,33,28,0.16)" }} />
         </div>
       </section>
 
@@ -235,22 +240,19 @@ const BFFWellnessApp = () => {
       <section id="bff-waitlist" style={{ background: BFF_COLORS.cream, padding: "84px 26px", scrollMarginTop: "70px" }}>
         <div style={{ maxWidth: "1040px", margin: "0 auto", display: "grid", gridTemplateColumns: "1.05fr 0.95fr", gap: "54px", alignItems: "center" }}>
           <div>
-            <h2 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(30px, 4.2vw, 48px)", lineHeight: 1.05, letterSpacing: "-0.02em", margin: "0" }}>
-              Join the first <span style={{ color: BFF_COLORS.pink }}>BFF workshop.</span>
-            </h2>
-            <p style={{ fontSize: "17px", lineHeight: 1.6, color: BFF_COLORS["body-text"], maxWidth: "520px", margin: "20px 0 0" }}>I'll walk you through the Body Food Feedback system I created to stop guessing and start noticing patterns.</p>
+            <span style={{ display: "inline-flex", alignItems: "center", background: "#fff", border: `1px solid rgba(42, 33, 28, 0.08)`, color: BFF_COLORS.coral, fontSize: "12px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", padding: "7px 14px", borderRadius: "999px" }}>Workshop details</span>
+            <h2 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(30px, 4.2vw, 48px)", lineHeight: 1.05, letterSpacing: "-0.02em", margin: "22px 0 0" }}>Join the first <span style={{ color: BFF_COLORS.pink }}>BFF workshop.</span></h2>
+            <p style={{ fontSize: "17px", lineHeight: 1.6, color: BFF_COLORS["body-text"], maxWidth: "520px", margin: "20px 0 0" }}>I'll walk you through the Body Food Feedback system I created to stop guessing and start noticing patterns. You'll learn how the system works, what data to bring and how to start using your BFF coach after the workshop.</p>
             <div style={{ display: "flex", gap: "14px", marginTop: "30px", flexWrap: "wrap" }}>
               {[{ label: "Date", value: "Soon", sub: "Coming" }, { label: "Format", value: "Live", sub: "Online" }, { label: "Spots", value: "Few", sub: "Limited" }].map((item) => (
                 <div key={item.label} style={{ background: "#fff", borderRadius: "16px", padding: "18px 22px", minWidth: "120px", boxShadow: "0 6px 16px rgba(42,33,28,0.05)" }}>
                   <div style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: BFF_COLORS["muted-gray"] }}>{item.label}</div>
-                  <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "22px", color: [BFF_COLORS.coral, BFF_COLORS.pink, BFF_COLORS.amber][Object.keys({ Date: 0, Format: 1, Spots: 2 })[item.label] || 0], marginTop: "4px" }}>{item.value}</div>
+                  <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "22px", color: [BFF_COLORS.coral, BFF_COLORS.pink, BFF_COLORS.amber][["Date", "Format", "Spots"].indexOf(item.label)], marginTop: "4px" }}>{item.value}</div>
                   <div style={{ fontSize: "13px", color: BFF_COLORS["body-text"] }}>{item.sub}</div>
                 </div>
               ))}
             </div>
           </div>
-
-          {/* Form Card */}
           <div style={{ background: "#fff", borderRadius: "24px", padding: "36px 34px", boxShadow: "0 24px 56px rgba(42,33,28,0.12)" }}>
             {!form.submitted ? (
               <>
@@ -260,15 +262,15 @@ const BFFWellnessApp = () => {
                 </div>
                 <div style={{ fontSize: "14px", color: BFF_COLORS["body-text"], marginBottom: "22px" }}>Join the waitlist for first invites.</div>
                 <form onSubmit={handleFormSubmit} style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
-                  <input type="text" placeholder="First name" value={form.name} onChange={(e) => setForm((p) => ({ ...p, name: e.target.value }))} style={{ fontSize: "15px", color: BFF_COLORS.ink, padding: "15px 18px", border: `1.5px solid #ece2da`, borderRadius: "14px", outline: "none", background: BFF_COLORS["cream-alt"] }} />
-                  <input type="email" placeholder="Email address" value={form.email} onChange={(e) => setForm((p) => ({ ...p, email: e.target.value }))} style={{ fontSize: "15px", color: BFF_COLORS.ink, padding: "15px 18px", border: `1.5px solid #ece2da`, borderRadius: "14px", outline: "none", background: BFF_COLORS["cream-alt"] }} />
-                  <button type="submit" style={{ fontSize: "16px", fontWeight: 700, color: "#fff", background: `linear-gradient(135deg, ${BFF_COLORS.coral}, ${BFF_COLORS.pink})`, border: "none", padding: "16px", borderRadius: "999px", cursor: "pointer", boxShadow: "0 14px 30px rgba(240,80,140,0.28)" }}>Join the waitlist →</button>
+                  <input type="text" placeholder="First name" value={form.name} onChange={(e) => setForm((p) => ({ ...p, name: e.target.value }))} style={{ fontSize: "15px", color: BFF_COLORS.ink, padding: "15px 18px", border: `1.5px solid #ece2da`, borderRadius: "14px", outline: "none", background: BFF_COLORS["cream-alt"], fontFamily: "'Plus Jakarta Sans', sans-serif" }} required />
+                  <input type="email" placeholder="Email address" value={form.email} onChange={(e) => setForm((p) => ({ ...p, email: e.target.value }))} style={{ fontSize: "15px", color: BFF_COLORS.ink, padding: "15px 18px", border: `1.5px solid #ece2da`, borderRadius: "14px", outline: "none", background: BFF_COLORS["cream-alt"], fontFamily: "'Plus Jakarta Sans', sans-serif" }} required />
+                  <button type="submit" style={{ fontSize: "16px", fontWeight: 700, color: "#fff", background: `linear-gradient(135deg, ${BFF_COLORS.coral}, ${BFF_COLORS.pink})`, border: "none", padding: "16px", borderRadius: "999px", cursor: "pointer", boxShadow: "0 14px 30px rgba(240,80,140,0.28)", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>Join the waitlist →</button>
                 </form>
                 <div style={{ fontSize: "12px", color: BFF_COLORS["placeholder-gray"], textAlign: "center", marginTop: "14px" }}>First invites open soon.</div>
               </>
             ) : (
               <div style={{ textAlign: "center", padding: "18px 6px" }}>
-                <div style={{ marginBottom: "14px" }}>
+                <div style={{ marginBottom: "14px", display: "flex", justifyContent: "center" }}>
                   <HeartGradient size={52} />
                 </div>
                 <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "28px", color: BFF_COLORS.ink }}>You're on the list.</div>
@@ -286,9 +288,7 @@ const BFFWellnessApp = () => {
             <HeartGradient size={24} />
             <BFFWordmark size={20} />
           </div>
-          <p style={{ fontSize: "13px", color: "rgba(255,247,241,0.65)", margin: "0", maxWidth: "600px", marginLeft: "auto", marginRight: "auto" }}>
-            For general wellness and education only. Not medical advice, diagnosis or treatment. Personal results shared are not a promise of your results. © 2026 BFF.
-          </p>
+          <p style={{ fontSize: "13px", color: "rgba(255,247,241,0.65)", margin: "0", maxWidth: "600px", marginLeft: "auto", marginRight: "auto" }}>For general wellness and education only. Not medical advice, diagnosis or treatment. Personal results shared are not a promise of your results. © 2026 BFF.</p>
         </div>
       </footer>
     </main>
