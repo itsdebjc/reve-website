@@ -332,7 +332,7 @@ const BFFWellnessApp = () => {
               </div>
             ))}
           </div>
-          <div style={{ background: BFF_COLORS.ink, borderRadius: "24px", padding: "40px 36px", color: BFF_COLORS.cream", marginTop: "32px" }}>
+          <div style={{ background: BFF_COLORS.ink, borderRadius: "24px", padding: "40px 36px", color: BFF_COLORS.cream, marginTop: "32px" }}>
             <div style={{ fontSize: "12px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: BFF_COLORS.amber, marginBottom: "16px" }}>In each of those moments, it helps you ask</div>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px" }}>
               <div>
