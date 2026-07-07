@@ -15,10 +15,10 @@ const Hero = () => {
       <div className="mx-auto w-full max-w-5xl px-6 md:px-10 pt-24 pb-16 fade-up">
         <p className="label-eyebrow mb-10">— AI Systems Studio</p>
 
-        <h1 className="display-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-foreground leading-tight">
-          Behind on AI?
+        <h1 className="display-serif text-4xl sm:text-5xl md:text-7xl lg:text-[6.5rem] text-foreground leading-tight">
+          AI runs on clear marketing.
           <br />
-          <span className="display-italic">You're not. Let's start here.</span>
+          <span className="display-italic">Let's build yours.</span>
         </h1>
 
         <p className="mt-8 text-foreground/75 text-base md:text-lg leading-relaxed max-w-xl">
