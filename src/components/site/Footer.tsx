@@ -46,7 +46,7 @@ const Footer = () => {
             </div>
             <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
               <a href="#cta" className="hover:text-primary transition-colors">Contact</a>
-              <a href="/workshop" className="hover:text-primary transition-colors flex items-center gap-1.5">
+              <a href="/bff-coach" className="hover:text-primary transition-colors flex items-center gap-1.5">
                 <span>❤️</span> BFF Workshop
               </a>
               <a href="#" className="hover:text-primary transition-colors">Privacy</a>
