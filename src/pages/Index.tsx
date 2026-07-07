@@ -5,6 +5,7 @@ import Problem from "@/components/site/Problem";
 import ThreeCards from "@/components/site/ThreeCards";
 import InPractice from "@/components/site/InPractice";
 import Method from "@/components/site/Method";
+import NotTheory from "@/components/site/NotTheory";
 import CaseStudies from "@/components/site/CaseStudies";
 import Testimonial from "@/components/site/Testimonial";
 import Founder from "@/components/site/Founder";
@@ -38,6 +39,7 @@ const Index = () => {
       <ThreeCards />
       <InPractice />
       <Method />
+      <NotTheory />
       <CaseStudies />
       <Testimonial />
       <Founder />

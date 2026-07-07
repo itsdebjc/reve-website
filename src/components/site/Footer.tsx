@@ -30,8 +30,7 @@ const Footer = () => {
       <div className="mx-auto max-w-7xl px-6">
         <div className="text-center mb-24">
           <p className="font-serif italic text-2xl md:text-4xl text-foreground">
-            ideas <span className="text-primary">→</span> systems{" "}
-            <span className="text-primary">→</span> momentum
+            Less scattered. <span className="text-primary">More momentum.</span>
           </p>
         </div>
 
