@@ -34,7 +34,7 @@ const systems = [
       "Build a clearer website that works for your customers, your team and the AI tools trying to understand your business.",
     href: "/services#cat-03",
     image: websiteImage,
-    alt: "Modern service business website mockup in a browser frame",
+    alt: "The Reve AI homepage hero, an AI-built website with a wildflower meadow and the headline AI runs on clear marketing",
   },
 ];
 

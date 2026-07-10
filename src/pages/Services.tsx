@@ -89,7 +89,7 @@ const systems = [
     description:
       "Structured for AI, search platforms and your team to actually use.",
     image: websiteImage,
-    alt: "Website",
+    alt: "The Reve AI homepage hero, an AI-built website with a wildflower meadow and the headline AI runs on clear marketing",
   },
 ];
 
