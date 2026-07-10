@@ -203,8 +203,8 @@ const BFFWellnessApp = () => {
           <p style={{ fontSize: "18px", lineHeight: 1.6, color: "rgba(255,247,241,0.72)", margin: "16px 0 0", maxWidth: "560px" }}>And still, your body feels harder to understand than it used to.</p>
           <p style={{ fontSize: "18px", lineHeight: 1.6, color: "rgba(255,247,241,0.72)", margin: "16px 0 0", maxWidth: "560px" }}>One week something works. The next week it does not.</p>
           <p style={{ fontSize: "18px", lineHeight: 1.6, color: "rgba(255,247,241,0.72)", margin: "16px 0 0", maxWidth: "560px" }}>So you keep wondering:</p>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "12px", margin: "20px 0", maxWidth: "560px" }}>
-            {[{ text: "Was it the food?", emoji: "🍽️" }, { text: "Was it the timing?", emoji: "⏰" }, { text: "Was it sleep?", emoji: "😴" }, { text: "Was it stress?", emoji: "😰" }, { text: "Was it hormones?", emoji: "📊" }, { text: "Was it the weekend?", emoji: "🎉" }, { text: "Was it just life?", emoji: "🤷" }].map((item) => (
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(135px, 1fr))", gap: "12px", margin: "20px 0", maxWidth: "560px" }}>
+            {[{ text: "Is it the food?", emoji: "🍽️" }, { text: "Is it the timing?", emoji: "⏰" }, { text: "Is it sleep?", emoji: "😴" }, { text: "Is it stress?", emoji: "😰" }, { text: "Is it hormones?", emoji: "📊" }, { text: "Is it the weekend?", emoji: "🎉" }, { text: "Is it just life?", emoji: "🤷" }].map((item) => (
               <span key={item.text} style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", gap: "6px", background: "rgba(255,247,241,0.07)", border: "1px solid rgba(255,247,241,0.12)", color: BFF_COLORS.cream, fontSize: "13px", fontWeight: 600, padding: "8px 12px", borderRadius: "999px", textAlign: "center" }}>
                 <span style={{ fontSize: "16px", flexShrink: 0 }}>{item.emoji}</span>{item.text}
               </span>
