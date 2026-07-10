@@ -6,17 +6,17 @@ const steps = [
     number: "1",
     label: "Step 1",
     Icon: Search,
-    title: "Capture",
+    title: "Audit",
     description:
-      "We learn how your business thinks. Voice, offers, proof, audience, tools, content and what is getting in the way.",
+      "We look at what is scattered, slow, unclear or harder to maintain than it should be.",
   },
   {
     number: "2",
     label: "Step 2",
     Icon: Lightbulb,
-    title: "Design",
+    title: "Prioritize",
     description:
-      "We map the workflows and decide what to build first based on where the system will create the most useful movement.",
+      "We identify what needs attention first and decide which system will create the most useful change.",
   },
   {
     number: "3",
@@ -24,7 +24,7 @@ const steps = [
     Icon: Wrench,
     title: "Build",
     description:
-      "We create the system. That might be a website, marketing brain, content engine, dashboard or custom workflow.",
+      "We create the system. That might be a website, marketing brain, content workflow, dashboard or custom setup.",
   },
   {
     number: "4",
@@ -32,7 +32,7 @@ const steps = [
     Icon: GraduationCap,
     title: "Launch",
     description:
-      "We hand it off properly. You leave with the templates, workflows and training so the system gets used from day one.",
+      "We train your team, document the process and make sure the system is ready to use from day one.",
   },
 ];
 
