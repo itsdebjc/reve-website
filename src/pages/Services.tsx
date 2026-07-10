@@ -17,79 +17,131 @@ import {
   PenTool,
   FileText,
   ShoppingCart,
+  type LucideIcon,
 } from "lucide-react";
 
 const steps = [
   {
     num: "01",
-    title: "Understand Your Challenge",
+    title: "Audit",
     description:
-      "We learn what is scattered, slow or hard to keep consistent. Marketing, websites, content, reporting, workflows or operations.",
+      "We look at what is scattered, slow, unclear or harder to maintain than it should be.",
   },
   {
     num: "02",
-    title: "Audit Your Systems",
+    title: "Prioritize",
     description:
-      "We map where the work actually lives, what is getting done where and what is causing the most friction.",
+      "We identify what needs attention first and decide which system will create the most useful change.",
   },
   {
     num: "03",
-    title: "Design the Fix",
+    title: "Build",
     description:
-      "We identify which system will create the most useful movement and what AI integration makes it work better.",
+      "We create the system. That might be a website, marketing brain, content workflow, dashboard or custom setup.",
   },
   {
     num: "04",
-    title: "Build and Launch",
+    title: "Launch",
     description:
-      "We build the system, train your team and hand everything off so it works from day one.",
+      "We train your team, document the process and make sure the system is ready to use from day one.",
   },
 ];
 
-const systems = [
+type SystemItem = {
+  icon: LucideIcon;
+  title: string;
+  description: string;
+  image: string;
+  alt: string;
+};
+
+type Category = {
+  num: string;
+  anchor: string;
+  icon: LucideIcon;
+  title: string;
+  tagline: string;
+  items: SystemItem[];
+};
+
+const categories: Category[] = [
   {
-    icon: Brain,
-    title: "Marketing Brain",
-    description: "The source of truth for your brand voice, offers and proof.",
-    image: marketingAsset.url,
-    alt: "Marketing Brain",
+    num: "01",
+    anchor: "cat-01",
+    icon: Sparkles,
+    title: "Reve AI Marketing Systems",
+    tagline:
+      "Turn your brand, offers, content and workflows into one clear system your team can actually use with AI.",
+    items: [
+      {
+        icon: Brain,
+        title: "Marketing Brain",
+        description:
+          "The source of truth for your brand voice, offers and proof.",
+        image: marketingAsset.url,
+        alt: "Marketing Brain knowledge base preview showing brand voice, offers and connected AI tools",
+      },
+      {
+        icon: PenTool,
+        title: "Content Engine",
+        description:
+          "Content planning, drafting and repurposing workflows for consistency.",
+        image: contentAsset.url,
+        alt: "Content Engine app preview with weekly calendar and draft editor",
+      },
+      {
+        icon: FileText,
+        title: "Proposal Builder",
+        description:
+          "Sales call notes transformed into stronger proposals, faster.",
+        image: proposalAsset.url,
+        alt: "Proposal Builder app preview with draft editor and AI suggestions",
+      },
+    ],
   },
   {
-    icon: PenTool,
-    title: "Content Engine",
-    description:
-      "Content planning, drafting and repurposing workflows for consistency.",
-    image: contentAsset.url,
-    alt: "Content Engine",
-  },
-  {
-    icon: FileText,
-    title: "Proposal Builder",
-    description: "Sales call notes transformed into stronger proposals, faster.",
-    image: proposalAsset.url,
-    alt: "Proposal Builder",
-  },
-  {
-    icon: ShoppingCart,
-    title: "E-commerce Dashboards",
-    description: "Real-time visibility into conversion, revenue and customer health.",
-    image: ecommerceDashboardExample.url,
-    alt: "E-commerce Dashboard",
-  },
-  {
+    num: "02",
+    anchor: "cat-02",
     icon: LayoutDashboard,
-    title: "Business Health Dashboards",
-    description: "All your important numbers in one clear, decision-ready view.",
-    image: businessHealthAsset.url,
-    alt: "Business Health Dashboard",
+    title: "Business Visibility Dashboards",
+    tagline:
+      "Bring your most important numbers into one view so you can see what is working, what is slipping and what needs attention.",
+    items: [
+      {
+        icon: ShoppingCart,
+        title: "E-commerce Dashboards",
+        description:
+          "Real-time visibility into conversion, revenue and customer health.",
+        image: ecommerceDashboardExample.url,
+        alt: "E-commerce health dashboard with conversion rate, LTV:CAC, revenue sources and recent orders",
+      },
+      {
+        icon: LayoutDashboard,
+        title: "Business Health Dashboards",
+        description:
+          "All your important numbers in one clear, decision-ready view.",
+        image: businessHealthAsset.url,
+        alt: "Business health dashboard preview",
+      },
+    ],
   },
   {
+    num: "03",
+    anchor: "cat-03",
     icon: Globe,
-    title: "AI-Ready Websites",
-    description:
-      "Structured for AI, search platforms and your team to actually use.",
-    image: websiteImage,
-    alt: "The Reve AI homepage hero, an AI-built website with a wildflower meadow and the headline AI runs on clear marketing",
+    title: "AI-Built Websites",
+    tagline:
+      "Build a clearer website that works for your customers, your team and the AI tools trying to understand your business.",
+    items: [
+      {
+        icon: Globe,
+        title: "AI-Ready Websites",
+        description:
+          "Structured, written and built so people, search platforms and AI tools can actually use it. This site is one.",
+        image: websiteImage,
+        alt: "The Reve AI homepage hero, an AI-built website with a wildflower meadow and the headline AI runs on clear marketing",
+      },
+    ],
   },
 ];
 
@@ -146,7 +198,7 @@ const Services = () => {
           <div className="mb-20">
             <span className="label-eyebrow">— How It Works</span>
             <h2 className="display-serif text-4xl md:text-5xl mt-8 text-foreground">
-              From scattered to <span className="display-italic">systems that work.</span>
+              The system comes <span className="display-italic">before the tool.</span>
             </h2>
           </div>
 
@@ -182,46 +234,87 @@ const Services = () => {
           <div className="mb-20">
             <span className="label-eyebrow">— What We Build</span>
             <h2 className="display-serif text-4xl md:text-5xl mt-8 text-foreground">
-              Six systems we <span className="display-italic">build most.</span>
+              Three systems, built from <span className="display-italic">your audit.</span>
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
-            {systems.map((system) => {
-              const Icon = system.icon;
+          <div className="space-y-24 md:space-y-32">
+            {categories.map((cat) => {
+              const CatIcon = cat.icon;
               return (
-                <div
-                  key={system.title}
-                  className="group flex flex-col bg-gradient-to-br from-card/60 via-card/30 to-background border border-hairline rounded-sm overflow-hidden hover:border-primary/60 hover:-translate-y-0.5 hover:shadow-[0_20px_60px_-20px_hsl(350_60%_82%/0.2)] transition-all duration-500"
-                >
-                  <div className="aspect-[16/10] overflow-hidden border-b border-hairline">
-                    <img
-                      src={system.image}
-                      alt={system.alt}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-
-                  <div className="relative flex flex-col flex-1 p-6 md:p-7">
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className="w-10 h-10 rounded-full bg-primary/15 border border-primary/40 flex items-center justify-center">
-                        <Icon className="w-4 h-4 text-primary" strokeWidth={1.5} />
-                      </div>
+                <div key={cat.anchor} id={cat.anchor} className="scroll-mt-28">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="w-10 h-10 rounded-full bg-primary/15 border border-primary/40 flex items-center justify-center">
+                      <CatIcon className="w-4 h-4 text-primary" strokeWidth={1.5} />
                     </div>
-
-                    <h3 className="font-serif text-xl md:text-xl text-foreground leading-tight mb-3">
-                      {system.title}
-                    </h3>
-
-                    <p className="text-foreground/75 leading-relaxed font-light text-base mb-6 flex-1">
-                      {system.description}
-                    </p>
-
-                    <span className="inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.25em] text-primary">
-                      Learn more →
+                    <span className="label-mono text-primary">
+                      {cat.num} — {cat.title}
                     </span>
+                  </div>
+                  <h3 className="font-serif text-2xl md:text-3xl text-foreground leading-tight mb-4">
+                    {cat.title}
+                  </h3>
+                  <p className="text-foreground/75 text-lg leading-relaxed font-light max-w-2xl mb-10">
+                    {cat.tagline}
+                  </p>
+
+                  <div
+                    className={`grid gap-6 ${
+                      cat.items.length === 3
+                        ? "md:grid-cols-3"
+                        : cat.items.length === 2
+                        ? "md:grid-cols-2"
+                        : "md:grid-cols-1"
+                    }`}
+                  >
+                    {cat.items.map((item) => {
+                      const Icon = item.icon;
+                      const single = cat.items.length === 1;
+                      return (
+                        <div
+                          key={item.title}
+                          className={`group flex bg-gradient-to-br from-card/60 via-card/30 to-background border border-hairline rounded-sm overflow-hidden hover:border-primary/60 transition-all duration-500 ${
+                            single ? "flex-col md:flex-row" : "flex-col"
+                          }`}
+                        >
+                          <div
+                            className={`overflow-hidden ${
+                              single
+                                ? "md:w-1/2 border-b md:border-b-0 md:border-r border-hairline"
+                                : "aspect-[16/10] border-b border-hairline"
+                            }`}
+                          >
+                            <img
+                              src={item.image}
+                              alt={item.alt}
+                              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                              loading="lazy"
+                              decoding="async"
+                            />
+                          </div>
+
+                          <div
+                            className={`relative flex flex-col flex-1 p-6 md:p-7 ${
+                              single ? "md:justify-center md:p-10" : ""
+                            }`}
+                          >
+                            <div className="flex items-center gap-3 mb-4">
+                              <div className="w-10 h-10 rounded-full bg-primary/15 border border-primary/40 flex items-center justify-center">
+                                <Icon className="w-4 h-4 text-primary" strokeWidth={1.5} />
+                              </div>
+                            </div>
+
+                            <h4 className="font-serif text-xl text-foreground leading-tight mb-3">
+                              {item.title}
+                            </h4>
+
+                            <p className="text-foreground/75 leading-relaxed font-light text-base">
+                              {item.description}
+                            </p>
+                          </div>
+                        </div>
+                      );
+                    })}
                   </div>
                 </div>
               );
