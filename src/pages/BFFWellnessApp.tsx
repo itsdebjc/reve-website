@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import debbieCollins from "@/assets/debbie-collins.jpeg";
 import debbieBeach from "@/assets/debbie-beach.jpeg";
 import heroCherryBlossom from "@/assets/hero-cherry-blossom.jpg";
-import debbieMallSolo from "@/assets/debbie-mall-solo.jpeg";
 import debbieCreamBg from "@/assets/debbie-collins-cream-bg.jpg";
 
 const BFF_COLORS = {
@@ -384,6 +383,9 @@ const BFFWellnessApp = () => {
             </div>
             <p style={{ fontSize: "17px", lineHeight: 1.6, color: BFF_COLORS.ink, fontWeight: 600, margin: "22px 0 0" }}>But the biggest change was not the number.</p>
             <p style={{ fontSize: "17px", lineHeight: 1.6, color: BFF_COLORS["body-text"], margin: "8px 0 0" }}>The biggest change was that I finally had a feedback loop. I could see what was working, what was not and what I wanted to adjust next.</p>
+            <div style={{ marginTop: "24px", paddingLeft: "18px", borderLeft: "2px solid rgba(240,80,140,0.3)" }}>
+              <div style={{ fontFamily: "'Caveat', cursive", fontWeight: 600, fontSize: "26px", lineHeight: 1.25, color: BFF_COLORS.ink }}>Not as a doctor. Not as a guru. Just a woman in midlife who figured out her own patterns.</div>
+            </div>
             <p style={{ fontSize: "13px", lineHeight: 1.55, color: BFF_COLORS["muted-gray"], background: BFF_COLORS.mat, borderRadius: "14px", padding: "16px 18px", margin: "24px 0 0" }}>These are my personal results, not a promise. Your results will be different because your body, food, habits and data are different. That is the point. This workshop is not about copying my exact plan — it is about learning how to notice your own patterns.</p>
           </div>
         </div>
@@ -574,21 +576,6 @@ const BFFWellnessApp = () => {
         <div style={{ position: "relative", zIndex: 1, textAlign: "center", padding: "80px 26px", maxWidth: "780px" }}>
           <h2 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(34px, 5vw, 56px)", lineHeight: 1.08, letterSpacing: "-0.02em", color: BFF_COLORS.cream, margin: "0", textShadow: "0 2px 20px rgba(42,33,28,0.4)" }}>Your body has changed. Now you have a better way to <span style={{ color: "#FFC8A0" }}>listen to the feedback.</span></h2>
           <button onClick={handleWaitlist} style={{ display: "inline-block", marginTop: "26px", fontSize: "16px", fontWeight: 700, color: BFF_COLORS.ink, background: BFF_COLORS.cream, padding: "15px 28px", borderRadius: "999px", border: "none", cursor: "pointer", boxShadow: "0 14px 30px rgba(0,0,0,0.25)" }}>Join the waitlist →</button>
-        </div>
-      </section>
-
-      {/* WHY I BUILT THIS */}
-      <section style={{ background: BFF_COLORS["cream-alt"], padding: "84px 26px" }}>
-        <div className="bff-grid-2col" style={{ maxWidth: "1080px", margin: "0 auto", display: "grid", gridTemplateColumns: "0.92fr 1.08fr", gap: "54px", alignItems: "center" }}>
-          <div>
-            <span style={{ display: "inline-flex", alignItems: "center", background: "#FFF1EB", color: BFF_COLORS.coral, fontSize: "12px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", padding: "7px 14px", borderRadius: "999px" }}>Why I built this</span>
-            <h2 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(30px, 4.2vw, 48px)", lineHeight: 1.05, letterSpacing: "-0.02em", margin: "22px 0 0" }}>I built BFF because I needed it.</h2>
-            <p style={{ fontSize: "18px", lineHeight: 1.65, color: BFF_COLORS["body-text"], maxWidth: "680px", margin: "24px 0 0" }}>I have worked in wellness, supplements, gyms and natural health for years. I have been health-conscious most of my adult life. And still, midlife changed the rules. So I built BFF: a simple way to use AI, body data and food notes to create a clearer feedback loop.</p>
-            <div style={{ marginTop: "28px", paddingLeft: "18px", borderLeft: "2px solid rgba(240,80,140,0.3)" }}>
-              <div style={{ fontFamily: "'Caveat', cursive", fontWeight: 600, fontSize: "28px", lineHeight: 1.25, color: BFF_COLORS.ink }}>Not as a doctor. Not as a guru. As a woman in midlife who finally stopped guessing.</div>
-            </div>
-          </div>
-          <img src={debbieMallSolo} alt="Debbie" style={{ display: "block", width: "100%", height: "520px", objectFit: "cover", borderRadius: "24px", boxShadow: "0 24px 50px rgba(42,33,28,0.16)" }} />
         </div>
       </section>
 
