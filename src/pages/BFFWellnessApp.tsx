@@ -322,8 +322,8 @@ const BFFWellnessApp = () => {
         <div style={{ maxWidth: "1000px", margin: "0 auto" }}>
           <span style={{ display: "inline-flex", alignItems: "center", background: "#fff", color: BFF_COLORS.pink, fontSize: "12px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", padding: "7px 14px", borderRadius: "999px" }}>Real life</span>
           <h2 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(28px, 3.8vw, 42px)", lineHeight: 1.1, letterSpacing: "-0.02em", margin: "22px 0 0", maxWidth: "720px" }}>BFF in <span style={{ color: BFF_COLORS.pink }}>the moments that matter.</span></h2>
-          <p style={{ fontSize: "18px", lineHeight: 1.6, color: BFF_COLORS["body-text"], maxWidth: "680px", margin: "22px 0 0" }}>Not just once a week. Not after you already feel off track.</p>
-          <p style={{ fontSize: "18px", lineHeight: 1.6, color: BFF_COLORS["body-text"], maxWidth: "680px", margin: "16px 0 0" }}>BFF is there in the small daily moments where choices actually happen.</p>
+          <p style={{ fontSize: "18px", lineHeight: 1.6, color: BFF_COLORS["body-text"], maxWidth: "680px", margin: "22px 0 0" }}>Think of BFF as your best friend in your back pocket. Not just once a week. Not after you already feel off track.</p>
+          <p style={{ fontSize: "18px", lineHeight: 1.6, color: BFF_COLORS["body-text"], maxWidth: "680px", margin: "16px 0 0" }}>It is there in the small daily moments where choices actually happen.</p>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "16px", margin: "28px 0 32px" }}>
             {[{ icon: "🍽️", text: "Looking at a menu." }, { icon: "👩‍🍳", text: "Standing in the kitchen at 4pm." }, { icon: "🍪", text: "Deciding if you need a snack." }, { icon: "😕", text: "Wondering why you feel off." }, { icon: "🍳", text: "Planning dinner." }, { icon: "📱", text: "Getting back on track after a busy weekend." }].map((item) => (
               <div key={item.text} style={{ background: "#fff", borderRadius: "16px", padding: "24px 20px", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", boxShadow: "0 4px 12px rgba(42,33,28,0.05)" }}>
@@ -333,18 +333,18 @@ const BFFWellnessApp = () => {
             ))}
           </div>
           <div style={{ background: BFF_COLORS.ink, borderRadius: "24px", padding: "40px 36px", color: BFF_COLORS.cream, marginTop: "32px" }}>
-            <div style={{ fontSize: "12px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: BFF_COLORS.amber, marginBottom: "16px" }}>In each of those moments, it helps you ask</div>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px" }}>
+            <div className="bff-grid-2col" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "32px" }}>
               <div>
-                <p style={{ fontSize: "18px", fontWeight: 800, color: BFF_COLORS.cream, lineHeight: 1.4, margin: "0" }}>What is happening here?</p>
-                <p style={{ fontSize: "18px", fontWeight: 800, color: BFF_COLORS.cream, lineHeight: 1.4, margin: "12px 0 0" }}>What do I need?</p>
-                <p style={{ fontSize: "18px", fontWeight: 800, color: BFF_COLORS.cream, lineHeight: 1.4, margin: "12px 0 0" }}>What is my next better choice?</p>
+                <div style={{ fontSize: "12px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: BFF_COLORS.amber, marginBottom: "16px" }}>Not the friend who says</div>
+                <p style={{ fontSize: "16px", lineHeight: 1.6, color: "rgba(255,247,241,0.6)", margin: "0" }}>"Just have the fries, who cares."</p>
+                <p style={{ fontSize: "16px", lineHeight: 1.6, color: "rgba(255,247,241,0.6)", margin: "10px 0 0" }}>"You ruined everything."</p>
               </div>
               <div>
-                <p style={{ fontSize: "16px", lineHeight: 1.6, color: BFF_COLORS.cream, margin: "0" }}>That is the point of BFF.</p>
-                <p style={{ fontSize: "18px", fontWeight: 800, color: BFF_COLORS.cream, margin: "20px 0 0" }}>You have your <span style={{ color: BFF_COLORS.amber }}>BFF coach</span> to help you use it every day.</p>
+                <div style={{ fontSize: "12px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: BFF_COLORS.amber, marginBottom: "16px" }}>The one who says</div>
+                <p style={{ fontSize: "18px", fontWeight: 800, color: BFF_COLORS.cream, lineHeight: 1.4, margin: "0" }}>Let's pause. What do you actually need right now?</p>
               </div>
             </div>
+            <p style={{ fontSize: "18px", fontWeight: 800, color: BFF_COLORS.cream, margin: "28px 0 0", paddingTop: "24px", borderTop: "1px solid rgba(255,247,241,0.12)" }}>Your <span style={{ color: BFF_COLORS.amber }}>BFF coach</span> helps you stay honest without being hard on yourself, every day.</p>
           </div>
         </div>
       </section>
@@ -372,7 +372,8 @@ const BFFWellnessApp = () => {
           <div>
             <span style={{ display: "inline-flex", alignItems: "center", background: "#fff", border: `1px solid rgba(42, 33, 28, 0.08)`, color: BFF_COLORS.coral, fontSize: "12px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", padding: "7px 14px", borderRadius: "999px" }}>What changed for me</span>
             <h2 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(30px, 4vw, 46px)", lineHeight: 1.05, letterSpacing: "-0.02em", margin: "20px 0 0" }}>At 54, I finally <span style={{ color: BFF_COLORS.pink }}>stopped guessing.</span></h2>
-            <p style={{ fontSize: "16px", lineHeight: 1.6, color: BFF_COLORS["body-text"], margin: "20px 0 16px" }}>In three months, after I started using AI with my food notes, habits and body composition data, I:</p>
+            <p style={{ fontSize: "16px", lineHeight: 1.6, color: BFF_COLORS["body-text"], margin: "20px 0 0" }}>For years I was doing the right things. Eating well. Moving. Trying. But my body still felt unpredictable. What changed was not a new diet or a harder workout. I started paying closer attention to my food, habits and body, then used AI to connect the dots.</p>
+            <p style={{ fontSize: "16px", lineHeight: 1.6, color: BFF_COLORS["body-text"], margin: "16px 0 16px" }}>In three months, after I started using AI with my food notes, habits and body composition data, I:</p>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px", marginBottom: "22px" }}>
               {[{ label: "7.8 lbs", desc: "lost total" }, { label: "7 lbs", desc: "body fat reduced" }, { label: "32.3% → 25.7%", desc: "body fat" }, { label: "muscle", desc: "supported while losing fat" }].map((stat) => (
                 <div key={stat.label} style={{ background: "#fff", borderRadius: "16px", padding: "18px 20px", boxShadow: "0 6px 16px rgba(42,33,28,0.05)" }}>
@@ -415,22 +416,6 @@ const BFFWellnessApp = () => {
         </div>
       </section>
 
-      {/* FOUNDER STORY */}
-      <section style={{ background: BFF_COLORS["cream-alt"], padding: "84px 26px" }}>
-        <div style={{ maxWidth: "920px", margin: "0 auto" }}>
-          <span style={{ display: "inline-flex", alignItems: "center", background: "#FFF1EB", color: BFF_COLORS.coral, fontSize: "12px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", padding: "7px 14px", borderRadius: "999px" }}>My story</span>
-          <h2 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(32px, 4.4vw, 50px)", lineHeight: 1.04, letterSpacing: "-0.02em", margin: "22px 0 0", color: BFF_COLORS.ink }}>At 54, <span style={{ color: BFF_COLORS.pink }}>I finally stopped guessing.</span></h2>
-          <p style={{ fontSize: "18px", lineHeight: 1.6, color: BFF_COLORS["body-text"], margin: "24px 0 0", maxWidth: "560px" }}>For years, I felt like I was doing the right things.</p>
-          <p style={{ fontSize: "18px", lineHeight: 1.6, color: BFF_COLORS["body-text"], margin: "16px 0 0", maxWidth: "560px" }}>I was eating well. I was moving. I was trying.</p>
-          <p style={{ fontSize: "18px", lineHeight: 1.6, color: BFF_COLORS["body-text"], margin: "16px 0 0", maxWidth: "560px" }}>But my body still felt unpredictable.</p>
-          <p style={{ fontSize: "18px", lineHeight: 1.6, color: BFF_COLORS["body-text"], margin: "16px 0 0", maxWidth: "560px" }}>What changed was not a new diet or a harder workout plan.</p>
-          <p style={{ fontSize: "18px", lineHeight: 1.6, color: BFF_COLORS["body-text"], margin: "16px 0 0", maxWidth: "560px" }}>I started paying closer attention to my body, my food and my habits. Then I used AI to help me connect the dots.</p>
-          <p style={{ fontSize: "18px", lineHeight: 1.6, color: BFF_COLORS["body-text"], margin: "16px 0 0", maxWidth: "560px" }}>That became BFF: Body Food Feedback.</p>
-          <p style={{ fontSize: "18px", lineHeight: 1.6, color: BFF_COLORS["body-text"], margin: "16px 0 0", maxWidth: "560px" }}>It gave me a calmer way to understand what was happening and make better choices without obsessing.</p>
-          <p style={{ fontSize: "18px", lineHeight: 1.6, color: BFF_COLORS["body-text"], margin: "16px 0 0", maxWidth: "560px" }}>Now I want to show you how to use it too.</p>
-        </div>
-      </section>
-
       {/* MINDSET */}
       <section style={{ position: "relative", overflow: "hidden", background: BFF_COLORS.ink, color: BFF_COLORS.cream, padding: "96px 26px" }}>
         <div style={{ position: "absolute", inset: "0", background: "radial-gradient(ellipse 62% 72% at 50% 36%, rgba(240,80,140,0.22), rgba(255,124,77,0.07) 46%, transparent 72%)", pointerEvents: "none" }} />
@@ -448,34 +433,12 @@ const BFFWellnessApp = () => {
           </div>
           <span style={{ display: "inline-flex", alignItems: "center", background: "rgba(255,247,241,0.08)", color: BFF_COLORS.amber, fontSize: "12px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", padding: "7px 14px", borderRadius: "999px" }}>A better way</span>
           <h2 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(32px, 4.6vw, 54px)", lineHeight: 1.08, letterSpacing: "-0.02em", margin: "20px 0 0", color: BFF_COLORS.cream }}>You do not need to be perfect. You need a better way to pay attention.</h2>
-          <p style={{ fontSize: "18px", lineHeight: 1.6, color: "rgba(255,247,241,0.74)", margin: "24px auto 0", maxWidth: "600px" }}>BFF is not here to judge your lunch.</p>
-          <p style={{ fontSize: "18px", lineHeight: 1.6, color: "rgba(255,247,241,0.74)", margin: "16px auto 0", maxWidth: "600px" }}>It is not here to tell you that one meal ruined everything.</p>
-          <p style={{ fontSize: "18px", lineHeight: 1.6, color: "rgba(255,247,241,0.85)", fontWeight: 600, margin: "16px auto 0", maxWidth: "600px" }}>It is here to help you notice patterns.</p>
-          <div style={{ margin: "24px auto 0", maxWidth: "600px" }}>
+          <p style={{ fontSize: "18px", lineHeight: 1.6, color: "rgba(255,247,241,0.74)", margin: "24px auto 0", maxWidth: "600px" }}>BFF is not here to judge your lunch or tell you one meal ruined everything. <span style={{ color: "rgba(255,247,241,0.95)", fontWeight: 600 }}>It is here to help you notice patterns.</span></p>
+          <div style={{ margin: "22px auto 0", maxWidth: "600px" }}>
             <p style={{ fontSize: "18px", lineHeight: 1.6, color: "rgba(255,247,241,0.74)", margin: "0" }}>One note can reveal something useful.</p>
             <p style={{ fontSize: "18px", lineHeight: 1.6, color: "rgba(255,247,241,0.74)", margin: "12px 0 0" }}>One pause can change the next choice.</p>
-            <p style={{ fontSize: "18px", lineHeight: 1.6, color: "rgba(255,247,241,0.74)", margin: "12px 0 0" }}>One small shift can help you feel more connected to your body again.</p>
           </div>
-          <p style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(19px, 2.8vw, 26px)", lineHeight: 1.16, margin: "34px auto 0", maxWidth: "660px" }}>This is not about being strict. It is about staying close enough to your habits that you can actually learn from them.</p>
-        </div>
-      </section>
-
-      {/* BEST FRIEND POSITIONING */}
-      <section style={{ background: BFF_COLORS.cream, padding: "84px 26px" }}>
-        <div style={{ maxWidth: "920px", margin: "0 auto" }}>
-          <span style={{ display: "inline-flex", alignItems: "center", background: "rgba(240,80,140,0.1)", color: BFF_COLORS.pink, fontSize: "12px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", padding: "7px 14px", borderRadius: "999px" }}>Your back-pocket BFF</span>
-          <h2 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(30px, 4vw, 46px)", lineHeight: 1.1, letterSpacing: "-0.02em", margin: "22px 0 0", maxWidth: "720px" }}>Think of BFF as <span style={{ color: BFF_COLORS.pink }}>your best friend in your back pocket.</span></h2>
-          <p style={{ fontSize: "18px", lineHeight: 1.6, color: BFF_COLORS["body-text"], maxWidth: "680px", margin: "28px 0 0" }}>The better friend.</p>
-          <p style={{ fontSize: "18px", lineHeight: 1.6, color: BFF_COLORS["body-text"], maxWidth: "680px", margin: "16px 0 0" }}>Not the one who says, "Just have the fries, who cares."</p>
-          <p style={{ fontSize: "18px", lineHeight: 1.6, color: BFF_COLORS["body-text"], maxWidth: "680px", margin: "16px 0 0" }}>Not the one who says, "You ruined everything."</p>
-          <p style={{ fontSize: "18px", lineHeight: 1.6, color: BFF_COLORS["body-text"], maxWidth: "680px", margin: "16px 0 0" }}>The one who says:</p>
-          <div style={{ display: "flex", flexDirection: "column", gap: "4px", margin: "12px 0 28px", maxWidth: "680px" }}>
-            <p style={{ fontSize: "18px", lineHeight: 1.6, color: BFF_COLORS.ink, margin: "0", fontWeight: 700 }}>Let's pause.</p>
-            <p style={{ fontSize: "18px", lineHeight: 1.6, color: BFF_COLORS.ink, margin: "0", fontWeight: 700 }}>What do you actually need right now?</p>
-          </div>
-          <p style={{ fontSize: "18px", lineHeight: 1.6, color: BFF_COLORS["body-text"], maxWidth: "680px", margin: "0" }}>BFF helps you stay honest without being hard on yourself.</p>
-          <p style={{ fontSize: "18px", lineHeight: 1.6, color: BFF_COLORS["body-text"], maxWidth: "680px", margin: "16px 0 0" }}>It gives you a place to track, reflect and come back to what matters.</p>
-          <p style={{ fontSize: "18px", lineHeight: 1.6, color: BFF_COLORS.ink, maxWidth: "680px", margin: "16px 0 0", fontWeight: 800 }}>Your body. Your food. Your feedback.</p>
+          <p style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(19px, 2.8vw, 26px)", lineHeight: 1.16, margin: "30px auto 0", maxWidth: "660px" }}>This is not about being strict. It is about staying close enough to your habits that you can actually learn from them.</p>
         </div>
       </section>
 
