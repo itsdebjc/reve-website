@@ -13,17 +13,22 @@ const Problem = () => {
             </div>
             <h2 className="display-serif text-4xl md:text-5xl text-foreground">
               Almost right is{" "}
-              <span className="display-italic">still too much work.</span>
+              <span className="display-italic">still not right.</span>
             </h2>
           </div>
 
           {/* Right column: Body text */}
           <div className="text-foreground/85 text-base md:text-lg leading-relaxed space-y-4">
-            <p>Most teams are already using AI.</p>
+            <p>Most businesses don't have an AI problem.</p>
             <p className="text-foreground/65">
-              But the output still needs rewriting. The voice is close but not quite right. The strategy is missing. The customer insight is not baked in. The workflow does not match how the business actually works.
+              They have a marketing system that has grown over time.<br />
+              Their website says one thing.<br />
+              Their proposals say another.<br />
+              Content lives everywhere.<br />
+              Knowledge disappears when someone leaves.
             </p>
-            <p>That is not leverage. That is another thing to fix. The tool is not the problem. The system underneath it is.</p>
+            <p>Then AI arrives and magnifies the chaos.</p>
+            <p>Before you add another tool, rebuild the foundation.</p>
           </div>
         </div>
       </div>

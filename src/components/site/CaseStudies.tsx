@@ -19,7 +19,7 @@ const cases = [
   {
     tag: "AI Website System",
     title: "From Webflow to fully custom in under a week",
-    body: "A founder-led consultancy moved off a rigid platform and launched a custom site with clear messaging and SEO foundations. They now update copy, add features and manage integrations like Klaviyo via API — no developer needed.",
+    body: "A founder-led consultancy moved off a rigid platform and launched a custom site with clear messaging and SEO foundations. They now update copy, add features and manage integrations like Klaviyo via API, no developer needed.",
     image: footerHills,
   },
 ];
@@ -30,9 +30,10 @@ const CaseStudies = () => {
       <DoodleAccent className="top-20 left-[5%]" size={56} />
       <div className="mx-auto max-w-7xl px-6">
         <div className="text-center mb-16">
-          <p className="label-eyebrow mb-6">— Case Studies</p>
+          <p className="label-eyebrow mb-6">— Recent Projects</p>
           <h2 className="display-serif text-4xl md:text-5xl leading-tight max-w-3xl mx-auto">
-            What we <span className="display-italic">built together.</span>
+            What we've built with AI.{" "}
+            <span className="display-italic">And what changed.</span>
           </h2>
         </div>
 

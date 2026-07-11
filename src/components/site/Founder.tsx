@@ -13,7 +13,7 @@ const Founder = () => {
             <span className="label-eyebrow">— Founder · Reve AI</span>
             <span className="hairline w-10" />
           </div>
-          <h2 className="display-serif text-5xl md:text-6xl">Debbie Collins</h2>
+          <h2 className="display-serif text-5xl md:text-6xl">Hi, I'm Debbie.</h2>
           <p className="label-mono mt-4">Marketing Strategist · Systems Builder</p>
         </div>
 
@@ -29,37 +29,29 @@ const Founder = () => {
 
           <div className="space-y-5 text-foreground/90 text-base md:text-lg leading-relaxed">
             <p>
-              Debbie Collins has spent 25+ years helping businesses get clearer, sharper and easier to choose.
+              I've spent more than 25 years helping businesses tell better stories.
             </p>
             <p>
-              She has never waited for a tool to go mainstream before figuring out what it changes.
-            </p>
-            <p>
-              She studied how Google worked before most businesses understood SEO. In 2008, she built one of the first social media agencies in Canada, when most companies were still asking whether social media mattered.
-            </p>
-            <p>
-              Now she is doing the same thing with AI.
+              When AI arrived, I thought the answer was learning better prompts.
             </p>
             <p className="font-serif font-semibold italic text-primary text-xl">
-              Same instinct. Different tool.
+              I was wrong.
             </p>
             <p>
-              What Debbie brings is not just AI setup.
+              The real breakthrough came from rebuilding the way I worked.
+            </p>
+            <p className="text-foreground/70">
+              I organized my knowledge.<br />
+              Simplified my workflows.<br />
+              Created systems instead of starting from scratch every day.
             </p>
             <p>
-              It is marketing judgment.
+              Work became faster.<br />
+              Clearer.<br />
+              Lighter.
             </p>
             <p>
-              She knows what good strategy sounds like. She knows when a message is too vague, when content is off-brand, when a workflow will not get used and when an idea needs to become a system.
-            </p>
-            <p>
-              That is what most AI setups are missing.
-            </p>
-            <p>
-              AI can create more output. But better output still needs voice, strategy, customer insight and taste behind it.
-            </p>
-            <p>
-              That is what Reve AI is built on.
+              Now I help businesses do the same.
             </p>
           </div>
         </div>

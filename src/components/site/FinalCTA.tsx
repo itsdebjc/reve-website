@@ -13,11 +13,11 @@ const FinalCTA = () => {
           — Start Here
         </p>
         <h2 className="display-serif text-3xl md:text-5xl mb-5 text-[hsl(0_0%_0%)]">
-          Let's figure out{" "}
-          <span className="display-italic !text-[hsl(0_0%_0%)]">what to build first.</span>
+          Ready to rebuild{" "}
+          <span className="display-italic !text-[hsl(0_0%_0%)]">your marketing?</span>
         </h2>
         <p className="text-base md:text-lg max-w-xl mx-auto leading-relaxed text-[hsl(0_0%_0%)]">
-          Tell us where the work feels scattered, slow or hard to keep up with. We will help you find the system that makes the most sense.
+          Start with an AI Marketing Audit and leave with a clear roadmap for what to build first.
         </p>
 
         <div className="mt-8 flex flex-col items-center gap-5">
@@ -27,7 +27,7 @@ const FinalCTA = () => {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 bg-[hsl(0_0%_0%)] text-[hsl(30_25%_96%)] px-10 py-3.5 font-mono text-[13px] md:text-[12px] tracking-[0.22em] uppercase hover:bg-[hsl(0_0%_15%)] transition-colors"
           >
-            Book a Strategy Call →
+            Start with an AI Marketing Audit →
           </a>
         </div>
       </div>

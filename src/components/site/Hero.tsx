@@ -13,16 +13,16 @@ const Hero = () => {
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/50 via-background/40 to-background" />
 
       <div className="mx-auto w-full max-w-5xl px-6 md:px-10 pt-24 pb-16 fade-up">
-        <p className="label-eyebrow mb-10">— AI Systems Studio</p>
+        <p className="label-eyebrow mb-10">— Reve AI</p>
 
         <h1 className="display-serif text-4xl sm:text-5xl md:text-7xl lg:text-[6.5rem] text-foreground leading-tight">
-          AI was supposed to make this easier.
+          Rebuild your marketing
           <br />
-          <span className="display-italic">Let's make that true.</span>
+          <span className="display-italic">so AI actually works.</span>
         </h1>
 
         <p className="mt-8 text-foreground/75 text-base md:text-lg leading-relaxed max-w-xl">
-          We turn scattered marketing into systems AI can actually use, whether that's your website, your content or your data.
+          Your website, content and workflows should make work easier, not more complicated. We help businesses organize their marketing into one AI-ready system so teams can create faster, stay consistent and stop reinventing the same work.
         </p>
 
         <div className="mt-12 flex flex-row gap-6 items-center flex-wrap">
@@ -32,13 +32,13 @@ const Hero = () => {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-8 py-4 label-mono hover:bg-primary/90 transition-all duration-300 whitespace-nowrap"
           >
-            Book a Strategy Call →
+            Start with an AI Marketing Audit →
           </a>
           <a
-            href="#case-studies"
+            href="#how-we-work"
             className="label-mono text-foreground/80 hover:text-primary transition-colors whitespace-nowrap"
           >
-            View Case Studies
+            See How It Works
           </a>
         </div>
       </div>

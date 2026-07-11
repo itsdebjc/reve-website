@@ -3,152 +3,75 @@ import Nav from "@/components/site/Nav";
 import Footer from "@/components/site/Footer";
 import { CALENDLY_URL } from "@/lib/links";
 import heroBlossom from "@/assets/hero-blossom.jpg";
-import marketingAsset from "@/assets/system-marketing.jpg.asset.json";
-import contentAsset from "@/assets/system-content.jpg.asset.json";
-import proposalAsset from "@/assets/system-proposal.jpg.asset.json";
-import ecommerceDashboardExample from "@/assets/ecommerce-dashboard-example.png.asset.json";
-import businessHealthAsset from "@/assets/system-business-health.jpg.asset.json";
-import websiteImage from "@/assets/system-website.jpg";
-import {
-  Sparkles,
-  LayoutDashboard,
-  Globe,
-  Brain,
-  PenTool,
-  FileText,
-  ShoppingCart,
-  type LucideIcon,
-} from "lucide-react";
+import { Search, Boxes, TrendingUp, Check, type LucideIcon } from "lucide-react";
 
-const steps = [
-  {
-    num: "01",
-    title: "Audit",
-    description:
-      "We look at what is scattered, slow, unclear or harder to maintain than it should be.",
-  },
-  {
-    num: "02",
-    title: "Prioritize",
-    description:
-      "We identify what needs attention first and decide which system will create the most useful change.",
-  },
-  {
-    num: "03",
-    title: "Build",
-    description:
-      "We create the system. That might be a website, marketing brain, content workflow, dashboard or custom setup.",
-  },
-  {
-    num: "04",
-    title: "Launch",
-    description:
-      "We train your team, document the process and make sure the system is ready to use from day one.",
-  },
-];
-
-type SystemItem = {
-  icon: LucideIcon;
-  title: string;
-  description: string;
-  image: string;
-  alt: string;
-};
-
-type Category = {
+type Service = {
   num: string;
-  anchor: string;
   icon: LucideIcon;
   title: string;
   tagline: string;
-  items: SystemItem[];
+  description: string;
+  listLabel?: string;
+  items?: string[];
+  closing?: string[];
 };
 
-const categories: Category[] = [
+const services: Service[] = [
   {
     num: "01",
-    anchor: "cat-01",
-    icon: Sparkles,
-    title: "Reve AI Marketing Systems",
-    tagline:
-      "Turn your brand, offers, content and workflows into one clear system your team can actually use with AI.",
+    icon: Search,
+    title: "AI Marketing Audit",
+    tagline: "Find what's getting in the way.",
+    description:
+      "We'll review your marketing, identify opportunities and create a roadmap for where AI can make the biggest impact.",
+    listLabel: "You'll receive",
     items: [
-      {
-        icon: Brain,
-        title: "Marketing Brain",
-        description:
-          "The source of truth for your brand voice, offers and proof.",
-        image: marketingAsset.url,
-        alt: "Marketing Brain knowledge base preview showing brand voice, offers and connected AI tools",
-      },
-      {
-        icon: PenTool,
-        title: "Content Engine",
-        description:
-          "Content planning, drafting and repurposing workflows for consistency.",
-        image: contentAsset.url,
-        alt: "Content Engine app preview with weekly calendar and draft editor",
-      },
-      {
-        icon: FileText,
-        title: "Proposal Builder",
-        description:
-          "Sales call notes transformed into stronger proposals, faster.",
-        image: proposalAsset.url,
-        alt: "Proposal Builder app preview with draft editor and AI suggestions",
-      },
+      "Website review",
+      "Messaging review",
+      "Content review",
+      "Workflow review",
+      "AI recommendations",
+      "Priority roadmap",
     ],
   },
   {
     num: "02",
-    anchor: "cat-02",
-    icon: LayoutDashboard,
-    title: "Business Visibility Dashboards",
-    tagline:
-      "Bring your most important numbers into one view so you can see what is working, what is slipping and what needs attention.",
+    icon: Boxes,
+    title: "AI Marketing System",
+    tagline: "We'll build the right system for your business.",
+    description:
+      "Every build is different. Depending on your goals, your system may include:",
     items: [
-      {
-        icon: ShoppingCart,
-        title: "E-commerce Dashboards",
-        description:
-          "Real-time visibility into conversion, revenue and customer health.",
-        image: ecommerceDashboardExample.url,
-        alt: "E-commerce health dashboard with conversion rate, LTV:CAC, revenue sources and recent orders",
-      },
-      {
-        icon: LayoutDashboard,
-        title: "Business Health Dashboards",
-        description:
-          "All your important numbers in one clear, decision-ready view.",
-        image: businessHealthAsset.url,
-        alt: "Business health dashboard preview",
-      },
+      "AI-ready website",
+      "Brand Hub",
+      "Content System",
+      "Proposal System",
+      "Case Study Library",
+      "Knowledge Base",
+      "AI workflows",
+      "Dashboards",
+      "Team training",
+    ],
+    closing: [
+      "Not every client needs every system.",
+      "Every client gets the right one.",
     ],
   },
   {
     num: "03",
-    anchor: "cat-03",
-    icon: Globe,
-    title: "AI-Built Websites",
-    tagline:
-      "Build a clearer website that works for your customers, your team and the AI tools trying to understand your business.",
-    items: [
-      {
-        icon: Globe,
-        title: "AI-Ready Websites",
-        description:
-          "Structured, written and built so people, search platforms and AI tools can actually use it. This site is one.",
-        image: websiteImage,
-        alt: "The Reve AI homepage hero, an AI-built website with a wildflower meadow and the headline AI runs on clear marketing",
-      },
-    ],
+    icon: TrendingUp,
+    title: "AI Growth Partner",
+    tagline: "Keep improving.",
+    description:
+      "AI moves quickly. We'll help your team continue improving with coaching, workflow updates, new tools and ongoing support.",
   },
 ];
 
 const Services = () => {
   useEffect(() => {
     document.title = "Services — Reve AI";
-    const desc = "Custom AI systems built for your business, or a focused session to show you exactly where to start.";
+    const desc =
+      "Don't buy another AI tool until you know what your business actually needs. Start with an AI Marketing Audit.";
     let meta = document.querySelector('meta[name="description"]');
     if (!meta) {
       meta = document.createElement("meta");
@@ -163,7 +86,7 @@ const Services = () => {
       <Nav />
 
       {/* Hero */}
-      <section className="relative pt-40 pb-24 md:pt-48 md:pb-32 px-6 overflow-hidden min-h-[85vh] flex items-center">
+      <section className="relative pt-40 pb-24 md:pt-48 md:pb-32 px-6 overflow-hidden min-h-[80vh] flex items-center">
         <div
           className="absolute inset-0 bg-cover bg-center pointer-events-none"
           style={{ backgroundImage: `url(${heroBlossom})` }}
@@ -172,12 +95,14 @@ const Services = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/50 to-background pointer-events-none" />
 
         <div className="relative z-10 max-w-2xl mx-auto text-center">
+          <p className="label-eyebrow mb-8">— AI Marketing Services</p>
           <h1 className="font-serif text-4xl md:text-6xl leading-tight text-foreground">
-            Not sure what AI system your business{" "}
-            <span className="italic">needs?</span>
+            Don't buy another AI tool until you know what your business{" "}
+            <span className="italic">actually needs.</span>
           </h1>
-          <p className="mt-8 text-foreground/75 text-lg md:text-xl">
-            Most businesses have the same problem: scattered tools, scattered workflows and no clear starting point.
+          <p className="mt-8 text-foreground/75 text-lg md:text-xl leading-relaxed">
+            Our services are designed to help you build a marketing system that
+            works today and gets smarter over time.
           </p>
           <div className="mt-12">
             <a
@@ -186,181 +111,118 @@ const Services = () => {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-background font-mono text-xs uppercase tracking-wider hover:bg-primary/90 transition-colors"
             >
-              Start with the AI Systems Audit →
+              Start with an AI Marketing Audit →
             </a>
           </div>
         </div>
       </section>
 
-      {/* How It Works */}
+      {/* Services */}
       <section className="py-32 md:py-44 px-6 border-t border-hairline overflow-hidden">
-        <div className="mx-auto max-w-6xl">
-          <div className="mb-20">
-            <span className="label-eyebrow">— How It Works</span>
-            <h2 className="display-serif text-4xl md:text-5xl mt-8 text-foreground">
-              The system comes <span className="display-italic">before the tool.</span>
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-16">
-            <div className="space-y-12">
-              {steps.map((step) => (
-                <div key={step.num} className="flex gap-6">
-                  <div className="flex-shrink-0">
-                    <div className="w-16 h-16 rounded-full border-2 border-primary flex items-center justify-center">
-                      <span className="font-serif text-2xl text-primary">
-                        {step.num}
-                      </span>
-                    </div>
+        <div className="mx-auto max-w-5xl space-y-24 md:space-y-32">
+          {services.map((s) => {
+            const Icon = s.icon;
+            return (
+              <div key={s.num} className="scroll-mt-28">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-10 h-10 rounded-full bg-primary/15 border border-primary/40 flex items-center justify-center">
+                    <Icon className="w-4 h-4 text-primary" strokeWidth={1.5} />
                   </div>
-                  <div className="flex-grow">
-                    <h3 className="text-xl font-serif text-foreground mb-3">
-                      {step.title}
-                    </h3>
-                    <p className="text-foreground/75 leading-relaxed">
-                      {step.description}
-                    </p>
-                  </div>
+                  <span className="label-mono text-primary">
+                    Service {s.num}
+                  </span>
                 </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* What We Build */}
-      <section className="py-32 md:py-44 px-6 border-t border-hairline overflow-hidden">
-        <div className="mx-auto max-w-6xl">
-          <div className="mb-20">
-            <span className="label-eyebrow">— What We Build</span>
-            <h2 className="display-serif text-4xl md:text-5xl mt-8 text-foreground">
-              Three systems, built from <span className="display-italic">your audit.</span>
-            </h2>
-          </div>
+                <h2 className="display-serif text-3xl md:text-4xl text-foreground leading-tight mb-3">
+                  {s.title}
+                </h2>
+                <p className="display-italic text-2xl md:text-3xl text-primary mb-8">
+                  {s.tagline}
+                </p>
+                <p className="text-foreground/80 text-lg leading-relaxed font-light max-w-2xl">
+                  {s.description}
+                </p>
 
-          <div className="space-y-24 md:space-y-32">
-            {categories.map((cat) => {
-              const CatIcon = cat.icon;
-              return (
-                <div key={cat.anchor} id={cat.anchor} className="scroll-mt-28">
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="w-10 h-10 rounded-full bg-primary/15 border border-primary/40 flex items-center justify-center">
-                      <CatIcon className="w-4 h-4 text-primary" strokeWidth={1.5} />
-                    </div>
-                    <span className="label-mono text-primary">
-                      {cat.num} — {cat.title}
-                    </span>
-                  </div>
-                  <h3 className="font-serif text-2xl md:text-3xl text-foreground leading-tight mb-4">
-                    {cat.title}
-                  </h3>
-                  <p className="text-foreground/75 text-lg leading-relaxed font-light max-w-2xl mb-10">
-                    {cat.tagline}
-                  </p>
-
-                  <div
-                    className={`grid gap-6 ${
-                      cat.items.length === 3
-                        ? "md:grid-cols-3"
-                        : cat.items.length === 2
-                        ? "md:grid-cols-2"
-                        : "md:grid-cols-1"
-                    }`}
-                  >
-                    {cat.items.map((item) => {
-                      const Icon = item.icon;
-                      const single = cat.items.length === 1;
-                      return (
-                        <div
-                          key={item.title}
-                          className={`group flex bg-gradient-to-br from-card/60 via-card/30 to-background border border-hairline rounded-sm overflow-hidden hover:border-primary/60 transition-all duration-500 ${
-                            single ? "flex-col md:flex-row" : "flex-col"
-                          }`}
+                {s.items && (
+                  <div className="mt-10">
+                    {s.listLabel && (
+                      <p className="label-mono text-primary mb-6">
+                        {s.listLabel}
+                      </p>
+                    )}
+                    <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-10 gap-y-4">
+                      {s.items.map((item) => (
+                        <li
+                          key={item}
+                          className="flex items-center gap-3 text-foreground/90 text-base"
                         >
-                          <div
-                            className={`overflow-hidden ${
-                              single
-                                ? "md:w-1/2 border-b md:border-b-0 md:border-r border-hairline"
-                                : "aspect-[16/10] border-b border-hairline"
-                            }`}
-                          >
-                            <img
-                              src={item.image}
-                              alt={item.alt}
-                              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
-                              loading="lazy"
-                              decoding="async"
-                            />
-                          </div>
-
-                          <div
-                            className={`relative flex flex-col flex-1 p-6 md:p-7 ${
-                              single ? "md:justify-center md:p-10" : ""
-                            }`}
-                          >
-                            <div className="flex items-center gap-3 mb-4">
-                              <div className="w-10 h-10 rounded-full bg-primary/15 border border-primary/40 flex items-center justify-center">
-                                <Icon className="w-4 h-4 text-primary" strokeWidth={1.5} />
-                              </div>
-                            </div>
-
-                            <h4 className="font-serif text-xl text-foreground leading-tight mb-3">
-                              {item.title}
-                            </h4>
-
-                            <p className="text-foreground/75 leading-relaxed font-light text-base">
-                              {item.description}
-                            </p>
-                          </div>
-                        </div>
-                      );
-                    })}
+                          <Check
+                            className="text-primary w-4 h-4 flex-shrink-0"
+                            strokeWidth={2}
+                          />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-                </div>
-              );
-            })}
+                )}
+
+                {s.closing && (
+                  <div className="mt-10 space-y-1 text-foreground/85 text-lg">
+                    {s.closing.map((line) => (
+                      <p key={line}>{line}</p>
+                    ))}
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* Why Reve AI */}
+      <section className="py-32 md:py-44 px-6 border-t border-hairline bg-dark-warm overflow-hidden">
+        <div className="mx-auto max-w-3xl text-center">
+          <p className="label-eyebrow mb-8">— Why Reve AI</p>
+          <h2 className="display-serif text-4xl md:text-5xl text-foreground mb-10">
+            Why clients <span className="display-italic">work with us.</span>
+          </h2>
+          <div className="space-y-4 text-foreground/85 text-lg md:text-xl leading-relaxed">
+            <p>We don't start with software.</p>
+            <p>We start with the way your business works.</p>
+            <p className="text-foreground/70">
+              That means the systems we build are practical, easy to adopt and
+              designed to grow with your team.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Audit CTA */}
-      <section className="py-32 md:py-44 px-6 bg-primary/10 border-t border-hairline overflow-hidden">
-        <div className="mx-auto max-w-3xl text-center">
-          <h2 className="display-serif text-4xl md:text-5xl text-foreground mb-8">
-            Start with the <span className="display-italic">AI Systems Audit.</span>
+      {/* Final CTA */}
+      <section
+        className="relative isolate py-20 md:py-28 px-6 border-t border-hairline overflow-hidden"
+        style={{
+          backgroundImage:
+            "linear-gradient(180deg, hsl(350 70% 90%) 0%, hsl(350 65% 86%) 60%, hsl(350 55% 80%) 100%)",
+        }}
+      >
+        <div className="mx-auto max-w-3xl text-center text-[hsl(0_0%_0%)]">
+          <h2 className="display-serif text-3xl md:text-5xl mb-6 text-[hsl(0_0%_0%)]">
+            Let's build something your team will{" "}
+            <span className="display-italic !text-[hsl(0_0%_0%)]">
+              actually use.
+            </span>
           </h2>
-          <p className="text-foreground/75 text-lg md:text-xl mb-12 leading-relaxed">
-            A focused session where we map what is scattered, what is slow and where an AI system will create the most useful movement in your business.
-          </p>
-          <a
-            href={CALENDLY_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-background font-mono text-xs uppercase tracking-wider hover:bg-primary/90 transition-colors"
-          >
-            Book Your Audit →
-          </a>
-        </div>
-      </section>
-
-      {/* Not Sure Yet */}
-      <section className="py-32 md:py-44 px-6 border-t border-hairline overflow-hidden">
-        <div className="mx-auto max-w-3xl text-center">
-          <h2 className="display-serif text-4xl md:text-5xl text-foreground mb-8">
-            Not sure what you <span className="display-italic">need yet?</span>
-          </h2>
-          <p className="text-foreground/75 text-lg md:text-xl mb-4">That is normal.</p>
-          <p className="text-foreground/75 text-lg leading-relaxed mb-12">
-            Most clients come to us with a mix of problems. We help you decide what needs to be fixed first, what can wait and which system will create the most useful movement.
-          </p>
-          <a
-            href={CALENDLY_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-background font-mono text-xs uppercase tracking-wider hover:bg-primary/90 transition-colors"
-          >
-            Book a Strategy Call →
-          </a>
+          <div className="mt-8">
+            <a
+              href={CALENDLY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 bg-[hsl(0_0%_0%)] text-[hsl(30_25%_96%)] px-10 py-3.5 font-mono text-[13px] md:text-[12px] tracking-[0.22em] uppercase hover:bg-[hsl(0_0%_15%)] transition-colors"
+            >
+              Start with an AI Marketing Audit →
+            </a>
+          </div>
         </div>
       </section>
 

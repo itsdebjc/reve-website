@@ -1,40 +1,76 @@
 import { Link } from "react-router-dom";
-import { Sparkles, LayoutDashboard, Globe, ArrowUpRight } from "lucide-react";
+import {
+  Sparkles,
+  LayoutDashboard,
+  Globe,
+  FileText,
+  PenTool,
+  BookOpen,
+  ArrowUpRight,
+} from "lucide-react";
 import { CALENDLY_URL } from "@/lib/links";
 import ecommerceDashboardExample from "@/assets/ecommerce-dashboard-example.png.asset.json";
 import marketingAsset from "@/assets/system-marketing.jpg.asset.json";
+import contentAsset from "@/assets/system-content.jpg.asset.json";
+import proposalAsset from "@/assets/system-proposal.jpg.asset.json";
+import businessHealthAsset from "@/assets/system-business-health.jpg.asset.json";
 import websiteImage from "@/assets/system-website.jpg";
 
 const systems = [
   {
     num: "01",
     icon: Sparkles,
-    title: "Reve AI Marketing Systems",
-    tagline:
-      "Turn your brand, offers, content and workflows into one clear system your team can actually use with AI.",
-    href: "/services#cat-01",
+    title: "AI Brand Hub",
+    tagline: "One place for your messaging, brand and content.",
+    href: "/services",
     image: marketingAsset.url,
-    alt: "Marketing Brain knowledge base preview showing brand voice, offers and connected AI tools",
+    alt: "AI Brand Hub preview showing brand voice, messaging and connected content",
   },
   {
     num: "02",
-    icon: LayoutDashboard,
-    title: "Business Visibility Dashboards",
+    icon: Globe,
+    title: "AI Website",
     tagline:
-      "Bring your most important numbers into one view so you can see what is working, what is slipping and what needs attention.",
-    href: "/services#cat-02",
-    image: ecommerceDashboardExample.url,
-    alt: "E-commerce health dashboard with conversion rate, LTV:CAC, revenue sources and recent orders",
+      "A website designed for people and built for the way AI works today.",
+    href: "/services",
+    image: websiteImage,
+    alt: "AI-built website preview with a wildflower meadow hero",
   },
   {
     num: "03",
-    icon: Globe,
-    title: "AI-Built Websites",
-    tagline:
-      "Build a clearer website that works for your customers, your team and the AI tools trying to understand your business.",
-    href: "/services#cat-03",
-    image: websiteImage,
-    alt: "The Reve AI homepage hero, an AI-built website with a wildflower meadow and the headline AI runs on clear marketing",
+    icon: LayoutDashboard,
+    title: "Business Dashboard",
+    tagline: "Know what's happening without digging through reports.",
+    href: "/services",
+    image: ecommerceDashboardExample.url,
+    alt: "Business dashboard with conversion rate, revenue sources and recent activity",
+  },
+  {
+    num: "04",
+    icon: FileText,
+    title: "Proposal System",
+    tagline: "Create proposals faster without starting from scratch.",
+    href: "/services",
+    image: proposalAsset.url,
+    alt: "Proposal System preview with a draft editor and AI suggestions",
+  },
+  {
+    num: "05",
+    icon: PenTool,
+    title: "Content System",
+    tagline: "Turn one idea into consistent content across every channel.",
+    href: "/services",
+    image: contentAsset.url,
+    alt: "Content System preview with a weekly calendar and draft editor",
+  },
+  {
+    num: "06",
+    icon: BookOpen,
+    title: "Knowledge Base",
+    tagline: "Give your team and AI one trusted source of truth.",
+    href: "/services",
+    image: businessHealthAsset.url,
+    alt: "Knowledge Base preview showing a single trusted source of truth",
   },
 ];
 
@@ -50,19 +86,20 @@ const ThreeCards = () => {
           <div className="max-w-3xl mx-auto text-center">
             <span className="label-mono text-blush">— Start Here</span>
             <h2 className="mt-6 font-serif text-4xl md:text-5xl text-foreground tracking-tight leading-[1.05]">
-              Start where the work{" "}
+              Start where work{" "}
               <em className="italic font-normal text-blush">feels hard.</em>
             </h2>
             <p className="mt-6 text-lg text-muted-foreground leading-relaxed font-light">
-              Your marketing is slow. Your website is unclear. Your numbers
-              live in too many places. Or AI is creating more work instead of
-              less.
+              Every project begins with an AI Marketing Audit.
             </p>
             <p className="mt-4 text-lg text-muted-foreground leading-relaxed font-light">
-              We start with an audit to understand what is getting in the way,
-              what needs attention first and where a better system could make
-              the biggest difference.
+              We'll uncover where work is slowing your team down, where AI can
+              make the biggest impact and what should be built first.
             </p>
+            <p className="mt-4 text-lg text-muted-foreground leading-relaxed font-light">
+              You'll leave with a practical roadmap, not another list of tools.
+            </p>
+
             <div className="mt-10">
               <a
                 href={CALENDLY_URL}
@@ -70,7 +107,7 @@ const ThreeCards = () => {
                 rel="noopener noreferrer"
                 className="btn-primary"
               >
-                Start With an Audit →
+                Book an Audit →
               </a>
             </div>
           </div>
@@ -84,14 +121,14 @@ const ThreeCards = () => {
       >
         <div className="container-wide">
           <div className="max-w-3xl mx-auto text-center mb-14 md:mb-16">
-            <span className="label-mono text-blush">— Services</span>
+            <span className="label-mono text-blush">— What We Build</span>
             <h2 className="mt-6 font-serif text-4xl md:text-5xl text-foreground tracking-tight leading-[1.05]">
-              Then we build what your business{" "}
-              <em className="italic font-normal text-blush">needs next.</em>
+              Systems we've{" "}
+              <em className="italic font-normal text-blush">built.</em>
             </h2>
             <p className="mt-6 text-lg text-muted-foreground leading-relaxed font-light">
-              The audit gives us a clear starting point. From there, we usually
-              build one of three systems.
+              Every business is different. These are examples of the AI-ready
+              marketing systems we've built for clients.
             </p>
           </div>
 

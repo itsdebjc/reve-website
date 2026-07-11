@@ -1,11 +1,12 @@
+import { Check } from "lucide-react";
+
 const items = [
-  "Turning a one-hour client call into a full case study the same day",
-  "Cutting proposal writing time from hours to under one hour",
-  "Turning weekly meetings into consistent thought leadership",
-  "Getting a week of content done in a single working session",
-  "Seeing what is working without digging through five tools",
-  "Updating your website without waiting on a developer",
-  "Producing marketing without rewriting everything three times",
+  "AI has the context it needs.",
+  "Your team works faster.",
+  "Your brand stays consistent.",
+  "Content becomes easier to create.",
+  "Knowledge is easier to find.",
+  "Work feels lighter.",
 ];
 
 const InPractice = () => {
@@ -17,6 +18,9 @@ const InPractice = () => {
           <h2 className="display-serif text-3xl md:text-5xl">
             What happens when <span className="display-italic">the system works.</span>
           </h2>
+          <p className="mt-6 text-foreground/70 text-base md:text-lg leading-relaxed">
+            When your marketing works as one connected system:
+          </p>
         </div>
 
         <ul className="space-y-px">
@@ -25,9 +29,7 @@ const InPractice = () => {
               key={i}
               className="grid grid-cols-[auto_1fr] gap-6 items-start py-5 border-b border-hairline last:border-b-0"
             >
-              <span className="font-mono text-primary text-sm mt-1">
-                {String(i + 1).padStart(2, "0")}
-              </span>
+              <Check className="text-primary w-5 h-5 mt-1" strokeWidth={2} />
               <span className="text-foreground/95 text-base md:text-lg leading-relaxed">{t}</span>
             </li>
           ))}
