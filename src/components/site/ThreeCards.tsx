@@ -5,7 +5,6 @@ import {
   Globe,
   FileText,
   PenTool,
-  BookOpen,
   ArrowUpRight,
 } from "lucide-react";
 import { CALENDLY_URL } from "@/lib/links";
@@ -13,7 +12,6 @@ import ecommerceDashboardExample from "@/assets/ecommerce-dashboard-example.png.
 import marketingAsset from "@/assets/system-marketing.jpg.asset.json";
 import contentAsset from "@/assets/system-content.jpg.asset.json";
 import proposalAsset from "@/assets/system-proposal.jpg.asset.json";
-import businessHealthAsset from "@/assets/system-business-health.jpg.asset.json";
 import websiteImage from "@/assets/system-website.jpg";
 
 const systems = [
@@ -63,15 +61,6 @@ const systems = [
     image: contentAsset.url,
     alt: "Content System preview with a weekly calendar and draft editor",
   },
-  {
-    num: "06",
-    icon: BookOpen,
-    title: "Knowledge Base",
-    tagline: "Give your team and AI one trusted source of truth.",
-    href: "/services",
-    image: businessHealthAsset.url,
-    alt: "Knowledge Base preview showing a single trusted source of truth",
-  },
 ];
 
 const ThreeCards = () => {
@@ -99,6 +88,10 @@ const ThreeCards = () => {
             <p className="mt-4 text-lg text-muted-foreground leading-relaxed font-light">
               You'll leave with a practical roadmap, not another list of tools.
             </p>
+            <p className="mt-6 text-lg text-foreground leading-relaxed">
+              Every business is different, so we start by understanding yours.
+              Strategy comes first. The tools just make it sharper.
+            </p>
 
             <div className="mt-10">
               <a
@@ -107,7 +100,7 @@ const ThreeCards = () => {
                 rel="noopener noreferrer"
                 className="btn-primary"
               >
-                Book an Audit →
+                Get an Audit →
               </a>
             </div>
           </div>

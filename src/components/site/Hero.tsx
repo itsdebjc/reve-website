@@ -32,7 +32,7 @@ const Hero = () => {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-8 py-4 label-mono hover:bg-primary/90 transition-all duration-300 whitespace-nowrap"
           >
-            Start with an AI Marketing Audit →
+            Get an Audit →
           </a>
           <a
             href="#how-we-work"

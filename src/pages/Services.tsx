@@ -47,7 +47,6 @@ const services: Service[] = [
       "Content System",
       "Proposal System",
       "Case Study Library",
-      "Knowledge Base",
       "AI workflows",
       "Dashboards",
       "Team training",
@@ -111,7 +110,7 @@ const Services = () => {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-background font-mono text-xs uppercase tracking-wider hover:bg-primary/90 transition-colors"
             >
-              Start with an AI Marketing Audit →
+              Get an Audit →
             </a>
           </div>
         </div>
@@ -220,7 +219,7 @@ const Services = () => {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 bg-[hsl(0_0%_0%)] text-[hsl(30_25%_96%)] px-10 py-3.5 font-mono text-[13px] md:text-[12px] tracking-[0.22em] uppercase hover:bg-[hsl(0_0%_15%)] transition-colors"
             >
-              Start with an AI Marketing Audit →
+              Get an Audit →
             </a>
           </div>
         </div>

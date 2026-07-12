@@ -76,7 +76,7 @@ const Nav = () => {
           rel="noopener noreferrer"
           className="hidden md:inline-flex label-mono text-foreground hover:text-primary transition-colors"
         >
-          Book a Call →
+          Get an Audit →
         </a>
 
         <button
@@ -137,7 +137,7 @@ const Nav = () => {
               onClick={closeMobileMenu}
               className="label-mono text-foreground hover:text-primary transition-colors"
             >
-              Book a Call →
+              Get an Audit →
             </a>
           </div>
         </div>
