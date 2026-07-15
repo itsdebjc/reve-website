@@ -1,26 +1,19 @@
 import Nav from "@/components/site/Nav";
-import Hero from "@/components/site/Hero";
-import Ticker from "@/components/site/Ticker";
-import Problem from "@/components/site/Problem";
-import ThreeCards from "@/components/site/ThreeCards";
-import InPractice from "@/components/site/InPractice";
-import Method from "@/components/site/Method";
-import NotTheory from "@/components/site/NotTheory";
-import CaseStudies from "@/components/site/CaseStudies";
-import Testimonial from "@/components/site/Testimonial";
-import Founder from "@/components/site/Founder";
-import LeadMagnet from "@/components/site/LeadMagnet";
-import FinalCTA from "@/components/site/FinalCTA";
-import FAQ from "@/components/site/FAQ";
+import HeroNewDesign from "@/components/site/HeroNewDesign";
+import HonestSection from "@/components/site/HonestSection";
+import WhatChangesSection from "@/components/site/WhatChangesSection";
+import EcommerceStackSection from "@/components/site/EcommerceStackSection";
+import ProofSection from "@/components/site/ProofSection";
+import FinalCtaSection from "@/components/site/FinalCtaSection";
 import Footer from "@/components/site/Footer";
 import { useEffect } from "react";
 
 const Index = () => {
   useEffect(() => {
-    document.title = "Reve AI — We turn AI into real marketing";
+    document.title = "RÊVE — AI Marketing Studio for Ecommerce Brands";
     const meta = document.querySelector('meta[name="description"]');
     const desc =
-      "Reve builds the right AI setup for your team so you can create stronger marketing, move faster, and use AI in a way that fits the work you already do.";
+      "AI that knows your brand. We help ecommerce brands use AI to sell more, in your voice, across your store, your email and your ads.";
     if (meta) meta.setAttribute("content", desc);
     else {
       const m = document.createElement("meta");
@@ -31,21 +24,14 @@ const Index = () => {
   }, []);
 
   return (
-    <main className="bg-background text-foreground">
+    <main className="bg-[#FDFAF4] text-[#263238]">
       <Nav />
-      <Hero />
-      <Ticker />
-      <Problem />
-      <ThreeCards />
-      <InPractice />
-      <Method />
-      <NotTheory />
-      <CaseStudies />
-      <Testimonial />
-      <Founder />
-      <LeadMagnet />
-      <FinalCTA />
-      <FAQ />
+      <HeroNewDesign />
+      <HonestSection />
+      <WhatChangesSection />
+      <EcommerceStackSection />
+      <ProofSection />
+      <FinalCtaSection />
       <Footer />
     </main>
   );

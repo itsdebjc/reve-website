@@ -1,8 +1,6 @@
 import { Linkedin } from "lucide-react";
-import heroImg from "@/assets/footer-misty.jpg";
+import KlaviyoSignup from "./KlaviyoSignup";
 
-// TikTok isn't in lucide-react, so we use a minimal inline SVG that matches
-// the stroke-style of the lucide icons we use elsewhere.
 const TikTokIcon = ({ size = 18, className = "" }: { size?: number; className?: string }) => (
   <svg
     width={size}
@@ -18,57 +16,73 @@ const TikTokIcon = ({ size = 18, className = "" }: { size?: number; className?: 
 
 const Footer = () => {
   return (
-    <footer className="relative isolate bg-surface pt-32 pb-10 overflow-hidden">
-      <img
-        src={heroImg}
-        alt=""
-        loading="lazy"
-        className="absolute inset-0 -z-20 h-full w-full object-cover"
-      />
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background via-background/40 to-background/80" />
+    <footer className="bg-[#FDFAF4] pt-16 pb-8 border-t border-[rgba(38,50,56,0.08)]">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="flex flex-col md:flex-row items-start justify-between gap-12 mb-12">
+          <div>
+            <div className="font-['Anton'] text-2xl text-[#263238] mb-2">RÊVE</div>
+            <div className="text-xs font-bold tracking-widest text-[#263238] opacity-55 mb-4">
+              AI MARKETING STUDIO FOR ECOMMERCE BRANDS
+            </div>
+            <div className="text-sm opacity-65 mb-2">By Debbie. Marketing expertise, powered by AI.</div>
+            <div className="text-sm opacity-65">Vancouver, beautiful British Columbia, Canada.</div>
+          </div>
 
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="text-center mb-24">
-          <p className="font-serif italic text-2xl md:text-4xl text-foreground">
-            Less scattered. <span className="text-primary">More momentum.</span>
-          </p>
+          <div className="hidden md:flex gap-8 font-bold text-sm">
+            <a href="/services" className="text-[#263238] hover:text-[#E893AC] transition-colors">
+              SERVICES
+            </a>
+            <a href="/case-studies" className="text-[#263238] hover:text-[#E893AC] transition-colors">
+              CASE STUDIES
+            </a>
+            <a href="/learning" className="text-[#263238] hover:text-[#E893AC] transition-colors">
+              BLOG
+            </a>
+            <a href="#about" className="text-[#263238] hover:text-[#E893AC] transition-colors">
+              ABOUT
+            </a>
+          </div>
+
+          <div className="flex gap-3">
+            <a
+              href="https://www.linkedin.com/in/debbiejcollins/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              className="text-[#263238] hover:text-[#E893AC] transition-colors"
+            >
+              <Linkedin size={18} strokeWidth={1.5} />
+            </a>
+            <a
+              href="https://www.tiktok.com/@itsdigitaldeb"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="TikTok"
+              className="text-[#263238] hover:text-[#E893AC] transition-colors"
+            >
+              <TikTokIcon size={18} />
+            </a>
+          </div>
         </div>
 
-        <div className="border-t border-hairline pt-10 label-mono">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="text-center md:text-left">
-              <p className="text-foreground/55">
-                © 2026 Reve AI · Site built with AI by Reve
+        <div className="border-t border-[rgba(38,50,56,0.12)] pt-8">
+          <div className="grid md:grid-cols-3 gap-8 mb-8">
+            <div className="md:col-span-2">
+              <p className="text-xs font-bold tracking-widest text-[#E893AC] mb-4 uppercase">
+                — Subscribe
               </p>
-              <p className="text-foreground/55 text-sm mt-1">
-                Located in beautiful British Columbia
+              <p className="text-sm opacity-65 mb-4 max-w-md">
+                One short email a month with insights on AI in ecommerce. No hype. No tool-chasing. Just useful thinking on how to make AI work inside a real business.
               </p>
             </div>
-            <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
-              <a href="#cta" className="hover:text-primary transition-colors">Contact</a>
-              <a href="/bff-coach" className="hover:text-primary transition-colors flex items-center gap-1.5">
-                <span>❤️</span> BFF Workshop
-              </a>
-              <a href="#" className="hover:text-primary transition-colors">Privacy</a>
-              <a
-                href="https://www.linkedin.com/in/debbiejcollins/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn"
-                className="hover:text-primary transition-colors inline-flex items-center"
-              >
-                <Linkedin size={18} strokeWidth={1.75} />
-              </a>
-              <a
-                href="https://www.tiktok.com/@itsdigitaldeb"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="TikTok"
-                className="hover:text-primary transition-colors inline-flex items-center"
-              >
-                <TikTokIcon size={18} />
-              </a>
-            </div>
+            <KlaviyoSignup variant="footer" />
+          </div>
+
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-xs opacity-55">
+            <p>© 2026 RÊVE · Site built with AI</p>
+            <a href="/bff-coach" className="hover:text-[#E893AC] transition-colors flex items-center gap-1">
+              <span>❤️</span> BFF Workshop
+            </a>
           </div>
         </div>
       </div>

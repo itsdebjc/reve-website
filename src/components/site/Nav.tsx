@@ -1,87 +1,57 @@
 import { useEffect, useState } from "react";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
-const learningItems = [
-  { label: "Articles", href: "/learning" },
-  { label: "Case Studies", href: "/case-studies" },
-];
+const SparkleIcon = () => (
+  <svg width="10" height="10" viewBox="0 0 10 10">
+    <path d="M5 0 L6 4 L10 5 L6 6 L5 10 L4 6 L0 5 L4 4 Z" fill="#E893AC" />
+  </svg>
+);
 
 const Nav = () => {
-  const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [learningOpen, setLearningOpen] = useState(false);
-  const [mobileLearningOpen, setMobileLearningOpen] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   const closeMobileMenu = () => {
     setMobileMenuOpen(false);
-    setMobileLearningOpen(false);
   };
 
   return (
-    <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
-        scrolled ? "bg-background/90 backdrop-blur-md border-b border-hairline" : "bg-background/50 backdrop-blur-sm"
-      }`}
-    >
-      <nav className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-5 md:px-12">
-        <a href="/" className="font-serif italic text-foreground text-2xl md:text-3xl tracking-wide">
-          Reve <span className="text-primary not-italic font-mono text-sm ml-1">/ AI</span>
+    <header className="sticky top-0 z-50 bg-[#FDFAF4] border-b border-[rgba(38,50,56,0.08)]">
+      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
+        <a href="/" className="flex items-center gap-1.5">
+          <div className="flex items-baseline gap-1">
+            <span className="font-['Anton'] text-lg text-[#263238]">RÊVE</span>
+            <SparkleIcon />
+          </div>
+          <div className="text-xs font-bold tracking-widest text-[#263238] opacity-60">
+            AI MARKETING STUDIO FOR ECOMMERCE BRANDS
+          </div>
         </a>
 
-        <div className="hidden md:flex items-center gap-10">
-          <a href="/#about" className="label-mono text-foreground/70 hover:text-primary transition-colors">
-            About
+        <div className="hidden md:flex items-center gap-8">
+          <a href="/services" className="text-sm font-bold text-[#263238] hover:text-[#E893AC] transition-colors">
+            SERVICES
           </a>
-
-          <a href="/services" className="label-mono text-foreground/70 hover:text-primary transition-colors">
-            Services
+          <a href="/case-studies" className="text-sm font-bold text-[#263238] hover:text-[#E893AC] transition-colors">
+            CASE STUDIES
           </a>
-
-          <div
-            className="relative"
-            onMouseEnter={() => setLearningOpen(true)}
-            onMouseLeave={() => setLearningOpen(false)}
-          >
-            <button className="label-mono text-foreground/70 hover:text-primary transition-colors flex items-center gap-1">
-              Learning <ChevronDown size={12} className={`transition-transform duration-200 ${learningOpen ? "rotate-180" : ""}`} />
-            </button>
-            {learningOpen && (
-              <div className="absolute top-full left-0 pt-3">
-                <div className="bg-background border border-hairline rounded-sm py-2 min-w-[160px]">
-                  {learningItems.map((item) => (
-                    <a
-                      key={item.href}
-                      href={item.href}
-                      className="block px-5 py-2.5 label-mono text-foreground/70 hover:text-primary transition-colors"
-                    >
-                      {item.label}
-                    </a>
-                  ))}
-                </div>
-              </div>
-            )}
-          </div>
-
+          <a href="/learning" className="text-sm font-bold text-[#263238] hover:text-[#E893AC] transition-colors">
+            BLOG
+          </a>
+          <a href="#about" className="text-sm font-bold text-[#263238] hover:text-[#E893AC] transition-colors">
+            ABOUT
+          </a>
         </div>
 
         <a
-          href="https://calendly.com/deb-xjsk/callwithdeb"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hidden md:inline-flex label-mono text-foreground hover:text-primary transition-colors"
+          href="/services"
+          className="hidden md:inline-flex font-['Anton'] text-sm bg-[#4F8577] text-white px-6 py-3 rounded-[10px] hover:opacity-90 transition-opacity"
         >
-          Get an Audit →
+          GET AN AUDIT
         </a>
 
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="md:hidden text-foreground hover:text-primary transition-colors"
+          className="md:hidden text-[#263238] hover:text-[#E893AC] transition-colors"
           aria-label="Toggle mobile menu"
         >
           {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -89,55 +59,42 @@ const Nav = () => {
       </nav>
 
       {mobileMenuOpen && (
-        <div className="md:hidden bg-background/95 backdrop-blur-sm border-b border-hairline">
-          <div className="mx-auto max-w-[1400px] px-6 py-6 flex flex-col gap-6">
-            <a
-              href="/#about"
-              onClick={closeMobileMenu}
-              className="label-mono text-foreground/70 hover:text-primary transition-colors"
-            >
-              About
-            </a>
-
+        <div className="md:hidden bg-[#FDFAF4] border-t border-[rgba(38,50,56,0.08)]">
+          <div className="px-6 py-6 flex flex-col gap-6">
             <a
               href="/services"
               onClick={closeMobileMenu}
-              className="label-mono text-foreground/70 hover:text-primary transition-colors"
+              className="text-sm font-bold text-[#263238] hover:text-[#E893AC] transition-colors"
             >
-              Services
+              SERVICES
             </a>
-
-            <div className="flex flex-col gap-3">
-              <button
-                onClick={() => setMobileLearningOpen(!mobileLearningOpen)}
-                className="label-mono text-foreground/70 hover:text-primary transition-colors flex items-center gap-1 text-left"
-              >
-                Learning <ChevronDown size={12} className={`transition-transform duration-200 ${mobileLearningOpen ? "rotate-180" : ""}`} />
-              </button>
-              {mobileLearningOpen && (
-                <div className="pl-4 flex flex-col gap-4 border-l border-hairline">
-                  {learningItems.map((item) => (
-                    <a
-                      key={item.href}
-                      href={item.href}
-                      onClick={closeMobileMenu}
-                      className="label-mono text-foreground/50 hover:text-primary transition-colors"
-                    >
-                      {item.label}
-                    </a>
-                  ))}
-                </div>
-              )}
-            </div>
-
             <a
-              href="https://calendly.com/deb-xjsk/callwithdeb"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/case-studies"
               onClick={closeMobileMenu}
-              className="label-mono text-foreground hover:text-primary transition-colors"
+              className="text-sm font-bold text-[#263238] hover:text-[#E893AC] transition-colors"
             >
-              Get an Audit →
+              CASE STUDIES
+            </a>
+            <a
+              href="/learning"
+              onClick={closeMobileMenu}
+              className="text-sm font-bold text-[#263238] hover:text-[#E893AC] transition-colors"
+            >
+              BLOG
+            </a>
+            <a
+              href="#about"
+              onClick={closeMobileMenu}
+              className="text-sm font-bold text-[#263238] hover:text-[#E893AC] transition-colors"
+            >
+              ABOUT
+            </a>
+            <a
+              href="/services"
+              onClick={closeMobileMenu}
+              className="font-['Anton'] text-sm bg-[#4F8577] text-white px-6 py-3 rounded-[10px] text-center hover:opacity-90 transition-opacity"
+            >
+              GET AN AUDIT
             </a>
           </div>
         </div>
