@@ -1,10 +1,10 @@
 const HonestSection = () => {
   return (
-    <section className="bg-[#FDFAF4] py-16 md:py-24 px-6 relative relative">
+    <section className="bg-[#FDFAF4] py-16 md:py-24 px-6 relative overflow-hidden">
       <div className="mx-auto max-w-6xl">
         {/* Watermark background */}
-        <div className="absolute -bottom-8 -right-16 text-[#E893AC] text-9xl md:text-[180px] font-['Anton'] opacity-10 leading-none pointer-events-none select-none">
-          THE TRUTH
+        <div className="absolute bottom-0 right-12 text-[#E893AC] text-8xl md:text-9xl font-['Anton'] opacity-10 leading-none pointer-events-none select-none">
+          THE<br />TRUTH
         </div>
 
         <div className="relative z-10">
