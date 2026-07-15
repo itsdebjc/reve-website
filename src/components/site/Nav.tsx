@@ -17,12 +17,12 @@ const Nav = () => {
   return (
     <header className="sticky top-0 z-50 bg-[#FDFAF4] border-b border-[rgba(38,50,56,0.08)]">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
-        <a href="/" className="flex items-center gap-1.5">
-          <div className="flex items-baseline gap-1">
-            <span className="font-['Anton'] text-lg text-[#263238]">RÊVE</span>
+        <a href="/" className="flex flex-col gap-1">
+          <div className="flex items-center gap-1.5">
+            <span className="font-['Anton'] text-2xl text-[#263238] leading-none">RÊVE</span>
             <SparkleIcon />
           </div>
-          <div className="text-xs font-bold tracking-widest text-[#263238] opacity-60">
+          <div className="text-[9px] font-bold tracking-widest text-[#263238] opacity-60">
             AI MARKETING STUDIO FOR ECOMMERCE BRANDS
           </div>
         </a>
@@ -44,7 +44,7 @@ const Nav = () => {
 
         <a
           href="/services"
-          className="hidden md:inline-flex font-['Anton'] text-sm bg-[#4F8577] text-white px-6 py-3 rounded-[10px] hover:opacity-90 transition-opacity"
+          className="hidden md:inline-flex font-['Anton'] text-xs font-bold bg-[#4F8577] text-white px-7 py-3 rounded-[10px] hover:opacity-90 transition-opacity leading-none"
         >
           GET AN AUDIT
         </a>
@@ -92,7 +92,7 @@ const Nav = () => {
             <a
               href="/services"
               onClick={closeMobileMenu}
-              className="font-['Anton'] text-sm bg-[#4F8577] text-white px-6 py-3 rounded-[10px] text-center hover:opacity-90 transition-opacity"
+              className="font-['Anton'] text-xs font-bold bg-[#4F8577] text-white px-7 py-3 rounded-[10px] text-center hover:opacity-90 transition-opacity"
             >
               GET AN AUDIT
             </a>

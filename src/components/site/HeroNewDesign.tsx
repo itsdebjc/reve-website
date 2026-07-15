@@ -17,13 +17,13 @@ const HeroNewDesign = () => {
           <div className="flex gap-3 flex-wrap">
             <a
               href="/services"
-              className="font-['Anton'] text-sm bg-[#4F8577] text-white px-8 py-4 rounded-[10px] hover:opacity-90 transition-opacity"
+              className="font-['Anton'] text-xs font-bold bg-[#4F8577] text-white px-8 py-4 rounded-[10px] hover:opacity-90 transition-opacity leading-none"
             >
               GET AN AUDIT
             </a>
             <a
               href="/services"
-              className="font-['Anton'] text-sm border-2 border-[#263238] text-[#263238] px-8 py-3 rounded-[10px] hover:bg-gray-50 transition-colors"
+              className="font-['Anton'] text-xs font-bold border-2 border-[#263238] text-[#263238] px-8 py-4 rounded-[10px] hover:bg-gray-50 transition-colors leading-none"
             >
               SEE HOW IT WORKS
             </a>
