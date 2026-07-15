@@ -1,11 +1,10 @@
-import { useState } from "react";
+import debbiePhoto from "@/assets/debbie.jpeg";
 
 const HeroNewDesign = () => {
-  const [photoUrl] = useState("https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&h=800&fit=crop");
 
   return (
-    <section className="bg-[#FDFAF4] py-12 md:py-24">
-      <div className="mx-auto max-w-6xl px-6 grid md:grid-cols-[1.15fr_1fr] gap-12 items-center">
+    <section className="bg-[#FDFAF4] py-12 md:py-28 pt-28 md:pt-32">
+      <div className="mx-auto max-w-6xl px-6 md:px-16 grid md:grid-cols-[1.15fr_1fr] gap-16 items-center">
         <div>
           <h1 className="font-['Anton'] text-6xl md:text-7xl leading-tight mb-7">
             AI THAT<br />
@@ -32,7 +31,7 @@ const HeroNewDesign = () => {
         </div>
         <div className="relative">
           <img
-            src={photoUrl}
+            src={debbiePhoto}
             alt="Debbie Collins"
             className="w-full rounded-2xl aspect-[4/5] object-cover"
           />
