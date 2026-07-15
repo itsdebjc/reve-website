@@ -1,4 +1,4 @@
-import debbiePhoto from "@/assets/debbie-collins.jpeg";
+import debbiePhoto from "@/assets/debbie.jpeg";
 
 const HeroNewDesign = () => {
 
