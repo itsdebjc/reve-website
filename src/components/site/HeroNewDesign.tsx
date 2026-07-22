@@ -1,4 +1,4 @@
-import debbiePhoto from "@/assets/debbie-collins.jpeg";
+import debbiePhoto from "@/assets/debbie-portrait.jpg";
 import { CALENDLY_URL } from "@/lib/links";
 
 const MARQUEE_ITEMS = [
@@ -69,10 +69,11 @@ const HeroNewDesign = () => {
               </div>
             </div>
             <div className="relative">
+              <div className="absolute -bottom-4 -right-4 h-full w-full bg-[#E893AC] rounded-2xl" aria-hidden="true" />
               <img
                 src={debbiePhoto}
                 alt="Debbie Collins"
-                className="w-full rounded-2xl aspect-[4/5] object-cover"
+                className="relative w-full rounded-2xl aspect-[4/5] object-cover"
               />
               <div className="absolute left-4 bottom-4 bg-[#20262A]/80 backdrop-blur-sm px-4 py-2.5 rounded-[10px]">
                 <div
