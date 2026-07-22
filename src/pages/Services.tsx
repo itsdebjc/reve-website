@@ -3,15 +3,14 @@ import ServicesHero from "@/components/site/ServicesHero";
 import ServiceCards from "@/components/site/ServiceCards";
 import WhatWeBuild from "@/components/site/WhatWeBuild";
 import FounderCtaBand from "@/components/site/FounderCtaBand";
-import ServicesFAQ from "@/components/site/ServicesFAQ";
 import Footer from "@/components/site/Footer";
 import { useEffect } from "react";
 
 const Services = () => {
   useEffect(() => {
-    document.title = "Services — RÊVE AI";
+    document.title = "Services · Reve";
     const meta = document.querySelector('meta[name="description"]');
-    const desc = "AI Marketing Services: Audit, Foundation & Build, and Growth Partnership for ecommerce brands.";
+    const desc = "AI Marketing Services: the Game Plan audit, a custom AI Marketing System build, and ongoing AI Growth Partnership.";
     if (meta) meta.setAttribute("content", desc);
     else {
       const m = document.createElement("meta");
@@ -22,13 +21,12 @@ const Services = () => {
   }, []);
 
   return (
-    <main className="bg-[#FDFAF4] text-[#263238]">
+    <main className="bg-[#20262A]">
       <Nav />
       <ServicesHero />
       <ServiceCards />
       <WhatWeBuild />
       <FounderCtaBand />
-      <ServicesFAQ />
       <Footer />
     </main>
   );

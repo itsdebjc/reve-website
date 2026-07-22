@@ -1,16 +1,26 @@
 const WhatChangesSection = () => {
   return (
-    <section className="bg-[#F5EEDD] py-16 md:py-24 px-6">
-      <div className="mx-auto max-w-6xl text-center">
-        <p className="text-xs md:text-sm font-bold tracking-widest text-[#E893AC] mb-5 uppercase">
-          WHAT CHANGES
-        </p>
-        <h2 className="font-['Anton'] text-3xl md:text-4xl leading-tight mb-6 max-w-2xl mx-auto">
-          IT'S NOT THAT AI <span className="text-[#E893AC]">SOUNDS LIKE YOU.</span><br />
-          IT'S THAT AI <span className="text-[#E893AC]">KNOWS YOUR BRAND.</span>
-        </h2>
-        <p className="text-base md:text-lg leading-relaxed opacity-65 max-w-3xl mx-auto">
-          Once AI knows your brand: your products, your customers, the way you talk to them, it stops guessing and starts doing real work. Less busywork. Better work. Nothing starting from scratch.
+    <section className="bg-[#F2E4D8] py-24 md:py-32 px-6 md:px-16">
+      <div className="mx-auto max-w-[1280px] grid md:grid-cols-2 gap-12 md:gap-20 items-center">
+        <div>
+          <p
+            style={{ fontFamily: "'Inter', sans-serif", letterSpacing: "0.14em" }}
+            className="text-[13px] font-bold text-[#C2477A] uppercase mb-6"
+          >
+            What Changes
+          </p>
+          <h2
+            style={{ fontFamily: "'Anton', sans-serif", fontWeight: 400 }}
+            className="text-[#263238] text-3xl md:text-4xl leading-[1.05] uppercase"
+          >
+            AI stops guessing. It starts working.
+          </h2>
+        </div>
+        <p className="font-['Inter'] text-[#263238]/80 text-lg leading-relaxed">
+          Your marketing gets sharper, not just faster. The busywork drops.
+          The thinking stays yours. And your team can run it, so you're not
+          dependent on anyone, including me. You end up a better marketer
+          with AI, not a worse one who leans on it.
         </p>
       </div>
     </section>

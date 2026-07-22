@@ -175,6 +175,15 @@ const BFFWellnessApp = () => {
         </div>
       </section>
 
+      {/* BODY INTELLIGENCE STATEMENT */}
+      <section style={{ background: BFF_COLORS["cream-pink"], padding: "72px 26px", textAlign: "center" }}>
+        <div style={{ maxWidth: "760px", margin: "0 auto" }}>
+          <span style={{ display: "inline-flex", alignItems: "center", background: "#fff", color: BFF_COLORS.pink, fontSize: "12px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", padding: "7px 14px", borderRadius: "999px" }}>Body intelligence</span>
+          <h2 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(28px, 3.8vw, 42px)", lineHeight: 1.15, letterSpacing: "-0.02em", margin: "22px 0 0", color: BFF_COLORS.ink }}>BFF helps midlife women discover what their own body responds to through simple daily tracking and weekly feedback.</h2>
+          <div style={{ fontFamily: "'Caveat', cursive", fontWeight: 600, fontSize: "clamp(26px, 3.2vw, 36px)", lineHeight: 1.2, color: BFF_COLORS.pink, marginTop: "16px" }}>Giving you true body intelligence.</div>
+        </div>
+      </section>
+
       {/* MARQUEE TICKER */}
       <section style={{ background: BFF_COLORS.ink, overflow: "hidden", padding: "15px 0" }}>
         <div style={{ display: "flex", width: "max-content", animation: "bffMarquee 34s linear infinite" }}>

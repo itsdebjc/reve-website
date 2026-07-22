@@ -1,14 +1,67 @@
+import marketingAsset from "@/assets/system-marketing.jpg.asset.json";
+import websiteImage from "@/assets/system-website.jpg";
+import dashboardImage from "@/assets/system-ecommerce-dashboard.png";
+import proposalAsset from "@/assets/system-proposal.jpg.asset.json";
+import contentAsset from "@/assets/system-content.jpg.asset.json";
+import founderAsset from "@/assets/system-founder.jpg.asset.json";
+
+const SYSTEMS = [
+  { label: "AI Brand Hub", image: marketingAsset.url, alt: "AI Brand Hub preview showing brand voice, messaging and connected content" },
+  { label: "AI Website", image: websiteImage, alt: "AI-built website homepage preview" },
+  { label: "Business Dashboard", image: dashboardImage, alt: "Business dashboard with live conversion rate, revenue source and recent orders" },
+  { label: "Proposal System", image: proposalAsset.url, alt: "Proposal System preview with a draft editor" },
+  { label: "Content System", image: contentAsset.url, alt: "Content System preview with a weekly calendar" },
+  { label: "Marketing Assistant", image: founderAsset.url, alt: "Marketing Assistant chat and daily briefing preview" },
+];
+
 const WhatWeBuild = () => {
-  const items = [{ icon: "📧", label: "Klaviyo email and SMS flows" }, { icon: "📄", label: "Product and collection page copy" }, { icon: "📢", label: "Meta and Google ads, copy and creative" }, { icon: "📸", label: "Product photos, UGC and video" }, { icon: "💬", label: "A content system for social" }, { icon: "✨", label: "A personal assistant that turns reviews into content" }, { icon: "📊", label: "Social media dashboard" }, { icon: "📈", label: "Business dashboard" }];
   return (
-    <section className="bg-[#FDFAF4] px-6 md:px-16 pb-24">
-      <div className="mx-auto max-w-6xl">
-        <h2 className="font-['Anton'] text-3xl md:text-4xl mb-8">WHAT WE BUILD</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-          {items.map((item, idx) => (<div key={idx} className="bg-[#F5EEDD] rounded-2xl p-6 flex items-center gap-4"><span className="text-3xl">{item.icon}</span><span className="text-base font-medium">{item.label}</span></div>))}
+    <section className="bg-[#1D2224] py-24 md:py-32 px-6 md:px-16">
+      <div className="mx-auto max-w-[1280px]">
+        <div className="text-center mb-14">
+          <p
+            style={{ fontFamily: "'Inter', sans-serif", letterSpacing: "0.14em" }}
+            className="text-[13px] font-bold text-[#7ED2F2] uppercase mb-6"
+          >
+            What We Build
+          </p>
+          <h2
+            style={{ fontFamily: "'Anton', sans-serif", fontWeight: 400 }}
+            className="text-[#F2E4D8] text-3xl md:text-4xl uppercase mb-5"
+          >
+            Systems we've built.
+          </h2>
+          <p className="font-['Inter'] text-[#F2E4D8]/65 text-lg max-w-2xl mx-auto">
+            Every business is different. These are examples of the AI-ready
+            marketing systems we've built for clients.
+          </p>
         </div>
-        <p className="text-base opacity-65 mb-8">These are just examples, if your brand needs it, we can probably build it.</p>
-        <a href="/services" className="font-['Anton'] text-sm bg-[#E893AC] text-white px-8 py-4 rounded-lg inline-block hover:opacity-90">START WITH AN AUDIT</a>
+
+        <div className="grid md:grid-cols-3 gap-6">
+          {SYSTEMS.map((s) => (
+            <div
+              key={s.label}
+              className="group rounded-2xl overflow-hidden border border-white/10 bg-[#20262A] hover:border-[#7ED2F2]/60 hover:-translate-y-1 transition-all duration-300"
+            >
+              <div className="aspect-[16/10] overflow-hidden">
+                <img
+                  src={s.image}
+                  alt={s.alt}
+                  className="w-full h-full object-cover scale-125 origin-center transition-transform duration-500 group-hover:scale-[1.3]"
+                  loading="lazy"
+                />
+              </div>
+              <div className="p-5">
+                <h3
+                  style={{ fontFamily: "'Anton', sans-serif", fontWeight: 400 }}
+                  className="text-[#F2E4D8] text-lg uppercase group-hover:text-[#E893AC] transition-colors"
+                >
+                  {s.label}
+                </h3>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://reve-ai.com/sitemap.xml
+Sitemap: https://www.wereve.ca/sitemap.xml

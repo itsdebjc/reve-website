@@ -1,22 +1,21 @@
 const Testimonial = () => {
   return (
-    <section className="py-32 md:py-44 border-b border-hairline bg-[#F7F4EE]">
-      <div className="mx-auto max-w-4xl px-6 text-center">
-        <p className="label-eyebrow mb-8">— Client Words</p>
-        <h2 className="display-serif text-4xl md:text-6xl mb-14 text-[#1C1917]">
-          Clients come to us for <span className="display-italic">clarity.</span>
-        </h2>
-
-        <blockquote className="font-serif italic text-2xl md:text-3xl text-[#1C1917]/75 leading-relaxed">
-          "Reve gave us the structure we didn't know we were missing. Our output went from
-          good enough drafts to material we actually want to send."
-        </blockquote>
-
-        <div className="mt-10 flex items-center justify-center gap-4">
-          <span className="h-px w-10 bg-[#1C1917]/25" />
-          <p className="label-mono text-[#1C1917]/50">Founder · Advisory Firm</p>
-          <span className="h-px w-10 bg-[#1C1917]/25" />
-        </div>
+    <section className="bg-[#20262A] py-20 md:py-28 px-6 md:px-16">
+      <div className="mx-auto max-w-[820px] text-center">
+        <p
+          style={{ fontFamily: "'Anton', sans-serif", fontWeight: 400 }}
+          className="text-[#F2E4D8] text-2xl md:text-3xl leading-[1.3] uppercase mb-8"
+        >
+          "Reve gave us the structure we didn't know we were missing. Our
+          output went from good enough drafts to material we actually want
+          to send."
+        </p>
+        <p
+          style={{ fontFamily: "'Inter', sans-serif", letterSpacing: "0.1em" }}
+          className="text-[#5FC2E8] text-sm font-bold uppercase"
+        >
+          Founder, Advisory Firm
+        </p>
       </div>
     </section>
   );

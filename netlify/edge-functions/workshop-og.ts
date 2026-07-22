@@ -28,19 +28,19 @@ export default async (request: Request, context: Context) => {
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>BFF Workshop — Reve AI</title>
+    <title>BFF Workshop · Reve</title>
     <meta name="description" content="A live AI wellness workshop for midlife women who are done guessing. Learn the Body Food Feedback system and get access to your BFF coach." />
-    <meta property="og:title" content="BFF Workshop — Reve AI" />
+    <meta property="og:title" content="BFF Workshop · Reve" />
     <meta property="og:description" content="A live AI wellness workshop for midlife women who are done guessing. Learn the Body Food Feedback system and get access to your BFF coach." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://reveai.ca/workshop" />
-    <meta property="og:image" content="https://reveai.ca/og-bff-workshop.png" />
+    <meta property="og:url" content="https://www.wereve.ca/bff-coach" />
+    <meta property="og:image" content="https://www.wereve.ca/og-bff-workshop.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="BFF Workshop — Reve AI" />
+    <meta name="twitter:title" content="BFF Workshop · Reve" />
     <meta name="twitter:description" content="A live AI wellness workshop for midlife women who are done guessing. Learn the Body Food Feedback system and get access to your BFF coach." />
-    <meta name="twitter:image" content="https://reveai.ca/og-bff-workshop.png" />
+    <meta name="twitter:image" content="https://www.wereve.ca/og-bff-workshop.png" />
   </head>
   <body></body>
 </html>`;
@@ -51,5 +51,5 @@ export default async (request: Request, context: Context) => {
 };
 
 export const config: Config = {
-  path: "/workshop",
+  path: "/bff-coach",
 };

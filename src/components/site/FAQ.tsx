@@ -4,62 +4,66 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { DoodleAccent } from "./Doodles";
+import { CALENDLY_URL } from "@/lib/links";
 
 const faqs = [
   {
-    q: "What is an AI system?",
-    a: "The setup behind the work. It captures your voice, offers, audience, proof, tools and workflows so your team can use AI with more consistency.",
+    q: "What is the Game Plan?",
+    a: "It's where we start. I look at your marketing and how your team uses AI, then map what to fix first and where AI helps most. You leave with a clear plan, not a list of tools.",
   },
   {
-    q: "How is this different from AI consulting?",
-    a: "We do not just advise. We help organize the business knowledge, design the workflow and build the system your team can actually use.",
+    q: "How is this different from AI consulting or a course?",
+    a: "I don't just advise, and I don't hand you homework. I set AI up to know your business and do real work, and your team learns by doing it with me.",
   },
   {
-    q: "What kinds of businesses do you work with?",
-    a: "Founder-led service businesses, agencies, consultants, creative firms, e-commerce brands and growing teams that need clearer systems for marketing, content, websites, reporting or operations.",
-  },
-  {
-    q: "Do we need to know exactly what we want before we call?",
-    a: "No. Most clients come to us with a mix of problems. We help you decide what needs to be fixed first, what can wait and which system will create the most useful movement.",
+    q: "Do I need to know what I want first?",
+    a: "No. Most teams come in with a pile of problems. The Game Plan sorts out what to fix first.",
   },
   {
     q: "Is this all automated?",
-    a: "No. AI helps speed up the work, but the strategy, structure and judgment are human. The goal is not to remove people. The goal is to give them better systems.",
+    a: "No. AI does the heavy lifting. The strategy and judgment stay human. That's the whole point.",
+  },
+  {
+    q: "Who do you work with?",
+    a: "Expert led businesses with a small team, consultants, agencies, advisors and B2B teams, who want better marketing and a team that knows AI.",
   },
 ];
 
 const FAQ = () => {
   return (
-    <section className="relative isolate py-32 md:py-44 border-b border-hairline overflow-hidden">
-      <DoodleAccent className="top-24 right-[6%]" size={56} />
-      <DoodleAccent className="bottom-28 left-[6%]" size={56} />
-      <div className="mx-auto max-w-6xl px-6 grid md:grid-cols-[1fr_2fr] gap-12 md:gap-20">
-        <div>
-          <p className="label-eyebrow mb-6">— FAQ</p>
-          <h2 className="display-serif text-4xl md:text-5xl leading-tight">
-            The questions we <span className="display-italic">hear most.</span>
-          </h2>
-          <a
-            href="#cta"
-            className="mt-10 inline-flex label-mono text-foreground/70 hover:text-primary transition-colors"
-          >
-            Contact us →
-          </a>
-        </div>
-
-        <Accordion type="single" collapsible className="w-full">
+    <section className="bg-[#1D2224] py-24 md:py-32 px-6 md:px-16 border-b border-white/10">
+      <div className="mx-auto max-w-[1280px]">
+        <p
+          style={{ fontFamily: "'Inter', sans-serif", letterSpacing: "0.14em" }}
+          className="text-[13px] font-bold text-[#5FC2E8] uppercase mb-6 text-center"
+        >
+          FAQ
+        </p>
+        <Accordion type="single" collapsible className="w-full max-w-[820px] mx-auto">
           {faqs.map((f, i) => (
-            <AccordionItem key={i} value={`item-${i}`} className="border-hairline">
-              <AccordionTrigger className="font-serif text-xl md:text-2xl text-left hover:text-primary hover:no-underline py-6">
+            <AccordionItem key={i} value={`item-${i}`} className="border-white/10">
+              <AccordionTrigger
+                style={{ fontFamily: "'Anton', sans-serif" }}
+                className="text-left text-[#F2E4D8] hover:text-[#E893AC] hover:no-underline py-6 text-lg uppercase"
+              >
                 {f.q}
               </AccordionTrigger>
-              <AccordionContent className="text-foreground/85 text-base leading-relaxed pb-6">
+              <AccordionContent className="font-['Inter'] text-[#F2E4D8]/70 text-base leading-relaxed pb-6">
                 {f.a}
               </AccordionContent>
             </AccordionItem>
           ))}
         </Accordion>
+        <div className="text-center mt-12">
+          <a
+            href={CALENDLY_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-['Inter'] text-[#5FC2E8] hover:text-[#E893AC] transition-colors"
+          >
+            Still have questions? Book a call →
+          </a>
+        </div>
       </div>
     </section>
   );
