@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+import { CALENDLY_URL } from "@/lib/links";
 
 const SparkleCluster = () => (
   <svg width="26" height="18" viewBox="0 0 26 18" className="flex-shrink-0">
@@ -51,11 +52,13 @@ const Nav = () => {
         </div>
 
         <a
-          href="/services#audit"
+          href={CALENDLY_URL}
+          target="_blank"
+          rel="noopener noreferrer"
           style={{ fontFamily: "'Anton', sans-serif" }}
           className="hidden md:inline-flex text-xs bg-[#5FAF95] text-[#20262A] px-7 py-3 rounded-[10px] hover:opacity-90 transition-opacity leading-none uppercase"
         >
-          Get Your Game Plan
+          Book a Call
         </a>
 
         <button
@@ -81,12 +84,14 @@ const Nav = () => {
               </a>
             ))}
             <a
-              href="/services#audit"
+              href={CALENDLY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={closeMobileMenu}
               style={{ fontFamily: "'Anton', sans-serif" }}
               className="text-xs bg-[#5FAF95] text-[#20262A] px-7 py-3 rounded-[10px] text-center hover:opacity-90 transition-opacity uppercase"
             >
-              Get Your Game Plan
+              Book a Call
             </a>
           </div>
         </div>

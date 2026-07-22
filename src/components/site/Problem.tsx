@@ -24,7 +24,7 @@ const Problem = () => {
           part.
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-12 md:gap-16">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-10">
           <div className="font-['Inter'] text-[#263238]/80 text-lg leading-relaxed space-y-5">
             <p>Getting AI to help isn't about finding a better tool. It's about what you feed it.</p>
             <p>
