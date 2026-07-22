@@ -4,6 +4,7 @@ import dashboardImage from "@/assets/system-ecommerce-dashboard.png";
 import proposalAsset from "@/assets/system-proposal.jpg.asset.json";
 import contentAsset from "@/assets/system-content.jpg.asset.json";
 import founderAsset from "@/assets/system-founder.jpg.asset.json";
+import { CALENDLY_URL } from "@/lib/links";
 
 const SYSTEMS = [
   { label: "AI Brand Hub", image: marketingAsset.url, alt: "AI Brand Hub preview showing brand voice, messaging and connected content" },
@@ -61,6 +62,29 @@ const WhatWeBuild = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="text-center mt-14">
+          <h3
+            style={{ fontFamily: "'Anton', sans-serif", fontWeight: 400 }}
+            className="text-[#F2E4D8] text-2xl md:text-3xl uppercase mb-4"
+          >
+            Don't see what you need? We'll build the system that works for
+            your business.
+          </h3>
+          <p className="font-['Inter'] text-[#F2E4D8]/60 text-base mb-8 max-w-xl mx-auto">
+            These are examples, not the limit. Every system we build is
+            custom to what your business actually needs.
+          </p>
+          <a
+            href={CALENDLY_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ fontFamily: "'Anton', sans-serif" }}
+            className="inline-flex text-sm bg-[#7ED2F2] text-[#20262A] px-8 py-4 rounded-[10px] hover:opacity-90 transition-opacity uppercase"
+          >
+            Book a Call →
+          </a>
         </div>
       </div>
     </section>
