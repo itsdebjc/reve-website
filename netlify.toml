@@ -3,5 +3,5 @@
   publish = "dist"
 
 [[edge_functions]]
-  path = "/workshop"
+  path = "/bff-coach"
   function = "workshop-og"
