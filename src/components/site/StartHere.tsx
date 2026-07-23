@@ -62,7 +62,7 @@ const StartHere = () => {
       </section>
 
       {/* How It Works */}
-      <section className="bg-[#20262A] pb-24 md:pb-32 px-6 md:px-16 border-b border-white/10">
+      <section className="bg-[#1D2224] pt-24 pb-24 md:pt-32 md:pb-32 px-6 md:px-16 border-t border-b border-white/10">
         <div className="mx-auto max-w-[1280px]">
           <div className="text-center mb-14">
             <p
@@ -92,7 +92,7 @@ const StartHere = () => {
                   className={`text-left rounded-2xl p-7 border transition-all duration-300 ease-out ${
                     isActive
                       ? "bg-[#5FAF95] border-[#5FAF95] -translate-y-1 shadow-[0_16px_32px_-12px_rgba(95,175,149,0.4)]"
-                      : "bg-[#1D2224] border-white/10 hover:border-[#5FAF95]/40"
+                      : "bg-[#20262A] border-white/10 hover:border-[#5FAF95]/40"
                   }`}
                 >
                   <div
