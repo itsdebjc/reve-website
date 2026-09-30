@@ -1,146 +1,230 @@
 import { useState } from "react";
 import { CALENDLY_URL } from "@/lib/links";
+import aiImplementationImage from "@/assets/offer-ai-implementation.jpg";
+import aiRoadmapImage from "@/assets/offer-ai-roadmap.jpg";
 
-const SERVICES = [
+const OFFERS = [
   {
     num: "01",
-    label: "Start Here",
-    accent: "#7ED2F2",
-    title: "AI Marketing Audit",
-    tagline: "Find what's getting in the way.",
+    theme: "light" as const,
+    when: "When you're ready to invest in AI but need a clear direction.",
+    title: "AI Marketing Roadmap",
     description:
-      "We review how your marketing works today, uncover gaps and identify where AI can improve performance, save time and make the work easier.",
-    pills: [
-      "Positioning & messaging",
-      "Website & conversion path",
-      "Customer journey & funnel",
-      "Content & channel system",
-      "Email, CRM & follow-up",
-      "AI workflows, tools & reporting",
+      "We review your marketing, existing systems and how your team works. Together, we identify where AI can make a useful difference and what needs to be in place first. You leave knowing what to prioritize, what to build and what can wait.",
+    image: aiRoadmapImage,
+    imageAlt: "A staircase lit from below, leading up into an archway",
+    accordions: [
+      {
+        label: "Best suited for",
+        items: [
+          "Leaders deciding where to invest in AI",
+          "Teams experimenting without a shared plan",
+          "Businesses ready to improve how marketing gets done",
+        ],
+      },
+      {
+        label: "By the end, you'll have",
+        items: [
+          "A clear assessment of your current setup",
+          "Priority opportunities tied to business goals",
+          "Recommendations for tools, workflows and team support",
+          "A practical implementation roadmap",
+        ],
+      },
+      {
+        label: "Typical engagement",
+        items: [
+          "Every roadmap is scoped to your business. We'll walk through timing and investment on your discovery call.",
+        ],
+      },
     ],
-    tinted: false,
-    cta: "Get Your Game Plan",
+    cta: "Plan Your Next Move",
   },
   {
     num: "02",
-    label: "Next",
-    accent: "#F0AAC0",
-    title: "AI Marketing System",
-    tagline: "We'll build the right system for your business.",
+    theme: "dark" as const,
+    when: "When your team needs AI to do more than draft.",
+    title: "AI Implementation",
     description:
-      "Every build is different. Depending on your goals, your system may include:",
-    pills: [
-      "AI Brand Hub",
-      "Content Engine",
-      "Proposal System",
-      "Business Dashboard",
-      "Team training",
-      "AI Website",
+      "We organize your business knowledge, configure the right tools and build workflows around your priorities. That could mean creating content, preparing proposals or reducing the manual work between systems. We work with what you already have wherever possible. Each engagement includes testing, refinement and training with your team.",
+    image: aiImplementationImage,
+    imageAlt: "Detail of a glass and steel building facade, a grid of angular reflective windows",
+    accordions: [
+      {
+        label: "Best suited for",
+        items: [
+          "Businesses ready to act on a roadmap",
+          "Teams spending too much time correcting AI output",
+          "Founders who want fewer tasks dependent on them",
+        ],
+      },
+      {
+        label: "By the end, you'll have",
+        items: [
+          "Working systems built around your priorities",
+          "Your business knowledge organized for AI",
+          "Clear workflows your team can follow",
+          "Training and guidance to keep the systems useful",
+        ],
+      },
+      {
+        label: "Typical engagement",
+        items: [
+          "Every implementation is scoped to what you're building. We'll walk through timing and investment on your discovery call.",
+        ],
+      },
     ],
-    footnote: "Not every client needs every system. Every client gets the right one.",
-    tinted: true,
-    cta: "Book a Call",
-  },
-  {
-    num: "03",
-    label: "Ongoing",
-    accent: "#7EDCB8",
-    title: "AI Growth Partner",
-    tagline: "Keep improving.",
-    description:
-      "AI moves quickly. We'll help your team continue improving with ongoing coaching, new systems and ongoing support.",
-    pills: [],
-    tinted: false,
-    cta: "Book a Call",
+    cta: "Put Your Plan to Work",
   },
 ];
 
-const ServiceCards = () => {
-  const [hovered, setHovered] = useState<number | null>(null);
+type Theme = "light" | "dark";
 
+const THEME = {
+  light: {
+    section: "bg-[#F2E4D8]",
+    ink: "text-[#20262A]",
+    inkMuted: "text-[#20262A]/60",
+    body: "text-[#20262A]/80",
+    border: "border-[#20262A]/12",
+    listDash: "text-[#C96E8C]",
+    listText: "text-[#20262A]/78",
+    ctaBg: "bg-[#20262A]",
+    ctaText: "text-[#F2E4D8]",
+    toggleIdle: "border-[#C96E8C] text-[#C96E8C]",
+    toggleOpen: "border-[#C96E8C] bg-[#C96E8C] text-[#F2E4D8]",
+    toggleHover: "hover:bg-[#C96E8C] hover:text-[#F2E4D8]",
+  },
+  dark: {
+    section: "bg-[#20262A]",
+    ink: "text-[#F2E4D8]",
+    inkMuted: "text-[#F2E4D8]/60",
+    body: "text-[#F2E4D8]/80",
+    border: "border-white/12",
+    listDash: "text-[#E893AC]",
+    listText: "text-[#F2E4D8]/75",
+    ctaBg: "bg-[#E893AC]",
+    ctaText: "text-[#20262A]",
+    toggleIdle: "border-[#E893AC] text-[#E893AC]",
+    toggleOpen: "border-[#E893AC] bg-[#E893AC] text-[#20262A]",
+    toggleHover: "hover:bg-[#E893AC] hover:text-[#20262A]",
+  },
+};
+
+const AccordionItem = ({ label, items, theme }: { label: string; items: string[]; theme: Theme }) => {
+  const [open, setOpen] = useState(false);
+  const t = THEME[theme];
   return (
-    <section id="audit" className="bg-[#20262A] px-6 md:px-16 pb-24 scroll-mt-20">
-      <div className="mx-auto max-w-[1280px] space-y-8">
-        {SERVICES.map((s, i) => {
-          const isHovered = hovered === i;
-          return (
-            <div
-              key={s.num}
-              onMouseEnter={() => setHovered(i)}
-              onMouseLeave={() => setHovered(null)}
-              className={`grid md:grid-cols-[280px_1fr] gap-10 rounded-2xl p-10 border transition-all duration-300 ease-out ${
-                s.tinted ? "bg-[#F0AAC0]/[0.06]" : "bg-[#1D2224]"
-              } ${isHovered ? "-translate-y-1" : ""}`}
-              style={{
-                borderColor: isHovered ? s.accent : `${s.accent}40`,
-                boxShadow: isHovered ? `0 20px 40px -16px ${s.accent}40` : "none",
-              }}
-            >
-              {/* Identity block */}
-              <div>
-                <div
-                  style={{
-                    fontFamily: "'Inter', sans-serif",
-                    letterSpacing: "0.1em",
-                    color: s.accent,
-                    border: `1px solid ${s.accent}`,
-                  }}
-                  className="inline-flex text-xs font-bold uppercase px-3 py-1.5 rounded-full mb-6"
-                >
-                  {s.label}
+    <div className={`border-t ${t.border}`}>
+      <button
+        type="button"
+        onClick={() => setOpen((v) => !v)}
+        aria-expanded={open}
+        className="w-full flex items-center justify-between gap-4 py-5 text-left group"
+      >
+        <span
+          style={{ fontFamily: "'Inter', sans-serif", fontWeight: 700, letterSpacing: "0.1em" }}
+          className={`${t.ink} text-[13px] uppercase`}
+        >
+          {label}
+        </span>
+        <span
+          className={`w-8 h-8 shrink-0 rounded-full border-[1.5px] flex items-center justify-center transition-colors duration-200 ${
+            open ? t.toggleOpen : `${t.toggleIdle} ${t.toggleHover}`
+          }`}
+        >
+          <span className="relative w-3 h-3">
+            <span className="absolute left-0 top-1/2 w-full h-[1.5px] -translate-y-1/2 bg-current" />
+            <span
+              className="absolute left-1/2 top-0 w-[1.5px] h-full -translate-x-1/2 bg-current transition-transform duration-200"
+              style={{ transform: open ? "translateX(-50%) scaleY(0)" : "translateX(-50%) scaleY(1)" }}
+            />
+          </span>
+        </span>
+      </button>
+      {open && (
+        <ul className="pb-6 space-y-2.5">
+          {items.map((item) => (
+            <li key={item} className={`flex gap-2.5 font-['Inter'] text-[14.5px] ${t.listText} leading-relaxed`}>
+              <span className={`${t.listDash} shrink-0`}>—</span>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+};
+
+const ServiceCards = () => {
+  return (
+    <>
+      {OFFERS.map((o, i) => {
+        const t = THEME[o.theme];
+        return (
+          <section
+            key={o.num}
+            id={i === 0 ? "audit" : undefined}
+            className={`${t.section} px-6 md:px-16 py-24 md:py-32 scroll-mt-20`}
+          >
+            <div className="mx-auto max-w-[1100px]">
+              <div className="grid md:grid-cols-[1fr_1fr] gap-12 items-center mb-8">
+                <div>
+                  <span
+                    style={{ fontFamily: "'Inter', sans-serif", fontWeight: 700, letterSpacing: "0.1em" }}
+                    className={`inline-flex items-center gap-2 ${o.theme === "light" ? "text-[#C96E8C]" : "text-[#E893AC]"} text-xs uppercase mb-6`}
+                  >
+                    &mdash; {o.num}
+                  </span>
+                  <h3
+                    style={{ fontFamily: "'Fraunces', serif", fontWeight: 500, letterSpacing: "-0.01em" }}
+                    className={`${t.ink} text-3xl md:text-4xl leading-[1.08] mb-6`}
+                  >
+                    {o.title}
+                  </h3>
+                  <p
+                    style={{ fontFamily: "'Inter', sans-serif", fontWeight: 700, letterSpacing: "0.06em" }}
+                    className={`${t.inkMuted} text-[12px] uppercase mb-6`}
+                  >
+                    {o.when}
+                  </p>
+                  <p className={`font-['Inter'] ${t.body} text-base md:text-lg leading-relaxed max-w-2xl`}>
+                    {o.description}
+                  </p>
                 </div>
-                <div
-                  style={{ fontFamily: "'Anton', sans-serif", color: s.accent }}
-                  className="text-5xl mb-3"
-                >
-                  {s.num}
+                <div className="hidden md:block aspect-[4/5] rounded-[20px] overflow-hidden" style={!o.image ? { background: o.art } : undefined}>
+                  {o.image && (
+                    <img
+                      src={o.image}
+                      alt={o.imageAlt}
+                      loading="lazy"
+                      className="w-full h-full object-cover"
+                    />
+                  )}
                 </div>
-                <h3
-                  style={{ fontFamily: "'Anton', sans-serif", fontWeight: 400 }}
-                  className="text-[#F2E4D8] text-2xl uppercase leading-tight mb-2"
-                >
-                  {s.title}
-                </h3>
-                <p className="font-['Inter'] text-[#F2E4D8]/60 text-sm">{s.tagline}</p>
               </div>
 
-              {/* Content */}
-              <div>
-                <p className="font-['Inter'] text-[#E8E1D8] text-base md:text-lg leading-relaxed mb-6 max-w-2xl">
-                  {s.description}
-                </p>
-                {s.pills.length > 0 && (
-                  <div className="grid md:grid-cols-3 gap-x-3 gap-y-2.5 mb-4">
-                    {s.pills.map((pill) => (
-                      <div
-                        key={pill}
-                        style={{ borderColor: `${s.accent}60`, backgroundColor: `${s.accent}14`, color: s.accent }}
-                        className="flex items-center gap-2 border rounded-full px-4 py-2 font-['Inter'] text-sm font-medium"
-                      >
-                        <span>✓</span>
-                        <span className="text-[#F2E4D8]">{pill}</span>
-                      </div>
-                    ))}
-                  </div>
-                )}
-                {s.footnote && (
-                  <p className="font-['Inter'] text-[#F2E4D8]/50 text-sm italic mb-6">{s.footnote}</p>
-                )}
+              <div className="mb-2">
+                {o.accordions.map((a) => (
+                  <AccordionItem key={a.label} label={a.label} items={a.items} theme={o.theme} />
+                ))}
+              </div>
+              <div className={`border-t ${t.border} pt-8`}>
                 <a
                   href={CALENDLY_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{ fontFamily: "'Anton', sans-serif", backgroundColor: s.accent }}
-                  className="inline-flex text-xs text-[#20262A] px-6 py-3 rounded-[10px] hover:opacity-90 transition-opacity uppercase mt-2"
+                  style={{ fontFamily: "'JetBrains Mono', monospace", letterSpacing: "0.04em" }}
+                  className={`inline-flex items-center rounded-full ${t.ctaBg} ${t.ctaText} text-[13px] font-bold px-7 py-3.5 hover:opacity-90 transition-opacity`}
                 >
-                  {s.cta} →
+                  {o.cta} &rarr;
                 </a>
               </div>
             </div>
-          );
-        })}
-      </div>
-    </section>
+          </section>
+        );
+      })}
+    </>
   );
 };
 

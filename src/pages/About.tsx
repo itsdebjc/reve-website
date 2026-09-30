@@ -10,7 +10,7 @@ const About = () => {
     document.title = "About Debbie Collins · Reve";
     document.querySelector('meta[name="description"]')?.setAttribute(
       "content",
-      "About Debbie Collins, founder of Reve. 25 years of marketing expertise, two deep in AI."
+      "About Debbie Collins, founder of Reve. 25 years of marketing expertise, three deep in AI."
     );
     setCanonical("/about");
   }, []);
@@ -18,24 +18,36 @@ const About = () => {
   return (
     <main className="bg-[#20262A]">
       <Nav />
-      <section className="pt-32 pb-24 px-6 md:px-16">
-        <div className="mx-auto max-w-[1280px] grid md:grid-cols-[1fr_1.15fr] gap-16 items-center">
+      <section className="relative overflow-hidden pt-36 pb-24 px-6 md:px-16">
+        <div
+          aria-hidden
+          className="absolute rounded-full pointer-events-none"
+          style={{
+            left: "-160px",
+            top: "-100px",
+            width: "480px",
+            height: "480px",
+            background: "radial-gradient(circle, rgba(95,194,232,0.2), transparent 70%)",
+            filter: "blur(6px)",
+          }}
+        />
+        <div className="relative mx-auto max-w-[1280px] grid md:grid-cols-[1fr_1.05fr] gap-16 items-center">
           <div>
-            <p
-              style={{ fontFamily: "'Inter', sans-serif", letterSpacing: "0.14em" }}
-              className="text-[13px] font-bold text-[#7ED2F2] uppercase mb-6"
+            <span
+              style={{ fontFamily: "'Inter', sans-serif", fontWeight: 700, letterSpacing: "0.12em" }}
+              className="inline-flex items-center gap-2 text-[#5FC2E8] text-xs uppercase mb-6"
             >
               About
-            </p>
+            </span>
             <h1
-              style={{ fontFamily: "'Anton', sans-serif", fontWeight: 400 }}
-              className="text-[#F2E4D8] text-5xl md:text-6xl leading-[1.05] uppercase mb-8"
+              style={{ fontFamily: "'Fraunces', serif", fontWeight: 500, letterSpacing: "-0.01em" }}
+              className="text-[#F2E4D8] text-[clamp(38px,5.6vw,64px)] leading-[1.05] mb-8"
             >
-              Hi, I'm <span className="text-[#E893AC]">Debbie.</span>
+              Hi, I'm <em className="not-italic italic text-[#E893AC]">Debbie.</em>
             </h1>
-            <div className="font-['Inter'] space-y-5 text-base md:text-lg leading-relaxed text-[#E8E1D8] max-w-lg">
+            <div className="font-['Inter'] space-y-5 text-base md:text-lg leading-relaxed text-[#F2E4D8]/75 max-w-lg">
               <p>
-                I've spent 25 years in marketing and the last two deep in
+                I've spent 25 years in marketing and the last three deep in
                 AI, in a hands on AI mastermind the whole way. I also run my
                 own businesses, so I know what it takes to make marketing
                 work with a small team and a real budget.
@@ -60,22 +72,26 @@ const About = () => {
             </div>
           </div>
           <div className="relative">
+            <div
+              aria-hidden
+              className="absolute -bottom-4 -right-4 h-full w-full bg-[#E893AC] rounded-2xl"
+            />
             <img
               src={debbiePhoto}
               alt="Debbie Collins"
-              className="w-full rounded-3xl aspect-[4/5] object-cover"
+              className="relative w-full rounded-2xl aspect-[4/5] object-cover"
             />
           </div>
         </div>
       </section>
 
-      <section className="bg-[#1D2224] py-20 md:py-24 px-6 text-center border-y border-white/10">
-        <h2
-          style={{ fontFamily: "'Anton', sans-serif", fontWeight: 400 }}
-          className="text-[#F2E4D8] text-3xl md:text-4xl uppercase leading-[1.1]"
+      <section className="bg-[#F2E4D8] py-24 md:py-28 px-6 text-center">
+        <p
+          style={{ fontFamily: "'Fraunces', serif", fontWeight: 500, letterSpacing: "-0.01em" }}
+          className="text-[#20262A] text-[clamp(28px,3.8vw,44px)] leading-[1.2] max-w-[720px] mx-auto"
         >
           Great marketing starts with expertise.
-        </h2>
+        </p>
       </section>
 
       <FinalCtaSection />

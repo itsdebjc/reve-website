@@ -29,13 +29,13 @@ const Nav = () => {
       <nav className="mx-auto flex max-w-[1280px] items-center justify-between px-6 md:px-16 py-5">
         <a href="/" className="flex flex-col gap-1">
           <div className="flex items-center gap-2">
-            <span style={{ fontFamily: "'Anton', sans-serif" }} className="text-2xl text-[#F2E4D8] leading-none uppercase">
+            <span style={{ fontFamily: "'Fraunces', serif", fontWeight: 500 }} className="text-2xl text-[#F2E4D8] leading-none">
               Reve
             </span>
             <SparkleCluster />
           </div>
           <div className="text-[10px] font-bold tracking-[0.14em] text-[#F2E4D8]/60 uppercase">
-            An AI Marketing Studio
+            An AI Ready Marketing Studio
           </div>
         </a>
 

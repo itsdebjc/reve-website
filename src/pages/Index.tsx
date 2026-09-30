@@ -1,5 +1,6 @@
 import Nav from "@/components/site/Nav";
-import HeroNewDesign from "@/components/site/HeroNewDesign";
+import HeroUpperStory from "@/components/site/HeroUpperStory";
+import HowWeWorkTogether from "@/components/site/HowWeWorkTogether";
 import Problem from "@/components/site/Problem";
 import StartHere from "@/components/site/StartHere";
 import WhatChangesSection from "@/components/site/WhatChangesSection";
@@ -14,7 +15,7 @@ import { setCanonical } from "@/lib/seo";
 
 const Index = () => {
   useEffect(() => {
-    document.title = "Reve · AI Marketing Studio";
+    document.title = "Reve · AI Ready Marketing Studio";
     const meta = document.querySelector('meta[name="description"]');
     const desc =
       "AI that knows your business. Reve builds AI marketing systems for expert-led businesses, consultants, agencies and B2B teams. Start with the Game Plan.";
@@ -31,7 +32,8 @@ const Index = () => {
   return (
     <main className="bg-[#20262A]">
       <Nav />
-      <HeroNewDesign />
+      <HeroUpperStory />
+      <HowWeWorkTogether />
       <Problem />
       <StartHere />
       <WhatChangesSection />
