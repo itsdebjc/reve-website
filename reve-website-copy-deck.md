@@ -319,9 +319,9 @@ Feel: warm, calm, clean. Lots of white space. One accent colour. No sliders, no 
 
 ---
 
-# UPPER STORY FORMULA REWRITE (draft, pending review)
+# REVE REDESIGN FORMULA (draft, pending review)
 
-Restructure of the homepage and Services page using Upper Story's page formula: eyebrow label, one big two color headline, two to three sentences, one supporting device, alternating light and dark sections, a logo band, and a "which one is right for you" lookup. All facts below come from the locked deck above. Nothing new is invented. New copy is marked NEW and needs your review before it goes anywhere near the site.
+Restructure of the homepage and Services page using this redesign's page formula: eyebrow label, one big two color headline, two to three sentences, one supporting device, alternating light and dark sections, a logo band, and a "which one is right for you" lookup. All facts below come from the locked deck above. Nothing new is invented. New copy is marked NEW and needs your review before it goes anywhere near the site.
 
 ## What stays exactly as is
 
@@ -343,7 +343,7 @@ The locked pull quote, "It's not that AI sounds like you. It's that AI knows you
 
 ### 1. Hero (LOCKED copy, new layout)
 
-Full bleed photo of Debbie. Headline set directly over the image in the display serif. Minimal nav. Two CTA pills bottom left over the photo, matching Upper Story's placement.
+Full bleed photo of Debbie. Headline set directly over the image in the display serif. Minimal nav. Two CTA pills bottom left over the photo, matching the reference layout used for this redesign.
 
 Eyebrow: AI works best in expert hands.
 Headline: AI that knows your business.
@@ -365,7 +365,7 @@ Eyebrow: The Problem
 Headline (two color): You know AI can do more. Getting it to help is the hard part.
 Body: You have the tools. The output is generic and the good work still takes just as long. That is not a tools problem. AI does not know your business yet, and it works best in the hands of someone who does.
 
-Design: one texture bloom behind the headline, off center. No list, no cards. Keep this section short, the way Upper Story keeps "Why You're Here" short.
+Design: one texture bloom behind the headline, off center. No list, no cards. Keep this section short, keeping this section similarly short.
 
 ### 4. Pull quote
 
@@ -381,7 +381,7 @@ Eyebrow: How we work together
 Headline: Your Brand Brain, then your systems.
 Body: One core built from your business. Then the tools that run on it.
 
-Device: horizontal card carousel, one card per system, photo led, matching Upper Story's carousel. Each card gets a NEW one line "when" opener, built from the existing one line description already locked above. Nothing here is a new claim, only a new opening frame.
+Device: horizontal card carousel, one card per system, photo led, matching the reference carousel layout used for this redesign. Each card gets a NEW one line "when" opener, built from the existing one line description already locked above. Nothing here is a new claim, only a new opening frame.
 
 1. Marketing Assistant
 NEW opener: When you need an answer, not a search.
@@ -409,7 +409,7 @@ Existing line: Proposals and pitches that win, 60% faster.
 
 ### 6. Which one do you need? (NEW device)
 
-Direct lift of Upper Story's lookup table. Built from the six systems above, no new facts.
+Direct lift of the reference lookup table format used for this redesign. Built from the six systems above, no new facts.
 
 Proposals eat your week -> New Business Engine
 Content keeps slipping -> Content Engine
@@ -418,11 +418,11 @@ You need an answer, not a search -> Marketing Assistant
 You need visuals fast -> Creative Lab
 You are guessing what customers want -> Customer Intelligence
 
-Design: plain list, statement on the left, arrow, system name on the right. No cards, no icons. The plainness is the point, matching Upper Story's version.
+Design: plain list, statement on the left, arrow, system name on the right. No cards, no icons. The plainness is the point, matching that reference layout.
 
 ### 7. The journey
 
-Same four steps as the deck, numbered 01 to 04 the way Upper Story numbers its approach section. No new copy.
+Same four steps as the deck, numbered 01 to 04 the way the reference site numbers its approach section. No new copy.
 
 01 The Game Plan. We map what to fix first and where AI helps most.
 02 Your Brand Brain. We build the core, your business taught to AI.
@@ -458,7 +458,7 @@ Body: Everything I do starts the same way. We figure out what your business need
 
 ### The three offers, with NEW when openers
 
-Same three offers from the deck. Each gets one NEW opening line, styled like Upper Story's "WHEN..." headers, so a reader can place themselves before reading the detail.
+Same three offers from the deck. Each gets one NEW opening line, styled as "WHEN..." headers, so a reader can place themselves before reading the detail.
 
 01 The Game Plan
 NEW opener: When you know AI could help and do not know where to start.
@@ -488,7 +488,7 @@ Unchanged from the deck.
 
 ---
 
-# END UPPER STORY FORMULA REWRITE
+# END REVE REDESIGN FORMULA
 
 ---
 

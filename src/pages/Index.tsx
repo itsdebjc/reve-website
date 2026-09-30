@@ -1,5 +1,5 @@
 import Nav from "@/components/site/Nav";
-import HeroUpperStory from "@/components/site/HeroUpperStory";
+import Hero from "@/components/site/Hero";
 import HowWeWorkTogether from "@/components/site/HowWeWorkTogether";
 import Problem from "@/components/site/Problem";
 import StartHere from "@/components/site/StartHere";
@@ -32,7 +32,7 @@ const Index = () => {
   return (
     <main className="bg-[#20262A]">
       <Nav />
-      <HeroUpperStory />
+      <Hero />
       <HowWeWorkTogether />
       <Problem />
       <StartHere />
