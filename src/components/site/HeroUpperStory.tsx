@@ -33,12 +33,12 @@ const HeroUpperStory = () => {
               style={{ fontFamily: "'Fraunces', serif", fontWeight: 500, letterSpacing: "-0.01em" }}
               className="text-[#F2E4D8] text-[clamp(44px,6.4vw,88px)] leading-[0.98]"
             >
-              AI that
+              Put AI to work
               <br />
-              <em className="not-italic italic text-[#E893AC]">knows your business.</em>
+              <em className="not-italic italic text-[#E893AC]">in your marketing.</em>
             </h1>
             <p className="font-['Inter'] text-[clamp(16px,1.4vw,19px)] leading-relaxed text-[#F2E4D8]/78 max-w-[480px] mt-7">
-              You are the expert. I put AI to work on your marketing and teach your team to run it.
+              We build websites, content and marketing systems that help your business move forward.
             </p>
             <div className="flex gap-3.5 flex-wrap mt-9">
               <a

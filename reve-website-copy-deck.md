@@ -11,20 +11,20 @@ Rules: no em dashes, no hyphens in copy, no Oxford comma. Brand is "Reve", never
 
 # HOMEPAGE
 
-## Hero (LOCKED)
+## Hero (LOCKED, updated 2026-09-30)
 
 Logo lockup: Reve. An AI ready marketing studio.
 
 Eyebrow: AI works best in expert hands.
 
-Headline: AI that knows your business.
+Headline: Put AI to work in your marketing.
 
-Subhead: You are the expert. I put AI to work on your marketing and teach your team to run it.
+Subhead: We build websites, content and marketing systems that help your business move forward.
 
 Primary CTA: Start with the Game Plan
 Secondary CTA: See how it works
 
-Design: warm photo of Debbie next to the copy. "Knows your business" in the accent colour.
+Design: warm photo of Debbie next to the copy. "In your marketing" in the accent colour.
 
 PARKED LINE: "Great marketing starts with expertise." Use on About or Why Reve. It's the reason they hire you.
 
