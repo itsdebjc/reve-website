@@ -61,7 +61,7 @@ const WhichOneNeeded = () => {
             style={{ fontFamily: "'JetBrains Mono', monospace", letterSpacing: "0.04em" }}
             className="inline-flex items-center rounded-full bg-[#20262A] text-[#F2E4D8] text-[13px] font-bold px-[30px] py-[15px] hover:opacity-90 transition-opacity"
           >
-            Book a Discovery Call
+            Book a Discovery Call &rarr;
           </a>
         </div>
       </section>

@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { CALENDLY_URL } from "@/lib/links";
-import aiImplementationImage from "@/assets/offer-ai-implementation.jpg";
 import aiRoadmapImage from "@/assets/offer-ai-roadmap.jpg";
 
 const OFFERS = [
@@ -10,7 +9,7 @@ const OFFERS = [
     when: "When you're ready to invest in AI but need a clear direction.",
     title: "AI Marketing Roadmap",
     description:
-      "We review your marketing, existing systems and how your team works. Together, we identify where AI can make a useful difference and what needs to be in place first. You leave knowing what to prioritize, what to build and what can wait.",
+      "We review your marketing, existing systems and how your team works. Together, we identify where AI can make a useful difference and what needs to be in place first. We look at what your existing tools can do before recommending something new. You leave knowing what to prioritize, what to build and what can wait.",
     image: aiRoadmapImage,
     imageAlt: "A staircase lit from below, leading up into an archway",
     accordions: [
@@ -39,42 +38,6 @@ const OFFERS = [
       },
     ],
     cta: "Plan Your Next Move",
-  },
-  {
-    num: "02",
-    theme: "dark" as const,
-    when: "When your team needs AI to do more than draft.",
-    title: "AI Implementation",
-    description:
-      "We organize your business knowledge, configure the right tools and build workflows around your priorities. That could mean creating content, preparing proposals or reducing the manual work between systems. We work with what you already have wherever possible. Each engagement includes testing, refinement and training with your team.",
-    image: aiImplementationImage,
-    imageAlt: "Detail of a glass and steel building facade, a grid of angular reflective windows",
-    accordions: [
-      {
-        label: "Best suited for",
-        items: [
-          "Businesses ready to act on a roadmap",
-          "Teams spending too much time correcting AI output",
-          "Founders who want fewer tasks dependent on them",
-        ],
-      },
-      {
-        label: "By the end, you'll have",
-        items: [
-          "Working systems built around your priorities",
-          "Your business knowledge organized for AI",
-          "Clear workflows your team can follow",
-          "Training and guidance to keep the systems useful",
-        ],
-      },
-      {
-        label: "Typical engagement",
-        items: [
-          "Every implementation is scoped to what you're building. We'll walk through timing and investment on your discovery call.",
-        ],
-      },
-    ],
-    cta: "Put Your Plan to Work",
   },
 ];
 
@@ -111,7 +74,7 @@ const THEME = {
   },
 };
 
-const AccordionItem = ({ label, items, theme }: { label: string; items: string[]; theme: Theme }) => {
+export const AccordionItem = ({ label, items, theme }: { label: string; items: string[]; theme: Theme }) => {
   const [open, setOpen] = useState(false);
   const t = THEME[theme];
   return (

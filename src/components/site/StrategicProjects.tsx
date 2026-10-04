@@ -3,11 +3,17 @@ import websiteStrategyImage from "@/assets/project-website-strategy-v2.jpg";
 import emailMarketingImage from "@/assets/project-notebook-pen.jpg";
 import aiVisibilityImage from "@/assets/project-ai-visibility.jpg";
 import knowledgeHubImage from "@/assets/project-knowledge-hub.jpg";
-import proposalSalesImage from "@/assets/project-proposal-sales.jpg";
 import creativeLabImage from "@/assets/project-creative-lab-v2.jpg";
-import contentCaseStudyImage from "@/assets/project-content-case-study-v2.jpg";
 
 const PROJECTS = [
+  {
+    when: "When your business knowledge needs to work beyond you.",
+    title: "Brand Knowledge Hub",
+    description:
+      "We bring your positioning, voice, offers and proof into a shared resource your team and AI can use to produce more consistent marketing.",
+    image: knowledgeHubImage,
+    alt: "A multi-level library with white shelving stacked full of books",
+  },
   {
     when: "When your business has outgrown its website.",
     title: "Website Strategy and Build",
@@ -18,7 +24,7 @@ const PROJECTS = [
   },
   {
     when: "When you need to know whether customers can find you through AI.",
-    title: "AI Visibility Audit and Plan",
+    title: "AI Search Visibility Audit and Plan",
     description:
       "We assess how your business appears in AI answers, identify gaps and recommend improvements to your website, content and supporting information.",
     image: aiVisibilityImage,
@@ -31,30 +37,6 @@ const PROJECTS = [
       "We build email programs that support sales and repeat purchases. Engagements can include an audit, automated flows, segmentation and campaign planning, depending on what your business needs.",
     image: emailMarketingImage,
     alt: "A blank white notebook page and a pen catching sunlight on a wooden surface",
-  },
-  {
-    when: "When your business knowledge needs to work beyond you.",
-    title: "Brand and Knowledge Hub",
-    description:
-      "We bring your positioning, voice, offers and proof into a shared resource your team and AI can use to produce more consistent marketing.",
-    image: knowledgeHubImage,
-    alt: "A multi-level library with white shelving stacked full of books",
-  },
-  {
-    when: "When your expertise deserves more consistent visibility.",
-    title: "Content and Case Study System",
-    description:
-      "We build a repeatable way to turn ideas, conversations and client results into useful content, with your voice and judgment built into the process.",
-    image: contentCaseStudyImage,
-    alt: "Close up of hands typing on a laptop with a document open, a second monitor in the background",
-  },
-  {
-    when: "When winning new work takes too much time away from delivering it.",
-    title: "Proposal and Sales System",
-    description:
-      "We create a system for tailored proposals, presentations and follow-up, grounded in your offers, expertise and proof.",
-    image: proposalSalesImage,
-    alt: "An open workbook on a wooden table with a comfort zone diagram and a radar chart, lit by afternoon sun",
   },
   {
     when: "When a promising idea needs something you can test.",
@@ -95,7 +77,7 @@ const StrategicProjects = () => {
               style={{ fontFamily: "'Fraunces', serif", fontWeight: 500, letterSpacing: "-0.01em" }}
               className="text-[#20262A] text-[clamp(32px,4vw,48px)] leading-[1.08]"
             >
-              A specific need. A focused engagement.
+              One need. One project.
             </h2>
           </div>
 

@@ -40,9 +40,14 @@ const ServicesHero = () => {
             <br />
             <em className="not-italic italic text-[#E893AC]">AI implementation.</em>
           </h1>
-          <p className="font-['Inter'] text-[#F2E4D8]/80 text-lg md:text-xl leading-relaxed max-w-[640px]">
-            Reve is an AI ready marketing studio. We help businesses put AI to work and deliver the marketing projects that move them forward. Some clients need a clear roadmap and help implementing it. Others need a stronger website, a better email program or a more consistent way to create content. Every engagement starts with what the business needs to achieve.
-          </p>
+          <div className="font-['Inter'] text-[#F2E4D8]/80 text-lg md:text-xl leading-relaxed max-w-[640px] space-y-5">
+            <p>
+              Reve is an AI ready marketing studio. We help businesses put AI to work and deliver the marketing projects that move them forward.
+            </p>
+            <p>
+              Some clients need a clear roadmap and help implementing it. Others need a stronger website, a better email program or a more consistent way to create content. Every engagement starts with what the business needs to achieve.
+            </p>
+          </div>
         </div>
       </div>
     </section>
