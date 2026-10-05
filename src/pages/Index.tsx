@@ -1,5 +1,6 @@
 import Nav from "@/components/site/Nav";
 import Hero from "@/components/site/Hero";
+import Ticker from "@/components/site/Ticker";
 import WhatWeDo from "@/components/site/WhatWeDo";
 import Problem from "@/components/site/Problem";
 import WhatChangesSection from "@/components/site/WhatChangesSection";
@@ -28,10 +29,31 @@ const Index = () => {
     setCanonical("/");
   }, []);
 
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const targets = Array.from(
+      document.querySelectorAll<HTMLElement>("main > section:not(:first-child) > div:not([aria-hidden]):not(.marquee)")
+    ).filter((el) => el.getBoundingClientRect().top > window.innerHeight);
+    targets.forEach((el) => el.classList.add("reveal-pending"));
+    const io = new IntersectionObserver(
+      (entries) =>
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            e.target.classList.add("reveal-in");
+            io.unobserve(e.target);
+          }
+        }),
+      { threshold: 0.12 }
+    );
+    targets.forEach((el) => io.observe(el));
+    return () => io.disconnect();
+  }, []);
+
   return (
     <main className="bg-[#20262A]">
       <Nav />
       <Hero />
+      <Ticker />
       <WhatWeDo />
       <Problem />
       <WhatChangesSection />

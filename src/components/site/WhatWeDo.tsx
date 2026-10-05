@@ -38,7 +38,7 @@ const OFFERS = [
 
 const WhatWeDo = () => {
   return (
-    <section id="what-we-do" className="relative overflow-hidden bg-[#F2E4D8] py-24 md:py-32 px-6 md:px-16 scroll-mt-20">
+    <section id="what-we-do" className="relative overflow-hidden bg-[#F2E4D8] py-28 md:py-40 px-6 md:px-16 scroll-mt-20">
       <div
         aria-hidden
         className="absolute rounded-full pointer-events-none"
@@ -52,7 +52,7 @@ const WhatWeDo = () => {
         }}
       />
       <div className="relative mx-auto max-w-[1280px]">
-        <div className="max-w-[720px] mb-14 md:mb-16">
+        <div className="max-w-[1100px] mb-16 md:mb-24">
           <span
             style={{ fontFamily: "'Inter', sans-serif", fontWeight: 700, letterSpacing: "0.12em" }}
             className="inline-flex items-center gap-2 text-[#C96E8C] text-xs uppercase before:content-[''] before:w-[18px] before:h-[1.5px] before:bg-[#C96E8C] before:inline-block"
@@ -61,7 +61,7 @@ const WhatWeDo = () => {
           </span>
           <h2
             style={{ fontFamily: "'Fraunces', serif", fontWeight: 500, letterSpacing: "-0.01em" }}
-            className="text-[#20262A] text-[clamp(34px,4.4vw,56px)] leading-[1.04] mt-4"
+            className="text-[#20262A] text-[clamp(44px,7vw,104px)] leading-[0.98] mt-6"
           >
             Marketing strategy.
             <br />
@@ -76,7 +76,7 @@ const WhatWeDo = () => {
           {OFFERS.map((o) => (
             <article
               key={o.num}
-              className="flex flex-col rounded-[22px] border border-[#20262A]/12 bg-white p-8 md:p-9"
+              className="flex flex-col rounded-[22px] border border-[#20262A]/12 bg-white p-8 md:p-9 transition-all duration-300 hover:-translate-y-2 hover:border-[#E893AC] hover:shadow-[0_28px_48px_-24px_rgba(201,110,140,0.55)]"
             >
               <span
                 style={{ fontFamily: "'JetBrains Mono', monospace", letterSpacing: "0.08em" }}
