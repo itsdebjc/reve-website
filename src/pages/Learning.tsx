@@ -24,13 +24,13 @@ const Learning = () => {
         <div className="mx-auto max-w-[1280px]">
           <p
             style={{ fontFamily: "'Inter', sans-serif", letterSpacing: "0.14em" }}
-            className="text-[13px] font-bold text-[#7ED2F2] uppercase mb-6"
+            className="text-[13px] font-bold text-[#5FC2E8] uppercase mb-6"
           >
             Learning
           </p>
           <h1
-            style={{ fontFamily: "'Anton', sans-serif", fontWeight: 400 }}
-            className="text-[#F2E4D8] text-5xl md:text-6xl leading-[1.05] uppercase mb-8"
+            style={{ fontFamily: "'Fraunces', serif", fontWeight: 500, letterSpacing: "-0.01em" }}
+            className="text-[#F2E4D8] text-5xl md:text-6xl leading-[1.05] mb-8"
           >
             Notes from the studio.
           </h1>
@@ -65,8 +65,8 @@ const Learning = () => {
                   {post.category} · {post.date} · {post.readTime}
                 </p>
                 <h3
-                  style={{ fontFamily: "'Anton', sans-serif", fontWeight: 400 }}
-                  className="text-[#F2E4D8] text-xl uppercase leading-tight mb-3 group-hover:text-[#E893AC] transition-colors"
+                  style={{ fontFamily: "'Fraunces', serif", fontWeight: 500, letterSpacing: "-0.01em" }}
+                  className="text-[#F2E4D8] text-xl leading-tight mb-3 group-hover:text-[#E893AC] transition-colors"
                 >
                   {post.title}
                 </h3>
@@ -74,8 +74,8 @@ const Learning = () => {
                   {post.excerpt}
                 </p>
                 <span
-                  style={{ fontFamily: "'Anton', sans-serif" }}
-                  className="text-[#5FC2E8] text-xs uppercase group-hover:text-[#E893AC] transition-colors"
+                  style={{ fontFamily: "'JetBrains Mono', monospace", letterSpacing: "0.04em" }}
+                  className="text-[#5FC2E8] text-xs group-hover:text-[#E893AC] transition-colors"
                 >
                   Read the post →
                 </span>
@@ -85,11 +85,11 @@ const Learning = () => {
         </div>
       </section>
 
-      <section className="bg-[#5FAF95] py-20 md:py-24 px-6 text-center">
+      <section className="bg-[#E893AC] py-20 md:py-24 px-6 text-center">
         <div className="mx-auto max-w-[640px]">
           <h2
-            style={{ fontFamily: "'Anton', sans-serif", fontWeight: 400 }}
-            className="text-[#20262A] text-3xl md:text-4xl uppercase leading-[1.1] mb-9"
+            style={{ fontFamily: "'Fraunces', serif", fontWeight: 500, letterSpacing: "-0.01em" }}
+            className="text-[#20262A] text-3xl md:text-4xl leading-[1.1] mb-9"
           >
             Want AI that knows your business?
           </h2>
@@ -98,15 +98,15 @@ const Learning = () => {
               href={CALENDLY_URL}
               target="_blank"
               rel="noopener noreferrer"
-              style={{ fontFamily: "'Anton', sans-serif" }}
-              className="text-sm bg-[#20262A] text-[#F2E4D8] px-8 py-4 rounded-[10px] inline-block hover:opacity-90 transition-opacity uppercase"
+              style={{ fontFamily: "'JetBrains Mono', monospace", letterSpacing: "0.04em" }}
+              className="text-[13px] font-bold bg-[#20262A] text-[#F2E4D8] px-[30px] py-[15px] rounded-full inline-flex items-center hover:opacity-90 transition-opacity"
             >
               Book a Call
             </a>
             <a
               href="/services#audit"
-              style={{ fontFamily: "'Anton', sans-serif" }}
-              className="text-sm border-2 border-[#20262A]/50 text-[#20262A] px-8 py-4 rounded-[10px] hover:bg-[#20262A]/10 transition-colors inline-block uppercase"
+              style={{ fontFamily: "'JetBrains Mono', monospace", letterSpacing: "0.04em" }}
+              className="text-[13px] font-bold border-[1.5px] border-[#20262A]/50 text-[#20262A] px-[30px] py-[15px] rounded-full hover:bg-[#20262A]/10 transition-colors inline-block"
             >
               Get Your AI Marketing Roadmap
             </a>

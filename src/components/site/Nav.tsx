@@ -55,8 +55,8 @@ const Nav = () => {
           href={CALENDLY_URL}
           target="_blank"
           rel="noopener noreferrer"
-          style={{ fontFamily: "'Anton', sans-serif" }}
-          className="hidden md:inline-flex text-xs bg-[#E893AC] text-[#20262A] px-7 py-3 rounded-[10px] hover:opacity-90 transition-opacity leading-none uppercase"
+          style={{ fontFamily: "'JetBrains Mono', monospace", letterSpacing: "0.04em" }}
+          className="hidden md:inline-flex items-center text-[13px] font-bold bg-[#E893AC] text-[#20262A] px-6 py-3 rounded-full hover:opacity-90 transition-opacity leading-none"
         >
           Book a Call
         </a>
@@ -88,8 +88,8 @@ const Nav = () => {
               target="_blank"
               rel="noopener noreferrer"
               onClick={closeMobileMenu}
-              style={{ fontFamily: "'Anton', sans-serif" }}
-              className="text-xs bg-[#E893AC] text-[#20262A] px-7 py-3 rounded-[10px] text-center hover:opacity-90 transition-opacity uppercase"
+              style={{ fontFamily: "'JetBrains Mono', monospace", letterSpacing: "0.04em" }}
+              className="text-[13px] font-bold bg-[#E893AC] text-[#20262A] px-6 py-3.5 rounded-full text-center hover:opacity-90 transition-opacity"
             >
               Book a Call
             </a>

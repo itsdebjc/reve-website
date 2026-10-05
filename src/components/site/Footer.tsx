@@ -19,10 +19,10 @@ const Footer = () => {
       <div className="mx-auto max-w-[1280px] px-6 md:px-16">
         <div className="flex flex-col md:flex-row items-start justify-between gap-10 mb-10">
           <div>
-            <div style={{ fontFamily: "'Anton', sans-serif" }} className="text-2xl text-[#F2E4D8] mb-3 uppercase">
+            <div style={{ fontFamily: "'Fraunces', serif", fontWeight: 500 }} className="text-3xl text-[#F2E4D8] mb-3">
               Reve
             </div>
-            <div style={{ fontFamily: "'Anton', sans-serif" }} className="text-sm text-[#F2E4D8]/80 mb-2 uppercase">
+            <div style={{ fontFamily: "'Fraunces', serif", fontStyle: "italic" }} className="text-lg text-[#F2E4D8]/80 mb-2">
               Better marketing. A team that knows AI.
             </div>
             <div className="font-['Inter'] text-sm text-[#F2E4D8]/60">Located in beautiful British Columbia.</div>

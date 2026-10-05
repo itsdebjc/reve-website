@@ -31,13 +31,13 @@ const Article = () => {
         <section className="pt-40 pb-32 text-center px-6">
           <p
             style={{ fontFamily: "'Inter', sans-serif", letterSpacing: "0.14em" }}
-            className="text-[13px] font-bold text-[#7ED2F2] uppercase mb-6"
+            className="text-[13px] font-bold text-[#5FC2E8] uppercase mb-6"
           >
             404
           </p>
           <h1
-            style={{ fontFamily: "'Anton', sans-serif", fontWeight: 400 }}
-            className="text-[#F2E4D8] text-4xl md:text-6xl uppercase mb-6"
+            style={{ fontFamily: "'Fraunces', serif", fontWeight: 500, letterSpacing: "-0.01em" }}
+            className="text-[#F2E4D8] text-4xl md:text-6xl mb-6"
           >
             Article not found.
           </h1>
@@ -61,13 +61,13 @@ const Article = () => {
         <div className="mx-auto max-w-3xl text-center">
           <p
             style={{ fontFamily: "'Inter', sans-serif", letterSpacing: "0.14em" }}
-            className="text-[13px] font-bold text-[#7ED2F2] uppercase mb-6"
+            className="text-[13px] font-bold text-[#5FC2E8] uppercase mb-6"
           >
             {post.category}
           </p>
           <h1
-            style={{ fontFamily: "'Anton', sans-serif", fontWeight: 400 }}
-            className="text-[#F2E4D8] text-4xl md:text-6xl leading-[1.05] uppercase mb-8"
+            style={{ fontFamily: "'Fraunces', serif", fontWeight: 500, letterSpacing: "-0.01em" }}
+            className="text-[#F2E4D8] text-4xl md:text-6xl leading-[1.05] mb-8"
           >
             {post.title}
           </h1>
@@ -111,8 +111,8 @@ const Article = () => {
                 return (
                   <h2
                     key={i}
-                    style={{ fontFamily: "'Anton', sans-serif", fontWeight: 400 }}
-                    className="text-[#F2E4D8] text-2xl md:text-3xl uppercase pt-6"
+                    style={{ fontFamily: "'Fraunces', serif", fontWeight: 500, letterSpacing: "-0.01em" }}
+                    className="text-[#F2E4D8] text-2xl md:text-3xl pt-6"
                   >
                     {block.heading}
                   </h2>
@@ -146,8 +146,8 @@ const Article = () => {
         <div className="mx-auto max-w-[1280px]">
           <div className="flex items-end justify-between mb-12 flex-wrap gap-4">
             <h2
-              style={{ fontFamily: "'Anton', sans-serif", fontWeight: 400 }}
-              className="text-[#F2E4D8] text-3xl md:text-4xl uppercase"
+              style={{ fontFamily: "'Fraunces', serif", fontWeight: 500, letterSpacing: "-0.01em" }}
+              className="text-[#F2E4D8] text-3xl md:text-4xl"
             >
               Keep reading.
             </h2>
@@ -168,14 +168,14 @@ const Article = () => {
                   />
                 </div>
                 <p
-                  style={{ fontFamily: "'Inter', sans-serif", letterSpacing: "0.1em", color: "#7ED2F2" }}
+                  style={{ fontFamily: "'Inter', sans-serif", letterSpacing: "0.1em", color: "#5FC2E8" }}
                   className="text-xs font-bold uppercase mb-3"
                 >
                   {p.category}
                 </p>
                 <h3
-                  style={{ fontFamily: "'Anton', sans-serif", fontWeight: 400 }}
-                  className="text-[#F2E4D8] text-xl uppercase leading-tight mb-3 group-hover:text-[#E893AC] transition-colors"
+                  style={{ fontFamily: "'Fraunces', serif", fontWeight: 500, letterSpacing: "-0.01em" }}
+                  className="text-[#F2E4D8] text-xl leading-tight mb-3 group-hover:text-[#E893AC] transition-colors"
                 >
                   {p.title}
                 </h3>
