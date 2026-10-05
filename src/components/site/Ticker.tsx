@@ -17,7 +17,7 @@ const Ticker = () => {
     <section aria-hidden className="bg-[#E893AC] overflow-hidden py-5 border-y border-[#20262A]/10">
       <div className="marquee flex w-max items-center hover:[animation-play-state:paused]">
         {row.map((item, i) => (
-          <span key={i} className="flex items-center">
+          <span key={i} className={`flex items-center ${i >= ITEMS.length ? "marquee-dup" : ""}`}>
             <span
               style={{ fontFamily: "'Fraunces', serif", fontStyle: i % 2 ? "italic" : "normal", fontWeight: 500 }}
               className="text-[#20262A] text-2xl md:text-3xl whitespace-nowrap px-8"

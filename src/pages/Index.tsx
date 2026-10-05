@@ -1,5 +1,6 @@
 import Nav from "@/components/site/Nav";
 import Hero from "@/components/site/Hero";
+import BrandsBand from "@/components/site/BrandsBand";
 import Ticker from "@/components/site/Ticker";
 import WhatWeDo from "@/components/site/WhatWeDo";
 import Problem from "@/components/site/Problem";
@@ -41,6 +42,7 @@ const Index = () => {
       <Problem />
       <WhatChangesSection />
       <ProofSection />
+      <BrandsBand />
       <EmailCapture />
       <Testimonial />
       <FAQ />

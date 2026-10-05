@@ -2,6 +2,7 @@ import Nav from "@/components/site/Nav";
 import Footer from "@/components/site/Footer";
 import FinalCtaSection from "@/components/site/FinalCtaSection";
 import { useEffect } from "react";
+import BrandsBand from "@/components/site/BrandsBand";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import debbiePhoto from "@/assets/debbie-collins.jpeg";
 import { setCanonical } from "@/lib/seo";
@@ -86,6 +87,8 @@ const About = () => {
           </div>
         </div>
       </section>
+
+      <BrandsBand />
 
       <section className="bg-[#F2E4D8] py-32 md:py-44 px-6 text-center">
         <p

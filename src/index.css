@@ -34,5 +34,11 @@ body {
   }
   .marquee {
     animation: none;
+    width: auto !important;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .marquee-dup {
+    display: none !important;
   }
 }
