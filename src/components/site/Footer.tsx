@@ -23,7 +23,7 @@ const Footer = () => {
               Reve
             </div>
             <div style={{ fontFamily: "'Fraunces', serif", fontStyle: "italic" }} className="text-lg text-[#F2E4D8]/80 mb-2">
-              Better marketing. A team that knows AI.
+              An AI ready marketing studio.
             </div>
             <div className="font-['Inter'] text-sm text-[#F2E4D8]/60">Located in beautiful British Columbia.</div>
           </div>
