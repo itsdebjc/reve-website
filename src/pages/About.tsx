@@ -2,10 +2,12 @@ import Nav from "@/components/site/Nav";
 import Footer from "@/components/site/Footer";
 import FinalCtaSection from "@/components/site/FinalCtaSection";
 import { useEffect } from "react";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 import debbiePhoto from "@/assets/debbie-collins.jpeg";
 import { setCanonical } from "@/lib/seo";
 
 const About = () => {
+  useScrollReveal();
   useEffect(() => {
     document.title = "About Debbie Collins · Reve";
     document.querySelector('meta[name="description"]')?.setAttribute(
@@ -41,7 +43,7 @@ const About = () => {
             </span>
             <h1
               style={{ fontFamily: "'Fraunces', serif", fontWeight: 500, letterSpacing: "-0.01em" }}
-              className="text-[#F2E4D8] text-[clamp(38px,5.6vw,64px)] leading-[1.05] mb-8"
+              className="text-[#F2E4D8] text-[clamp(52px,8vw,112px)] leading-[0.98] mb-8"
             >
               Hi, I'm <em className="not-italic italic text-[#E893AC]">Debbie.</em>
             </h1>
@@ -85,10 +87,10 @@ const About = () => {
         </div>
       </section>
 
-      <section className="bg-[#F2E4D8] py-24 md:py-28 px-6 text-center">
+      <section className="bg-[#F2E4D8] py-32 md:py-44 px-6 text-center">
         <p
           style={{ fontFamily: "'Fraunces', serif", fontWeight: 500, letterSpacing: "-0.01em" }}
-          className="text-[#20262A] text-[clamp(28px,3.8vw,44px)] leading-[1.2] max-w-[720px] mx-auto"
+          className="text-[#20262A] text-[clamp(40px,6.4vw,92px)] leading-[1.02] max-w-[1000px] mx-auto"
         >
           Great marketing starts with expertise.
         </p>

@@ -43,15 +43,15 @@ const WhichOneNeeded = () => {
         </div>
       </section>
 
-      <section className="bg-[#F2E4D8] py-20 md:py-28 px-6 text-center">
-        <div className="mx-auto max-w-[640px]">
+      <section className="bg-[#F2E4D8] py-28 md:py-40 px-6 text-center">
+        <div className="mx-auto max-w-[1000px]">
           <h2
             style={{ fontFamily: "'Fraunces', serif", fontWeight: 500, letterSpacing: "-0.01em" }}
-            className="text-[#20262A] text-2xl md:text-3xl leading-[1.2] mb-4"
+            className="text-[#20262A] text-[clamp(38px,5.8vw,80px)] leading-[1.02] mb-6"
           >
             Not sure where to start?
           </h2>
-          <p className="font-['Inter'] text-[#20262A]/70 text-base leading-relaxed mb-8 max-w-[440px] mx-auto">
+          <p className="font-['Inter'] text-[#20262A]/70 text-lg leading-relaxed mb-10 max-w-[480px] mx-auto">
             Tell us what needs to change. We'll help you choose the right engagement.
           </p>
           <a

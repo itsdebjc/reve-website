@@ -6,9 +6,11 @@ import StrategicProjects from "@/components/site/StrategicProjects";
 import WhichOneNeeded from "@/components/site/WhichOneNeeded";
 import Footer from "@/components/site/Footer";
 import { useEffect } from "react";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { setCanonical } from "@/lib/seo";
 
 const Services = () => {
+  useScrollReveal();
   useEffect(() => {
     document.title = "Services · Reve";
     const meta = document.querySelector('meta[name="description"]');

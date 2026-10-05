@@ -3,10 +3,12 @@ import Footer from "@/components/site/Footer";
 import { Link } from "react-router-dom";
 import { allPosts } from "@/data/learningPosts";
 import { useEffect } from "react";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { CALENDLY_URL } from "@/lib/links";
 import { setCanonical } from "@/lib/seo";
 
 const Learning = () => {
+  useScrollReveal();
   useEffect(() => {
     document.title = "Learning · Reve";
     setCanonical("/learning");
@@ -30,7 +32,7 @@ const Learning = () => {
           </p>
           <h1
             style={{ fontFamily: "'Fraunces', serif", fontWeight: 500, letterSpacing: "-0.01em" }}
-            className="text-[#F2E4D8] text-5xl md:text-6xl leading-[1.05] mb-8"
+            className="text-[#F2E4D8] text-[clamp(52px,8vw,112px)] leading-[0.98] mb-8"
           >
             Notes from the studio.
           </h1>
@@ -85,11 +87,11 @@ const Learning = () => {
         </div>
       </section>
 
-      <section className="bg-[#E893AC] py-20 md:py-24 px-6 text-center">
-        <div className="mx-auto max-w-[640px]">
+      <section className="bg-[#E893AC] py-28 md:py-40 px-6 text-center">
+        <div className="mx-auto max-w-[1000px]">
           <h2
             style={{ fontFamily: "'Fraunces', serif", fontWeight: 500, letterSpacing: "-0.01em" }}
-            className="text-[#20262A] text-3xl md:text-4xl leading-[1.1] mb-9"
+            className="text-[#20262A] text-[clamp(38px,5.8vw,80px)] leading-[1.02] mb-10"
           >
             Want AI that knows your business?
           </h2>

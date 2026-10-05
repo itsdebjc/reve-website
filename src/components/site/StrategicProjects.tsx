@@ -62,12 +62,12 @@ const StrategicProjects = () => {
   return (
     <section
       id="projects"
-      className="relative overflow-hidden py-24 md:py-32 px-6 md:px-16 scroll-mt-20"
+      className="relative overflow-hidden py-28 md:py-40 px-6 md:px-16 scroll-mt-20"
       style={{ background: "linear-gradient(180deg, #F2E4D8 0%, #F0CFDC 100%)" }}
     >
       <div className="relative mx-auto max-w-[1280px]">
         <div className="flex items-end justify-between gap-6 flex-wrap mb-14">
-          <div className="max-w-[640px]">
+          <div className="max-w-[1000px]">
             <span
               style={{ fontFamily: "'Inter', sans-serif", fontWeight: 700, letterSpacing: "0.12em" }}
               className="inline-flex items-center gap-2 text-[#C96E8C] text-xs uppercase before:content-[''] before:w-[18px] before:h-[1.5px] before:bg-[#C96E8C] before:inline-block mb-4"
@@ -76,7 +76,7 @@ const StrategicProjects = () => {
             </span>
             <h2
               style={{ fontFamily: "'Fraunces', serif", fontWeight: 500, letterSpacing: "-0.01em" }}
-              className="text-[#20262A] text-[clamp(32px,4vw,48px)] leading-[1.08]"
+              className="text-[#20262A] text-[clamp(44px,7vw,104px)] leading-[0.98]"
             >
               One need. One project.
             </h2>

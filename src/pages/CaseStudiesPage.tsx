@@ -1,6 +1,7 @@
 import Nav from "@/components/site/Nav";
 import Footer from "@/components/site/Footer";
 import { useEffect } from "react";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { setCanonical } from "@/lib/seo";
 import { CALENDLY_URL } from "@/lib/links";
 
@@ -39,6 +40,7 @@ const CASES = [
 ];
 
 const CaseStudiesPage = () => {
+  useScrollReveal();
   useEffect(() => {
     document.title = "Case Studies · Reve";
     setCanonical("/case-studies");
@@ -74,7 +76,7 @@ const CaseStudiesPage = () => {
           </span>
           <h1
             style={{ fontFamily: "'Fraunces', serif", fontWeight: 500, letterSpacing: "-0.01em" }}
-            className="text-[#F2E4D8] text-[clamp(38px,5.6vw,64px)] leading-[1.05] mb-7"
+            className="text-[#F2E4D8] text-[clamp(52px,8vw,112px)] leading-[0.98] mb-7"
           >
             Real systems. <em className="not-italic italic text-[#E893AC]">Real results.</em>
           </h1>
@@ -139,16 +141,16 @@ const CaseStudiesPage = () => {
         </div>
       </section>
 
-      <section className="bg-[#20262A] py-20 md:py-28 px-6 text-center">
-        <div className="mx-auto max-w-[720px]">
+      <section className="bg-[#20262A] py-28 md:py-40 px-6 text-center">
+        <div className="mx-auto max-w-[1000px]">
           <h2
             style={{ fontFamily: "'Fraunces', serif", fontWeight: 500, letterSpacing: "-0.01em" }}
-            className="text-[#F2E4D8] text-[clamp(28px,3.6vw,42px)] leading-[1.15] mb-6"
+            className="text-[#F2E4D8] text-[clamp(38px,5.8vw,80px)] leading-[1.02] mb-8"
           >
             Want to see what this could look like in your business?
           </h2>
           <p className="font-['Inter'] text-[#F2E4D8]/75 text-lg leading-relaxed mb-9 max-w-[560px] mx-auto">
-            Tell me what feels slow, scattered or hard to keep consistent. I'll help you find the system that belongs underneath it.
+            Tell us what feels slow, scattered or hard to keep consistent. We'll help you find the system that belongs underneath it.
           </p>
           <a
             href={CALENDLY_URL}
