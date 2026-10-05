@@ -108,7 +108,7 @@ const Learning = () => {
               style={{ fontFamily: "'Anton', sans-serif" }}
               className="text-sm border-2 border-[#20262A]/50 text-[#20262A] px-8 py-4 rounded-[10px] hover:bg-[#20262A]/10 transition-colors inline-block uppercase"
             >
-              Get Your Game Plan
+              Get Your AI Marketing Roadmap
             </a>
           </div>
         </div>

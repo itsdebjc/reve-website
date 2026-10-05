@@ -42,20 +42,19 @@ const EmailCapture = () => {
       <div className="mx-auto max-w-[1280px] grid md:grid-cols-2 gap-10 items-center">
         <div>
           <p
-            style={{ fontFamily: "'Inter', sans-serif", letterSpacing: "0.14em" }}
-            className="text-[13px] font-bold text-[#20262A]/70 uppercase mb-5"
+            style={{ fontFamily: "'Inter', sans-serif", fontWeight: 700, letterSpacing: "0.12em" }}
+            className="text-xs text-[#20262A]/70 uppercase mb-5"
           >
             Free Guide
           </p>
           <h2
-            style={{ fontFamily: "'Anton', sans-serif", fontWeight: 400 }}
-            className="text-[#20262A] text-3xl md:text-4xl leading-[1.05] uppercase mb-4"
+            style={{ fontFamily: "'Fraunces', serif", fontWeight: 500, letterSpacing: "-0.01em" }}
+            className="text-[#20262A] text-[clamp(30px,4vw,46px)] leading-[1.08] mb-4"
           >
             Get the AI Marketing Readiness Checklist.
           </h2>
           <p className="font-['Inter'] text-[#20262A]/75 text-lg leading-relaxed">
-            The exact 20 points I check on every Game Plan. Free, straight to
-            your inbox.
+            The 20 points we check in every AI Marketing Roadmap. Free, sent to your inbox.
           </p>
         </div>
 
@@ -67,13 +66,13 @@ const EmailCapture = () => {
             onChange={(e) => setEmail(e.target.value)}
             placeholder="you@yourbusiness.com"
             disabled={loading}
-            className="flex-1 bg-[#20262A] text-[#F2E4D8] placeholder:text-[#F2E4D8]/50 rounded-[10px] px-5 py-4 font-['Inter'] focus:outline-none focus:ring-2 focus:ring-[#F2E4D8]/40 disabled:opacity-50"
+            className="flex-1 bg-[#20262A] text-[#F2E4D8] placeholder:text-[#F2E4D8]/50 rounded-full px-6 py-4 font-['Inter'] focus:outline-none focus:ring-2 focus:ring-[#F2E4D8]/40 disabled:opacity-50"
           />
           <button
             type="submit"
             disabled={loading}
-            style={{ fontFamily: "'Anton', sans-serif" }}
-            className="bg-[#20262A] text-[#F2E4D8] rounded-[10px] px-8 py-4 text-sm uppercase hover:opacity-90 transition-opacity disabled:opacity-50"
+            style={{ fontFamily: "'JetBrains Mono', monospace", letterSpacing: "0.04em" }}
+            className="bg-[#20262A] text-[#F2E4D8] rounded-full px-8 py-4 text-[13px] font-bold hover:opacity-90 transition-opacity disabled:opacity-50"
           >
             {loading ? "Sending..." : "Send It"}
           </button>

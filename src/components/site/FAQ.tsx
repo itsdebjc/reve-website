@@ -10,24 +10,28 @@ import { setJsonLd } from "@/lib/seo";
 
 const faqs = [
   {
-    q: "What is the Game Plan?",
-    a: "It's where we start. I look at your marketing and how your team uses AI, then map what to fix first and where AI helps most. You leave with a clear plan, not a list of tools.",
+    q: "What is the AI Marketing Roadmap?",
+    a: "It is where we start. We review your marketing, your existing systems and how your team uses AI, then identify where AI can make a useful difference and what needs to be in place first. You leave with a clear plan, not a list of tools.",
+  },
+  {
+    q: "What can you build with AI?",
+    a: "Automations, connected workflows, AI assistants and custom apps and tools. We look at what your existing tools can do before recommending something new.",
   },
   {
     q: "How is this different from AI consulting or a course?",
-    a: "I don't just advise, and I don't hand you homework. I set AI up to know your business and do real work, and your team learns by doing it with me.",
+    a: "We do more than advise. We build the tools and systems around your business, test them and train your team to use them.",
   },
   {
     q: "Do I need to know what I want first?",
-    a: "No. Most teams come in with a pile of problems. The Game Plan sorts out what to fix first.",
+    a: "No. Most teams arrive with a list of problems. The Roadmap helps you decide what to tackle first.",
   },
   {
     q: "Is this all automated?",
-    a: "No. AI does the heavy lifting. The strategy and judgment stay human. That's the whole point.",
+    a: "No. AI handles the repetitive work. Strategy and judgment stay with your team and with us.",
   },
   {
     q: "Who do you work with?",
-    a: "Expert led businesses with a small team, consultants, agencies, advisors and B2B teams, who want better marketing and a team that knows AI.",
+    a: "Expert led businesses with small teams: consultants, agencies, advisors and B2B teams that want stronger marketing and a team confident with AI.",
   },
 ];
 
@@ -51,8 +55,8 @@ const FAQ = () => {
     <section className="bg-[#1D2224] py-24 md:py-32 px-6 md:px-16 border-b border-white/10">
       <div className="mx-auto max-w-[1280px]">
         <p
-          style={{ fontFamily: "'Inter', sans-serif", letterSpacing: "0.14em" }}
-          className="text-[13px] font-bold text-[#5FC2E8] uppercase mb-6 text-center"
+          style={{ fontFamily: "'Inter', sans-serif", fontWeight: 700, letterSpacing: "0.12em" }}
+          className="text-xs text-[#5FC2E8] uppercase mb-6 text-center"
         >
           FAQ
         </p>
@@ -60,8 +64,8 @@ const FAQ = () => {
           {faqs.map((f, i) => (
             <AccordionItem key={i} value={`item-${i}`} className="border-white/10">
               <AccordionTrigger
-                style={{ fontFamily: "'Anton', sans-serif" }}
-                className="text-left text-[#F2E4D8] hover:text-[#E893AC] hover:no-underline py-6 text-lg uppercase"
+                style={{ fontFamily: "'Fraunces', serif", fontWeight: 500, letterSpacing: "-0.01em" }}
+                className="text-left text-[#F2E4D8] hover:text-[#E893AC] hover:no-underline py-6 text-xl"
               >
                 {f.q}
               </AccordionTrigger>

@@ -61,7 +61,8 @@ const StrategicProjects = () => {
 
   return (
     <section
-      className="relative overflow-hidden py-24 md:py-32 px-6 md:px-16"
+      id="projects"
+      className="relative overflow-hidden py-24 md:py-32 px-6 md:px-16 scroll-mt-20"
       style={{ background: "linear-gradient(180deg, #F2E4D8 0%, #F0CFDC 100%)" }}
     >
       <div className="relative mx-auto max-w-[1280px]">

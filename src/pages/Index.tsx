@@ -1,8 +1,7 @@
 import Nav from "@/components/site/Nav";
 import Hero from "@/components/site/Hero";
-import HowWeWorkTogether from "@/components/site/HowWeWorkTogether";
+import WhatWeDo from "@/components/site/WhatWeDo";
 import Problem from "@/components/site/Problem";
-import StartHere from "@/components/site/StartHere";
 import WhatChangesSection from "@/components/site/WhatChangesSection";
 import ProofSection from "@/components/site/ProofSection";
 import EmailCapture from "@/components/site/EmailCapture";
@@ -18,7 +17,7 @@ const Index = () => {
     document.title = "Reve · AI Ready Marketing Studio";
     const meta = document.querySelector('meta[name="description"]');
     const desc =
-      "AI that knows your business. Reve builds AI marketing systems for expert-led businesses, consultants, agencies and B2B teams. Start with the Game Plan.";
+      "Reve is an AI ready marketing studio. Marketing strategy and AI implementation for expert led businesses, consultants, agencies and B2B teams. Start with an AI Marketing Roadmap.";
     if (meta) meta.setAttribute("content", desc);
     else {
       const m = document.createElement("meta");
@@ -33,9 +32,8 @@ const Index = () => {
     <main className="bg-[#20262A]">
       <Nav />
       <Hero />
-      <HowWeWorkTogether />
+      <WhatWeDo />
       <Problem />
-      <StartHere />
       <WhatChangesSection />
       <ProofSection />
       <EmailCapture />

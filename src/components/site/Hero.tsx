@@ -131,7 +131,7 @@ const Hero = () => {
               </span>
             </h1>
             <p className="font-['Inter'] text-[clamp(16px,1.4vw,19px)] leading-relaxed text-[#F2E4D8]/85 max-w-[480px] mt-7">
-              We help businesses use AI to build better websites, content and marketing systems.
+              Reve is an AI ready marketing studio. We help businesses put AI to work and deliver the marketing projects that move them forward.
             </p>
             <div className="flex items-center gap-4 flex-wrap mt-9">
               <a

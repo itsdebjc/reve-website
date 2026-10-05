@@ -4,23 +4,21 @@ const WhatChangesSection = () => {
       <div className="mx-auto max-w-[1280px] grid md:grid-cols-2 gap-12 md:gap-20 items-center">
         <div>
           <p
-            style={{ fontFamily: "'Inter', sans-serif", letterSpacing: "0.14em" }}
-            className="text-[13px] font-bold text-[#C2477A] uppercase mb-6"
+            style={{ fontFamily: "'Inter', sans-serif", fontWeight: 700, letterSpacing: "0.12em" }}
+            className="text-xs text-[#C96E8C] uppercase mb-6"
           >
             What Changes
           </p>
           <h2
-            style={{ fontFamily: "'Anton', sans-serif", fontWeight: 400 }}
-            className="text-[#263238] text-3xl md:text-4xl leading-[1.05] uppercase"
+            style={{ fontFamily: "'Fraunces', serif", fontWeight: 500, letterSpacing: "-0.01em" }}
+            className="text-[#20262A] text-[clamp(30px,4vw,48px)] leading-[1.08]"
           >
-            AI stops guessing. It starts working.
+            AI that works the way your business does.
           </h2>
         </div>
-        <p className="font-['Inter'] text-[#263238]/80 text-lg leading-relaxed">
-          Your marketing gets sharper, not just faster. The busywork drops.
-          The thinking stays yours. And your team can run it, so you're not
-          dependent on anyone, including me. You end up a better marketer
-          with AI, not a worse one who leans on it.
+        <p className="font-['Inter'] text-[#20262A]/80 text-lg leading-relaxed">
+          Your marketing gets sharper and faster. The repetitive work drops and the thinking stays with your team.
+          Your team can run what we build, so you stay in control of your marketing.
         </p>
       </div>
     </section>

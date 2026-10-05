@@ -1,46 +1,43 @@
 const Problem = () => {
   return (
-    <section className="relative isolate bg-[#F2E4D8] py-24 md:py-32 px-6 md:px-16 overflow-hidden">
+    <section className="relative isolate bg-[#20262A] py-24 md:py-32 px-6 md:px-16 overflow-hidden">
       <span
         aria-hidden
-        style={{ fontFamily: "'Anton', sans-serif" }}
-        className="absolute -bottom-6 right-0 md:right-8 text-[18vw] leading-none text-[#263238]/[0.05] uppercase select-none pointer-events-none"
+        style={{ fontFamily: "'Fraunces', serif", fontStyle: "italic" }}
+        className="absolute -bottom-6 right-0 md:right-8 text-[16vw] leading-none text-[#F2E4D8]/[0.04] select-none pointer-events-none"
       >
         The Gap
       </span>
 
       <div className="relative mx-auto max-w-[1280px]">
         <p
-          style={{ fontFamily: "'Inter', sans-serif", letterSpacing: "0.14em" }}
-          className="text-[13px] font-bold text-[#C2477A] uppercase mb-6"
+          style={{ fontFamily: "'Inter', sans-serif", fontWeight: 700, letterSpacing: "0.12em" }}
+          className="text-xs text-[#E893AC] uppercase mb-6"
         >
           The Problem
         </p>
         <h2
-          style={{ fontFamily: "'Anton', sans-serif", fontWeight: 400 }}
-          className="text-[#263238] text-4xl md:text-5xl leading-[1.05] uppercase max-w-3xl mb-12"
+          style={{ fontFamily: "'Fraunces', serif", fontWeight: 500, letterSpacing: "-0.01em" }}
+          className="text-[#F2E4D8] text-[clamp(32px,4.4vw,52px)] leading-[1.08] max-w-3xl mb-12"
         >
-          You know AI can do more. Getting it to actually help is the hard
-          part.
+          You know AI can do more. Getting it to help is the hard part.
         </h2>
 
         <div className="grid md:grid-cols-2 gap-8 md:gap-10">
-          <div className="font-['Inter'] text-[#263238]/80 text-lg leading-relaxed space-y-5">
-            <p>Getting AI to help isn't about finding a better tool. It's about what you feed it.</p>
+          <div className="font-['Inter'] text-[#F2E4D8]/80 text-lg leading-relaxed space-y-5">
             <p>
-              Most marketing systems grow one piece at a time. The website
-              says one thing. The proposals say another. Content lives
-              everywhere. Knowledge disappears when someone leaves.
+              AI works with what it is given. Most marketing grows one piece at a time. The website says one thing
+              and the proposals say another. Content lives in different places. Knowledge leaves when people do.
             </p>
-            <p>AI can only work with what it's given. Feed it chaos, and it hands chaos back, just faster.</p>
+            <p>When AI starts from that, it produces more of the same, only faster.</p>
           </div>
-          <div className="border-l-2 border-[#C2477A]/40 pl-8 font-['Inter'] text-[#263238]/80 text-lg leading-relaxed space-y-5">
+          <div className="border-l-2 border-[#E893AC]/50 pl-8 font-['Inter'] text-[#F2E4D8]/80 text-lg leading-relaxed space-y-5">
             <p>
-              Before you add another tool, rebuild the foundation. AI works
-              best in the hands of someone who knows the business.
+              We start with the foundation: your positioning, voice, offers and proof, organized so your team and
+              AI can use them. Then we build the roadmap, systems and projects on top of it.
             </p>
-            <p className="font-bold text-[#263238]">
-              That's the part I build with you.
+            <p className="font-bold text-[#F2E4D8]">
+              That is where Reve starts.
             </p>
           </div>
         </div>
