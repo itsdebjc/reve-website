@@ -272,7 +272,7 @@ const TuniLandingPage = () => {
 
       {/* STICKY HEADER */}
       <header style={{ position: "sticky", top: 0, zIndex: 50, background: TUNI_COLORS.cream, borderBottom: `1px solid rgba(42,33,28,0.07)` }}>
-        <div style={{ maxWidth: "1320px", margin: "0 auto", padding: "13px 26px", display: "flex", alignItems: "center", justifyContent: "space-between", gap: "20px" }}>
+        <div style={{ maxWidth: "1480px", margin: "0 auto", padding: "13px 26px", display: "flex", alignItems: "center", justifyContent: "space-between", gap: "20px" }}>
           <div style={{ display: "flex", alignItems: "center", gap: "11px" }}>
             <RadiantHeart size={30} />
             <TuniWordmark size={23} />
@@ -286,7 +286,7 @@ const TuniLandingPage = () => {
 
       {/* HERO SECTION */}
       <section style={{ background: `linear-gradient(180deg, ${TUNI_COLORS.cream} 0%, ${TUNI_COLORS["cream-alt"]} 100%)`, padding: "64px 26px 76px" }}>
-        <div className="bff-grid-2col" style={{ maxWidth: "1320px", margin: "0 auto", display: "grid", gridTemplateColumns: "0.95fr 1.05fr", gap: "56px", alignItems: "center" }}>
+        <div className="bff-grid-2col" style={{ maxWidth: "1480px", margin: "0 auto", display: "grid", gridTemplateColumns: "0.95fr 1.05fr", gap: "56px", alignItems: "center" }}>
           <div>
             <div style={{ display: "flex", gap: "10px", flexWrap: "wrap", marginBottom: "26px" }}>
               <span style={{ display: "inline-flex", alignItems: "center", gap: "7px", background: "#fff", border: `1px solid rgba(42, 33, 28, 0.08)`, color: TUNI_COLORS.coral, fontSize: "12px", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", padding: "7px 14px", borderRadius: "999px" }}>For women in perimenopause + menopause</span>
@@ -306,7 +306,7 @@ const TuniLandingPage = () => {
             <span style={{ fontSize: "13px", color: TUNI_COLORS["placeholder-gray"], display: "block", marginTop: "12px" }}>$15/month. Cancel anytime. Curious first? Join a live workshop below.</span>
           </div>
           <div>
-            <img src={debbieSwingHero} alt="Debbie Collins" style={{ display: "block", width: "100%", height: "640px", objectFit: "cover", objectPosition: "center 25%", borderRadius: "24px", boxShadow: "0 24px 50px rgba(42,33,28,0.16)" }} />
+            <img src={debbieSwingHero} alt="Debbie Collins" style={{ display: "block", width: "100%", height: "640px", objectFit: "cover", objectPosition: "center 18%", borderRadius: "24px", boxShadow: "0 24px 50px rgba(42,33,28,0.16)" }} />
             <div style={{ background: "#fff", borderRadius: "16px", padding: "18px 22px", boxShadow: "0 10px 25px rgba(42,33,28,0.08)", marginTop: "16px" }}>
               <div style={{ fontFamily: "'Caveat', cursive", fontWeight: 600, fontSize: "22px", lineHeight: 1.3, color: TUNI_COLORS.ink }}>Hi, I'm Deb. I built Tuni for women like us.</div>
             </div>
@@ -325,7 +325,7 @@ const TuniLandingPage = () => {
 
       {/* THE PROBLEM */}
       <section style={{ background: TUNI_COLORS.ink, color: TUNI_COLORS.cream, padding: "84px 26px" }}>
-        <div style={{ maxWidth: "1080px", margin: "0 auto" }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
           <span style={{ display: "inline-flex", alignItems: "center", background: "rgba(255,247,241,0.08)", color: TUNI_COLORS.amber, fontSize: "12px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", padding: "7px 14px", borderRadius: "999px" }}>Sound familiar?</span>
           <h2 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(32px, 4.4vw, 50px)", lineHeight: 1.04, letterSpacing: "-0.02em", margin: "22px 0 0", color: TUNI_COLORS.cream }}>You've tried it all.<br /><span style={{ color: TUNI_COLORS["coral-light"] }}>So what's actually working?</span></h2>
           <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "flex-start", gap: "12px", margin: "26px 0 0", maxWidth: "820px" }}>
@@ -347,7 +347,7 @@ const TuniLandingPage = () => {
 
       {/* FOUNDER STORY */}
       <section style={{ background: TUNI_COLORS.cream, padding: "84px 26px" }}>
-        <div className="bff-grid-2col" style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "0.95fr 1.05fr", gap: "54px", alignItems: "start" }}>
+        <div className="bff-grid-2col" style={{ maxWidth: "1340px", margin: "0 auto", display: "grid", gridTemplateColumns: "0.95fr 1.05fr", gap: "54px", alignItems: "start" }}>
           <div className="bff-sticky-desktop" style={{ position: "sticky", top: "100px", alignSelf: "start" }}>
             <img src={debbieBeach} alt="Debbie at beach" style={{ display: "block", width: "100%", height: "520px", objectFit: "cover", borderRadius: "24px", boxShadow: "0 24px 50px rgba(42,33,28,0.16)" }} />
             <div style={{ background: "#fff", borderRadius: "16px", padding: "20px 22px", boxShadow: "0 10px 25px rgba(42,33,28,0.08)", marginTop: "18px" }}>
@@ -411,7 +411,7 @@ const TuniLandingPage = () => {
 
       {/* HOW TUNI IS DIFFERENT */}
       <section style={{ background: TUNI_COLORS.cream, padding: "84px 26px" }}>
-        <div className="bff-grid-2col" style={{ maxWidth: "1220px", margin: "0 auto", display: "grid", gridTemplateColumns: "1.1fr 0.9fr", gap: "60px", alignItems: "center" }}>
+        <div className="bff-grid-2col" style={{ maxWidth: "1360px", margin: "0 auto", display: "grid", gridTemplateColumns: "1.1fr 0.9fr", gap: "60px", alignItems: "center" }}>
           <div>
             <span style={{ display: "inline-flex", alignItems: "center", background: "#FFF1EB", color: TUNI_COLORS.coral, fontSize: "12px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", padding: "7px 14px", borderRadius: "999px" }}>See how Tuni works</span>
             <h2 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(28px, 3.8vw, 42px)", lineHeight: 1.1, letterSpacing: "-0.02em", margin: "22px 0 0" }}><span style={{ color: TUNI_COLORS.pink }}>Tuni gives you personalised feedback.</span> Not another plan.</h2>
@@ -475,7 +475,7 @@ const TuniLandingPage = () => {
 
       {/* REAL-LIFE MOMENTS */}
       <section style={{ background: TUNI_COLORS["cream-pink"], padding: "84px 26px" }}>
-        <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
+        <div style={{ maxWidth: "1220px", margin: "0 auto" }}>
           <span style={{ display: "inline-flex", alignItems: "center", background: "#fff", color: TUNI_COLORS.pink, fontSize: "12px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", padding: "7px 14px", borderRadius: "999px" }}>Real life</span>
           <h2 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(28px, 3.8vw, 42px)", lineHeight: 1.1, letterSpacing: "-0.02em", margin: "22px 0 0", maxWidth: "720px" }}>Tuni helps when <span style={{ color: TUNI_COLORS.pink }}>real life happens.</span></h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "16px", margin: "28px 0 24px" }}>
@@ -515,7 +515,7 @@ const TuniLandingPage = () => {
 
       {/* THE BIG IDEA */}
       <section style={{ background: TUNI_COLORS["cream-alt"], padding: "84px 26px" }}>
-        <div style={{ maxWidth: "1080px", margin: "0 auto", textAlign: "center" }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto", textAlign: "center" }}>
           <span style={{ display: "inline-flex", alignItems: "center", background: "#FFF1EB", color: TUNI_COLORS.coral, fontSize: "12px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", padding: "7px 14px", borderRadius: "999px" }}>A different way to think about it</span>
           <h2 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(30px, 4.4vw, 48px)", lineHeight: 1.08, letterSpacing: "-0.02em", margin: "22px 0 0" }}>The goal is to find out <span style={{ color: TUNI_COLORS.pink }}>what works for your body.</span></h2>
           <p style={{ fontSize: "18px", lineHeight: 1.6, color: TUNI_COLORS["body-text"], margin: "16px auto 0", maxWidth: "560px" }}>Tuni helps you notice your patterns, see how your body is responding and make small adjustments based on what you learn.</p>
@@ -564,7 +564,7 @@ const TuniLandingPage = () => {
 
       {/* 1. START TUNI */}
       <section id="bff-waitlist" style={{ background: TUNI_COLORS.cream, padding: "84px 26px", scrollMarginTop: "70px" }}>
-        <div className="bff-grid-2col" style={{ maxWidth: "1200px", margin: "0 auto", display: "grid", gridTemplateColumns: "1.05fr 0.95fr", gap: "54px", alignItems: "center" }}>
+        <div className="bff-grid-2col" style={{ maxWidth: "1340px", margin: "0 auto", display: "grid", gridTemplateColumns: "1.05fr 0.95fr", gap: "54px", alignItems: "center" }}>
           <div>
             <span style={{ display: "inline-flex", alignItems: "center", background: "#fff", border: `1px solid rgba(42, 33, 28, 0.08)`, color: TUNI_COLORS.coral, fontSize: "12px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", padding: "7px 14px", borderRadius: "999px" }}>Get started</span>
             <h2 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(30px, 4.2vw, 48px)", lineHeight: 1.05, letterSpacing: "-0.02em", margin: "22px 0 0" }}>Start Tuni today. <span style={{ color: TUNI_COLORS.pink }}>Add a live workshop if you'd like extra support.</span></h2>
@@ -645,7 +645,7 @@ const TuniLandingPage = () => {
         <div style={{ maxWidth: "700px", margin: "0 auto", textAlign: "center" }}>
           <span style={{ display: "inline-flex", alignItems: "center", background: "#fff", border: `1px solid rgba(42,33,28,0.08)`, color: TUNI_COLORS.coral, fontSize: "12px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", padding: "7px 14px", borderRadius: "999px" }}>Is this you?</span>
         </div>
-        <div style={{ maxWidth: "1080px", margin: "22px auto 0", background: "#fff", borderRadius: "22px", padding: "44px 48px", boxShadow: "0 10px 30px rgba(42,33,28,0.06)" }}>
+        <div style={{ maxWidth: "1200px", margin: "22px auto 0", background: "#fff", borderRadius: "22px", padding: "44px 48px", boxShadow: "0 10px 30px rgba(42,33,28,0.06)" }}>
           <h3 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(24px, 3vw, 30px)", lineHeight: 1.15, margin: "0 0 26px", textAlign: "center" }}>Tuni may be for you if&hellip;</h3>
           <div className="bff-grid-2col" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "18px 32px" }}>
             {[
@@ -728,7 +728,7 @@ const TuniLandingPage = () => {
 
       {/* FOOTER */}
       <footer style={{ background: TUNI_COLORS.ink, color: "rgba(255,247,241,0.6)", padding: "44px 26px" }}>
-        <div style={{ maxWidth: "1320px", margin: "0 auto" }}>
+        <div style={{ maxWidth: "1480px", margin: "0 auto" }}>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "20px", flexWrap: "wrap" }}>
             <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
               <RadiantHeart size={28} />
