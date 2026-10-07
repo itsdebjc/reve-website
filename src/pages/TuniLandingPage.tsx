@@ -2,8 +2,9 @@ import { useEffect, useId, useState, type ReactNode } from "react";
 import { setCanonical } from "@/lib/seo";
 import debbieCollins from "@/assets/debbie-collins.jpeg";
 import debbieBeach from "@/assets/debbie-beach.jpeg";
-import heroCherryBlossom from "@/assets/hero-cherry-blossom.jpg";
-import debbieCreamBg from "@/assets/debbie-collins-cream-bg.jpg";
+import heroCherryBlossom from "@/assets/debbie-blossom-portrait.jpeg";
+import debbieSwingHero from "@/assets/debbie-swing-hero.jpg";
+import debbieLouvre from "@/assets/debbie-louvre.jpg";
 import tuniAppToday from "@/assets/tuni-app-today.png";
 import tuniAppCoach from "@/assets/tuni-app-coach.jpeg";
 
@@ -270,7 +271,7 @@ const TuniLandingPage = () => {
       `}</style>
 
       {/* STICKY HEADER */}
-      <header style={{ position: "sticky", top: 0, zIndex: 50, background: `rgba(255,247,241,0.82)`, backdropFilter: "blur(12px)", WebkitBackdropFilter: "blur(12px)", borderBottom: `1px solid rgba(42,33,28,0.07)` }}>
+      <header style={{ position: "sticky", top: 0, zIndex: 50, background: TUNI_COLORS.cream, borderBottom: `1px solid rgba(42,33,28,0.07)` }}>
         <div style={{ maxWidth: "1180px", margin: "0 auto", padding: "13px 26px", display: "flex", alignItems: "center", justifyContent: "space-between", gap: "20px" }}>
           <div style={{ display: "flex", alignItems: "center", gap: "11px" }}>
             <RadiantHeart size={30} />
@@ -285,18 +286,17 @@ const TuniLandingPage = () => {
 
       {/* HERO SECTION */}
       <section style={{ background: `linear-gradient(180deg, ${TUNI_COLORS.cream} 0%, ${TUNI_COLORS["cream-alt"]} 100%)`, padding: "64px 26px 76px" }}>
-        <div className="bff-grid-2col" style={{ maxWidth: "1180px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1.04fr", gap: "56px", alignItems: "center" }}>
+        <div className="bff-grid-2col" style={{ maxWidth: "1180px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "56px", alignItems: "center" }}>
           <div>
             <div style={{ display: "flex", gap: "10px", flexWrap: "wrap", marginBottom: "26px" }}>
               <span style={{ display: "inline-flex", alignItems: "center", gap: "7px", background: "#fff", border: `1px solid rgba(42, 33, 28, 0.08)`, color: TUNI_COLORS.coral, fontSize: "12px", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", padding: "7px 14px", borderRadius: "999px" }}>For women in perimenopause + menopause</span>
             </div>
-            <h1 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(44px, 6vw, 76px)", lineHeight: 0.98, letterSpacing: "-0.035em", margin: 0, color: TUNI_COLORS.ink }}>Your body changed.</h1>
-            <div style={{ fontFamily: "'Caveat', cursive", fontWeight: 700, fontSize: "clamp(32px, 4.4vw, 48px)", lineHeight: 1, color: TUNI_COLORS.pink, marginTop: "6px" }}>Tuni helps you figure out what works for your body now.</div>
-            <p style={{ fontSize: "clamp(16px, 1.5vw, 19px)", lineHeight: 1.6, color: TUNI_COLORS["body-text"], maxWidth: "520px", margin: "22px 0 0" }}>You hit your 40s or 50s, and suddenly the things that used to work don't. You eat pretty well. You move. You try to make good choices.</p>
-            <p style={{ fontSize: "clamp(16px, 1.5vw, 19px)", lineHeight: 1.6, color: TUNI_COLORS["body-text"], maxWidth: "520px", margin: "12px 0 0" }}>But the things that used to work don't seem to work the same way anymore.</p>
-            <p style={{ fontSize: "clamp(16px, 1.5vw, 19px)", lineHeight: 1.6, color: TUNI_COLORS["body-text"], maxWidth: "520px", margin: "12px 0 0" }}>And you're left wondering:</p>
-            <p style={{ fontSize: "clamp(16px, 1.5vw, 19px)", lineHeight: 1.6, color: TUNI_COLORS.ink, fontWeight: 700, maxWidth: "520px", margin: "6px 0 0" }}>What is actually working for me now?</p>
-            <p style={{ fontSize: "clamp(16px, 1.5vw, 19px)", lineHeight: 1.6, color: TUNI_COLORS["body-text"], maxWidth: "520px", margin: "20px 0 0" }}>Tuni connects your choices with your body changes, giving you personalised feedback so you can learn what works for you.</p>
+            <h1 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(44px, 5.2vw, 68px)", lineHeight: 0.98, letterSpacing: "-0.035em", margin: 0, color: TUNI_COLORS.ink }}>Your body changed.</h1>
+            <div style={{ fontFamily: "'Caveat', cursive", fontWeight: 700, fontSize: "clamp(30px, 3.8vw, 42px)", lineHeight: 1, color: TUNI_COLORS.pink, marginTop: "6px" }}>Tuni helps you figure out what works for your body now.</div>
+            <p style={{ fontSize: "clamp(16px, 1.5vw, 19px)", lineHeight: 1.6, color: TUNI_COLORS["body-text"], maxWidth: "520px", margin: "22px 0 0" }}>You hit your 40s or 50s, and suddenly the things that used to work don't. You eat well. You move. You make good choices.</p>
+            <p style={{ fontSize: "clamp(16px, 1.5vw, 19px)", lineHeight: 1.6, color: TUNI_COLORS["body-text"], maxWidth: "520px", margin: "12px 0 0" }}>But it doesn't work the way it used to. And you're left wondering:</p>
+            <p style={{ fontSize: "clamp(16px, 1.5vw, 19px)", lineHeight: 1.6, color: TUNI_COLORS.ink, fontWeight: 700, maxWidth: "520px", margin: "6px 0 0" }}>What's actually working for you now?</p>
+            <p style={{ fontSize: "clamp(16px, 1.5vw, 19px)", lineHeight: 1.6, color: TUNI_COLORS["body-text"], maxWidth: "520px", margin: "18px 0 0" }}>Tuni connects your choices with your body's changes, so you always know.</p>
 
             <div style={{ display: "flex", gap: "12px", flexWrap: "wrap", alignItems: "center", marginTop: "26px" }}>
               {/* TODO(dev): primary CTA — currently scrolls to the shared signup form (#bff-waitlist). Swap onClick/href once a direct app-start destination exists. */}
@@ -305,10 +305,10 @@ const TuniLandingPage = () => {
             </div>
             <span style={{ fontSize: "13px", color: TUNI_COLORS["placeholder-gray"], display: "block", marginTop: "12px" }}>$15/month. Cancel anytime. Curious first? Join a live workshop below.</span>
           </div>
-          <div style={{ display: "flex", justifyContent: "center", position: "relative" }}>
-            <img src={debbieCreamBg} alt="Debbie Collins" style={{ width: "100%", maxWidth: "400px", height: "480px", objectFit: "cover", objectPosition: "right center", borderRadius: "26px", boxShadow: "0 28px 60px rgba(42,33,28,0.18)" }} />
-            <div style={{ position: "absolute", left: "-18px", bottom: "-22px", background: "#fff", borderRadius: "16px", padding: "13px 17px", boxShadow: "0 16px 34px rgba(42,33,28,0.16)", maxWidth: "228px" }}>
-              <div style={{ fontFamily: "'Caveat', cursive", fontWeight: 600, fontSize: "21px", lineHeight: 1.15, color: TUNI_COLORS.ink }}>I built Tuni because I was doing all the right things, and I was still gaining weight.</div>
+          <div>
+            <img src={debbieSwingHero} alt="Debbie Collins" style={{ display: "block", width: "100%", height: "640px", objectFit: "cover", objectPosition: "center 25%", borderRadius: "24px", boxShadow: "0 24px 50px rgba(42,33,28,0.16)" }} />
+            <div style={{ background: "#fff", borderRadius: "16px", padding: "18px 22px", boxShadow: "0 10px 25px rgba(42,33,28,0.08)", marginTop: "16px" }}>
+              <div style={{ fontFamily: "'Caveat', cursive", fontWeight: 600, fontSize: "22px", lineHeight: 1.3, color: TUNI_COLORS.ink }}>Hi, I'm Deb. I built Tuni for women like us.</div>
             </div>
           </div>
         </div>
@@ -551,9 +551,10 @@ const TuniLandingPage = () => {
           <div key={i} style={{ position: "absolute", ...dot, borderRadius: "50%", background: dot.color, opacity: dot.opacity }} />
         ))}
         <div style={{ position: "relative", zIndex: 1, maxWidth: "640px", margin: "0 auto", textAlign: "center" }}>
-          <div style={{ display: "flex", justifyContent: "center", marginBottom: "20px" }}>
-            <RadiantHeart size={64} />
+          <div style={{ display: "flex", justifyContent: "center", marginBottom: "14px" }}>
+            <img src={debbieLouvre} alt="Debbie Collins" style={{ width: "132px", height: "132px", borderRadius: "50%", objectFit: "cover", objectPosition: "center 25%", border: "3px solid rgba(255,247,241,0.25)", boxShadow: "0 16px 36px rgba(0,0,0,0.35)" }} />
           </div>
+          <div style={{ fontFamily: "'Caveat', cursive", fontWeight: 600, fontSize: "26px", color: TUNI_COLORS["coral-light"], marginBottom: "18px" }}>Hi, I'm Deb</div>
           <span style={{ display: "inline-flex", alignItems: "center", background: "rgba(255,247,241,0.08)", color: TUNI_COLORS.amber, fontSize: "12px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", padding: "7px 14px", borderRadius: "999px" }}>Curious about Tuni?</span>
           <h2 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(28px, 3.8vw, 42px)", lineHeight: 1.1, letterSpacing: "-0.02em", margin: "14px 0 0", color: TUNI_COLORS.cream }}>A live Tuni workshop with Deb.</h2>
           <p style={{ fontSize: "18px", lineHeight: 1.6, color: "rgba(255,247,241,0.74)", margin: "18px auto 0" }}>Learn how Tuni works, why your body can respond differently in midlife, and how to start figuring out what works for you.</p>
@@ -667,7 +668,7 @@ const TuniLandingPage = () => {
 
       {/* LANDSCAPE STATEMENT */}
       <section style={{ position: "relative", minHeight: "620px", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
-        <img src={heroCherryBlossom} alt="Cherry blossom landscape" style={{ position: "absolute", inset: "0", width: "100%", height: "100%", objectFit: "cover" }} />
+        <img src={heroCherryBlossom} alt="Debbie Collins laughing among cherry blossoms" style={{ position: "absolute", inset: "0", width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 25%" }} />
         <div style={{ position: "absolute", inset: "0", background: "linear-gradient(180deg, rgba(42,33,28,0.28), rgba(42,33,28,0.6))" }} />
         <div style={{ position: "relative", zIndex: 1, textAlign: "center", padding: "80px 26px", maxWidth: "980px" }}>
           <h2 className="bff-nowrap-desktop" style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(24px, 4.4vw, 50px)", lineHeight: 1.08, letterSpacing: "-0.02em", color: TUNI_COLORS.cream, margin: "0", textShadow: "0 2px 20px rgba(42,33,28,0.4)" }}>You don't have to figure this out <span style={{ color: "#FFC8A0" }}>alone.</span></h2>
