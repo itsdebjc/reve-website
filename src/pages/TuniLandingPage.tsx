@@ -691,7 +691,7 @@ const TuniLandingPage = () => {
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
             {[
-              { q: "Is Tuni a subscription?", a: "Yes. Tuni is a monthly app at $15/month, and you can cancel anytime. Your first $15 payment covers your first month. If you join a live workshop with Deb, it's included at no extra cost." },
+              { q: "Is Tuni a subscription?", a: "Yes. Tuni is a monthly app, and you can cancel anytime. If you join a live workshop with Deb, it's included at no extra cost." },
               { q: "Is Tuni a diet?", a: "No. Tuni doesn't give you a strict meal plan or ask you to follow someone else's diet. It helps you learn from what you're already eating and make changes based on what you're seeing." },
               { q: "Do I have to count calories or log perfectly?", a: "No. You don't need to weigh every ingredient or get every detail right. An estimate is fine. Consistency is more useful than perfection." },
               { q: "Do I need a body composition scale?", a: (
