@@ -307,7 +307,7 @@ const TuniLandingPage = () => {
             <span style={{ fontSize: "13px", color: TUNI_COLORS["placeholder-gray"], display: "block", marginTop: "12px" }}>$15/month. Cancel anytime. Curious first? Join a live workshop below.</span>
           </div>
           <div>
-            <img src={debbieSwingHero} alt="Debbie Collins" style={{ display: "block", width: "100%", height: "640px", objectFit: "cover", objectPosition: "center 18%", borderRadius: "24px", boxShadow: "0 24px 50px rgba(42,33,28,0.16)" }} />
+            <img src={debbieSwingHero} alt="Debbie Collins" style={{ display: "block", width: "100%", aspectRatio: "3 / 4", objectFit: "cover", objectPosition: "center center", borderRadius: "24px", boxShadow: "0 24px 50px rgba(42,33,28,0.16)" }} />
             <div style={{ background: "#fff", borderRadius: "16px", padding: "18px 22px", boxShadow: "0 10px 25px rgba(42,33,28,0.08)", marginTop: "16px" }}>
               <div style={{ fontFamily: "'Caveat', cursive", fontWeight: 600, fontSize: "22px", lineHeight: 1.3, color: TUNI_COLORS.ink }}>Hi, I'm Deb. I built Tuni for women like us.</div>
             </div>
@@ -416,14 +416,12 @@ const TuniLandingPage = () => {
           <div>
             <span style={{ display: "inline-flex", alignItems: "center", background: "#FFF1EB", color: TUNI_COLORS.coral, fontSize: "12px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", padding: "7px 14px", borderRadius: "999px" }}>See how Tuni works</span>
             <h2 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(28px, 3.8vw, 42px)", lineHeight: 1.1, letterSpacing: "-0.02em", margin: "22px 0 0" }}><span style={{ color: TUNI_COLORS.pink }}>Tuni gives you personalised feedback.</span> Not another plan.</h2>
-            <p style={{ fontSize: "17px", lineHeight: 1.6, color: TUNI_COLORS["body-text"], maxWidth: "720px", margin: "20px 0 0" }}>Tuni brings your food, habits and body changes together so you can spot patterns, ask questions and understand how your body responds to the choices you make.</p>
-            <p style={{ fontSize: "15px", fontWeight: 700, letterSpacing: "0.02em", color: TUNI_COLORS.ink, margin: "18px 0 0" }}>Here's how:</p>
-            <div className="bff-grid-2col" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "24px 28px", margin: "22px 0 28px", paddingTop: "28px", borderTop: "1px solid rgba(42,33,28,0.1)" }}>
+            <p style={{ fontSize: "17px", lineHeight: 1.6, color: TUNI_COLORS["body-text"], maxWidth: "720px", margin: "20px 0 0" }}>Log what you eat, get feedback as you go and see what changes over time.</p>
+            <div style={{ display: "flex", flexDirection: "column", gap: "24px", margin: "22px 0 28px", paddingTop: "28px", borderTop: "1px solid rgba(42,33,28,0.1)" }}>
               {[
-                { num: "01", line1: "Log", line2: "your day, your way.", details: ["Talk it, type it or snap a photo — no weighing, no tracking project."], tag: "No calorie counting.", color: TUNI_COLORS.coral },
-                { num: "02", line1: "Ask", line2: "a coach who knows your data.", details: ["Ask about your day, patterns or progress, and Tuni shows what's working and what's getting in the way."], tag: "Feedback based on you.", color: TUNI_COLORS.pink },
-                { num: "03", line1: "Scan", line2: "what's actually changing.", details: ["A weekly body composition scan shows what's changing beyond the number on the scale."], tag: "Beyond weight.", color: TUNI_COLORS.amber },
-                { num: "04", line1: "Snap", line2: "the food in front of you.", details: ["Menu, package or label — snap a photo and Tuni makes sense of it for what you're working on."], tag: "Real-life food help.", color: TUNI_COLORS.green },
+                { num: "01", line1: "Log", line2: "your day, your way.", details: ["Talk, type or snap your meals, snacks and drinks. Tuni gives you feedback every time you log."], tag: "No calorie counting.", color: TUNI_COLORS.coral },
+                { num: "02", line1: "Ask", line2: "a coach who knows your data.", details: ["What should I order? Is this a good choice for me? Ask a question or snap a menu or label for advice based on your logs, scans and goals."], tag: "Help with everyday food choices.", color: TUNI_COLORS.pink },
+                { num: "03", line1: "Scan", line2: "what's actually changing.", details: ["Add a weekly body composition scan to see changes in body fat and muscle."], tag: "See beyond your weight.", color: TUNI_COLORS.amber },
               ].map((item, i) => (
                 <div key={item.line1}>
                   <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "10px" }}>
@@ -439,9 +437,8 @@ const TuniLandingPage = () => {
               ))}
             </div>
             <div style={{ marginTop: "32px", paddingTop: "24px", borderTop: "1px solid rgba(42,33,28,0.1)" }}>
-              <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "22px", color: TUNI_COLORS.ink, marginBottom: "12px" }}>Your body is already giving you feedback. Tuni helps you understand it.</div>
-              <p style={{ fontSize: "17px", lineHeight: 1.6, color: TUNI_COLORS["body-text"], margin: "0 0 12px" }}>No calorie counting. No perfect days. No generic plan.</p>
-              <p style={{ fontSize: "17px", lineHeight: 1.6, color: TUNI_COLORS["body-text"], margin: "0" }}>Just your real life, your own data and a clearer view of what may be working, what might be getting in the way and what to try next.</p>
+              <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "22px", color: TUNI_COLORS.ink, marginBottom: "20px" }}>Your body is already giving you feedback. Tuni helps you understand it.</div>
+              <button onClick={handleWaitlist} style={{ fontSize: "16px", fontWeight: 700, color: "#fff", background: `linear-gradient(135deg, ${TUNI_COLORS.coral}, ${TUNI_COLORS.pink})`, padding: "16px 30px", borderRadius: "999px", border: "none", cursor: "pointer", boxShadow: "0 14px 30px rgba(240,80,140,0.30)" }}>Join the waitlist →</button>
             </div>
           </div>
           {/* iPhone mockups with app screens, fanned */}
@@ -710,7 +707,7 @@ const TuniLandingPage = () => {
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
             {[
-              { q: "Is the $15 a one-time payment?", a: "No. $15 today starts your Tuni membership and covers your first month. After that, it's $15/month — cancel anytime. If you join a live workshop with Deb, it's included at no extra cost." },
+              { q: "Is Tuni a subscription?", a: "Yes. Tuni is a monthly app at $15/month, and you can cancel anytime. Your first $15 payment covers your first month. If you join a live workshop with Deb, it's included at no extra cost." },
               { q: "Is Tuni a diet?", a: "No. Tuni doesn't give you a strict meal plan or ask you to follow someone else's diet. It helps you learn from what you're already eating and make changes based on what you're seeing." },
               { q: "Do I have to count calories or log perfectly?", a: "No. You don't need to weigh every ingredient or get every detail right. An estimate is fine. Consistency is more useful than perfection." },
               { q: "Do I need a body composition scale?", a: (
@@ -770,7 +767,7 @@ const TuniLandingPage = () => {
             </p>
           </div>
           <div style={{ marginTop: "22px", paddingTop: "22px", borderTop: "1px solid rgba(255,247,241,0.1)" }}>
-            <p style={{ fontSize: "11.5px", lineHeight: 1.7, color: "rgba(255,247,241,0.4)", margin: 0 }}>For general wellness and education only, not medical advice. $15/month membership, cancel anytime — see our <a href="https://itstuni.com/terms" target="_blank" rel="noopener noreferrer" style={{ color: "rgba(255,247,241,0.55)", textDecoration: "underline" }}>cancellation policy</a>. © 2026 Tuni, operated by 1236097 BC Ltd.</p>
+            <p style={{ fontSize: "14px", lineHeight: 1.6, color: "rgba(255,247,241,0.55)", margin: 0 }}>For general wellness and education only, not medical advice. $15/month membership, cancel anytime — see our <a href="https://itstuni.com/terms" target="_blank" rel="noopener noreferrer" style={{ color: "rgba(255,247,241,0.7)", textDecoration: "underline" }}>cancellation policy</a>. © 2026 Tuni, operated by 1236097 BC Ltd.</p>
           </div>
         </div>
       </footer>
