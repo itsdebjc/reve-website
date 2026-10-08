@@ -476,7 +476,7 @@ const TuniLandingPage = () => {
         <div style={{ maxWidth: "1220px", margin: "0 auto" }}>
           <span style={{ display: "inline-flex", alignItems: "center", background: "#fff", color: TUNI_COLORS.pink, fontSize: "12px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", padding: "7px 14px", borderRadius: "999px" }}>Real life</span>
           <h2 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(28px, 3.8vw, 42px)", lineHeight: 1.1, letterSpacing: "-0.02em", margin: "22px 0 0", maxWidth: "720px" }}>Tuni helps when <span style={{ color: TUNI_COLORS.pink }}>real life happens.</span></h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "16px", margin: "28px 0 24px" }}>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "12px", margin: "28px 0 24px" }}>
             {[
               { icon: <IconMenu color={TUNI_COLORS.coral} />, color: TUNI_COLORS.coral, text: "Looking at a menu." },
               { icon: <IconClock color={TUNI_COLORS.pink} />, color: TUNI_COLORS.pink, text: "Standing in the kitchen at 4 p.m." },
@@ -485,9 +485,9 @@ const TuniLandingPage = () => {
               { icon: <IconMenu color={TUNI_COLORS.coral} />, color: TUNI_COLORS.coral, text: "Planning dinner." },
               { icon: <IconPhone color={TUNI_COLORS.pink} />, color: TUNI_COLORS.pink, text: "Getting back into your rhythm after the weekend." },
             ].map((item) => (
-              <div key={item.text} style={{ background: "#fff", borderRadius: "16px", padding: "24px 20px", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", boxShadow: "0 4px 12px rgba(42,33,28,0.05)" }}>
-                <IconBadge color={item.color} size={48}>{item.icon}</IconBadge>
-                <div style={{ fontSize: "16px", fontWeight: 600, color: TUNI_COLORS.ink, lineHeight: 1.4, marginTop: "14px" }}>{item.text}</div>
+              <div key={item.text} style={{ display: "inline-flex", alignItems: "center", gap: "10px", background: "#fff", borderRadius: "999px", padding: "8px 18px 8px 8px", boxShadow: "0 4px 12px rgba(42,33,28,0.05)" }}>
+                <IconBadge color={item.color} size={32}>{item.icon}</IconBadge>
+                <span style={{ fontSize: "15px", fontWeight: 600, color: TUNI_COLORS.ink, lineHeight: 1.3 }}>{item.text}</span>
               </div>
             ))}
           </div>
