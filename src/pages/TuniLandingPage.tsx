@@ -491,23 +491,7 @@ const TuniLandingPage = () => {
               </div>
             ))}
           </div>
-          <p style={{ fontSize: "17px", lineHeight: 1.6, color: TUNI_COLORS["body-text"], maxWidth: "680px", margin: "0 0 8px" }}>Because this stuff doesn't happen in a perfect wellness bubble.</p>
-          <div style={{ background: TUNI_COLORS.ink, borderRadius: "24px", padding: "40px 36px", color: TUNI_COLORS.cream, marginTop: "24px" }}>
-            <div className="bff-grid-2col" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "32px" }}>
-              <div>
-                <div style={{ fontSize: "12px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: TUNI_COLORS.amber, marginBottom: "16px" }}>Not the voice that says</div>
-                <p style={{ fontSize: "16px", lineHeight: 1.6, color: "rgba(255,247,241,0.6)", margin: "0" }}>"You blew it."</p>
-                <p style={{ fontSize: "16px", lineHeight: 1.6, color: "rgba(255,247,241,0.6)", margin: "10px 0 0" }}>"Start again Monday."</p>
-              </div>
-              <div>
-                <div style={{ fontSize: "12px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", color: TUNI_COLORS.amber, marginBottom: "16px" }}>More like</div>
-                <p style={{ fontSize: "18px", fontWeight: 800, color: TUNI_COLORS.cream, lineHeight: 1.4, margin: "0" }}>"What happened?"</p>
-                <p style={{ fontSize: "18px", fontWeight: 800, color: TUNI_COLORS.cream, lineHeight: 1.4, margin: "8px 0 0" }}>"What did you notice?"</p>
-                <p style={{ fontSize: "18px", fontWeight: 800, color: TUNI_COLORS.cream, lineHeight: 1.4, margin: "8px 0 0" }}>"What might help next?"</p>
-              </div>
-            </div>
-            <p style={{ fontSize: "18px", fontWeight: 800, color: TUNI_COLORS.cream, margin: "28px 0 0", paddingTop: "24px", borderTop: "1px solid rgba(255,247,241,0.12)" }}>A calm body feedback guide for real life.</p>
-          </div>
+          <p style={{ fontSize: "17px", lineHeight: 1.6, color: TUNI_COLORS["body-text"], maxWidth: "680px", margin: "0" }}>Because this stuff doesn't happen in a perfect wellness bubble.</p>
         </div>
       </section>
 
