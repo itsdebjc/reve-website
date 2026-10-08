@@ -330,7 +330,7 @@ const TuniLandingPage = () => {
           <span style={{ display: "inline-flex", alignItems: "center", background: "rgba(255,247,241,0.08)", color: TUNI_COLORS.amber, fontSize: "12px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", padding: "7px 14px", borderRadius: "999px" }}>Sound familiar?</span>
           <h2 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(32px, 4.4vw, 50px)", lineHeight: 1.04, letterSpacing: "-0.02em", margin: "22px 0 0", color: TUNI_COLORS.cream }}>You've tried it all.<br /><span style={{ color: TUNI_COLORS["coral-light"] }}>So what's actually working?</span></h2>
           <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "flex-start", gap: "14px", margin: "30px 0 0", maxWidth: "920px" }}>
-            {["Protein", "Intermittent fasting", "Strength training", "Less wine", "More sleep", "Hormones", "Eating better", "More water"].map((text) => (
+            {["Protein", "Intermittent fasting", "Strength training", "Less wine", "More sleep", "Hormones", "Eating better", "More water", "Watch the carbs", "Stop the sugar"].map((text) => (
               <span key={text} style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", background: "rgba(255,247,241,0.1)", border: "1px solid rgba(255,247,241,0.2)", color: TUNI_COLORS.cream, fontSize: "17px", fontWeight: 700, padding: "13px 22px", borderRadius: "999px", textAlign: "center", whiteSpace: "nowrap" }}>
                 {text}
               </span>
