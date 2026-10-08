@@ -262,6 +262,7 @@ const TuniLandingPage = () => {
         @media (max-width: 768px) {
           .bff-grid-2col { grid-template-columns: 1fr !important; }
           .bff-grid-4col { grid-template-columns: 1fr 1fr !important; }
+          .bff-grid-3col { grid-template-columns: 1fr !important; }
           .bff-hide-mobile { display: none !important; }
           .bff-header-label { display: none !important; }
           .bff-header-tagline { display: none !important; }
@@ -536,6 +537,31 @@ const TuniLandingPage = () => {
           </div>
 
           <p className="bff-nowrap-desktop" style={{ fontSize: "18px", lineHeight: 1.6, color: TUNI_COLORS.ink, fontWeight: 600, margin: "36px auto 0" }}>Because the goal isn't to follow someone else's plan. It's to figure out what works for you.</p>
+        </div>
+      </section>
+
+      {/* TESTIMONIALS */}
+      {/* TODO(dev): collage uses generic stock photos, not real Tuni members — swap for real member photos as they come in. Add more real testimonial cards below Erin's as they're collected; this section is built to hold more. */}
+      <section style={{ background: TUNI_COLORS.cream, padding: "84px 26px" }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto", textAlign: "center" }}>
+          <span style={{ display: "inline-flex", alignItems: "center", background: "#FFF1EB", color: TUNI_COLORS.coral, fontSize: "12px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", padding: "7px 14px", borderRadius: "999px" }}>What women are saying</span>
+
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(8, 1fr)", gap: "3px", margin: "28px auto 0", maxWidth: "760px", borderRadius: "20px", overflow: "hidden" }}>
+            {[47, 5, 31, 23, 44, 16, 9, 38].map((n) => (
+              <img key={n} src={`https://i.pravatar.cc/200?img=${n}`} alt="" style={{ width: "100%", aspectRatio: "1", objectFit: "cover", display: "block" }} />
+            ))}
+          </div>
+
+          <div style={{ fontFamily: "'Caveat', cursive", fontWeight: 700, fontSize: "clamp(34px, 4.6vw, 50px)", color: TUNI_COLORS.pink, lineHeight: 1.15, margin: "28px auto 0" }}>"This is so fascinating."</div>
+          <div style={{ fontSize: "13px", fontWeight: 700, color: TUNI_COLORS["muted-gray"], letterSpacing: "0.04em", marginTop: "6px" }}>— Erin C., Tuni member</div>
+
+          <h2 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(30px, 4.4vw, 48px)", lineHeight: 1.08, letterSpacing: "-0.02em", margin: "30px 0 0" }}>Real women. <span style={{ color: TUNI_COLORS.pink }}>Real feedback.</span></h2>
+
+          <div style={{ maxWidth: "460px", margin: "40px auto 0", textAlign: "left", background: "#fff", borderRadius: "18px", padding: "30px 28px", boxShadow: "0 6px 16px rgba(42,33,28,0.05)" }}>
+            <div style={{ width: "64px", height: "64px", borderRadius: "16px", background: `${TUNI_COLORS.pink}22`, color: TUNI_COLORS.pink, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "18px" }}>EC</div>
+            <p style={{ fontSize: "15.5px", lineHeight: 1.55, color: TUNI_COLORS["body-text"], fontStyle: "italic", margin: "16px 0 0" }}>"You are brilliant. This is so fascinating, unearthing patterns and awareness and real life suggestions. My eyes are so opened on why I struggle with eating."</p>
+            <div style={{ fontSize: "13px", fontWeight: 700, color: TUNI_COLORS.ink, marginTop: "14px" }}>Erin C.</div>
+          </div>
         </div>
       </section>
 
