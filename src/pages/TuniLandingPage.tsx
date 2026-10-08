@@ -527,7 +527,7 @@ const TuniLandingPage = () => {
         <div style={{ maxWidth: "1200px", margin: "0 auto", textAlign: "center" }}>
           <span style={{ display: "inline-flex", alignItems: "center", background: "#FFF1EB", color: TUNI_COLORS.coral, fontSize: "12px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", padding: "7px 14px", borderRadius: "999px" }}>What women are saying</span>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(8, 1fr)", gap: "4px", margin: "28px auto 0", maxWidth: "1040px", borderRadius: "24px", overflow: "hidden" }}>
+          <div className="bff-grid-4col" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "6px", margin: "28px auto 0", maxWidth: "900px", borderRadius: "24px", overflow: "hidden" }}>
             {[47, 5, 31, 23, 44, 16, 9, 38].map((n) => (
               <img key={n} src={`https://i.pravatar.cc/200?img=${n}`} alt="" style={{ width: "100%", aspectRatio: "1", objectFit: "cover", display: "block" }} />
             ))}
