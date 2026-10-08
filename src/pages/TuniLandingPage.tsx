@@ -527,7 +527,7 @@ const TuniLandingPage = () => {
         <div style={{ maxWidth: "1200px", margin: "0 auto", textAlign: "center" }}>
           <span style={{ display: "inline-flex", alignItems: "center", background: "#FFF1EB", color: TUNI_COLORS.coral, fontSize: "12px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", padding: "7px 14px", borderRadius: "999px" }}>What women are saying</span>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(8, 1fr)", gap: "3px", margin: "28px auto 0", maxWidth: "760px", borderRadius: "20px", overflow: "hidden" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(8, 1fr)", gap: "4px", margin: "28px auto 0", maxWidth: "1040px", borderRadius: "24px", overflow: "hidden" }}>
             {[47, 5, 31, 23, 44, 16, 9, 38].map((n) => (
               <img key={n} src={`https://i.pravatar.cc/200?img=${n}`} alt="" style={{ width: "100%", aspectRatio: "1", objectFit: "cover", display: "block" }} />
             ))}
@@ -538,10 +538,10 @@ const TuniLandingPage = () => {
 
           <h2 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(30px, 4.4vw, 48px)", lineHeight: 1.08, letterSpacing: "-0.02em", margin: "30px 0 0" }}>Real women. <span style={{ color: TUNI_COLORS.pink }}>Real feedback.</span></h2>
 
-          <div style={{ maxWidth: "460px", margin: "40px auto 0", textAlign: "left", background: "#fff", borderRadius: "18px", padding: "30px 28px", boxShadow: "0 6px 16px rgba(42,33,28,0.05)" }}>
-            <div style={{ width: "64px", height: "64px", borderRadius: "16px", background: `${TUNI_COLORS.pink}22`, color: TUNI_COLORS.pink, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "18px" }}>EC</div>
-            <p style={{ fontSize: "15.5px", lineHeight: 1.55, color: TUNI_COLORS["body-text"], fontStyle: "italic", margin: "16px 0 0" }}>"You are brilliant. This is so fascinating, unearthing patterns and awareness and real life suggestions. My eyes are so opened on why I struggle with eating."</p>
-            <div style={{ fontSize: "13px", fontWeight: 700, color: TUNI_COLORS.ink, marginTop: "14px" }}>Erin C.</div>
+          <div style={{ maxWidth: "620px", margin: "40px auto 0", textAlign: "left", background: "#fff", borderRadius: "22px", padding: "40px 38px", boxShadow: "0 6px 16px rgba(42,33,28,0.05)" }}>
+            <div style={{ width: "84px", height: "84px", borderRadius: "20px", background: `${TUNI_COLORS.pink}22`, color: TUNI_COLORS.pink, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "24px" }}>EC</div>
+            <p style={{ fontSize: "19px", lineHeight: 1.6, color: TUNI_COLORS["body-text"], fontStyle: "italic", margin: "20px 0 0" }}>"You are brilliant. This is so fascinating, unearthing patterns and awareness and real life suggestions. My eyes are so opened on why I struggle with eating."</p>
+            <div style={{ fontSize: "15px", fontWeight: 700, color: TUNI_COLORS.ink, marginTop: "16px" }}>Erin C.</div>
           </div>
         </div>
       </section>
