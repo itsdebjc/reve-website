@@ -522,14 +522,23 @@ const TuniLandingPage = () => {
       </section>
 
       {/* TESTIMONIALS */}
-      {/* TODO(dev): collage uses generic stock photos, not real Tuni members — swap for real member photos as they come in. Add more real testimonial cards below Erin's as they're collected; this section is built to hold more. */}
+      {/* TODO(dev): collage uses candid-style stock photos (Unsplash, free license), not real Tuni members — swap for real member photos as they come in. Add more real testimonial cards below Erin's as they're collected; this section is built to hold more. */}
       <section style={{ background: TUNI_COLORS.cream, padding: "84px 26px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", textAlign: "center" }}>
           <span style={{ display: "inline-flex", alignItems: "center", background: "#FFF1EB", color: TUNI_COLORS.coral, fontSize: "12px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", padding: "7px 14px", borderRadius: "999px" }}>What women are saying</span>
 
           <div className="bff-grid-4col" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "6px", margin: "28px auto 0", maxWidth: "900px", borderRadius: "24px", overflow: "hidden" }}>
-            {[47, 5, 31, 23, 44, 16, 9, 38].map((n) => (
-              <img key={n} src={`https://i.pravatar.cc/200?img=${n}`} alt="" style={{ width: "100%", aspectRatio: "1", objectFit: "cover", display: "block" }} />
+            {[
+              "1592621385645-e41659e8aabe",
+              "1693434361986-6c169ce1eb41",
+              "1634450637395-795c131a88f7",
+              "1662850886700-4ec19bd30d11",
+              "1594756154841-ac5d160dbf46",
+              "1595380785068-8608441faa8e",
+              "1612994451093-c6791c8989cd",
+              "1672829985207-38fcd875df03",
+            ].map((id) => (
+              <img key={id} src={`https://images.unsplash.com/photo-${id}?w=400&h=400&fit=crop&crop=faces&q=80`} alt="" style={{ width: "100%", aspectRatio: "1", objectFit: "cover", display: "block" }} />
             ))}
           </div>
 
@@ -691,18 +700,21 @@ const TuniLandingPage = () => {
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
             {[
-              { q: "Is Tuni a subscription?", a: "Yes. Tuni is a monthly app, and you can cancel anytime. If you join a live workshop with Deb, it's included at no extra cost." },
-              { q: "Is Tuni a diet?", a: "No. Tuni doesn't give you a strict meal plan or ask you to follow someone else's diet. It helps you learn from what you're already eating and make changes based on what you're seeing." },
-              { q: "Do I have to count calories or log perfectly?", a: "No. You don't need to weigh every ingredient or get every detail right. An estimate is fine. Consistency is more useful than perfection." },
+              { q: "What is Tuni?", a: "Tuni is an AI body coach for women in midlife. Talk, type or snap what you eat, and Tuni gives you feedback based on what you share. I'm Deb, the founder, and I lead the live workshop." },
+              { q: "How does the Tuni subscription work?", a: "Tuni is a monthly subscription. It includes the app and an optional live workshop with me. You can cancel anytime." },
+              { q: "When do I get access to Tuni?", a: "I welcome women in small groups. After you join the waitlist, I'll email you with the next steps. When your account is ready, you'll get instructions to add Tuni to your phone." },
+              { q: "Do I have to attend the workshop?", a: "No. You can start using Tuni as soon as your account is ready. The workshop is included if you'd like me to show you how Tuni works, share why I built it and help you get started." },
               { q: "Do I need a body composition scale?", a: (
                 <>
-                  <p style={{ margin: 0 }}>No. You can start using Tuni without one and learn from your food, movement and daily patterns.</p>
-                  <p style={{ margin: "10px 0 0" }}>But if you want Tuni to connect those habits with changes in body fat, muscle and body composition, a scale helps. For the most in-depth data, I recommend the <a href="https://link.amazon/B0bdC4sOT" target="_blank" rel="noopener noreferrer" style={{ color: TUNI_COLORS.coral, textDecoration: "underline" }}>RENPHO 50+ metrics scale</a>. If you'd rather start smaller, there's also the <a href="https://link.amazon/B0d6e0DPM" target="_blank" rel="noopener noreferrer" style={{ color: TUNI_COLORS.coral, textDecoration: "underline" }}>RENPHO Elis 1</a> with fewer metrics. Right now, Tuni is only compatible with RENPHO scales — other brands are coming soon.</p>
+                  <p style={{ margin: 0 }}>No. You can start using Tuni without one and get feedback on the food and movement you log.</p>
+                  <p style={{ margin: "10px 0 0" }}>A weekly scan adds another piece of the picture. Tuni can show your habits alongside changes in body fat and muscle over time. For the most detailed view, I recommend the <a href="https://link.amazon/B01Sok1g4" target="_blank" rel="noopener noreferrer" style={{ color: TUNI_COLORS.coral, textDecoration: "underline" }}>RENPHO 50+ metrics scale</a>. For a simpler start, try the <a href="https://link.amazon/B04vE2Laj" target="_blank" rel="noopener noreferrer" style={{ color: TUNI_COLORS.coral, textDecoration: "underline" }}>RENPHO Elis 1</a>.</p>
+                  <p style={{ margin: "10px 0 0" }}>Tuni currently works with RENPHO scales. More brands are coming soon.</p>
+                  <p style={{ margin: "10px 0 0", fontSize: "13px", color: TUNI_COLORS["placeholder-gray"] }}>As an Amazon Associate, I earn from qualifying purchases.</p>
                 </>
               ) },
-              { q: "Will Tuni tell me exactly what to eat?", a: "No. Tuni isn't there to give every woman the same food plan. It helps you understand your own patterns so you can make more informed choices." },
-              { q: "Is this medical advice?", a: "No. Tuni is for general wellness and education only. It is not medical advice, diagnosis or treatment." },
-              { q: "When do I get access to Tuni?", a: "As soon as you sign up, you get access to download Tuni. If you've joined a live workshop, we'll also set it up together and walk through it in real time." },
+              { q: "Is Tuni a diet or meal plan?", a: "No. Tuni helps you learn from what you already eat. It gives you feedback and helps you find choices that fit your life." },
+              { q: "Do I have to count calories or log perfectly?", a: "No calorie counting. You can describe a meal in your own words or use a photo. An estimate is fine. Logging regularly gives Tuni more to work with." },
+              { q: "Is Tuni medical advice?", a: "No. Tuni is for general wellness and education. It does not diagnose or treat medical conditions." },
             ].map((item) => (
               <details key={item.q} id={item.q.includes("body composition") ? "scale-faq" : undefined} style={{ background: "#fff", border: `1px solid rgba(42,33,28,0.07)`, borderRadius: "16px", padding: "4px 22px" }}>
                 <summary style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "16px", cursor: "pointer", listStyle: "none", padding: "18px 0", fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 700, fontSize: "17px", color: TUNI_COLORS.ink }}>
@@ -730,6 +742,17 @@ const TuniLandingPage = () => {
             <button onClick={handleWaitlist} style={{ textDecoration: "none", display: "inline-block", fontSize: "17px", fontWeight: 700, color: TUNI_COLORS.pink, background: "#fff", padding: "17px 36px", borderRadius: "999px", boxShadow: "0 16px 36px rgba(42,33,28,0.22)", border: "none", cursor: "pointer" }}>Start Tuni →</button>
             <button onClick={handleWaitlist} style={{ textDecoration: "none", display: "inline-block", fontSize: "17px", fontWeight: 700, color: "#fff", background: "transparent", padding: "16px 34px", borderRadius: "999px", border: "1.5px solid rgba(255,255,255,0.6)", cursor: "pointer" }}>Join a Live Workshop</button>
           </div>
+        </div>
+      </section>
+
+      {/* MISSION STATEMENT */}
+      <section style={{ background: TUNI_COLORS.cream, padding: "100px 26px", textAlign: "center" }}>
+        <div style={{ maxWidth: "860px", margin: "0 auto" }}>
+          <span style={{ display: "inline-flex", alignItems: "center", gap: "7px", background: "#fff", border: `1px solid rgba(42, 33, 28, 0.08)`, color: TUNI_COLORS.coral, fontSize: "12px", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", padding: "7px 14px", borderRadius: "999px" }}>Our mission</span>
+          <h2 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(34px, 5.5vw, 64px)", lineHeight: 1.08, letterSpacing: "-0.03em", color: TUNI_COLORS.ink, margin: "26px 0 0" }}>
+            Help <span style={{ color: TUNI_COLORS.pink }}>1,000 women</span> in midlife understand their bodies, trust their choices and feel like themselves again.
+          </h2>
+          <div style={{ fontFamily: "'Caveat', cursive", fontWeight: 700, fontSize: "clamp(26px, 3vw, 34px)", color: TUNI_COLORS["body-text"], marginTop: "30px" }}>Deb xox</div>
         </div>
       </section>
 
