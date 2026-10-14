@@ -1,1 +1,1 @@
-export const CALENDLY_URL = "https://calendly.com/deb-xjsk/callwithdeb";
+export const CALENDLY_URL = "https://calendar.app.google/juR5bfXKuaxhwb9F8";
