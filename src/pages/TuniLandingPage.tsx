@@ -750,7 +750,7 @@ const TuniLandingPage = () => {
         <div style={{ maxWidth: "860px", margin: "0 auto" }}>
           <span style={{ display: "inline-flex", alignItems: "center", gap: "7px", background: "#fff", border: `1px solid rgba(42, 33, 28, 0.08)`, color: TUNI_COLORS.coral, fontSize: "12px", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", padding: "7px 14px", borderRadius: "999px" }}>Our mission</span>
           <h2 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(34px, 5.5vw, 64px)", lineHeight: 1.08, letterSpacing: "-0.03em", color: TUNI_COLORS.ink, margin: "26px 0 0" }}>
-            Help <span style={{ color: TUNI_COLORS.pink }}>1,000 women</span> in midlife understand their bodies, trust their choices and feel like themselves again.
+            Help <span style={{ color: TUNI_COLORS.pink }}>1,000 women</span> stop guessing and trust their bodies again.
           </h2>
           <div style={{ fontFamily: "'Caveat', cursive", fontWeight: 700, fontSize: "clamp(26px, 3vw, 34px)", color: TUNI_COLORS["body-text"], marginTop: "30px" }}>Deb xox</div>
         </div>
