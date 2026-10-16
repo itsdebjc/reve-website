@@ -293,18 +293,16 @@ const TuniLandingPage = () => {
               <span style={{ display: "inline-flex", alignItems: "center", gap: "7px", background: "#fff", border: `1px solid rgba(42, 33, 28, 0.08)`, color: TUNI_COLORS.coral, fontSize: "12px", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", padding: "7px 14px", borderRadius: "999px" }}>For women in perimenopause + menopause</span>
             </div>
             <h1 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(44px, 5.2vw, 68px)", lineHeight: 0.98, letterSpacing: "-0.035em", margin: 0, color: TUNI_COLORS.ink }}>Your body changed.</h1>
-            <div style={{ fontFamily: "'Caveat', cursive", fontWeight: 700, fontSize: "clamp(30px, 3.8vw, 42px)", lineHeight: 1, color: TUNI_COLORS.pink, marginTop: "6px" }}>Tuni helps you figure out what works for your body now.</div>
-            <p style={{ fontSize: "clamp(16px, 1.5vw, 19px)", lineHeight: 1.6, color: TUNI_COLORS["body-text"], maxWidth: "520px", margin: "22px 0 0" }}>You hit your 40s or 50s, and suddenly the things that used to work don't. You eat well. You move. You make good choices.</p>
-            <p style={{ fontSize: "clamp(16px, 1.5vw, 19px)", lineHeight: 1.6, color: TUNI_COLORS["body-text"], maxWidth: "520px", margin: "12px 0 0" }}>But it doesn't work the way it used to. And you're left wondering:</p>
-            <p style={{ fontSize: "clamp(16px, 1.5vw, 19px)", lineHeight: 1.6, color: TUNI_COLORS.ink, fontWeight: 700, maxWidth: "520px", margin: "6px 0 0" }}>What's actually working for you now?</p>
-            <p style={{ fontSize: "clamp(16px, 1.5vw, 19px)", lineHeight: 1.6, color: TUNI_COLORS["body-text"], maxWidth: "520px", margin: "18px 0 0" }}>Tuni connects your choices with your body's changes, so you always know.</p>
+            <div style={{ fontFamily: "'Caveat', cursive", fontWeight: 700, fontSize: "clamp(30px, 3.8vw, 42px)", lineHeight: 1, color: TUNI_COLORS.pink, marginTop: "6px" }}>It's time to understand what works now.</div>
+            <p style={{ fontSize: "clamp(16px, 1.5vw, 19px)", lineHeight: 1.6, color: TUNI_COLORS["body-text"], maxWidth: "520px", margin: "22px 0 0" }}>Tuni is your personal body feedback app. It brings your food, daily habits and body changes together to help you notice patterns, understand your progress and make choices that work for you.</p>
+            <p style={{ fontSize: "clamp(16px, 1.5vw, 19px)", lineHeight: 1.6, color: TUNI_COLORS.ink, fontWeight: 700, maxWidth: "520px", margin: "14px 0 0" }}>No calorie counting. No rigid diets. Just better feedback.</p>
 
             <div style={{ display: "flex", gap: "12px", flexWrap: "wrap", alignItems: "center", marginTop: "26px" }}>
               {/* TODO(dev): primary CTA — currently scrolls to the shared signup form (#bff-waitlist). Swap onClick/href once a direct app-start destination exists. */}
               <button onClick={handleWaitlist} style={{ fontSize: "16px", fontWeight: 700, color: "#fff", background: `linear-gradient(135deg, ${TUNI_COLORS.coral}, ${TUNI_COLORS.pink})`, padding: "16px 30px", borderRadius: "999px", border: "none", cursor: "pointer", boxShadow: "0 14px 30px rgba(240,80,140,0.30)" }}>Start Tuni →</button>
               <button onClick={handleWaitlist} style={{ fontSize: "16px", fontWeight: 700, color: TUNI_COLORS.ink, background: "transparent", padding: "15px 28px", borderRadius: "999px", border: `1.5px solid rgba(42,33,28,0.22)`, cursor: "pointer" }}>Join a Live Workshop</button>
             </div>
-            <span style={{ fontSize: "13px", color: TUNI_COLORS["placeholder-gray"], display: "block", marginTop: "12px" }}>$15/month. Cancel anytime. Curious first? Join a live workshop below.</span>
+            <span style={{ fontSize: "13px", color: TUNI_COLORS["placeholder-gray"], display: "block", marginTop: "12px" }}>See how Tuni works, get set up with Deb and learn how to use it in your everyday life.</span>
           </div>
           <div>
             <img src={debbieSwingHero} alt="Debbie Collins" style={{ display: "block", width: "100%", aspectRatio: "3 / 4", objectFit: "cover", objectPosition: "center center", borderRadius: "24px", boxShadow: "0 24px 50px rgba(42,33,28,0.16)" }} />
