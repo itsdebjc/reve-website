@@ -296,13 +296,12 @@ const TuniLandingPage = () => {
             <span style={{ fontFamily: "'Caveat', cursive", fontWeight: 700, color: TUNI_COLORS.pink, fontSize: "0.56em", display: "block", lineHeight: 1, marginTop: "4px" }}>It's time to understand what works now.</span>
           </h1>
 
-          <div className="bff-hero-grid" style={{ display: "grid", gridTemplateColumns: "0.72fr 1.28fr", gap: "64px", alignItems: "center", marginTop: "52px" }}>
+          <div className="bff-hero-grid" style={{ display: "grid", gridTemplateColumns: "0.72fr 1.28fr", gap: "64px", alignItems: "start", marginTop: "52px" }}>
             <div className="bff-hero-polaroid-wrap" style={{ position: "relative" }}>
-              <div style={{ position: "absolute", inset: "-50px", background: `radial-gradient(circle at 35% 30%, rgba(255,106,77,0.35), transparent 60%), radial-gradient(circle at 70% 80%, rgba(255,161,62,0.28), transparent 55%)`, filter: "blur(10px)", zIndex: 0 }} />
-              <div style={{ position: "relative", zIndex: 1, background: "#fff", padding: "16px 16px 20px", borderRadius: "6px", boxShadow: "0 30px 60px rgba(42,33,28,0.22)", transform: "rotate(-3deg)", maxWidth: "340px", margin: "0 auto" }}>
-                <div style={{ position: "absolute", top: "-16px", left: "50%", transform: "translateX(-50%) rotate(-2deg)", width: "100px", height: "30px", background: "rgba(255,161,62,0.55)", border: "1px solid rgba(255,255,255,0.4)", boxShadow: "0 4px 10px rgba(42,33,28,0.08)" }} />
-                <img src={debbieSwingHero} alt="Debbie Collins" style={{ display: "block", width: "100%", aspectRatio: "1", objectFit: "cover", objectPosition: "center 25%", borderRadius: "2px" }} />
-                <div style={{ fontFamily: "'Caveat', cursive", fontWeight: 600, fontSize: "18px", lineHeight: 1.3, color: TUNI_COLORS.ink, textAlign: "center", marginTop: "14px" }}>Hi, I'm Deb! I know what it's like to try everything and still feel confused. That's why I built Tuni. xoxo</div>
+              <div style={{ position: "absolute", inset: "-40px", background: `radial-gradient(circle at 30% 25%, rgba(255,106,77,0.3), transparent 60%), radial-gradient(circle at 75% 80%, rgba(255,161,62,0.24), transparent 55%)`, filter: "blur(10px)", zIndex: 0 }} />
+              <img src={debbieSwingHero} alt="Debbie Collins" style={{ position: "relative", zIndex: 1, display: "block", width: "100%", aspectRatio: "6 / 7", objectFit: "cover", objectPosition: "center 20%", borderRadius: "22px", boxShadow: "0 24px 50px rgba(42,33,28,0.2)" }} />
+              <div style={{ position: "relative", zIndex: 1, background: "#fff", borderRadius: "16px", padding: "18px 22px", boxShadow: "0 10px 25px rgba(42,33,28,0.08)", marginTop: "16px" }}>
+                <div style={{ fontFamily: "'Caveat', cursive", fontWeight: 600, fontSize: "19px", lineHeight: 1.3, color: TUNI_COLORS.ink }}>Hi, I'm Deb! I know what it's like to try everything and still feel confused. That's why I built Tuni. xoxo</div>
               </div>
             </div>
 
@@ -317,13 +316,13 @@ const TuniLandingPage = () => {
                 </div>
                 <div style={{ width: "1px", height: "36px", background: "rgba(42,33,28,0.12)" }} />
                 <div>
-                  <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 900, fontSize: "28px", color: TUNI_COLORS.amber, lineHeight: 1 }}>0</div>
-                  <div style={{ fontSize: "12.5px", color: TUNI_COLORS["muted-gray"], marginTop: "4px" }}>Calories to count</div>
+                  <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 900, fontSize: "22px", color: TUNI_COLORS.amber, lineHeight: 1.1, textTransform: "uppercase" }}>Easy</div>
+                  <div style={{ fontSize: "12.5px", color: TUNI_COLORS["muted-gray"], marginTop: "4px" }}>Meal logging</div>
                 </div>
                 <div style={{ width: "1px", height: "36px", background: "rgba(42,33,28,0.12)" }} />
                 <div>
-                  <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 900, fontSize: "28px", color: TUNI_COLORS.pink, lineHeight: 1 }}>1:1</div>
-                  <div style={{ fontSize: "12.5px", color: TUNI_COLORS["muted-gray"], marginTop: "4px" }}>Feedback on you</div>
+                  <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 900, fontSize: "22px", color: TUNI_COLORS.pink, lineHeight: 1.1, textTransform: "uppercase" }}>You</div>
+                  <div style={{ fontSize: "12.5px", color: TUNI_COLORS["muted-gray"], marginTop: "4px" }}>Personalised feedback</div>
                 </div>
               </div>
 
