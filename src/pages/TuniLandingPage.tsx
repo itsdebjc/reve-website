@@ -306,8 +306,8 @@ const TuniLandingPage = () => {
             </div>
 
             <div>
-              <p style={{ fontSize: "18px", lineHeight: 1.65, color: TUNI_COLORS["body-text"], maxWidth: "560px", margin: 0 }}>Tuni is your personal body-feedback app. It brings your food, daily habits, and body changes together to help you notice patterns and understand your progress.</p>
-              <p style={{ fontSize: "18px", lineHeight: 1.65, color: TUNI_COLORS.ink, fontWeight: 700, margin: "14px 0 0" }}>No calorie counting. No rigid diets. Just better feedback.</p>
+              <p style={{ fontSize: "clamp(20px, 2.1vw, 24px)", lineHeight: 1.55, color: TUNI_COLORS["body-text"], maxWidth: "580px", margin: 0 }}>Tuni is your personal body-feedback app. It brings your food, daily habits, and body changes together to help you notice patterns and understand your progress.</p>
+              <p style={{ fontSize: "clamp(20px, 2.1vw, 24px)", lineHeight: 1.55, color: TUNI_COLORS.ink, fontWeight: 700, maxWidth: "580px", margin: "16px 0 0" }}>Your choices. Your body.<br />A clearer picture of what works for you.</p>
 
               <div style={{ display: "flex", alignItems: "center", gap: "26px", marginTop: "30px", paddingTop: "26px", borderTop: "1px solid rgba(42,33,28,0.1)" }}>
                 <div>
