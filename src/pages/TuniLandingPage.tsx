@@ -294,7 +294,7 @@ const TuniLandingPage = () => {
             </div>
             <h1 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(44px, 5.2vw, 68px)", lineHeight: 0.98, letterSpacing: "-0.035em", margin: 0, color: TUNI_COLORS.ink }}>Your body changed.</h1>
             <div style={{ fontFamily: "'Caveat', cursive", fontWeight: 700, fontSize: "clamp(30px, 3.8vw, 42px)", lineHeight: 1, color: TUNI_COLORS.pink, marginTop: "6px" }}>It's time to understand what works now.</div>
-            <p style={{ fontSize: "clamp(16px, 1.5vw, 19px)", lineHeight: 1.6, color: TUNI_COLORS["body-text"], maxWidth: "520px", margin: "22px 0 0" }}>Tuni is your personal body feedback app. It brings your food, daily habits and body changes together to help you notice patterns, understand your progress and make choices that work for you.</p>
+            <p style={{ fontSize: "clamp(16px, 1.5vw, 19px)", lineHeight: 1.6, color: TUNI_COLORS["body-text"], maxWidth: "520px", margin: "22px 0 0" }}>Tuni is your personal body-feedback app. It brings your food, daily habits, and body changes together to help you notice patterns and understand your progress.</p>
             <p style={{ fontSize: "clamp(16px, 1.5vw, 19px)", lineHeight: 1.6, color: TUNI_COLORS.ink, fontWeight: 700, maxWidth: "520px", margin: "14px 0 0" }}>No calorie counting. No rigid diets. Just better feedback.</p>
 
             <div style={{ display: "flex", gap: "12px", flexWrap: "wrap", alignItems: "center", marginTop: "26px" }}>
