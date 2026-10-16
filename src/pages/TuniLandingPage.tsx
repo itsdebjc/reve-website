@@ -3,7 +3,7 @@ import { setCanonical } from "@/lib/seo";
 import debbieCollins from "@/assets/debbie-collins.jpeg";
 import debbieBeach from "@/assets/debbie-beach.jpeg";
 import heroCherryBlossom from "@/assets/debbie-blossom-portrait.jpeg";
-import debbieSwingHero from "@/assets/debbie-swing-hero.jpg";
+import debbieSwingHero from "@/assets/debbie-swing-hero-extended.jpg";
 import debbieLouvre from "@/assets/debbie-louvre.jpg";
 import tuniAppToday from "@/assets/tuni-app-today.png";
 import tuniAppCoach from "@/assets/tuni-app-coach.jpeg";
@@ -268,6 +268,11 @@ const TuniLandingPage = () => {
           .bff-header-tagline { display: none !important; }
           .bff-header-button { padding: 8px 14px !important; font-size: 12px !important; }
           .bff-sticky-desktop { position: static !important; top: auto !important; }
+          .bff-hero-section { min-height: auto !important; display: block !important; }
+          .bff-hero-img { position: static !important; width: 100% !important; height: auto !important; aspect-ratio: 12 / 7 !important; display: block !important; }
+          .bff-hero-scrim { display: none !important; }
+          .bff-hero-wrap { position: static !important; padding: 28px 22px 40px !important; background: ${TUNI_COLORS.cream} !important; }
+          .bff-hero-copy { max-width: 100% !important; }
         }
       `}</style>
 
@@ -285,29 +290,30 @@ const TuniLandingPage = () => {
         </div>
       </header>
 
-      {/* HERO SECTION */}
-      <section style={{ background: `linear-gradient(180deg, ${TUNI_COLORS.cream} 0%, ${TUNI_COLORS["cream-alt"]} 100%)`, padding: "64px 26px 76px" }}>
-        <div className="bff-grid-2col" style={{ maxWidth: "1480px", margin: "0 auto", display: "grid", gridTemplateColumns: "0.95fr 1.05fr", gap: "56px", alignItems: "start" }}>
-          <div>
-            <div style={{ display: "flex", gap: "10px", flexWrap: "wrap", marginBottom: "26px" }}>
-              <span style={{ display: "inline-flex", alignItems: "center", gap: "7px", background: "#fff", border: `1px solid rgba(42, 33, 28, 0.08)`, color: TUNI_COLORS.coral, fontSize: "12px", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", padding: "7px 14px", borderRadius: "999px" }}>For women in perimenopause + menopause</span>
-            </div>
-            <h1 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(44px, 5.2vw, 68px)", lineHeight: 0.98, letterSpacing: "-0.035em", margin: 0, color: TUNI_COLORS.ink }}>Your body changed.</h1>
-            <div style={{ fontFamily: "'Caveat', cursive", fontWeight: 700, fontSize: "clamp(30px, 3.8vw, 42px)", lineHeight: 1, color: TUNI_COLORS.pink, marginTop: "6px" }}>It's time to understand what works now.</div>
-            <p style={{ fontSize: "clamp(16px, 1.5vw, 19px)", lineHeight: 1.6, color: TUNI_COLORS["body-text"], maxWidth: "520px", margin: "22px 0 0" }}>Tuni is your personal body-feedback app. It brings your food, daily habits, and body changes together to help you notice patterns and understand your progress.</p>
-            <p style={{ fontSize: "clamp(16px, 1.5vw, 19px)", lineHeight: 1.6, color: TUNI_COLORS.ink, fontWeight: 700, maxWidth: "520px", margin: "14px 0 0" }}>No calorie counting. No rigid diets. Just better feedback.</p>
+      {/* HERO SECTION — Debbie's photo extended with more water on the left, copy sits directly on it */}
+      <section className="bff-hero-section" style={{ position: "relative", minHeight: "82vh", overflow: "hidden", display: "flex", alignItems: "center" }}>
+        <img className="bff-hero-img" src={debbieSwingHero} alt="Debbie Collins on a swing in the water" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "right center" }} />
+        <div
+          className="bff-hero-scrim"
+          style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 60% 75% at 24% 50%, rgba(255,247,241,0.82) 0%, rgba(255,247,241,0.55) 45%, transparent 75%)" }}
+        />
+        <div className="bff-hero-wrap" style={{ position: "relative", width: "100%", maxWidth: "1480px", margin: "0 auto", padding: "80px 26px" }}>
+          <div className="bff-hero-copy" style={{ maxWidth: "480px" }}>
+            <span style={{ display: "inline-flex", alignItems: "center", gap: "7px", background: "#fff", border: `1px solid rgba(42, 33, 28, 0.08)`, color: TUNI_COLORS.coral, fontSize: "12px", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", padding: "7px 14px", borderRadius: "999px" }}>For women in perimenopause + menopause</span>
+            <h1 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(38px, 4.4vw, 58px)", lineHeight: 0.98, letterSpacing: "-0.035em", margin: "18px 0 0", color: TUNI_COLORS.ink }}>Your body changed.</h1>
+            <div style={{ fontFamily: "'Caveat', cursive", fontWeight: 700, fontSize: "clamp(26px, 3.2vw, 36px)", lineHeight: 1, color: TUNI_COLORS.pink, marginTop: "6px" }}>It's time to understand what works now.</div>
+            <p style={{ fontSize: "16px", lineHeight: 1.6, color: TUNI_COLORS["body-text"], margin: "20px 0 0" }}>Tuni is your personal body-feedback app. It brings your food, daily habits, and body changes together to help you notice patterns and understand your progress.</p>
+            <p style={{ fontSize: "16px", lineHeight: 1.6, color: TUNI_COLORS.ink, fontWeight: 700, margin: "12px 0 0" }}>No calorie counting. No rigid diets. Just better feedback.</p>
 
-            <div style={{ display: "flex", gap: "12px", flexWrap: "wrap", alignItems: "center", marginTop: "26px" }}>
+            <div style={{ display: "flex", gap: "12px", flexWrap: "wrap", alignItems: "center", marginTop: "24px" }}>
               {/* TODO(dev): primary CTA — currently scrolls to the shared signup form (#bff-waitlist). Swap onClick/href once a direct app-start destination exists. */}
               <button onClick={handleWaitlist} style={{ fontSize: "16px", fontWeight: 700, color: "#fff", background: `linear-gradient(135deg, ${TUNI_COLORS.coral}, ${TUNI_COLORS.pink})`, padding: "16px 30px", borderRadius: "999px", border: "none", cursor: "pointer", boxShadow: "0 14px 30px rgba(240,80,140,0.30)" }}>Start Tuni →</button>
               <button onClick={handleWaitlist} style={{ fontSize: "16px", fontWeight: 700, color: TUNI_COLORS.ink, background: "transparent", padding: "15px 28px", borderRadius: "999px", border: `1.5px solid rgba(42,33,28,0.22)`, cursor: "pointer" }}>Join a Live Workshop</button>
             </div>
-            <span style={{ fontSize: "13px", color: TUNI_COLORS["placeholder-gray"], display: "block", marginTop: "12px" }}>See how Tuni works, get set up with Deb and learn how to use it in your everyday life.</span>
-          </div>
-          <div>
-            <img src={debbieSwingHero} alt="Debbie Collins" style={{ display: "block", width: "100%", aspectRatio: "3 / 4", objectFit: "cover", objectPosition: "center center", borderRadius: "24px", boxShadow: "0 24px 50px rgba(42,33,28,0.16)" }} />
-            <div style={{ background: "#fff", borderRadius: "16px", padding: "18px 22px", boxShadow: "0 10px 25px rgba(42,33,28,0.08)", marginTop: "16px" }}>
-              <div style={{ fontFamily: "'Caveat', cursive", fontWeight: 600, fontSize: "22px", lineHeight: 1.3, color: TUNI_COLORS.ink }}>Hi, I'm Deb. This became Tuni because I needed it too.</div>
+            <span style={{ fontSize: "13px", color: TUNI_COLORS["muted-gray"], display: "block", marginTop: "14px" }}>See how Tuni works, get set up with Deb and learn how to use it in your everyday life.</span>
+
+            <div style={{ borderTop: "1px solid rgba(42,33,28,0.12)", marginTop: "24px", paddingTop: "18px" }}>
+              <div style={{ fontFamily: "'Caveat', cursive", fontWeight: 600, fontSize: "20px", lineHeight: 1.3, color: TUNI_COLORS.ink }}>Hi, I'm Deb. This became Tuni because I needed it too.</div>
             </div>
           </div>
         </div>
