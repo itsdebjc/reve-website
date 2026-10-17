@@ -268,8 +268,8 @@ const TuniLandingPage = () => {
           .bff-header-tagline { display: none !important; }
           .bff-header-button { padding: 8px 14px !important; font-size: 12px !important; }
           .bff-sticky-desktop { position: static !important; top: auto !important; }
-          .bff-hero-grid { grid-template-columns: 1fr !important; }
-          .bff-hero-polaroid-wrap { max-width: 320px; margin: 0 auto 8px; }
+          .bff-hero-grid { grid-template-columns: 1fr !important; gap: 28px !important; margin-top: 32px !important; }
+          .bff-hero-polaroid-wrap img { aspect-ratio: 1 / 1 !important; object-position: center 15% !important; }
         }
       `}</style>
 
