@@ -296,7 +296,7 @@ const TuniLandingPage = () => {
             <span style={{ fontFamily: "'Caveat', cursive", fontWeight: 700, color: TUNI_COLORS.pink, fontSize: "0.56em", display: "block", lineHeight: 1, marginTop: "4px" }}>It's time to understand what works now.</span>
           </h1>
 
-          <div className="bff-hero-grid" style={{ display: "grid", gridTemplateColumns: "0.72fr 1.28fr", gap: "64px", alignItems: "start", marginTop: "52px" }}>
+          <div className="bff-hero-grid" style={{ display: "grid", gridTemplateColumns: "0.95fr 1.05fr", gap: "56px", alignItems: "start", marginTop: "52px" }}>
             <div className="bff-hero-polaroid-wrap" style={{ position: "relative" }}>
               <div style={{ position: "absolute", inset: "-40px", background: `radial-gradient(circle at 30% 25%, rgba(255,106,77,0.3), transparent 60%), radial-gradient(circle at 75% 80%, rgba(255,161,62,0.24), transparent 55%)`, filter: "blur(10px)", zIndex: 0 }} />
               <img src={debbieSwingHero} alt="Debbie Collins" style={{ position: "relative", zIndex: 1, display: "block", width: "100%", aspectRatio: "6 / 7", objectFit: "cover", objectPosition: "center 20%", borderRadius: "22px", boxShadow: "0 24px 50px rgba(42,33,28,0.2)" }} />
@@ -306,8 +306,8 @@ const TuniLandingPage = () => {
             </div>
 
             <div>
-              <p style={{ fontSize: "clamp(20px, 2.1vw, 24px)", lineHeight: 1.55, color: TUNI_COLORS["body-text"], maxWidth: "580px", margin: 0 }}>Tuni is your personal body-feedback app. It brings your food, daily habits, and body changes together to help you notice patterns and understand your progress.</p>
-              <p style={{ fontSize: "clamp(20px, 2.1vw, 24px)", lineHeight: 1.55, color: TUNI_COLORS.ink, fontWeight: 700, maxWidth: "580px", margin: "16px 0 0" }}>Your choices. Your body.<br />A clearer picture of what works for you.</p>
+              <p style={{ fontSize: "clamp(20px, 2.1vw, 24px)", lineHeight: 1.55, color: TUNI_COLORS["body-text"], maxWidth: "640px", margin: 0 }}>Tuni is your personal body-feedback app. It brings your food, daily habits, and body changes together to help you notice patterns and understand your progress.</p>
+              <p style={{ fontSize: "clamp(20px, 2.1vw, 24px)", lineHeight: 1.55, color: TUNI_COLORS.ink, fontWeight: 700, maxWidth: "640px", margin: "16px 0 0" }}>Your choices. Your body.<br />A clearer picture of what works for you.</p>
 
               <div style={{ display: "flex", alignItems: "center", gap: "26px", marginTop: "30px", paddingTop: "26px", borderTop: "1px solid rgba(42,33,28,0.1)" }}>
                 <div>
@@ -563,8 +563,7 @@ const TuniLandingPage = () => {
           <h2 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(30px, 4.4vw, 48px)", lineHeight: 1.08, letterSpacing: "-0.02em", margin: "30px 0 0" }}>A little more clarity. <span style={{ color: TUNI_COLORS.pink }}>A lot less guessing.</span></h2>
 
           <div style={{ maxWidth: "620px", margin: "40px auto 0", textAlign: "left", background: "#fff", borderRadius: "22px", padding: "40px 38px", boxShadow: "0 6px 16px rgba(42,33,28,0.05)" }}>
-            <div style={{ width: "84px", height: "84px", borderRadius: "20px", background: `${TUNI_COLORS.pink}22`, color: TUNI_COLORS.pink, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "24px" }}>EC</div>
-            <p style={{ fontSize: "19px", lineHeight: 1.6, color: TUNI_COLORS["body-text"], fontStyle: "italic", margin: "20px 0 0" }}>"You are brilliant. This is so fascinating, unearthing patterns and awareness and real life suggestions. My eyes are so opened on why I struggle with eating."</p>
+            <p style={{ fontSize: "19px", lineHeight: 1.6, color: TUNI_COLORS["body-text"], fontStyle: "italic", margin: 0 }}>"You are brilliant. This is so fascinating, unearthing patterns and awareness and real life suggestions. My eyes are so opened on why I struggle with eating."</p>
             <div style={{ fontSize: "15px", fontWeight: 700, color: TUNI_COLORS.ink, marginTop: "16px" }}>Erin C.</div>
           </div>
         </div>
