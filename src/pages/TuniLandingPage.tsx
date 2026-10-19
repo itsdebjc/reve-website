@@ -296,7 +296,7 @@ const TuniLandingPage = () => {
             <span style={{ fontFamily: "'Caveat', cursive", fontWeight: 700, color: TUNI_COLORS.pink, fontSize: "0.56em", display: "block", lineHeight: 1, marginTop: "4px" }}>It's time to understand what works now.</span>
           </h1>
 
-          <div className="bff-hero-grid" style={{ display: "grid", gridTemplateColumns: "0.95fr 1.05fr", gap: "56px", alignItems: "center", marginTop: "52px" }}>
+          <div className="bff-hero-grid" style={{ display: "grid", gridTemplateColumns: "480px 1fr", gap: "56px", alignItems: "center", marginTop: "52px" }}>
             <div className="bff-hero-polaroid-wrap" style={{ position: "relative", maxWidth: "440px", justifySelf: "start" }}>
               <div style={{ position: "absolute", inset: "-40px", background: `radial-gradient(circle at 30% 25%, rgba(255,106,77,0.3), transparent 60%), radial-gradient(circle at 75% 80%, rgba(255,161,62,0.24), transparent 55%)`, filter: "blur(10px)", zIndex: 0 }} />
               <img src={debbieSwingHero} alt="Debbie Collins" style={{ position: "relative", zIndex: 1, display: "block", width: "100%", aspectRatio: "4 / 5", objectFit: "cover", objectPosition: "center 20%", borderRadius: "22px", boxShadow: "0 24px 50px rgba(42,33,28,0.2)" }} />
