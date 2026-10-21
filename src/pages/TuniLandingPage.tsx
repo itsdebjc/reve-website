@@ -786,6 +786,8 @@ const TuniLandingPage = () => {
               <a href="https://itstuni.com/terms" target="_blank" rel="noopener noreferrer" style={{ color: "rgba(255,247,241,0.5)", textDecoration: "none" }}>Terms of Use</a>
             </p>
             <p style={{ fontSize: "12px", margin: 0 }}>
+              <a href="https://www.instagram.com/itsdebj/" target="_blank" rel="noopener noreferrer" style={{ color: "rgba(255,247,241,0.5)", textDecoration: "none" }}>Instagram</a>
+              {" · "}
               <a href="https://www.tiktok.com/@itsdigitaldeb" target="_blank" rel="noopener noreferrer" style={{ color: "rgba(255,247,241,0.5)", textDecoration: "none" }}>TikTok</a>
             </p>
           </div>
