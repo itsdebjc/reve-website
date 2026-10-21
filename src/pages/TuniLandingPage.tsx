@@ -2,7 +2,7 @@ import { useEffect, useId, useState, type ReactNode } from "react";
 import { setCanonical } from "@/lib/seo";
 import debbieCollins from "@/assets/debbie-collins.jpeg";
 import debbieBeach from "@/assets/debbie-beach.jpeg";
-import debbieSwingHero from "@/assets/debbie-swing-hero.jpg";
+import heroCherryBlossom from "@/assets/debbie-blossom-portrait.jpeg";
 import debbieLouvre from "@/assets/debbie-louvre.jpg";
 import tuniAppCoach from "@/assets/tuni-app-coach.jpeg";
 import tuniAppTodayHero from "@/assets/tuni-app-today-hero.webp";
@@ -693,10 +693,11 @@ const TuniLandingPage = () => {
       </section>
 
       {/* LANDSCAPE STATEMENT */}
-      <section style={{ background: TUNI_COLORS["cream-pink"], padding: "90px 26px", textAlign: "center" }}>
-        <div style={{ maxWidth: "640px", margin: "0 auto" }}>
-          <h2 className="bff-nowrap-desktop" style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(26px, 4.4vw, 50px)", lineHeight: 1.1, letterSpacing: "-0.02em", color: TUNI_COLORS.ink, margin: "0 0 32px" }}>You don't have to figure this out <span style={{ color: TUNI_COLORS.pink }}>alone.</span></h2>
-          <img src={debbieSwingHero} alt="Debbie Collins" style={{ display: "block", width: "100%", maxWidth: "420px", height: "auto", margin: "0 auto", borderRadius: "28px", boxShadow: "0 24px 60px rgba(42,33,28,0.2)" }} />
+      <section style={{ position: "relative", minHeight: "620px", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
+        <img src={heroCherryBlossom} alt="Debbie Collins laughing among cherry blossoms" style={{ position: "absolute", inset: "0", width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 25%" }} />
+        <div style={{ position: "absolute", inset: "0", background: "linear-gradient(180deg, rgba(42,33,28,0.28), rgba(42,33,28,0.6))" }} />
+        <div style={{ position: "relative", zIndex: 1, textAlign: "center", padding: "80px 26px", maxWidth: "980px" }}>
+          <h2 className="bff-nowrap-desktop" style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(24px, 4.4vw, 50px)", lineHeight: 1.08, letterSpacing: "-0.02em", color: TUNI_COLORS.cream, margin: "0", textShadow: "0 2px 20px rgba(42,33,28,0.4)" }}>You don't have to figure this out <span style={{ color: "#FFC8A0" }}>alone.</span></h2>
         </div>
       </section>
 
