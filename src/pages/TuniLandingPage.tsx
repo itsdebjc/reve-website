@@ -312,9 +312,9 @@ const TuniLandingPage = () => {
               <p style={{ fontSize: "clamp(20px, 2.1vw, 26px)", lineHeight: 1.6, color: TUNI_COLORS["body-text"], maxWidth: "640px", margin: 0 }}>Tuni is your personal body-feedback app. It brings your food, daily habits, and body changes together to help you notice patterns and understand your progress.</p>
               <p style={{ fontSize: "clamp(20px, 2.1vw, 26px)", lineHeight: 1.6, color: TUNI_COLORS.ink, fontWeight: 700, maxWidth: "640px", margin: "22px 0 0" }}>Your choices. Your body.<br />A clearer picture of what works for you.</p>
 
-              <div style={{ display: "flex", alignItems: "center", gap: "14px", marginTop: "28px", background: "#fff", borderRadius: "16px", padding: "14px 18px", boxShadow: "0 10px 25px rgba(42,33,28,0.06)", maxWidth: "560px" }}>
-                <img src={debbieLouvre} alt="Debbie Collins" style={{ width: "48px", height: "48px", borderRadius: "50%", objectFit: "cover", objectPosition: "center 25%", flexShrink: 0, border: "2px solid rgba(255,255,255,0.8)", boxShadow: "0 6px 14px rgba(42,33,28,0.15)" }} />
-                <div style={{ fontFamily: "'Caveat', cursive", fontWeight: 600, fontSize: "17px", lineHeight: 1.3, color: TUNI_COLORS.ink }}>Hi, I'm Deb. I have been confused and out of answers too. That is why I built Tuni. xoxo</div>
+              <div style={{ display: "flex", alignItems: "center", gap: "16px", marginTop: "28px", background: "#fff", borderRadius: "18px", padding: "16px 20px", boxShadow: "0 10px 25px rgba(42,33,28,0.06)", maxWidth: "560px" }}>
+                <img src={debbieLouvre} alt="Debbie Collins" style={{ width: "76px", height: "76px", borderRadius: "50%", objectFit: "cover", objectPosition: "center 20%", flexShrink: 0, border: "2px solid rgba(255,255,255,0.8)", boxShadow: "0 6px 14px rgba(42,33,28,0.15)" }} />
+                <div style={{ fontFamily: "'Caveat', cursive", fontWeight: 600, fontSize: "18px", lineHeight: 1.3, color: TUNI_COLORS.ink }}>Hi, I'm Deb. I have been confused and out of answers too. That is why I built Tuni. xoxo</div>
               </div>
 
               <div style={{ display: "flex", alignItems: "center", gap: "26px", marginTop: "28px", paddingTop: "28px", borderTop: "1px solid rgba(42,33,28,0.1)" }}>
@@ -775,12 +775,18 @@ const TuniLandingPage = () => {
               <TuniWordmark size={22} />
               <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.13em", textTransform: "uppercase", color: "rgba(255,247,241,0.45)" }}>Feedback for midlife women</span>
             </div>
+            <p style={{ fontSize: "17px", fontWeight: 700, margin: 0, color: TUNI_COLORS.cream }}>
+              Need help? Email <a href="mailto:hi@itstuni.com" style={{ color: TUNI_COLORS.cream, textDecoration: "underline" }}>hi@itstuni.com</a>.
+            </p>
+          </div>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "20px", flexWrap: "wrap", marginTop: "18px" }}>
             <p style={{ fontSize: "12px", margin: 0 }}>
               <a href="https://itstuni.com/privacy" target="_blank" rel="noopener noreferrer" style={{ color: "rgba(255,247,241,0.5)", textDecoration: "none" }}>Privacy Policy</a>
               {" · "}
               <a href="https://itstuni.com/terms" target="_blank" rel="noopener noreferrer" style={{ color: "rgba(255,247,241,0.5)", textDecoration: "none" }}>Terms of Use</a>
-              {" · "}
-              <a href="mailto:hi@itstuni.com" style={{ color: "rgba(255,247,241,0.5)", textDecoration: "none" }}>hi@itstuni.com</a>
+            </p>
+            <p style={{ fontSize: "12px", margin: 0 }}>
+              <a href="https://www.tiktok.com/@itsdigitaldeb" target="_blank" rel="noopener noreferrer" style={{ color: "rgba(255,247,241,0.5)", textDecoration: "none" }}>TikTok</a>
             </p>
           </div>
           <div style={{ marginTop: "22px", paddingTop: "22px", borderTop: "1px solid rgba(255,247,241,0.1)" }}>
