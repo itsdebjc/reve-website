@@ -549,19 +549,27 @@ const TuniLandingPage = () => {
       </section>
 
       {/* TESTIMONIALS */}
-      {/* TODO(dev): only one real member quote so far (Erin). Add more real member quotes, and real photos, as they are collected; this section is built to hold more. */}
+      {/* TODO(dev): three real member quotes so far (Erin, Marguerite, Amanda). Add more real member quotes, and real photos, as they are collected; this section is built to hold more. */}
       <section style={{ background: TUNI_COLORS.cream, padding: "84px 26px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", textAlign: "center" }}>
           <span style={{ display: "inline-flex", alignItems: "center", background: "#FFF1EB", color: TUNI_COLORS.coral, fontSize: "12px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", padding: "7px 14px", borderRadius: "999px" }}>What women are saying</span>
 
-          <div style={{ fontFamily: "'Caveat', cursive", fontWeight: 700, fontSize: "clamp(34px, 4.6vw, 50px)", color: TUNI_COLORS.pink, lineHeight: 1.15, margin: "40px auto 0" }}>"This is so fascinating."</div>
-          <div style={{ fontSize: "13px", fontWeight: 700, color: TUNI_COLORS["muted-gray"], letterSpacing: "0.04em", marginTop: "6px" }}>— Erin C., Tuni member</div>
+          <h2 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(30px, 4.4vw, 48px)", lineHeight: 1.08, letterSpacing: "-0.02em", margin: "22px 0 0" }}>A little more clarity. <span style={{ color: TUNI_COLORS.pink }}>A lot less guessing.</span></h2>
 
-          <h2 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(30px, 4.4vw, 48px)", lineHeight: 1.08, letterSpacing: "-0.02em", margin: "30px 0 0" }}>A little more clarity. <span style={{ color: TUNI_COLORS.pink }}>A lot less guessing.</span></h2>
-
-          <div style={{ maxWidth: "620px", margin: "40px auto 0", textAlign: "left", background: "#fff", borderRadius: "22px", padding: "40px 38px", boxShadow: "0 6px 16px rgba(42,33,28,0.05)" }}>
-            <p style={{ fontSize: "19px", lineHeight: 1.6, color: TUNI_COLORS["body-text"], fontStyle: "italic", margin: 0 }}>"You are brilliant. This is so fascinating, unearthing patterns and awareness and real life suggestions. My eyes are so opened on why I struggle with eating."</p>
-            <div style={{ fontSize: "15px", fontWeight: 700, color: TUNI_COLORS.ink, marginTop: "16px" }}>Erin C.</div>
+          <div className="bff-grid-3col" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "20px", maxWidth: "1100px", margin: "40px auto 0" }}>
+            {[
+              { lead: "You are brilliant.", rest: "This is so fascinating, unearthing patterns and awareness and real life suggestions. My eyes are so opened on why I struggle with eating.", name: "Erin C.", color: TUNI_COLORS.coral },
+              { lead: "It was a bit of a running joke between my husband and I about whether I would tell Tuni about that extra cookie or treat that I had, so it was easy to incorporate the tracking into my life.", rest: "I've been doing this for two weeks and I've already lost 3 lbs.", name: "Marguerite L.", color: TUNI_COLORS.pink, note: "Individual experience. Results vary." },
+              { lead: "Thanks for making Tuni. 💕", rest: "I was really surprised how much I like it so far.", name: "Amanda L.", color: TUNI_COLORS.amber },
+            ].map((t) => (
+              <div key={t.name} style={{ textAlign: "left", background: "#fff", borderRadius: "22px", padding: "32px 28px", boxShadow: "0 10px 26px rgba(42,33,28,0.08)", borderTop: `4px solid ${t.color}` }}>
+                <HeartGradient size={22} color={t.color} />
+                <p style={{ fontSize: "17px", lineHeight: 1.45, color: TUNI_COLORS.ink, fontWeight: 700, margin: "14px 0 0" }}>"{t.lead}</p>
+                <p style={{ fontSize: "15px", lineHeight: 1.55, color: TUNI_COLORS["body-text"], fontStyle: "italic", margin: "8px 0 0" }}>{t.rest}"</p>
+                <div style={{ fontSize: "14px", fontWeight: 700, color: TUNI_COLORS.ink, marginTop: "18px" }}>{t.name}</div>
+                {t.note && <div style={{ fontSize: "12px", color: TUNI_COLORS["muted-gray"], marginTop: "4px", fontStyle: "italic" }}>{t.note}</div>}
+              </div>
+            ))}
           </div>
         </div>
       </section>
