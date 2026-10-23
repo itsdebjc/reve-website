@@ -298,7 +298,7 @@ const TuniLandingPage = () => {
           </h1>
           <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(22px, 2.6vw, 30px)", color: TUNI_COLORS.coral, margin: "18px 0 0" }}>Tuni tells you.</div>
 
-          <div className="bff-hero-grid" style={{ display: "grid", gridTemplateColumns: "440px 1fr", gap: "56px", alignItems: "center", marginTop: "52px" }}>
+          <div className="bff-hero-grid" style={{ display: "grid", gridTemplateColumns: "440px 1fr", gap: "80px", alignItems: "center", marginTop: "52px" }}>
             <div className="bff-hero-phone-wrap" style={{ position: "relative", width: "100%", maxWidth: "420px", aspectRatio: "420 / 560", justifySelf: "start" }}>
               <div style={{ position: "absolute", inset: "-40px", background: `radial-gradient(circle at 30% 25%, rgba(255,106,77,0.3), transparent 60%), radial-gradient(circle at 75% 80%, rgba(255,161,62,0.24), transparent 55%)`, filter: "blur(10px)", zIndex: 0 }} />
               <div style={{ position: "absolute", left: 0, top: "7%", width: "55%", height: "89%", transform: "rotate(-8deg)", transformOrigin: "bottom left", background: "#0A0A0A", borderRadius: "32px", border: "9px solid #0A0A0A", boxShadow: "0 24px 50px rgba(42,33,28,0.25)", overflow: "hidden", zIndex: 1 }}>
@@ -312,11 +312,6 @@ const TuniLandingPage = () => {
             <div>
               <p style={{ fontSize: "clamp(20px, 2.1vw, 26px)", lineHeight: 1.6, color: TUNI_COLORS["body-text"], maxWidth: "640px", margin: 0 }}>Tuni is your personal body-feedback app. It brings your food, daily habits, and body changes together to help you notice patterns and understand your progress.</p>
               <p style={{ fontSize: "clamp(20px, 2.1vw, 26px)", lineHeight: 1.6, color: TUNI_COLORS.ink, fontWeight: 700, maxWidth: "640px", margin: "22px 0 0" }}>Your choices. Your body.<br />A clearer picture of what works for you.</p>
-
-              <div style={{ display: "flex", alignItems: "center", gap: "16px", marginTop: "28px", background: "#fff", borderRadius: "18px", padding: "16px 20px", boxShadow: "0 10px 25px rgba(42,33,28,0.06)", maxWidth: "560px" }}>
-                <img src={debbieLouvre} alt="Debbie Collins" style={{ width: "76px", height: "76px", borderRadius: "50%", objectFit: "cover", objectPosition: "center 20%", flexShrink: 0, border: "2px solid rgba(255,255,255,0.8)", boxShadow: "0 6px 14px rgba(42,33,28,0.15)" }} />
-                <div style={{ fontFamily: "'Caveat', cursive", fontWeight: 600, fontSize: "18px", lineHeight: 1.3, color: TUNI_COLORS.ink }}>Hi, I'm Deb. I have been confused and out of answers too. That is why I built Tuni. xoxo</div>
-              </div>
 
               <div style={{ display: "flex", alignItems: "center", gap: "26px", marginTop: "28px", paddingTop: "28px", borderTop: "1px solid rgba(42,33,28,0.1)" }}>
                 <div>
