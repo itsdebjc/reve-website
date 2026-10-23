@@ -819,7 +819,7 @@ const TuniLandingPage = () => {
             </p>
           </div>
           <div style={{ marginTop: "22px", paddingTop: "22px", borderTop: "1px solid rgba(255,247,241,0.1)" }}>
-            <p style={{ fontSize: "14px", lineHeight: 1.6, color: "rgba(255,247,241,0.55)", margin: 0 }}>For general wellness and education only, not medical advice. $15/month membership, cancel anytime — see our <a href="https://itstuni.com/terms" target="_blank" rel="noopener noreferrer" style={{ color: "rgba(255,247,241,0.7)", textDecoration: "underline" }}>cancellation policy</a>. © 2026 Tuni, operated by 1236097 BC Ltd.</p>
+            <p style={{ fontSize: "14px", lineHeight: 1.6, color: "rgba(255,247,241,0.55)", margin: 0 }}>For general wellness and education only, not medical advice. © 2026 Tuni, operated by 1236097 BC Ltd.</p>
           </div>
         </div>
       </footer>
