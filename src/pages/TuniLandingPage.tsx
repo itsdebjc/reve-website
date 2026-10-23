@@ -7,6 +7,7 @@ import debbieLouvre from "@/assets/debbie-louvre.jpg";
 import tuniAppCoach from "@/assets/tuni-app-coach.jpeg";
 import tuniAppTodayHero from "@/assets/tuni-app-today-hero.webp";
 import tuniAppMenuHero from "@/assets/tuni-app-menu-hero.webp";
+import kristinTestimonial from "@/assets/kristin-testimonial.jpg";
 
 const TUNI_COLORS = {
   cream: "#FFF7F1",
@@ -549,24 +550,49 @@ const TuniLandingPage = () => {
       </section>
 
       {/* TESTIMONIALS */}
-      {/* TODO(dev): three real member quotes so far (Erin, Marguerite, Amanda). Add more real member quotes, and real photos, as they are collected; this section is built to hold more. */}
+      {/* TODO(dev): four real member quotes so far (Kristin featured, plus Erin, Marguerite, Amanda). Add more real member quotes, and real photos, as they are collected; this section is built to hold more. */}
       <section style={{ background: TUNI_COLORS.cream, padding: "84px 26px" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto", textAlign: "center" }}>
           <span style={{ display: "inline-flex", alignItems: "center", background: "#FFF1EB", color: TUNI_COLORS.coral, fontSize: "12px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", padding: "7px 14px", borderRadius: "999px" }}>What women are saying</span>
 
           <h2 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(30px, 4.4vw, 48px)", lineHeight: 1.08, letterSpacing: "-0.02em", margin: "22px 0 0" }}>A little more clarity. <span style={{ color: TUNI_COLORS.pink }}>A lot less guessing.</span></h2>
 
-          <div className="bff-grid-3col" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "20px", maxWidth: "1100px", margin: "40px auto 0" }}>
+          <div className="bff-grid-2col" style={{ display: "grid", gridTemplateColumns: "0.42fr 1.58fr", gap: "24px", alignItems: "center", maxWidth: "860px", margin: "40px auto 0", background: "#fff", borderRadius: "22px", padding: "24px", boxShadow: "0 14px 36px rgba(42,33,28,0.1)", textAlign: "left" }}>
+            <img src={kristinTestimonial} alt="Kristin J." style={{ width: "100%", maxWidth: "140px", aspectRatio: "4 / 5", objectFit: "cover", objectPosition: "center 20%", borderRadius: "16px" }} />
+            <div>
+              <p style={{ fontSize: "17px", lineHeight: 1.4, color: TUNI_COLORS.ink, fontWeight: 700, margin: 0 }}>"Tuni has been the hero of this transformation.</p>
+              <p style={{ fontSize: "14.5px", lineHeight: 1.5, color: TUNI_COLORS["body-text"], fontStyle: "italic", margin: "8px 0 0" }}>Helping me choose meals and snacks at restaurants, offering better options, giving me recipes and meal suggestions, tracking my hydration, and guiding me to eat my food in the right order."</p>
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "8px", margin: "16px 0 0" }}>
+                {[
+                  { val: "139 → 124 lb", label: "15+ lbs lost" },
+                  { val: "-7 pts", label: "body fat" },
+                  { val: "-3 grades", label: "visceral fat" },
+                  { val: "-4 yrs", label: "metabolic age" },
+                ].map((stat) => (
+                  <div key={stat.label} style={{ background: TUNI_COLORS.mat, borderRadius: "12px", padding: "8px 6px", textAlign: "center" }}>
+                    <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "12.5px", color: TUNI_COLORS.pink }}>{stat.val}</div>
+                    <div style={{ fontSize: "9.5px", color: TUNI_COLORS["muted-gray"], marginTop: "2px" }}>{stat.label}</div>
+                  </div>
+                ))}
+              </div>
+              <div style={{ fontSize: "13px", fontWeight: 700, color: TUNI_COLORS.ink, marginTop: "14px" }}>Kristin J.</div>
+              <div style={{ fontSize: "12.5px", color: TUNI_COLORS["muted-gray"], marginTop: "2px" }}>North Vancouver, BC</div>
+              <div style={{ fontSize: "12px", color: TUNI_COLORS["muted-gray"], marginTop: "4px", fontStyle: "italic" }}>Individual experience. Results vary.</div>
+            </div>
+          </div>
+
+          <div className="bff-grid-3col" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "20px", maxWidth: "1100px", margin: "24px auto 0" }}>
             {[
-              { lead: "You are brilliant.", rest: "This is so fascinating, unearthing patterns and awareness and real life suggestions. My eyes are so opened on why I struggle with eating.", name: "Erin C.", color: TUNI_COLORS.coral },
-              { lead: "It was a bit of a running joke between my husband and I about whether I would tell Tuni about that extra cookie or treat that I had, so it was easy to incorporate the tracking into my life.", rest: "I've been doing this for two weeks and I've already lost 3 lbs.", name: "Marguerite L.", color: TUNI_COLORS.pink, note: "Individual experience. Results vary." },
-              { lead: "Thanks for making Tuni. 💕", rest: "I was really surprised how much I like it so far.", name: "Amanda L.", color: TUNI_COLORS.amber },
+              { lead: "You are brilliant.", rest: "This is so fascinating, unearthing patterns and awareness and real life suggestions. My eyes are so opened on why I struggle with eating.", name: "Erin C.", location: "Edmonton, AB", color: TUNI_COLORS.coral },
+              { lead: "It was a bit of a running joke between my husband and I about whether I would tell Tuni about that extra cookie or treat that I had, so it was easy to incorporate the tracking into my life.", rest: "I've been doing this for two weeks and I've already lost 3 lbs.", name: "Marguerite L.", location: "Vancouver, BC", color: TUNI_COLORS.pink, note: "Individual experience. Results vary." },
+              { lead: "Thanks for making Tuni. 💕", rest: "I was really surprised how much I like it so far.", name: "Amanda L.", location: "Vancouver, BC", color: TUNI_COLORS.amber },
             ].map((t) => (
               <div key={t.name} style={{ textAlign: "left", background: "#fff", borderRadius: "22px", padding: "32px 28px", boxShadow: "0 10px 26px rgba(42,33,28,0.08)", borderTop: `4px solid ${t.color}` }}>
                 <HeartGradient size={22} color={t.color} />
                 <p style={{ fontSize: "17px", lineHeight: 1.45, color: TUNI_COLORS.ink, fontWeight: 700, margin: "14px 0 0" }}>"{t.lead}</p>
                 <p style={{ fontSize: "15px", lineHeight: 1.55, color: TUNI_COLORS["body-text"], fontStyle: "italic", margin: "8px 0 0" }}>{t.rest}"</p>
                 <div style={{ fontSize: "14px", fontWeight: 700, color: TUNI_COLORS.ink, marginTop: "18px" }}>{t.name}</div>
+                <div style={{ fontSize: "12.5px", color: TUNI_COLORS["muted-gray"], marginTop: "2px" }}>{t.location}</div>
                 {t.note && <div style={{ fontSize: "12px", color: TUNI_COLORS["muted-gray"], marginTop: "4px", fontStyle: "italic" }}>{t.note}</div>}
               </div>
             ))}
@@ -725,9 +751,7 @@ const TuniLandingPage = () => {
               { q: "Do I need a body composition scale?", a: (
                 <>
                   <p style={{ margin: 0 }}>No. You can start using Tuni without one and get feedback on the food and movement you log.</p>
-                  <p style={{ margin: "10px 0 0" }}>A weekly scan adds another piece of the picture. Tuni can show your habits alongside changes in body fat and muscle over time. For the most detailed view, I recommend the <a href="https://link.amazon/B01Sok1g4" target="_blank" rel="noopener noreferrer" style={{ color: TUNI_COLORS.coral, textDecoration: "underline" }}>RENPHO 50+ metrics scale</a>. For a simpler start, try the <a href="https://link.amazon/B04vE2Laj" target="_blank" rel="noopener noreferrer" style={{ color: TUNI_COLORS.coral, textDecoration: "underline" }}>RENPHO Elis 1</a>.</p>
-                  <p style={{ margin: "10px 0 0" }}>Tuni currently works with RENPHO scales. More brands are coming soon.</p>
-                  <p style={{ margin: "10px 0 0", fontSize: "13px", color: TUNI_COLORS["placeholder-gray"] }}>As an Amazon Associate, I earn from qualifying purchases.</p>
+                  <p style={{ margin: "10px 0 0" }}>A weekly scan adds another piece of the picture, showing your habits alongside changes in body fat and muscle over time. See my <a href="/bff-coach/scales" style={{ color: TUNI_COLORS.coral, textDecoration: "underline" }}>full scale guide</a> for which ones work with Tuni, from budget options to my personal pick.</p>
                 </>
               ) },
               { q: "Is Tuni a diet or meal plan?", a: "No. Tuni helps you learn from what you already eat. It gives you feedback and helps you find choices that fit your life." },

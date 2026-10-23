@@ -11,6 +11,7 @@ import CaseStudiesPage from "./pages/CaseStudiesPage.tsx";
 import Learning from "./pages/Learning.tsx";
 import Article from "./pages/Article.tsx";
 import TuniLandingPage from "./pages/TuniLandingPage.tsx";
+import TuniScalesPage from "./pages/TuniScalesPage.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -45,6 +46,7 @@ const App = () => (
           <Route path="/learning" element={<Learning />} />
           <Route path="/learning/:slug" element={<Article />} />
           <Route path="/bff-coach" element={<TuniLandingPage />} />
+          <Route path="/bff-coach/scales" element={<TuniScalesPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
