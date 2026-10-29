@@ -336,7 +336,7 @@ const TuniLandingPage = () => {
               <div style={{ display: "flex", gap: "14px", flexWrap: "wrap", alignItems: "center", marginTop: "36px" }}>
                 {/* TODO(dev): primary CTA — currently scrolls to the shared signup form (#bff-waitlist). Swap onClick/href once a direct app-start destination exists. */}
                 <button onClick={handleWaitlist} style={{ fontSize: "17px", fontWeight: 700, color: "#fff", background: `linear-gradient(135deg, ${TUNI_COLORS.coral}, ${TUNI_COLORS.pink})`, padding: "18px 34px", borderRadius: "999px", border: "none", cursor: "pointer", boxShadow: "0 14px 30px rgba(240,80,140,0.30)" }}>Start Tuni →</button>
-                <button onClick={handleWaitlist} style={{ fontSize: "17px", fontWeight: 700, color: TUNI_COLORS.ink, background: "transparent", padding: "17px 32px", borderRadius: "999px", border: `1.5px solid rgba(42,33,28,0.22)`, cursor: "pointer" }}>Join a Live Workshop</button>
+                <button onClick={handleWaitlist} style={{ fontSize: "17px", fontWeight: 700, color: TUNI_COLORS.ink, background: "transparent", padding: "17px 32px", borderRadius: "999px", border: `1.5px solid rgba(42,33,28,0.22)`, cursor: "pointer" }}>Book a Live Workshop</button>
               </div>
               <span style={{ fontSize: "13.5px", color: TUNI_COLORS["placeholder-gray"], display: "block", marginTop: "16px" }}>See how Tuni works, get set up with Deb and learn how to use it in your everyday life.</span>
             </div>
@@ -479,6 +479,19 @@ const TuniLandingPage = () => {
         </div>
       </section>
 
+      {/* WORKSHOP CALLOUT BAR */}
+      <section style={{ background: TUNI_COLORS["cream-pink"], padding: "26px 26px" }}>
+        <div style={{ maxWidth: "1280px", margin: "0 auto", display: "flex", alignItems: "center", justifyContent: "center", gap: "16px", flexWrap: "wrap", textAlign: "center" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+            <RadiantHeart size={30} />
+            <span style={{ fontSize: "16px", color: TUNI_COLORS.ink }}>
+              <strong style={{ fontWeight: 800 }}>Want a walkthrough before you start?</strong> Book a live workshop with Deb.
+            </span>
+          </div>
+          <button onClick={handleWaitlist} style={{ fontSize: "14.5px", fontWeight: 700, color: TUNI_COLORS.pink, background: "transparent", padding: "10px 20px", borderRadius: "999px", border: `1.5px solid ${TUNI_COLORS.pink}`, cursor: "pointer", whiteSpace: "nowrap" }}>Book a Live Workshop →</button>
+        </div>
+      </section>
+
       {/* MARQUEE TICKER */}
       <section style={{ background: TUNI_COLORS.ink, overflow: "hidden", padding: "15px 0" }}>
         <div style={{ display: "flex", width: "max-content", animation: "bffMarquee 95s linear infinite" }}>
@@ -616,7 +629,7 @@ const TuniLandingPage = () => {
           <span style={{ display: "inline-flex", alignItems: "center", background: "rgba(255,247,241,0.08)", color: TUNI_COLORS.amber, fontSize: "12px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", padding: "7px 14px", borderRadius: "999px" }}>Hi, I'm Deb</span>
           <h2 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(28px, 3.8vw, 42px)", lineHeight: 1.1, letterSpacing: "-0.02em", margin: "14px 0 0", color: TUNI_COLORS.cream }}>Let me show you around.</h2>
           <p style={{ fontSize: "18px", lineHeight: 1.6, color: "rgba(255,247,241,0.74)", margin: "18px auto 0" }}>Join me for a relaxed, live workshop where I'll walk you through logging, feedback and everyday use, and answer your questions.</p>
-          <button onClick={handleWaitlist} style={{ textDecoration: "none", display: "inline-block", fontSize: "16px", fontWeight: 700, color: TUNI_COLORS.cream, background: "transparent", padding: "15px 28px", borderRadius: "999px", border: "1.5px solid rgba(255,247,241,0.35)", cursor: "pointer", marginTop: "26px" }}>Join a Live Workshop</button>
+          <button onClick={handleWaitlist} style={{ textDecoration: "none", display: "inline-block", fontSize: "16px", fontWeight: 700, color: TUNI_COLORS.cream, background: "transparent", padding: "15px 28px", borderRadius: "999px", border: "1.5px solid rgba(255,247,241,0.35)", cursor: "pointer", marginTop: "26px" }}>Book a Live Workshop</button>
         </div>
       </section>
 
@@ -780,7 +793,7 @@ const TuniLandingPage = () => {
           <p className="bff-nowrap-desktop" style={{ fontSize: "17px", lineHeight: 1.6, color: "rgba(255,255,255,0.9)", margin: "20px auto 0" }}>Start Tuni today, or join a live workshop first if you'd like to see how it works.</p>
           <div style={{ display: "flex", gap: "12px", flexWrap: "wrap", justifyContent: "center", marginTop: "30px" }}>
             <button onClick={handleWaitlist} style={{ textDecoration: "none", display: "inline-block", fontSize: "17px", fontWeight: 700, color: TUNI_COLORS.pink, background: "#fff", padding: "17px 36px", borderRadius: "999px", boxShadow: "0 16px 36px rgba(42,33,28,0.22)", border: "none", cursor: "pointer" }}>Start Tuni →</button>
-            <button onClick={handleWaitlist} style={{ textDecoration: "none", display: "inline-block", fontSize: "17px", fontWeight: 700, color: "#fff", background: "transparent", padding: "16px 34px", borderRadius: "999px", border: "1.5px solid rgba(255,255,255,0.6)", cursor: "pointer" }}>Join a Live Workshop</button>
+            <button onClick={handleWaitlist} style={{ textDecoration: "none", display: "inline-block", fontSize: "17px", fontWeight: 700, color: "#fff", background: "transparent", padding: "16px 34px", borderRadius: "999px", border: "1.5px solid rgba(255,255,255,0.6)", cursor: "pointer" }}>Book a Live Workshop</button>
           </div>
         </div>
       </section>
