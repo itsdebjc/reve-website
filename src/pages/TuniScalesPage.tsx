@@ -132,11 +132,14 @@ const TuniScalesPage = () => {
       `}</style>
 
       <header style={{ position: "sticky", top: 0, zIndex: 50, background: COLORS.cream, borderBottom: "1px solid rgba(42,33,28,0.07)" }}>
-        <div style={{ maxWidth: "900px", margin: "0 auto", padding: "16px 26px", display: "flex", alignItems: "center", gap: "12px" }}>
-          <Link to="/bff-coach" style={{ display: "flex", alignItems: "center", gap: "10px", textDecoration: "none" }}>
-            <TuniWordmark size={22} />
-          </Link>
-          <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.13em", textTransform: "uppercase", color: COLORS["muted-gray"] }}>Scale Guide</span>
+        <div style={{ maxWidth: "900px", margin: "0 auto", padding: "16px 26px", display: "flex", alignItems: "center", justifyContent: "space-between", gap: "12px" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+            <Link to="/bff-coach" style={{ display: "flex", alignItems: "center", gap: "10px", textDecoration: "none" }}>
+              <TuniWordmark size={22} />
+            </Link>
+            <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.13em", textTransform: "uppercase", color: COLORS["muted-gray"] }}>Scale Guide</span>
+          </div>
+          <Link to="/bff-coach" style={{ fontSize: "13px", fontWeight: 700, color: COLORS.coral, textDecoration: "none" }}>← Back to Tuni</Link>
         </div>
       </header>
 

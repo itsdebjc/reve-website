@@ -283,8 +283,11 @@ const TuniLandingPage = () => {
             <span className="bff-header-label" style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.13em", textTransform: "uppercase", color: TUNI_COLORS["muted-gray"] }}>Feedback for midlife women</span>
           </div>
           <div className="bff-header-tagline" style={{ fontFamily: "'Caveat', cursive", fontSize: "21px", fontWeight: 600, color: TUNI_COLORS["body-text"] }}>Tune in to what works.</div>
-          {/* TODO(dev): primary CTA — currently scrolls to the shared signup form (#bff-waitlist). Swap onClick/href once a direct app-start destination exists. */}
-          <button className="bff-header-button" onClick={handleWaitlist} style={{ fontSize: "14px", fontWeight: 700, color: "#fff", background: `linear-gradient(135deg, ${TUNI_COLORS.coral}, ${TUNI_COLORS.pink})`, padding: "11px 20px", borderRadius: "999px", border: "none", cursor: "pointer", boxShadow: "0 8px 18px rgba(240,80,140,0.26)" }}>Start Tuni →</button>
+          <div style={{ display: "flex", alignItems: "center", gap: "18px" }}>
+            <a href="https://itstuni.com/login" className="bff-hide-mobile" style={{ fontSize: "14px", fontWeight: 700, color: TUNI_COLORS.ink, textDecoration: "none" }}>Log In</a>
+            {/* TODO(dev): primary CTA — currently scrolls to the shared signup form (#bff-waitlist). Swap onClick/href once a direct app-start destination exists. */}
+            <button className="bff-header-button" onClick={handleWaitlist} style={{ fontSize: "14px", fontWeight: 700, color: "#fff", background: `linear-gradient(135deg, ${TUNI_COLORS.coral}, ${TUNI_COLORS.pink})`, padding: "11px 20px", borderRadius: "999px", border: "none", cursor: "pointer", boxShadow: "0 8px 18px rgba(240,80,140,0.26)" }}>Start Tuni →</button>
+          </div>
         </div>
       </header>
 
@@ -412,7 +415,7 @@ const TuniLandingPage = () => {
                 { val: "124.2 → 114.2 lb", label: "10 lb lighter", color: TUNI_COLORS.coral },
                 { val: "32.3% → 25.7%", label: "body fat", color: TUNI_COLORS.pink },
                 { val: "20.0 → 15.4 lb", label: "trunk fat", color: TUNI_COLORS.amber },
-                { val: "7 → 5", label: "visceral fat", color: TUNI_COLORS.green },
+                { val: "8 → 5", label: "visceral fat", color: TUNI_COLORS.green },
               ].map((stat) => (
                 <div key={stat.label} style={{ background: "#fff", borderRadius: "14px", padding: "16px 14px", boxShadow: "0 6px 16px rgba(42,33,28,0.05)" }}>
                   <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 900, fontSize: "26px", color: stat.color, lineHeight: 1 }}>{stat.val}</div>
@@ -461,7 +464,7 @@ const TuniLandingPage = () => {
             </div>
             <div style={{ marginTop: "32px", paddingTop: "24px", borderTop: "1px solid rgba(42,33,28,0.1)" }}>
               <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "22px", color: TUNI_COLORS.ink, marginBottom: "20px" }}>Your body is already changing. Tuni helps you understand the bigger picture.</div>
-              <button onClick={handleWaitlist} style={{ fontSize: "16px", fontWeight: 700, color: "#fff", background: `linear-gradient(135deg, ${TUNI_COLORS.coral}, ${TUNI_COLORS.pink})`, padding: "16px 30px", borderRadius: "999px", border: "none", cursor: "pointer", boxShadow: "0 14px 30px rgba(240,80,140,0.30)" }}>Join the waitlist →</button>
+              <button onClick={handleWaitlist} style={{ fontSize: "16px", fontWeight: 700, color: "#fff", background: `linear-gradient(135deg, ${TUNI_COLORS.coral}, ${TUNI_COLORS.pink})`, padding: "16px 30px", borderRadius: "999px", border: "none", cursor: "pointer", boxShadow: "0 14px 30px rgba(240,80,140,0.30)" }}>Start Tuni →</button>
             </div>
           </div>
           {/* iPhone mockups with app screens, fanned */}
