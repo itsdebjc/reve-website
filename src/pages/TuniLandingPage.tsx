@@ -386,15 +386,10 @@ const TuniLandingPage = () => {
           </div>
           <div>
             <span style={{ display: "inline-flex", alignItems: "center", background: "#fff", border: `1px solid rgba(42, 33, 28, 0.08)`, color: TUNI_COLORS.coral, fontSize: "12px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", padding: "7px 14px", borderRadius: "999px" }}>Why I built Tuni</span>
-            <h2 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(30px, 4vw, 46px)", lineHeight: 1.05, letterSpacing: "-0.02em", margin: "20px 0 0" }}>I was doing all the right things. <span style={{ color: TUNI_COLORS.pink }}>But my body wasn't changing.</span></h2>
-            <p style={{ fontSize: "16px", lineHeight: 1.6, color: TUNI_COLORS["body-text"], margin: "20px 0 0" }}>Hi, I'm Deb.</p>
-            <p style={{ fontSize: "16px", lineHeight: 1.6, color: TUNI_COLORS["body-text"], margin: "12px 0 0" }}>When I hit midlife, the things that had always worked for me stopped working.</p>
-            <p style={{ fontSize: "16px", lineHeight: 1.6, color: TUNI_COLORS["body-text"], margin: "12px 0 0" }}>So I tried harder. More workouts, more protein, trainers, supplements, HRT, better choices.</p>
-            <p style={{ fontSize: "17px", lineHeight: 1.6, color: TUNI_COLORS.ink, fontWeight: 700, margin: "12px 0 0" }}>But my body stayed the same.</p>
-            <p style={{ fontSize: "16px", lineHeight: 1.6, color: TUNI_COLORS["body-text"], margin: "12px 0 0" }}>I had more information than ever, but I still couldn't tell what was actually working for me.</p>
-            <div style={{ marginTop: "24px", paddingLeft: "18px", borderLeft: "2px solid rgba(240,80,140,0.3)" }}>
-              <div style={{ fontFamily: "'Caveat', cursive", fontWeight: 600, fontSize: "26px", lineHeight: 1.25, color: TUNI_COLORS.ink }}>The hardest part wasn't the weight. It was the confusion.</div>
-            </div>
+            <h2 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(30px, 4vw, 46px)", lineHeight: 1.05, letterSpacing: "-0.02em", margin: "20px 0 0" }}>I wanted to understand <span style={{ color: TUNI_COLORS.pink }}>my body again.</span></h2>
+            <p style={{ fontSize: "16px", lineHeight: 1.6, color: TUNI_COLORS["body-text"], margin: "20px 0 0" }}>When I hit midlife, the things that had always worked for me stopped working.</p>
+            <p style={{ fontSize: "16px", lineHeight: 1.6, color: TUNI_COLORS["body-text"], margin: "12px 0 0" }}>So I tried harder. More workouts, more protein, trainers, supplements, HRT.</p>
+            <p style={{ fontSize: "17px", lineHeight: 1.6, color: TUNI_COLORS.ink, fontWeight: 700, margin: "12px 0 0" }}>I was putting in the effort. I still couldn't tell what was helping.</p>
 
             <div style={{ display: "flex", gap: "10px", margin: "24px 0 0" }}>
               {[
@@ -424,13 +419,12 @@ const TuniLandingPage = () => {
               ))}
             </div>
 
-            <p style={{ fontSize: "16px", lineHeight: 1.6, color: TUNI_COLORS["body-text"], margin: "20px 0 0" }}>Eventually, I stopped adding more rules and started paying attention to what I was already doing: my meals, habits, weekends, and consistency.</p>
-            <p style={{ fontSize: "16px", lineHeight: 1.6, color: TUNI_COLORS["body-text"], margin: "12px 0 0" }}>Over time, I began noticing patterns and making small changes. My body-composition numbers started changing too.</p>
-            <p style={{ fontSize: "16px", lineHeight: 1.6, color: TUNI_COLORS["body-text"], margin: "12px 0 0" }}>But the biggest shift was feeling like I understood my choices better.</p>
-            <p style={{ fontSize: "16px", lineHeight: 1.6, color: TUNI_COLORS["body-text"], margin: "12px 0 0" }}>That experience inspired me to build Tuni.</p>
+            <p style={{ fontSize: "16px", lineHeight: 1.6, color: TUNI_COLORS["body-text"], margin: "20px 0 0" }}>At 54, I started using AI to connect my meals and everyday habits with changes in my body. I began seeing patterns, making small adjustments and understanding my progress.</p>
             <div style={{ marginTop: "24px", paddingLeft: "18px", borderLeft: "2px solid rgba(240,80,140,0.3)" }}>
               <div style={{ fontFamily: "'Caveat', cursive", fontWeight: 600, fontSize: "26px", lineHeight: 1.25, color: TUNI_COLORS.ink }}>I wasn't missing effort. I was missing feedback.</div>
             </div>
+            <p style={{ fontSize: "16px", lineHeight: 1.6, color: TUNI_COLORS["body-text"], margin: "20px 0 0" }}>I built Tuni because I believe every woman deserves to understand her changing body and feel confident caring for it.</p>
+            <p style={{ fontSize: "16px", lineHeight: 1.6, color: TUNI_COLORS["body-text"], margin: "12px 0 0" }}>What helped me understand mine became something I could share.</p>
             <p style={{ fontSize: "13px", lineHeight: 1.5, color: TUNI_COLORS["muted-gray"], background: TUNI_COLORS.mat, borderRadius: "14px", padding: "14px 16px", margin: "24px 0 0", fontWeight: 600, fontStyle: "italic" }}>These are my personal results from the process that inspired Tuni. Individual experiences and results vary.</p>
           </div>
         </div>
@@ -803,8 +797,11 @@ const TuniLandingPage = () => {
         <div style={{ maxWidth: "860px", margin: "0 auto" }}>
           <span style={{ display: "inline-flex", alignItems: "center", gap: "7px", background: "#fff", border: `1px solid rgba(42, 33, 28, 0.08)`, color: TUNI_COLORS.coral, fontSize: "12px", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", padding: "7px 14px", borderRadius: "999px" }}>Our mission</span>
           <h2 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(34px, 5.5vw, 64px)", lineHeight: 1.08, letterSpacing: "-0.03em", color: TUNI_COLORS.ink, margin: "26px 0 0" }}>
-            Help <span style={{ color: TUNI_COLORS.pink }}>1,000 women</span> stop guessing and trust their bodies again.
+            We believe every woman deserves to understand her changing body and feel confident caring for it.
           </h2>
+          <p style={{ fontSize: "18px", lineHeight: 1.6, color: TUNI_COLORS["body-text"], margin: "22px 0 0" }}>
+            Our mission is to help <span style={{ color: TUNI_COLORS.pink, fontWeight: 700 }}>1,000 women</span> feel that way.
+          </p>
           <div style={{ fontFamily: "'Caveat', cursive", fontWeight: 700, fontSize: "clamp(26px, 3vw, 34px)", color: TUNI_COLORS["body-text"], marginTop: "30px" }}>Deb xox</div>
         </div>
       </section>
