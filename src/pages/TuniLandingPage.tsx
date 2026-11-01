@@ -800,7 +800,7 @@ const TuniLandingPage = () => {
             We believe every woman deserves to understand her changing body and feel confident caring for it.
           </h2>
           <p style={{ fontSize: "18px", lineHeight: 1.6, color: TUNI_COLORS["body-text"], margin: "22px 0 0" }}>
-            Our mission is to help <span style={{ color: TUNI_COLORS.pink, fontWeight: 700 }}>1,000 women</span> feel that way.
+            Our goal is to help <span style={{ color: TUNI_COLORS.pink, fontWeight: 700 }}>1,000 women</span> feel that way.
           </p>
           <div style={{ fontFamily: "'Caveat', cursive", fontWeight: 700, fontSize: "clamp(26px, 3vw, 34px)", color: TUNI_COLORS["body-text"], marginTop: "30px" }}>Deb xox</div>
         </div>
