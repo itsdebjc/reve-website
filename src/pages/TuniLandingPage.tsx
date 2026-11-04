@@ -904,6 +904,25 @@ const TuniLandingPage = () => {
         </div>
       </section>
 
+      {/* STAY IN TOUCH — low-commitment email capture */}
+      <section style={{ background: TUNI_COLORS["cream-pink"], padding: "84px 26px", textAlign: "center" }}>
+        <div style={{ maxWidth: "640px", margin: "0 auto" }}>
+          <span style={{ display: "inline-flex", alignItems: "center", background: "#fff", color: TUNI_COLORS.pink, fontSize: "12px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", padding: "7px 14px", borderRadius: "999px" }}>Not ready yet?</span>
+          <h2 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(30px, 4vw, 46px)", lineHeight: 1.1, letterSpacing: "-0.02em", margin: "22px 0 0" }}>Curious about Tuni? <span style={{ color: TUNI_COLORS.pink }}>Let's stay in touch.</span></h2>
+          {!newsletter.submitted ? (
+            <>
+              <p style={{ fontSize: "17px", lineHeight: 1.6, color: TUNI_COLORS["body-text"], margin: "16px auto 0", maxWidth: "500px" }}>Not quite ready to join? Get practical tips for understanding your body in midlife, plus occasional Tuni updates.</p>
+              <form onSubmit={handleNewsletterSubmit} style={{ display: "flex", gap: "10px", flexWrap: "wrap", justifyContent: "center", marginTop: "28px" }}>
+                <input type="email" placeholder="you@example.com" value={newsletter.email} onChange={(e) => setNewsletter((p) => ({ ...p, email: e.target.value }))} style={{ flex: "1 1 260px", maxWidth: "320px", fontSize: "15px", color: TUNI_COLORS.ink, padding: "15px 18px", border: `1.5px solid #ece2da`, borderRadius: "999px", outline: "none", background: "#fff", fontFamily: "'Plus Jakarta Sans', sans-serif" }} required />
+                <button type="submit" style={{ fontSize: "16px", fontWeight: 700, color: "#fff", background: `linear-gradient(135deg, ${TUNI_COLORS.coral}, ${TUNI_COLORS.pink})`, border: "none", padding: "15px 28px", borderRadius: "999px", cursor: "pointer", boxShadow: "0 14px 30px rgba(240,80,140,0.30)", whiteSpace: "nowrap" }}>Keep Me in the Loop</button>
+              </form>
+            </>
+          ) : (
+            <p style={{ fontSize: "17px", color: TUNI_COLORS["body-text"], marginTop: "16px" }}>You're on the list — talk soon!</p>
+          )}
+        </div>
+      </section>
+
       {/* FAQ */}
       <section style={{ background: TUNI_COLORS["cream-alt"], padding: "84px 26px" }}>
         <div style={{ maxWidth: "780px", margin: "0 auto" }}>
@@ -953,24 +972,6 @@ const TuniLandingPage = () => {
             <button onClick={handleWaitlist} style={{ textDecoration: "none", display: "inline-block", fontSize: "17px", fontWeight: 700, color: TUNI_COLORS.pink, background: "#fff", padding: "17px 36px", borderRadius: "999px", boxShadow: "0 16px 36px rgba(42,33,28,0.22)", border: "none", cursor: "pointer" }}>Start Tuni for $15 →</button>
             <button onClick={handleWaitlist} style={{ textDecoration: "none", display: "inline-block", fontSize: "17px", fontWeight: 700, color: "#fff", background: "transparent", padding: "16px 34px", borderRadius: "999px", border: "1.5px solid rgba(255,255,255,0.6)", cursor: "pointer" }}>Book a Live Workshop</button>
           </div>
-        </div>
-      </section>
-
-      {/* STAY IN TOUCH — low-commitment email capture */}
-      <section style={{ background: TUNI_COLORS["cream-alt"], padding: "48px 26px" }}>
-        <div style={{ maxWidth: "480px", margin: "0 auto", textAlign: "center" }}>
-          <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "20px", letterSpacing: "-0.01em", color: TUNI_COLORS.ink }}>Curious about Tuni? Let's stay in touch.</div>
-          {!newsletter.submitted ? (
-            <>
-              <p style={{ fontSize: "13.5px", lineHeight: 1.5, color: TUNI_COLORS["muted-gray"], margin: "8px 0 0" }}>Not quite ready to join? Get practical tips for understanding your body in midlife, plus occasional Tuni updates.</p>
-              <form onSubmit={handleNewsletterSubmit} style={{ display: "flex", gap: "8px", flexWrap: "wrap", justifyContent: "center", marginTop: "16px" }}>
-                <input type="email" placeholder="you@example.com" value={newsletter.email} onChange={(e) => setNewsletter((p) => ({ ...p, email: e.target.value }))} style={{ flex: "1 1 220px", maxWidth: "280px", fontSize: "13.5px", color: TUNI_COLORS.ink, padding: "11px 14px", border: `1.5px solid #ece2da`, borderRadius: "999px", outline: "none", background: "#fff", fontFamily: "'Plus Jakarta Sans', sans-serif" }} required />
-                <button type="submit" style={{ fontSize: "13.5px", fontWeight: 700, color: "#fff", background: `linear-gradient(135deg, ${TUNI_COLORS.coral}, ${TUNI_COLORS.pink})`, border: "none", padding: "11px 20px", borderRadius: "999px", cursor: "pointer", whiteSpace: "nowrap" }}>Keep Me in the Loop</button>
-              </form>
-            </>
-          ) : (
-            <p style={{ fontSize: "13.5px", color: TUNI_COLORS["muted-gray"], marginTop: "10px" }}>You're on the list — talk soon!</p>
-          )}
         </div>
       </section>
 
