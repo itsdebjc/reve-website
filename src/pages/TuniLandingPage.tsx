@@ -296,10 +296,10 @@ const TuniLandingPage = () => {
         <div style={{ maxWidth: "1280px", margin: "0 auto" }}>
           <span style={{ display: "inline-flex", alignItems: "center", gap: "7px", background: "#fff", border: `1px solid rgba(42, 33, 28, 0.08)`, color: TUNI_COLORS.coral, fontSize: "12px", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", padding: "7px 14px", borderRadius: "999px" }}>For women in perimenopause + menopause</span>
           <h1 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(38px, 6vw, 84px)", lineHeight: 0.98, letterSpacing: "-0.04em", margin: "20px 0 0", color: TUNI_COLORS.ink, maxWidth: "1100px" }}>
-            You've tried everything.
-            <span style={{ fontFamily: "'Caveat', cursive", fontWeight: 700, color: TUNI_COLORS.pink, fontSize: "0.56em", display: "block", lineHeight: 1, marginTop: "4px" }}>You still don't know what's actually working.</span>
+            You're doing all the right things.
+            <span style={{ fontFamily: "'Caveat', cursive", fontWeight: 700, color: TUNI_COLORS.pink, fontSize: "0.56em", display: "block", lineHeight: 1, marginTop: "4px" }}>So what's actually working?</span>
           </h1>
-          <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(22px, 2.6vw, 30px)", color: TUNI_COLORS.coral, margin: "18px 0 0" }}>Tuni tells you.</div>
+          <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(22px, 2.6vw, 30px)", color: TUNI_COLORS.coral, margin: "18px 0 0" }}>Tuni helps you find out.</div>
 
           <div className="bff-hero-grid" style={{ display: "grid", gridTemplateColumns: "440px 1fr", gap: "80px", alignItems: "center", marginTop: "52px" }}>
             <div className="bff-hero-phone-wrap" style={{ position: "relative", width: "100%", maxWidth: "420px", aspectRatio: "420 / 560", justifySelf: "start" }}>
@@ -313,8 +313,7 @@ const TuniLandingPage = () => {
             </div>
 
             <div>
-              <p style={{ fontSize: "clamp(20px, 2.1vw, 26px)", lineHeight: 1.6, color: TUNI_COLORS["body-text"], maxWidth: "640px", margin: 0 }}>Tuni is your personal body-feedback app. It brings your food, daily habits, and body changes together to help you notice patterns and understand your progress.</p>
-              <p style={{ fontSize: "clamp(20px, 2.1vw, 26px)", lineHeight: 1.6, color: TUNI_COLORS.ink, fontWeight: 700, maxWidth: "640px", margin: "22px 0 0" }}>Your choices. Your body.<br />A clearer picture of what works for you.</p>
+              <p style={{ fontSize: "clamp(20px, 2.1vw, 26px)", lineHeight: 1.6, color: TUNI_COLORS["body-text"], maxWidth: "640px", margin: 0 }}>Your personal AI body coach. Log your meals by photo, voice or text, get feedback on your choices and discover patterns that help you understand your body.</p>
 
               <div style={{ display: "flex", alignItems: "center", gap: "26px", marginTop: "28px", paddingTop: "28px", borderTop: "1px solid rgba(42,33,28,0.1)" }}>
                 <div>
