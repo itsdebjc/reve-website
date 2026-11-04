@@ -304,7 +304,6 @@ const TuniLandingPage = () => {
   const handleNewsletterSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      // TODO(dev): posting to the main membership list until a dedicated "not ready yet" Klaviyo list exists.
       const res = await fetch("https://a.klaviyo.com/client/subscriptions/?company_id=XjEbAU", {
         method: "POST",
         headers: { "Content-Type": "application/json", revision: "2023-12-15" },
@@ -314,7 +313,7 @@ const TuniLandingPage = () => {
             attributes: {
               profile: { data: { type: "profile", attributes: { email: newsletter.email } } },
             },
-            relationships: { list: { data: { type: "list", id: "WmvKHc" } } },
+            relationships: { list: { data: { type: "list", id: "TiByuD" } } },
           },
         }),
       });
@@ -430,7 +429,7 @@ const TuniLandingPage = () => {
         <div className="bff-grid-2col" style={{ maxWidth: "1280px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 0.85fr", gap: "60px", alignItems: "center" }}>
           <div>
             <span style={{ display: "inline-flex", alignItems: "center", background: "#FFF1EB", color: TUNI_COLORS.coral, fontSize: "12px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", padding: "7px 14px", borderRadius: "999px" }}>Start today</span>
-            <h2 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(28px, 3.8vw, 44px)", lineHeight: 1.1, letterSpacing: "-0.02em", margin: "22px 0 0" }}>Your first meal. <span style={{ color: TUNI_COLORS.pink }}>Your first bit of feedback.</span></h2>
+            <h2 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(28px, 3.8vw, 44px)", lineHeight: 1.1, letterSpacing: "-0.02em", margin: "22px 0 0" }}>Your first meal.<span style={{ color: TUNI_COLORS.pink, display: "block" }}>Your first bit of feedback.</span></h2>
             <p style={{ fontSize: "17px", lineHeight: 1.6, color: TUNI_COLORS["body-text"], maxWidth: "520px", margin: "18px 0 0" }}>Snap a photo, describe your meal or simply tell Tuni what you ate. Get personalized guidance that helps you make sense of your choices, starting with your first log.</p>
             <span style={{ display: "inline-flex", alignItems: "center", gap: "6px", background: `${TUNI_COLORS.green}15`, color: TUNI_COLORS.green, fontSize: "13.5px", fontWeight: 700, padding: "7px 14px", borderRadius: "999px", marginTop: "18px" }}>✓ No calorie counting. No perfect meals required.</span>
 
