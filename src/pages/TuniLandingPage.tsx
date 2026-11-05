@@ -30,12 +30,12 @@ const TUNI_COLORS = {
 
 const FEEDBACK_EXAMPLES = {
   dinner: {
-    tab: "A real dinner, logged by text",
+    tab: "What's for dinner?",
     youAsk: "A real dinner, logged by text: salmon, salad and sweet potatoes.",
     tuniResponds: "A personalized answer right in the chat, not a generic plan.",
   },
   restaurant: {
-    tab: "At a restaurant? Ask Tuni.",
+    tab: "What to order at a restaurant?",
     youAsk: "A real question about what to order when you're eating out.",
     tuniResponds: "A personalized answer right in the chat, not a generic plan.",
   },
@@ -401,7 +401,7 @@ const TuniLandingPage = () => {
             <span style={{ display: "inline-flex", alignItems: "center", background: "#FFF1EB", color: TUNI_COLORS.coral, fontSize: "12px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", padding: "7px 14px", borderRadius: "999px" }}>Start today</span>
             <h2 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(28px, 3.8vw, 44px)", lineHeight: 1.1, letterSpacing: "-0.02em", margin: "22px 0 0" }}>Your first meal.<span style={{ color: TUNI_COLORS.pink, display: "block" }}>Your first bit of feedback.</span></h2>
             <p style={{ fontSize: "17px", lineHeight: 1.6, color: TUNI_COLORS["body-text"], maxWidth: "520px", margin: "18px 0 0" }}>Snap a photo, describe your meal or simply tell Tuni what you ate. Get personalized guidance that helps you make sense of your choices, starting with your first log.</p>
-            <span style={{ display: "inline-flex", alignItems: "center", gap: "6px", background: `${TUNI_COLORS.green}15`, color: TUNI_COLORS.green, fontSize: "13.5px", fontWeight: 700, padding: "7px 14px", borderRadius: "999px", marginTop: "18px" }}>✓ No calorie counting. No perfect meals required.</span>
+            <span style={{ display: "inline-flex", alignItems: "center", gap: "6px", background: `${TUNI_COLORS.green}15`, color: TUNI_COLORS.green, fontSize: "13.5px", fontWeight: 700, padding: "7px 14px", borderRadius: "999px", marginTop: "18px" }}>✓ No calorie counting. Super easy logging.</span>
 
             <div style={{ display: "flex", gap: "10px", flexWrap: "wrap", marginTop: "28px" }}>
               {(Object.keys(FEEDBACK_EXAMPLES) as Array<keyof typeof FEEDBACK_EXAMPLES>).map((key) => (
