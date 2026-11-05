@@ -4,10 +4,12 @@ import debbieCollins from "@/assets/debbie-collins.jpeg";
 import debbieBeach from "@/assets/debbie-beach.jpeg";
 import heroCherryBlossom from "@/assets/debbie-blossom-portrait.jpeg";
 import debbieLouvre from "@/assets/debbie-louvre.jpg";
-import tuniAppCoach from "@/assets/tuni-app-coach.jpeg";
+import tuniAppCoachProgress from "@/assets/tuni-app-coach-progress.webp";
 import tuniAppTodayHero from "@/assets/tuni-app-today-hero.webp";
-import tuniAppMenuHero from "@/assets/tuni-app-menu-hero.webp";
-import tuniAppCoachMuscle from "@/assets/tuni-app-coach-muscle.webp";
+import tuniAppCoachRestaurant from "@/assets/tuni-app-coach-restaurant.webp";
+import tuniAppCoachBreakfastLunch from "@/assets/tuni-app-coach-breakfast-lunch.webp";
+import tuniAppCoachDinner from "@/assets/tuni-app-coach-dinner.webp";
+import tuniAppCoachSnack from "@/assets/tuni-app-coach-snack.webp";
 import kristinTestimonial from "@/assets/kristin-testimonial.jpg";
 
 const TUNI_COLORS = {
@@ -27,19 +29,19 @@ const TUNI_COLORS = {
 };
 
 const FEEDBACK_EXAMPLES = {
-  breakfast: {
-    tab: "Blueberry muffin breakfast",
-    youAsk: "A simple breakfast a lot of us have: a blueberry muffin at 10am.",
+  dinner: {
+    tab: "A real dinner, logged by text",
+    youAsk: "A real dinner, logged by text: salmon, salad and sweet potatoes.",
     tuniResponds: "A personalized answer right in the chat, not a generic plan.",
-    mockQuestion: "I had a blueberry muffin for breakfast at 10am.",
-    mockAnswer: [
-      "That muffin is basically cake on its own. It burns off fast, so expect to be hungry again within a couple of hours, maybe a little shaky or foggy, and wanting something sweet. That's the muffin, not your willpower.",
-      "Tomorrow, try eggs with some cheese, or Greek yogurt with nuts. You'll stay full until lunch and the 11 o'clock hunt goes away.",
-    ],
   },
-  muscle: {
-    tab: "Why am I losing muscle?",
-    youAsk: "A real question about losing muscle while strength training.",
+  restaurant: {
+    tab: "At a restaurant? Ask Tuni.",
+    youAsk: "A real question about what to order when you're eating out.",
+    tuniResponds: "A personalized answer right in the chat, not a generic plan.",
+  },
+  snack: {
+    tab: "Is this a good snack?",
+    youAsk: "A real question about whether a packaged snack is worth it.",
     tuniResponds: "A personalized answer right in the chat, not a generic plan.",
   },
 } as const;
@@ -218,38 +220,6 @@ const TuniWordmark = ({ size = 23 }: { size?: number }) => (
   </div>
 );
 
-const MockCoachScreen = ({ question, answer }: { question: string; answer: readonly string[] }) => (
-  <div style={{ width: "100%", aspectRatio: "923 / 2000", background: TUNI_COLORS.cream, display: "flex", flexDirection: "column", overflow: "hidden" }}>
-    <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "9% 7% 4%" }}>
-      <div style={{ display: "flex", alignItems: "center", gap: "4%" }}>
-        <RadiantHeart size={16} />
-        <TuniWordmark size={13} />
-      </div>
-      <div style={{ display: "flex", alignItems: "center", gap: "3%" }}>
-        <span style={{ fontSize: "7.5px", fontWeight: 700, color: TUNI_COLORS.ink, background: "#fff", borderRadius: "999px", padding: "4px 9px" }}>Help</span>
-        <span style={{ fontSize: "7.5px", fontWeight: 700, color: TUNI_COLORS.ink, background: "#fff", borderRadius: "999px", padding: "4px 9px" }}>🔥 5</span>
-      </div>
-    </div>
-    <div style={{ textAlign: "center", marginTop: "3%" }}>
-      <div style={{ fontSize: "7px", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: TUNI_COLORS.pink }}>Ask Tuni</div>
-      <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontSize: "15px", fontWeight: 800, color: TUNI_COLORS.ink, marginTop: "2px" }}>Coach</div>
-    </div>
-    <div style={{ flex: 1, padding: "5% 6%", display: "flex", flexDirection: "column" }}>
-      <div style={{ alignSelf: "flex-end", maxWidth: "88%", background: `linear-gradient(135deg, ${TUNI_COLORS.coral}, ${TUNI_COLORS.pink})`, color: "#fff", borderRadius: "14px", padding: "9px 11px", fontSize: "9.5px", lineHeight: 1.4, fontWeight: 600 }}>
-        {question}
-      </div>
-      <div style={{ marginTop: "4%", background: "#fff", borderRadius: "14px", padding: "11px 12px", boxShadow: "0 4px 14px rgba(42,33,28,0.06)" }}>
-        {answer.map((p, i) => (
-          <p key={i} style={{ fontSize: "9px", lineHeight: 1.55, color: TUNI_COLORS.ink, margin: i === 0 ? 0 : "8px 0 0" }}>{p}</p>
-        ))}
-      </div>
-    </div>
-    <div style={{ padding: "0 6% 6%" }}>
-      <div style={{ background: "#fff", border: `1px solid rgba(42,33,28,0.1)`, borderRadius: "999px", padding: "8px 12px", fontSize: "8.5px", color: TUNI_COLORS["placeholder-gray"] }}>Ask Tuni...</div>
-    </div>
-  </div>
-);
-
 const TuniLandingPage = () => {
   useEffect(() => {
     document.title = "Tuni | Body Feedback for Midlife Women";
@@ -266,7 +236,7 @@ const TuniLandingPage = () => {
 
   const [form, setForm] = useState({ name: "", email: "", submitted: false });
   const [newsletter, setNewsletter] = useState({ email: "", submitted: false });
-  const [feedbackExample, setFeedbackExample] = useState<"muscle" | "breakfast">("breakfast");
+  const [feedbackExample, setFeedbackExample] = useState<"dinner" | "restaurant" | "snack">("dinner");
 
   const handleWaitlist = () => {
     document.getElementById("bff-waitlist")?.scrollIntoView({ behavior: "smooth" });
@@ -380,13 +350,13 @@ const TuniLandingPage = () => {
             You're doing all the right things.
             <span style={{ fontFamily: "'Caveat', cursive", fontWeight: 700, color: TUNI_COLORS.pink, fontSize: "clamp(30px, 4.6vw, 58px)", display: "block", lineHeight: 1.1, marginTop: "8px" }}>So what's actually working?</span>
           </h1>
-          <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(22px, 2.6vw, 30px)", color: TUNI_COLORS.coral, margin: "18px 0 0" }}>Tuni helps you find out.</div>
+          <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(22px, 2.6vw, 30px)", color: TUNI_COLORS.coral, margin: "32px 0 0" }}>Tuni helps you find out.</div>
 
           <div className="bff-hero-grid" style={{ display: "grid", gridTemplateColumns: "440px 1fr", gap: "80px", alignItems: "center", marginTop: "52px" }}>
             <div className="bff-hero-phone-wrap" style={{ position: "relative", width: "100%", maxWidth: "420px", aspectRatio: "420 / 560", justifySelf: "start" }}>
               <div style={{ position: "absolute", inset: "-40px", background: `radial-gradient(circle at 30% 25%, rgba(255,106,77,0.3), transparent 60%), radial-gradient(circle at 75% 80%, rgba(255,161,62,0.24), transparent 55%)`, filter: "blur(10px)", zIndex: 0 }} />
               <div style={{ position: "absolute", left: 0, top: "7%", width: "55%", height: "89%", transform: "rotate(-8deg)", transformOrigin: "bottom left", background: "#0A0A0A", borderRadius: "32px", border: "9px solid #0A0A0A", boxShadow: "0 24px 50px rgba(42,33,28,0.25)", overflow: "hidden", zIndex: 1 }}>
-                <img src={tuniAppMenuHero} alt="Tuni coach recommending what to order from a photo of a menu" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                <img src={tuniAppCoachBreakfastLunch} alt="Tuni coach giving real feedback on a woman's breakfast and lunch logged by text" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
               </div>
               <div style={{ position: "absolute", right: 0, top: 0, width: "60%", height: "96%", transform: "rotate(7deg)", transformOrigin: "bottom right", background: "#0A0A0A", borderRadius: "34px", border: "10px solid #0A0A0A", boxShadow: "0 28px 60px rgba(42,33,28,0.3)", overflow: "hidden", zIndex: 2 }}>
                 <img src={tuniAppTodayHero} alt="Tuni's daily tracking screen showing protein and progress" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
@@ -475,13 +445,15 @@ const TuniLandingPage = () => {
           <div style={{ position: "relative", width: "100%", maxWidth: "300px", justifySelf: "center" }}>
             <div style={{ position: "absolute", inset: "-30px", background: `radial-gradient(circle at 30% 20%, rgba(240,80,140,0.22), transparent 60%)`, filter: "blur(10px)", zIndex: 0 }} />
             <div style={{ position: "relative", borderRadius: "36px", border: "10px solid #0A0A0A", background: "#0A0A0A", boxShadow: "0 24px 50px rgba(42,33,28,0.22)", overflow: "hidden", zIndex: 1 }}>
-              {feedbackExample === "muscle" ? (
-                <img src={tuniAppCoachMuscle} alt="A real conversation inside Tuni: a woman asks why she's losing muscle while strength training, and Tuni gives a personalized answer" style={{ display: "block", width: "100%", height: "auto" }} />
+              {feedbackExample === "restaurant" ? (
+                <img src={tuniAppCoachRestaurant} alt="A real conversation inside Tuni: a woman asks what to order for dinner at a restaurant, and Tuni recommends a dish with the full reasoning behind it" style={{ display: "block", width: "100%", height: "auto" }} />
+              ) : feedbackExample === "snack" ? (
+                <img src={tuniAppCoachSnack} alt="A real conversation inside Tuni: a woman asks if a packaged snack is a good choice, and Tuni gives a personalized answer based on its fat, fibre and carbs" style={{ display: "block", width: "100%", height: "auto" }} />
               ) : (
-                <MockCoachScreen question={FEEDBACK_EXAMPLES.breakfast.mockQuestion} answer={FEEDBACK_EXAMPLES.breakfast.mockAnswer} />
+                <img src={tuniAppCoachDinner} alt="A real conversation inside Tuni: a woman logs her dinner of salmon, salad and sweet potatoes, and Tuni gives a personalized answer about her protein and fibre" style={{ display: "block", width: "100%", height: "auto" }} />
               )}
             </div>
-            <div style={{ textAlign: "center", fontSize: "12.5px", color: TUNI_COLORS["muted-gray"], marginTop: "14px" }}>{feedbackExample === "muscle" ? "An actual exchange inside Tuni." : "A sample exchange, styled to match the app."}</div>
+            <div style={{ textAlign: "center", fontSize: "12.5px", color: TUNI_COLORS["muted-gray"], marginTop: "14px" }}>An actual exchange inside Tuni.</div>
           </div>
         </div>
       </section>
@@ -606,7 +578,7 @@ const TuniLandingPage = () => {
           {/* iPhone mockups with app screens, fanned */}
           <div className="bff-hide-mobile" style={{ justifySelf: "center", position: "sticky", top: "100px", width: "340px", height: "660px" }}>
             <div style={{ position: "absolute", left: 0, top: "28px", width: "280px", height: "608px", transform: "rotate(-7deg)", transformOrigin: "bottom left", background: "#0A0A0A", borderRadius: "42px", border: "11px solid #0A0A0A", boxShadow: "0 20px 50px rgba(0,0,0,0.25)", display: "flex", flexDirection: "column", overflow: "hidden" }}>
-              <img src={tuniAppCoach} alt="Tuni coach screen" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+              <img src={tuniAppCoachProgress} alt="Tuni coach showing a week of real progress: body fat, trunk fat and weight trending down" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
             </div>
             <div style={{ position: "absolute", right: 0, top: 0, width: "300px", height: "652px", transform: "rotate(6deg)", transformOrigin: "bottom right", background: "#0A0A0A", borderRadius: "44px", border: "12px solid #0A0A0A", boxShadow: "0 24px 60px rgba(0,0,0,0.3)", display: "flex", flexDirection: "column", overflow: "hidden" }}>
               <img src={tuniAppTodayHero} alt="Tuni app screen" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
