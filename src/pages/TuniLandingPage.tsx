@@ -591,19 +591,6 @@ const TuniLandingPage = () => {
         </div>
       </section>
 
-      {/* DEMO CALLOUT BAR */}
-      <section style={{ background: TUNI_COLORS["cream-pink"], padding: "26px 26px" }}>
-        <div style={{ maxWidth: "1280px", margin: "0 auto", display: "flex", alignItems: "center", justifyContent: "center", gap: "16px", flexWrap: "wrap", textAlign: "center" }}>
-          <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-            <RadiantHeart size={30} />
-            <span style={{ fontSize: "16px", color: TUNI_COLORS.ink }}>
-              <strong style={{ fontWeight: 800 }}>Want a walkthrough before you start?</strong> Do a free live demo with Deb.
-            </span>
-          </div>
-          <button onClick={handleBookDemo} style={{ fontSize: "14.5px", fontWeight: 700, color: TUNI_COLORS.pink, background: "transparent", padding: "10px 20px", borderRadius: "999px", border: `1.5px solid ${TUNI_COLORS.pink}`, cursor: "pointer", whiteSpace: "nowrap" }}>Book a Live Demo →</button>
-        </div>
-      </section>
-
       {/* MARQUEE TICKER */}
       <section style={{ background: TUNI_COLORS.ink, overflow: "hidden", padding: "15px 0" }}>
         <div style={{ display: "flex", width: "max-content", animation: "bffMarquee 95s linear infinite" }}>
@@ -700,7 +687,7 @@ const TuniLandingPage = () => {
               </div>
               <div style={{ fontSize: "13px", fontWeight: 700, color: TUNI_COLORS.ink, marginTop: "14px" }}>Kristin J.</div>
               <div style={{ fontSize: "12.5px", color: TUNI_COLORS["muted-gray"], marginTop: "2px" }}>North Vancouver, BC</div>
-              <div style={{ fontSize: "12px", color: TUNI_COLORS["muted-gray"], marginTop: "4px", fontStyle: "italic" }}>Individual experience. Results vary.</div>
+              <div style={{ fontSize: "12px", color: TUNI_COLORS["muted-gray"], marginTop: "4px", fontStyle: "italic" }}>Individual experience, not a typical or guaranteed result.</div>
             </div>
           </div>
 
@@ -802,7 +789,7 @@ const TuniLandingPage = () => {
                   {/* TODO(dev): this is where the direct-start flow should branch from the workshop-scheduling flow once both exist */}
                   <button type="submit" style={{ fontSize: "16px", fontWeight: 700, color: "#fff", background: `linear-gradient(135deg, ${TUNI_COLORS.coral}, ${TUNI_COLORS.pink})`, border: "none", padding: "16px", borderRadius: "999px", cursor: "pointer", boxShadow: "0 14px 30px rgba(240,80,140,0.30)", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>Start Tuni for $15</button>
                 </form>
-                <div style={{ fontSize: "12px", color: TUNI_COLORS["placeholder-gray"], textAlign: "center", marginTop: "14px" }}>Your first month starts today. Then $15 + GST/month. Cancel anytime.</div>
+                <div style={{ fontSize: "12px", color: TUNI_COLORS["placeholder-gray"], textAlign: "center", marginTop: "14px" }}>Your first month is $15 + GST. Then $15 + GST/month. Cancel anytime.</div>
               </>
             ) : (
               <div style={{ textAlign: "center", padding: "18px 6px" }}>
@@ -815,33 +802,6 @@ const TuniLandingPage = () => {
               </div>
             )}
           </div>
-        </div>
-      </section>
-
-      {/* 2. WHAT'S INCLUDED */}
-      <section style={{ background: TUNI_COLORS["cream-alt"], padding: "84px 26px" }}>
-        <div style={{ maxWidth: "760px", margin: "0 auto" }}>
-          <div style={{ textAlign: "center" }}>
-            <span style={{ display: "inline-flex", alignItems: "center", background: "#fff", border: `1px solid rgba(42,33,28,0.08)`, color: TUNI_COLORS.coral, fontSize: "12px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", padding: "7px 14px", borderRadius: "999px" }}>What's included</span>
-            <h2 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(30px, 4vw, 46px)", lineHeight: 1.06, letterSpacing: "-0.02em", margin: "22px 0 0" }}>Everything you need to get started.</h2>
-            <p className="bff-nowrap-desktop" style={{ fontSize: "17px", lineHeight: 1.6, color: TUNI_COLORS["body-text"], margin: "16px auto 0" }}>Your $15 today includes the Tuni app, your first month and a live demo with Deb if you'd like one.</p>
-          </div>
-          <div style={{ display: "flex", flexDirection: "column", gap: "14px", marginTop: "34px" }}>
-            {[
-              { title: "Tuni app access", desc: "The tool itself, not just a demo. Set up and ready to use right away.", icon: <IconPhone color={TUNI_COLORS.pink} />, color: TUNI_COLORS.pink },
-              { title: "First month of membership included", desc: "No separate signup, no second purchase — you're set up in one step.", icon: <IconClock color={TUNI_COLORS.amber} />, color: TUNI_COLORS.amber },
-              { title: "Live demo with Deb (optional)", desc: "If you'd like one, we log meals together and I show you exactly how to use Tuni in real life.", icon: <IconChat color={TUNI_COLORS.coral} />, color: TUNI_COLORS.coral },
-            ].map((item) => (
-              <div key={item.title} style={{ display: "flex", gap: "16px", alignItems: "flex-start", background: "#fff", border: "1px solid rgba(42,33,28,0.06)", borderRadius: "16px", padding: "20px 22px", boxShadow: "0 6px 16px rgba(42,33,28,0.05)" }}>
-                <IconBadge color={item.color}>{item.icon}</IconBadge>
-                <div>
-                  <div style={{ fontSize: "16px", fontWeight: 700, color: TUNI_COLORS.ink }}>{item.title}</div>
-                  <div style={{ fontSize: "15px", color: TUNI_COLORS["body-text"], lineHeight: 1.45, marginTop: "2px" }}>{item.desc}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-          <p style={{ textAlign: "center", fontSize: "15px", fontWeight: 700, color: TUNI_COLORS.ink, marginTop: "24px" }}>$15 today. Then $15/month after your first month — cancel anytime.</p>
         </div>
       </section>
 
@@ -910,7 +870,7 @@ const TuniLandingPage = () => {
             {[
               { q: "What is Tuni?", a: "Tuni is an AI body coach for women in midlife. Talk, type or snap what you eat, and Tuni gives you feedback based on what you share. I'm Deb, the founder, and I lead the live demo." },
               { q: "How does the Tuni subscription work?", a: "Tuni is a monthly subscription. It includes the app and an optional live demo with me. You can cancel anytime." },
-              { q: "When do I get access to Tuni?", a: "I welcome women in small groups. After you join the waitlist, I'll email you with the next steps. When your account is ready, you'll get instructions to add Tuni to your phone." },
+              { q: "When do I get access to Tuni?", a: "I welcome women in small groups. After you join the waitlist, I'll email you with the next steps. As soon as your account is ready, you can start using Tuni and add it to your phone's Home Screen." },
               { q: "Do I have to attend the demo?", a: "No. You can start using Tuni as soon as your account is ready. The demo is included if you'd like me to show you how Tuni works, share why I built it and help you get started." },
               { q: "Do I need a body composition scale?", a: (
                 <>
