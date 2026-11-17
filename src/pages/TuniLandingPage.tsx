@@ -678,9 +678,9 @@ const TuniLandingPage = () => {
                   { val: "7%", label: "less body fat" },
                   { val: "-3 levels", label: "visceral fat" },
                 ].map((stat) => (
-                  <div key={stat.label} style={{ background: TUNI_COLORS.mat, borderRadius: "12px", padding: "8px 6px", textAlign: "center" }}>
-                    <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "12.5px", color: TUNI_COLORS.pink }}>{stat.val}</div>
-                    <div style={{ fontSize: "9.5px", color: TUNI_COLORS["muted-gray"], marginTop: "2px" }}>{stat.label}</div>
+                  <div key={stat.label} style={{ background: TUNI_COLORS.mat, borderRadius: "12px", padding: "10px 6px", textAlign: "center" }}>
+                    <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "16px", color: TUNI_COLORS.pink }}>{stat.val}</div>
+                    <div style={{ fontSize: "11px", color: TUNI_COLORS["muted-gray"], marginTop: "2px" }}>{stat.label}</div>
                   </div>
                 ))}
               </div>
