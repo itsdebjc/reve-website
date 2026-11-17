@@ -557,7 +557,7 @@ const TuniLandingPage = () => {
             <p style={{ fontSize: "17px", lineHeight: 1.6, color: TUNI_COLORS["body-text"], maxWidth: "720px", margin: "20px 0 0" }}>Log what you eat, get feedback along the way and track changes over time.</p>
             <div style={{ display: "flex", flexDirection: "column", gap: "24px", margin: "22px 0 28px", paddingTop: "28px", borderTop: "1px solid rgba(42,33,28,0.1)" }}>
               {[
-                { num: "01", line1: "Log", line2: "your day, your way.", details: ["Talk, type, or snap your meals, snacks, and drinks. Tuni uses what you share to give you personalised feedback."], tag: "No calorie counting.", color: TUNI_COLORS.coral },
+                { num: "01", line1: "Tell", line2: "Tuni your day, your way.", details: ["Talk, type, or snap your meals, snacks, and drinks. Tuni uses what you share to give you personalised feedback."], tag: "No calorie counting.", color: TUNI_COLORS.coral },
                 { num: "02", line1: "Ask", line2: "your AI coach, informed by your data.", details: ["Wondering what to order? Curious about a food choice? Ask Tuni a question or snap a menu or food label for guidance based on the information you've shared and your goals."], tag: "Help with everyday food choices.", color: TUNI_COLORS.pink },
                 { num: "03", line1: "Scan", line2: "to see beyond your weight.", details: ["Add a weekly body-composition scan to track estimated changes in body fat and muscle over time."], tag: "Follow your body-composition trends.", color: TUNI_COLORS.amber },
               ].map((item, i) => (
@@ -672,12 +672,11 @@ const TuniLandingPage = () => {
             <div>
               <p style={{ fontSize: "17px", lineHeight: 1.4, color: TUNI_COLORS.ink, fontWeight: 700, margin: 0 }}>"Tuni has been the hero of this transformation.</p>
               <p style={{ fontSize: "14.5px", lineHeight: 1.5, color: TUNI_COLORS["body-text"], fontStyle: "italic", margin: "8px 0 0" }}>Helping me choose meals and snacks at restaurants, offering better options, giving me recipes and meal suggestions, tracking my hydration, and guiding me to eat my food in the right order."</p>
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "8px", margin: "16px 0 0" }}>
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "8px", margin: "16px 0 0" }}>
                 {[
                   { val: "139 → 124 lb", label: "15+ lbs lost" },
-                  { val: "-7 pts", label: "body fat" },
-                  { val: "-3 grades", label: "visceral fat" },
-                  { val: "-4 yrs", label: "metabolic age" },
+                  { val: "7%", label: "less body fat" },
+                  { val: "-3 levels", label: "visceral fat" },
                 ].map((stat) => (
                   <div key={stat.label} style={{ background: TUNI_COLORS.mat, borderRadius: "12px", padding: "8px 6px", textAlign: "center" }}>
                     <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "12.5px", color: TUNI_COLORS.pink }}>{stat.val}</div>
