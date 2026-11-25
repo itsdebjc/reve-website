@@ -14,7 +14,6 @@ const TuniHeader = () => (
       <Link to="/bff-coach" style={{ display: "flex", alignItems: "center", gap: "11px", textDecoration: "none" }}>
         <RadiantHeart size={30} />
         <TuniWordmark size={23} />
-        <span className="bff-header-label" style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.13em", textTransform: "uppercase", color: TUNI_COLORS["muted-gray"] }}>Feedback for women</span>
       </Link>
       <nav style={{ display: "flex", alignItems: "center", gap: "22px" }}>
         <NavLink to="/bff-coach/story" style={({ isActive }) => navLinkStyle(isActive)}>Our Story</NavLink>

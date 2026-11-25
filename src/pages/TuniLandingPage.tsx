@@ -243,7 +243,8 @@ const TuniLandingPage = () => {
       {/* HERO SECTION */}
       <section style={{ background: `linear-gradient(180deg, ${TUNI_COLORS.cream} 0%, ${TUNI_COLORS["cream-alt"]} 100%)`, padding: "56px 26px 90px" }}>
         <div style={{ maxWidth: "1280px", margin: "0 auto" }}>
-          <h1 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(38px, 6vw, 84px)", lineHeight: 0.98, letterSpacing: "-0.04em", margin: "0", color: TUNI_COLORS.ink, maxWidth: "1100px" }}>
+          <span style={{ display: "inline-flex", alignItems: "center", gap: "7px", background: "#fff", border: `1px solid rgba(42, 33, 28, 0.08)`, color: TUNI_COLORS.coral, fontSize: "12px", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", padding: "7px 14px", borderRadius: "999px" }}>Feedback for Women in Midlife</span>
+          <h1 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(38px, 6vw, 84px)", lineHeight: 0.98, letterSpacing: "-0.04em", margin: "20px 0 0", color: TUNI_COLORS.ink, maxWidth: "1100px" }}>
             You're doing all the right things.
             <span style={{ fontFamily: "'Caveat', cursive", fontWeight: 700, color: TUNI_COLORS.pink, fontSize: "clamp(30px, 4.6vw, 58px)", display: "block", lineHeight: 1.1, marginTop: "8px" }}>So what's actually working?</span>
           </h1>
