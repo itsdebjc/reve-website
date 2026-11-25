@@ -21,7 +21,7 @@ const TuniHeader = () => (
         <NavLink to="/bff-coach/faq" style={({ isActive }) => navLinkStyle(isActive)}>FAQ</NavLink>
       </nav>
       <div style={{ display: "flex", alignItems: "center", gap: "18px" }}>
-        <a href="https://itstuni.com/login" className="bff-hide-mobile" style={{ fontSize: "14px", fontWeight: 700, color: TUNI_COLORS.ink, textDecoration: "none" }}>Log In</a>
+        <a href="https://itstuni.com/login" className="bff-hide-mobile" style={{ fontSize: "13px", fontWeight: 600, color: TUNI_COLORS["muted-gray"], textDecoration: "none" }}>Log In</a>
         <Link
           to="/bff-coach/join"
           className="bff-header-button"
