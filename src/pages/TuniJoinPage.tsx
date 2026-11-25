@@ -104,10 +104,10 @@ const TuniJoinPage = () => {
                 ))}
               </div>
 
-              <div style={{ marginTop: "26px", paddingTop: "22px", borderTop: "1px solid rgba(42,33,28,0.1)" }}>
-                <div style={{ fontSize: "16px", fontWeight: 700 }}>Want to see Tuni in action first?</div>
-                <p style={{ fontSize: "15px", lineHeight: 1.6, color: TUNI_COLORS["body-text"], margin: "6px 0 0" }}>Join me for a free live demo. I'll show you how Tuni works with everyday meals, answer your questions and help you get started. Whether you're curious or already a member, you're welcome.</p>
-                <button onClick={handleBookDemo} style={{ fontSize: "14.5px", fontWeight: 700, color: TUNI_COLORS.ink, background: "transparent", padding: "13px 24px", borderRadius: "999px", border: "1.5px solid rgba(42,33,28,0.22)", cursor: "pointer", marginTop: "14px" }}>Book a Free Live Demo →</button>
+              <div style={{ marginTop: "26px", background: TUNI_COLORS["cream-pink"], borderRadius: "18px", padding: "20px 22px" }}>
+                <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontSize: "16px", fontWeight: 800, color: TUNI_COLORS.ink }}>Want to see Tuni in action first?</div>
+                <p style={{ fontSize: "15px", lineHeight: 1.6, color: TUNI_COLORS["body-text"], margin: "8px 0 0" }}>Join me for a free live demo. I'll show you how Tuni works with everyday meals, answer your questions and help you get started. Whether you're curious or already a member, you're welcome.</p>
+                <button onClick={handleBookDemo} style={{ fontSize: "14.5px", fontWeight: 700, color: TUNI_COLORS.pink, background: "#fff", padding: "13px 24px", borderRadius: "999px", border: `1.5px solid rgba(240,80,140,0.3)`, cursor: "pointer", marginTop: "14px" }}>Book a Free Live Demo →</button>
               </div>
             </div>
 
