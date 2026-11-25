@@ -12,6 +12,9 @@ import Learning from "./pages/Learning.tsx";
 import Article from "./pages/Article.tsx";
 import TuniLandingPage from "./pages/TuniLandingPage.tsx";
 import TuniScalesPage from "./pages/TuniScalesPage.tsx";
+import TuniOurStoryPage from "./pages/TuniOurStoryPage.tsx";
+import TuniFaqPage from "./pages/TuniFaqPage.tsx";
+import TuniJoinPage from "./pages/TuniJoinPage.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -47,6 +50,9 @@ const App = () => (
           <Route path="/learning/:slug" element={<Article />} />
           <Route path="/bff-coach" element={<TuniLandingPage />} />
           <Route path="/bff-coach/scales" element={<TuniScalesPage />} />
+          <Route path="/bff-coach/story" element={<TuniOurStoryPage />} />
+          <Route path="/bff-coach/faq" element={<TuniFaqPage />} />
+          <Route path="/bff-coach/join" element={<TuniJoinPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
