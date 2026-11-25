@@ -11,7 +11,7 @@ const TuniFooter = () => (
           <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
             <RadiantHeart size={28} />
             <TuniWordmark size={22} />
-            <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.13em", textTransform: "uppercase", color: "rgba(255,247,241,0.45)" }}>Feedback for midlife women</span>
+            <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.13em", textTransform: "uppercase", color: "rgba(255,247,241,0.45)" }}>Feedback for women</span>
           </div>
           <div style={{ fontFamily: "'Caveat', cursive", fontWeight: 600, fontSize: "20px", color: TUNI_COLORS.cream, marginTop: "4px" }}>Tune in to what works.</div>
         </div>
