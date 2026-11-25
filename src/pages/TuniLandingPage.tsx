@@ -402,41 +402,12 @@ const TuniLandingPage = () => {
             <p style={{ fontSize: "16px", lineHeight: 1.6, color: TUNI_COLORS["body-text"], margin: "12px 0 0" }}>So I tried harder. More workouts, more protein, trainers, supplements, HRT.</p>
             <p style={{ fontSize: "17px", lineHeight: 1.6, color: TUNI_COLORS.ink, fontWeight: 700, margin: "12px 0 0" }}>I was putting in the effort. I still couldn't tell what was helping.</p>
 
-            <div style={{ display: "flex", gap: "10px", margin: "24px 0 0" }}>
-              {[
-                { year: "2022", val: "34.8%" },
-                { year: "2023", val: "34.0%" },
-                { year: "2024", val: "34.8%" },
-              ].map((row) => (
-                <div key={row.year} style={{ flex: 1, background: TUNI_COLORS.mat, borderRadius: "14px", padding: "14px 12px", textAlign: "center" }}>
-                  <div style={{ fontSize: "12px", color: TUNI_COLORS["muted-gray"], fontWeight: 600 }}>{row.year}</div>
-                  <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "19px", color: TUNI_COLORS["placeholder-gray"], marginTop: "4px" }}>{row.val}</div>
-                  <div style={{ fontSize: "11px", color: TUNI_COLORS["muted-gray"], marginTop: "2px" }}>body fat</div>
-                </div>
-              ))}
-            </div>
-
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10px", margin: "10px 0 0" }}>
-              {[
-                { val: "124.2 → 114.2 lb", label: "10 lb lighter", color: TUNI_COLORS.coral },
-                { val: "32.3% → 25.7%", label: "body fat", color: TUNI_COLORS.pink },
-                { val: "20.0 → 15.4 lb", label: "trunk fat", color: TUNI_COLORS.amber },
-                { val: "8 → 5", label: "visceral fat", color: TUNI_COLORS.green },
-              ].map((stat) => (
-                <div key={stat.label} style={{ background: "#fff", borderRadius: "14px", padding: "16px 14px", boxShadow: "0 6px 16px rgba(42,33,28,0.05)" }}>
-                  <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 900, fontSize: "26px", color: stat.color, lineHeight: 1 }}>{stat.val}</div>
-                  <div style={{ fontSize: "12.5px", color: TUNI_COLORS["body-text"], marginTop: "6px" }}>{stat.label}</div>
-                </div>
-              ))}
-            </div>
-
-            <p style={{ fontSize: "16px", lineHeight: 1.6, color: TUNI_COLORS["body-text"], margin: "20px 0 0" }}>At 54, I started using AI to connect my meals and everyday habits with changes in my body. I began seeing patterns, making small adjustments and understanding my progress.</p>
             <div style={{ marginTop: "24px", paddingLeft: "18px", borderLeft: "2px solid rgba(240,80,140,0.3)" }}>
               <div style={{ fontFamily: "'Caveat', cursive", fontWeight: 600, fontSize: "26px", lineHeight: 1.25, color: TUNI_COLORS.ink }}>I wasn't missing effort. I was missing feedback.</div>
             </div>
             <p style={{ fontSize: "16px", lineHeight: 1.6, color: TUNI_COLORS["body-text"], margin: "20px 0 0" }}>I built Tuni because I believe every woman deserves to understand her changing body and feel confident caring for it.</p>
-            <p style={{ fontSize: "16px", lineHeight: 1.6, color: TUNI_COLORS["body-text"], margin: "12px 0 0" }}>What helped me understand mine became something I could share.</p>
-            <p style={{ fontSize: "13px", lineHeight: 1.5, color: TUNI_COLORS["muted-gray"], background: TUNI_COLORS.mat, borderRadius: "14px", padding: "14px 16px", margin: "24px 0 0", fontWeight: 600, fontStyle: "italic" }}>These are my personal results from the process that inspired Tuni. Individual experiences and results vary.</p>
+
+            <Link to="/bff-coach/story" style={{ display: "inline-flex", alignItems: "center", gap: "6px", fontSize: "15.5px", fontWeight: 700, color: TUNI_COLORS.coral, textDecoration: "underline", marginTop: "22px" }}>Read my full story, with the numbers →</Link>
           </div>
         </div>
       </section>
