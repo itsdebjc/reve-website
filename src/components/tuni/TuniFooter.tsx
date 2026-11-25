@@ -20,7 +20,7 @@ const TuniFooter = () => (
         </p>
       </div>
       <nav style={{ display: "flex", flexWrap: "wrap", gap: "18px", marginTop: "22px", paddingTop: "22px", borderTop: "1px solid rgba(255,247,241,0.1)" }}>
-        <Link to="/bff-coach/story" style={footerLinkStyle}>Our Story</Link>
+        <Link to="/bff-coach/story" style={footerLinkStyle}>Deb's Story</Link>
         <Link to="/bff-coach/faq" style={footerLinkStyle}>FAQ</Link>
         <Link to="/bff-coach/join" style={footerLinkStyle}>Checkout</Link>
       </nav>

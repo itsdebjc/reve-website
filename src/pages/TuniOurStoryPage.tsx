@@ -4,7 +4,7 @@ import { setCanonical } from "@/lib/seo";
 import TuniHeader from "@/components/tuni/TuniHeader";
 import TuniFooter from "@/components/tuni/TuniFooter";
 import { TUNI_COLORS, TUNI_FONT_IMPORT, TUNI_CHROME_CSS, useBookDemo } from "@/components/tuni/TuniShared";
-import debbieBeach from "@/assets/debbie-beach.jpeg";
+import debbieCaveBoat from "@/assets/debbie-cave-boat.jpg";
 
 const TuniOurStoryPage = () => {
   useEffect(() => {
@@ -39,7 +39,7 @@ const TuniOurStoryPage = () => {
       <section style={{ background: TUNI_COLORS.cream, padding: "84px 26px" }}>
         <div className="bff-grid-2col" style={{ maxWidth: "1340px", margin: "0 auto", display: "grid", gridTemplateColumns: "0.95fr 1.05fr", gap: "54px", alignItems: "start" }}>
           <div className="bff-sticky-desktop" style={{ position: "sticky", top: "100px", alignSelf: "start" }}>
-            <img src={debbieBeach} alt="Debbie at beach" style={{ display: "block", width: "100%", height: "520px", objectFit: "cover", borderRadius: "24px", boxShadow: "0 24px 50px rgba(42,33,28,0.16)" }} />
+            <img src={debbieCaveBoat} alt="Debbie and her husband smiling in a sea cave" style={{ display: "block", width: "100%", height: "520px", objectFit: "cover", objectPosition: "center 30%", borderRadius: "24px", boxShadow: "0 24px 50px rgba(42,33,28,0.16)" }} />
             <div style={{ background: "#fff", borderRadius: "16px", padding: "20px 22px", boxShadow: "0 10px 25px rgba(42,33,28,0.08)", marginTop: "18px" }}>
               <div style={{ fontFamily: "'Caveat', cursive", fontWeight: 600, fontSize: "22px", lineHeight: 1.3, color: TUNI_COLORS.ink }}>"I built this because I needed it too."</div>
             </div>

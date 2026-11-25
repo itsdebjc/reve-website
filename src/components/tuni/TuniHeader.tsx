@@ -16,7 +16,7 @@ const TuniHeader = () => (
         <TuniWordmark size={23} />
       </Link>
       <nav style={{ display: "flex", alignItems: "center", gap: "22px" }}>
-        <NavLink to="/bff-coach/story" style={({ isActive }) => navLinkStyle(isActive)}>Our Story</NavLink>
+        <NavLink to="/bff-coach/story" style={({ isActive }) => navLinkStyle(isActive)}>Deb's Story</NavLink>
         <NavLink to="/bff-coach/faq" style={({ isActive }) => navLinkStyle(isActive)}>FAQ</NavLink>
       </nav>
       <div style={{ display: "flex", alignItems: "center", gap: "18px" }}>
