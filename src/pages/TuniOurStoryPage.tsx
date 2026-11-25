@@ -90,12 +90,12 @@ const TuniOurStoryPage = () => {
         </div>
       </section>
 
-      <section style={{ background: TUNI_COLORS.ink, color: TUNI_COLORS.cream, padding: "90px 26px", textAlign: "center" }}>
+      <section style={{ background: `linear-gradient(150deg, ${TUNI_COLORS.coral} 0%, ${TUNI_COLORS.pink} 100%)`, padding: "90px 26px", textAlign: "center" }}>
         <div style={{ maxWidth: "640px", margin: "0 auto" }}>
-          <h2 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(30px, 4.4vw, 48px)", lineHeight: 1.08, letterSpacing: "-0.02em", margin: 0 }}>Ready to find out what works for you?</h2>
+          <h2 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(30px, 4.4vw, 48px)", lineHeight: 1.08, letterSpacing: "-0.02em", margin: 0, color: "#fff" }}>Ready to find out what works for you?</h2>
           <div style={{ display: "flex", gap: "12px", flexWrap: "wrap", justifyContent: "center", marginTop: "28px" }}>
-            <Link to="/bff-coach/join" style={{ textDecoration: "none", display: "inline-block", fontSize: "17px", fontWeight: 700, color: "#fff", background: `linear-gradient(135deg, ${TUNI_COLORS.coral}, ${TUNI_COLORS.pink})`, padding: "17px 32px", borderRadius: "999px", boxShadow: "0 14px 30px rgba(240,80,140,0.30)" }}>Start Tuni for $8.99 →</Link>
-            <button onClick={handleBookDemo} style={{ fontSize: "17px", fontWeight: 700, color: TUNI_COLORS.cream, background: "transparent", padding: "16px 30px", borderRadius: "999px", border: "1.5px solid rgba(255,247,241,0.35)", cursor: "pointer" }}>Book a Live Demo</button>
+            <Link to="/bff-coach/join" style={{ textDecoration: "none", display: "inline-block", fontSize: "17px", fontWeight: 700, color: TUNI_COLORS.pink, background: "#fff", padding: "17px 32px", borderRadius: "999px", boxShadow: "0 16px 36px rgba(42,33,28,0.22)" }}>Start Tuni for $8.99 →</Link>
+            <button onClick={handleBookDemo} style={{ fontSize: "17px", fontWeight: 700, color: "#fff", background: "transparent", padding: "16px 30px", borderRadius: "999px", border: "1.5px solid rgba(255,255,255,0.6)", cursor: "pointer" }}>Book a Live Demo</button>
           </div>
         </div>
       </section>
