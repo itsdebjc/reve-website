@@ -359,13 +359,13 @@ const TuniLandingPage = () => {
       <section style={{ background: TUNI_COLORS["cream-pink"], padding: "72px 26px" }}>
         <div style={{ maxWidth: "880px", margin: "0 auto", textAlign: "center" }}>
           <span style={{ display: "inline-flex", alignItems: "center", background: "#fff", color: TUNI_COLORS.pink, fontSize: "12px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", padding: "7px 14px", borderRadius: "999px" }}>A different kind of feedback</span>
-          <h2 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(28px, 3.8vw, 42px)", lineHeight: 1.15, letterSpacing: "-0.02em", margin: "22px 0 0", color: TUNI_COLORS.ink }}>Most apps tell you what to do. <span style={{ color: TUNI_COLORS.pink }}>Tuni helps you understand what's working.</span></h2>
+          <h2 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(28px, 3.8vw, 42px)", lineHeight: 1.15, letterSpacing: "-0.02em", margin: "22px 0 0", color: TUNI_COLORS.ink }}>Most apps just track. <span style={{ color: TUNI_COLORS.pink }}>Tuni gives feedback.</span></h2>
         </div>
         <div className="bff-grid-2col" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px", maxWidth: "780px", margin: "36px auto 0" }}>
           <div style={{ background: "rgba(255,255,255,0.5)", border: "1.5px dashed rgba(42,33,28,0.18)", borderRadius: "20px", padding: "26px 24px" }}>
             <div style={{ fontSize: "12px", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: TUNI_COLORS["muted-gray"] }}>Most apps</div>
             <div style={{ display: "flex", flexDirection: "column", gap: "14px", marginTop: "16px" }}>
-              {["Another generic plan to follow", "Rules that ignore your real life", "One more thing to keep up with"].map((line) => (
+              {["Logs what you eat, nothing more", "Numbers with no context", "You're left to figure out what it means"].map((line) => (
                 <div key={line} style={{ display: "flex", gap: "10px", alignItems: "flex-start" }}>
                   <span style={{ flexShrink: 0, width: "20px", height: "20px", borderRadius: "50%", background: "rgba(42,33,28,0.08)", color: TUNI_COLORS["muted-gray"], fontSize: "13px", fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center", lineHeight: 1 }}>×</span>
                   <span style={{ fontSize: "15px", lineHeight: 1.4, color: TUNI_COLORS["muted-gray"] }}>{line}</span>
