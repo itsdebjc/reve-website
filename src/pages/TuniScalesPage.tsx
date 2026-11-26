@@ -79,10 +79,10 @@ const BUDGET: ScaleEntry[] = [
 
 const OTHER: ScaleEntry[] = [
   {
-    name: "Wyze Scale X",
+    name: "Wyze Scale BodyScan",
     tier: "Also compatible",
-    why: "Wi-Fi and Bluetooth body composition scale with segmental measurement. Works with Tuni.",
-    url: "https://www.wyze.com/products/wyze-scale-x",
+    why: "8-electrode BIA scale with segmental muscle and fat analysis across arms, legs and torso. Works with Tuni.",
+    url: "https://www.wyze.com/en-ca/products/wyze-scale-bodyscan",
     linkLabel: "View on Wyze's site →",
     image: wyzeScaleX,
   },
