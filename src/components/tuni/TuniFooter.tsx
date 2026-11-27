@@ -48,10 +48,11 @@ const TuniFooter = () => {
         </p>
       </div>
 
-      <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "18px", flexWrap: "wrap", marginTop: "22px", paddingTop: "22px", borderTop: "1px solid rgba(255,247,241,0.1)" }}>
+      <div style={{ background: "rgba(255,247,241,0.06)", border: "1px solid rgba(255,247,241,0.14)", borderRadius: "18px", padding: "22px 26px", marginTop: "22px", display: "flex", alignItems: "center", justifyContent: "space-between", gap: "20px", flexWrap: "wrap" }}>
         <div>
-          <div style={{ fontSize: "14px", fontWeight: 700, color: TUNI_COLORS.cream }}>Midlife tips on feeling good again.</div>
-          <div style={{ fontSize: "12.5px", color: "rgba(255,247,241,0.5)", marginTop: "2px" }}>Occasional emails. No pressure to join.</div>
+          <span style={{ display: "inline-flex", alignItems: "center", gap: "6px", fontSize: "11px", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: TUNI_COLORS.pink }}>✉ Free email tips</span>
+          <div style={{ fontSize: "17px", fontWeight: 700, color: TUNI_COLORS.cream, marginTop: "6px" }}>How to use Tuni and feel good again.</div>
+          <div style={{ fontSize: "13px", color: "rgba(255,247,241,0.55)", marginTop: "2px" }}>Straight to your inbox. No pressure to join.</div>
         </div>
         {!newsletter.submitted ? (
           <form onSubmit={handleNewsletterSubmit} style={{ display: "flex", gap: "8px", flexWrap: "wrap" }}>
@@ -60,10 +61,10 @@ const TuniFooter = () => {
               placeholder="you@example.com"
               value={newsletter.email}
               onChange={(e) => setNewsletter((p) => ({ ...p, email: e.target.value }))}
-              style={{ fontSize: "14px", color: TUNI_COLORS.ink, padding: "10px 14px", border: "1.5px solid rgba(255,247,241,0.15)", borderRadius: "999px", outline: "none", background: TUNI_COLORS.cream, fontFamily: "'Plus Jakarta Sans', sans-serif", width: "220px" }}
+              style={{ fontSize: "14px", color: TUNI_COLORS.ink, padding: "12px 16px", border: "1.5px solid rgba(255,247,241,0.15)", borderRadius: "999px", outline: "none", background: TUNI_COLORS.cream, fontFamily: "'Plus Jakarta Sans', sans-serif", width: "230px" }}
               required
             />
-            <button type="submit" style={{ fontSize: "13.5px", fontWeight: 700, color: TUNI_COLORS.ink, background: TUNI_COLORS.cream, border: "none", padding: "10px 18px", borderRadius: "999px", cursor: "pointer", whiteSpace: "nowrap" }}>Send Me the Tips</button>
+            <button type="submit" style={{ fontSize: "14px", fontWeight: 700, color: "#fff", background: `linear-gradient(135deg, ${TUNI_COLORS.coral}, ${TUNI_COLORS.pink})`, border: "none", padding: "12px 20px", borderRadius: "999px", cursor: "pointer", whiteSpace: "nowrap" }}>Send Me the Tips</button>
           </form>
         ) : (
           <p style={{ fontSize: "14px", color: TUNI_COLORS.cream, margin: 0 }}>You're on the list — talk soon!</p>
