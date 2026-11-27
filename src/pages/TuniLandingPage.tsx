@@ -148,7 +148,6 @@ const TuniLandingPage = () => {
   }, []);
 
   const [form, setForm] = useState({ name: "", email: "", submitted: false });
-  const [newsletter, setNewsletter] = useState({ email: "", submitted: false });
   const [feedbackExample, setFeedbackExample] = useState<"dinner" | "restaurant" | "snack">("dinner");
 
   const handleBookDemo = () => {
@@ -178,30 +177,6 @@ const TuniLandingPage = () => {
       });
       if (res.ok || res.status === 202) {
         setForm((p) => ({ ...p, submitted: true }));
-      }
-    } catch (e) {
-      console.error(e);
-    }
-  };
-
-  const handleNewsletterSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    try {
-      const res = await fetch("https://a.klaviyo.com/client/subscriptions/?company_id=XjEbAU", {
-        method: "POST",
-        headers: { "Content-Type": "application/json", revision: "2023-12-15" },
-        body: JSON.stringify({
-          data: {
-            type: "subscription",
-            attributes: {
-              profile: { data: { type: "profile", attributes: { email: newsletter.email } } },
-            },
-            relationships: { list: { data: { type: "list", id: "TiByuD" } } },
-          },
-        }),
-      });
-      if (res.ok || res.status === 202) {
-        setNewsletter((p) => ({ ...p, submitted: true }));
       }
     } catch (e) {
       console.error(e);
@@ -726,25 +701,6 @@ const TuniLandingPage = () => {
         <div style={{ position: "absolute", inset: "0", background: "linear-gradient(180deg, rgba(42,33,28,0.28), rgba(42,33,28,0.6))" }} />
         <div style={{ position: "relative", zIndex: 1, textAlign: "center", padding: "80px 26px", maxWidth: "980px" }}>
           <h2 className="bff-nowrap-desktop" style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(24px, 4.4vw, 50px)", lineHeight: 1.08, letterSpacing: "-0.02em", color: TUNI_COLORS.cream, margin: "0", textShadow: "0 2px 20px rgba(42,33,28,0.4)" }}>You don't have to figure this out <span style={{ color: "#FFC8A0" }}>alone.</span></h2>
-        </div>
-      </section>
-
-      {/* STAY IN TOUCH — low-commitment email capture */}
-      <section style={{ background: TUNI_COLORS["cream-pink"], padding: "84px 26px", textAlign: "center" }}>
-        <div style={{ maxWidth: "640px", margin: "0 auto" }}>
-          <span style={{ display: "inline-flex", alignItems: "center", background: "#fff", color: TUNI_COLORS.pink, fontSize: "12px", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", padding: "7px 14px", borderRadius: "999px" }}>Not ready yet?</span>
-          <h2 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(30px, 4vw, 46px)", lineHeight: 1.1, letterSpacing: "-0.02em", margin: "22px 0 0" }}>Curious about Tuni? <span style={{ color: TUNI_COLORS.pink }}>Let's stay in touch.</span></h2>
-          {!newsletter.submitted ? (
-            <>
-              <p style={{ fontSize: "17px", lineHeight: 1.6, color: TUNI_COLORS["body-text"], margin: "16px auto 0", maxWidth: "500px" }}>Not quite ready to join? Get practical tips for understanding your body in midlife, plus occasional Tuni updates.</p>
-              <form onSubmit={handleNewsletterSubmit} style={{ display: "flex", gap: "10px", flexWrap: "wrap", justifyContent: "center", marginTop: "28px" }}>
-                <input type="email" placeholder="you@example.com" value={newsletter.email} onChange={(e) => setNewsletter((p) => ({ ...p, email: e.target.value }))} style={{ flex: "1 1 260px", maxWidth: "320px", fontSize: "15px", color: TUNI_COLORS.ink, padding: "15px 18px", border: `1.5px solid #ece2da`, borderRadius: "999px", outline: "none", background: "#fff", fontFamily: "'Plus Jakarta Sans', sans-serif" }} required />
-                <button type="submit" style={{ fontSize: "16px", fontWeight: 700, color: "#fff", background: `linear-gradient(135deg, ${TUNI_COLORS.coral}, ${TUNI_COLORS.pink})`, border: "none", padding: "15px 28px", borderRadius: "999px", cursor: "pointer", boxShadow: "0 14px 30px rgba(240,80,140,0.30)", whiteSpace: "nowrap" }}>Keep Me in the Loop</button>
-              </form>
-            </>
-          ) : (
-            <p style={{ fontSize: "17px", color: TUNI_COLORS["body-text"], marginTop: "16px" }}>You're on the list — talk soon!</p>
-          )}
         </div>
       </section>
 
