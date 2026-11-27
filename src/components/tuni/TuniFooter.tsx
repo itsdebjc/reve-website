@@ -32,7 +32,7 @@ const TuniFooter = () => {
   };
 
   return (
-  <footer style={{ background: TUNI_COLORS.ink, color: "rgba(255,247,241,0.6)", padding: "44px 26px" }}>
+  <footer style={{ background: TUNI_COLORS.ink, color: "rgba(255,247,241,0.6)", padding: "56px 26px 44px" }}>
     <div style={{ maxWidth: "1480px", margin: "0 auto" }}>
       <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "20px", flexWrap: "wrap" }}>
         <div>
@@ -48,9 +48,9 @@ const TuniFooter = () => {
         </p>
       </div>
 
-      <div style={{ background: "rgba(255,247,241,0.06)", border: "1px solid rgba(255,247,241,0.14)", borderRadius: "18px", padding: "22px 26px", marginTop: "22px", display: "flex", alignItems: "center", justifyContent: "space-between", gap: "20px", flexWrap: "wrap" }}>
+      <div style={{ background: "rgba(255,247,241,0.06)", border: "1px solid rgba(255,247,241,0.14)", borderRadius: "18px", padding: "28px 30px", marginTop: "34px", display: "flex", alignItems: "center", justifyContent: "space-between", gap: "24px", flexWrap: "wrap" }}>
         <div>
-          <span style={{ display: "inline-flex", alignItems: "center", gap: "6px", fontSize: "11px", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: TUNI_COLORS.pink }}>✉ Free email tips</span>
+          <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: TUNI_COLORS.pink }}>Sign up to learn more</span>
           <div style={{ fontSize: "17px", fontWeight: 700, color: TUNI_COLORS.cream, marginTop: "6px" }}>How to use Tuni and feel good again.</div>
           <div style={{ fontSize: "13px", color: "rgba(255,247,241,0.55)", marginTop: "2px" }}>Straight to your inbox. No pressure to join.</div>
         </div>
@@ -71,12 +71,12 @@ const TuniFooter = () => {
         )}
       </div>
 
-      <nav style={{ display: "flex", flexWrap: "wrap", gap: "18px", marginTop: "22px", paddingTop: "22px", borderTop: "1px solid rgba(255,247,241,0.1)" }}>
+      <nav style={{ display: "flex", flexWrap: "wrap", gap: "18px", marginTop: "34px", paddingTop: "28px", borderTop: "1px solid rgba(255,247,241,0.1)" }}>
         <Link to="/bff-coach/story" style={footerLinkStyle}>Why I Built Tuni</Link>
         <Link to="/bff-coach/faq" style={footerLinkStyle}>FAQ</Link>
         <Link to="/bff-coach/join" style={footerLinkStyle}>Checkout</Link>
       </nav>
-      <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "20px", flexWrap: "wrap", marginTop: "18px" }}>
+      <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "20px", flexWrap: "wrap", marginTop: "22px" }}>
         <p style={{ fontSize: "12px", margin: 0 }}>
           <a href="https://itstuni.com/privacy" target="_blank" rel="noopener noreferrer" style={footerLinkStyle}>Privacy Policy</a>
           {" · "}
@@ -86,9 +86,11 @@ const TuniFooter = () => {
           <a href="https://www.instagram.com/itsdebj/" target="_blank" rel="noopener noreferrer" style={footerLinkStyle}>Instagram</a>
           {" · "}
           <a href="https://www.tiktok.com/@itsdigitaldeb" target="_blank" rel="noopener noreferrer" style={footerLinkStyle}>TikTok</a>
+          {" · "}
+          <a href="https://www.youtube.com/@TellTuni" target="_blank" rel="noopener noreferrer" style={footerLinkStyle}>YouTube</a>
         </p>
       </div>
-      <div style={{ marginTop: "22px", paddingTop: "22px", borderTop: "1px solid rgba(255,247,241,0.1)" }}>
+      <div style={{ marginTop: "28px", paddingTop: "22px", borderTop: "1px solid rgba(255,247,241,0.1)" }}>
         <p style={{ fontSize: "14px", lineHeight: 1.6, color: "rgba(255,247,241,0.55)", margin: 0 }}>For general wellness and education only, not medical advice. © 2026 Tuni, operated by 1236097 BC Ltd.</p>
       </div>
     </div>
