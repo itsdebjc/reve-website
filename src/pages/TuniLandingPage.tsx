@@ -231,6 +231,8 @@ const TuniLandingPage = () => {
           .bff-sticky-desktop { position: static !important; top: auto !important; }
           .bff-hero-grid { grid-template-columns: 1fr !important; gap: 28px !important; margin-top: 32px !important; }
           .bff-hero-phone-wrap { max-width: 300px !important; margin: 0 auto !important; }
+          .bff-hero-stats { flex-wrap: wrap !important; row-gap: 14px !important; column-gap: 20px !important; }
+          .bff-hero-stat-divider { display: none !important; }
           .bff-pricing-card { padding: 26px 22px !important; }
           .bff-pricing-card .bff-pricing-includes { margin-top: 14px !important; padding-top: 14px !important; }
           .bff-pricing-card .bff-pricing-includes > div:last-child { gap: 7px !important; margin-top: 9px !important; }
@@ -241,7 +243,7 @@ const TuniLandingPage = () => {
       <TuniHeader />
 
       {/* HERO SECTION */}
-      <section style={{ background: `linear-gradient(180deg, ${TUNI_COLORS.cream} 0%, ${TUNI_COLORS["cream-alt"]} 100%)`, padding: "56px 26px 90px" }}>
+      <section style={{ background: `linear-gradient(180deg, ${TUNI_COLORS.cream} 0%, ${TUNI_COLORS["cream-alt"]} 100%)`, padding: "56px 26px 90px", overflowX: "hidden" }}>
         <div style={{ maxWidth: "1280px", margin: "0 auto" }}>
           <span style={{ display: "inline-flex", alignItems: "center", gap: "7px", background: "#fff", border: `1px solid rgba(42, 33, 28, 0.08)`, color: TUNI_COLORS.coral, fontSize: "12px", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", padding: "7px 14px", borderRadius: "999px" }}>Feedback for Women in Midlife</span>
           <h1 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(38px, 6vw, 84px)", lineHeight: 0.98, letterSpacing: "-0.04em", margin: "20px 0 0", color: TUNI_COLORS.ink, maxWidth: "1100px" }}>
@@ -264,17 +266,17 @@ const TuniLandingPage = () => {
             <div>
               <p style={{ fontSize: "clamp(20px, 2.1vw, 26px)", lineHeight: 1.6, color: TUNI_COLORS["body-text"], maxWidth: "640px", margin: 0 }}>Your personal AI body coach. Log your meals by photo, voice or text, get feedback on your choices and discover patterns that help you understand your body.</p>
 
-              <div style={{ display: "flex", alignItems: "center", gap: "26px", marginTop: "28px", paddingTop: "28px", borderTop: "1px solid rgba(42,33,28,0.1)" }}>
+              <div className="bff-hero-stats" style={{ display: "flex", alignItems: "center", gap: "26px", marginTop: "28px", paddingTop: "28px", borderTop: "1px solid rgba(42,33,28,0.1)" }}>
                 <div>
                   <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 900, fontSize: "28px", color: TUNI_COLORS.ink, lineHeight: 1 }}><StrikePrice was="$15" size={15} />$8.99<span style={{ fontSize: "14px", fontWeight: 700, color: TUNI_COLORS["muted-gray"] }}>/mo</span></div>
                   <div style={{ fontSize: "12.5px", color: TUNI_COLORS["muted-gray"], marginTop: "4px" }}>Cancel anytime</div>
                 </div>
-                <div style={{ width: "1px", height: "36px", background: "rgba(42,33,28,0.12)" }} />
+                <div className="bff-hero-stat-divider" style={{ width: "1px", height: "36px", background: "rgba(42,33,28,0.12)" }} />
                 <div>
                   <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 900, fontSize: "22px", color: TUNI_COLORS.amber, lineHeight: 1.1, textTransform: "uppercase" }}>Easy</div>
                   <div style={{ fontSize: "12.5px", color: TUNI_COLORS["muted-gray"], marginTop: "4px" }}>Snap, talk or type</div>
                 </div>
-                <div style={{ width: "1px", height: "36px", background: "rgba(42,33,28,0.12)" }} />
+                <div className="bff-hero-stat-divider" style={{ width: "1px", height: "36px", background: "rgba(42,33,28,0.12)" }} />
                 <div>
                   <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 900, fontSize: "22px", color: TUNI_COLORS.pink, lineHeight: 1.1, textTransform: "uppercase" }}>You</div>
                   <div style={{ fontSize: "12.5px", color: TUNI_COLORS["muted-gray"], marginTop: "4px" }}>Feedback for your body</div>
